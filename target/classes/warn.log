@@ -1,0 +1,53 @@
+[WARN ] 2018-03-06 01:07:53,579(24013) com.beta.ControllerMy.loginTest(ControllerMy.java:43) –> [http-nio-8080-exec-1] loginTest...WARN...LEVEL...Test  
+[ERROR] 2018-03-06 01:07:53,581(24015) com.beta.ControllerMy.loginTest(ControllerMy.java:44) –> [http-nio-8080-exec-1] loginTest...ERROR...LEVEL...Test  
+[WARN ] 2018-03-06 10:46:23,890(74332) com.beta.ControllerMy.loginTest(ControllerMy.java:52) –> [http-nio-8080-exec-6] loginTest...WARN...LEVEL...Test  
+[ERROR] 2018-03-06 10:46:28,656(79098) com.beta.ControllerMy.loginTest(ControllerMy.java:53) –> [http-nio-8080-exec-6] loginTest...ERROR...LEVEL...Test  
+[WARN ] 2018-03-06 10:49:28,229(35690) com.beta.ControllerMy.loginTest(ControllerMy.java:52) –> [http-nio-8080-exec-1] loginTest...WARN...LEVEL...Test  
+[ERROR] 2018-03-06 10:49:31,881(39342) com.beta.ControllerMy.loginTest(ControllerMy.java:53) –> [http-nio-8080-exec-1] loginTest...ERROR...LEVEL...Test  
+[WARN ] 2018-03-06 10:50:30,588(18192) com.beta.ControllerMy.loginTest(ControllerMy.java:52) –> [http-nio-8080-exec-1] loginTest...WARN...LEVEL...Test  
+[ERROR] 2018-03-06 10:50:35,965(23569) com.beta.ControllerMy.loginTest(ControllerMy.java:53) –> [http-nio-8080-exec-1] loginTest...ERROR...LEVEL...Test  
+[WARN ] 2018-03-06 10:55:32,547(28129) com.beta.ControllerMy.loginTest(ControllerMy.java:52) –> [http-nio-8080-exec-1] loginTest...WARN...LEVEL...Test  
+[ERROR] 2018-03-06 10:55:38,652(34234) com.beta.ControllerMy.loginTest(ControllerMy.java:53) –> [http-nio-8080-exec-1] loginTest...ERROR...LEVEL...Test  
+[WARN ] 2018-03-06 10:57:17,216(40437) com.beta.ControllerMy.loginTest(ControllerMy.java:52) –> [http-nio-8080-exec-1] loginTest...WARN...LEVEL...Test  
+[ERROR] 2018-03-06 10:57:22,891(46112) com.beta.ControllerMy.loginTest(ControllerMy.java:53) –> [http-nio-8080-exec-1] loginTest...ERROR...LEVEL...Test  
+[WARN ] 2018-03-06 11:04:47,630(18757) com.beta.ControllerMy.loginTest(ControllerMy.java:54) –> [http-nio-8080-exec-1] loginTest...WARN...LEVEL...Test  
+[ERROR] 2018-03-06 11:04:47,631(18758) com.beta.ControllerMy.loginTest(ControllerMy.java:55) –> [http-nio-8080-exec-1] loginTest...ERROR...LEVEL...Test  
+[WARN ] 2018-03-06 11:10:19,643(39600) com.beta.ControllerMy.loginTest(ControllerMy.java:54) –> [http-nio-8080-exec-7] loginTest...WARN...LEVEL...Test  
+[ERROR] 2018-03-06 11:10:19,662(39619) com.beta.ControllerMy.loginTest(ControllerMy.java:55) –> [http-nio-8080-exec-7] loginTest...ERROR...LEVEL...Test  
+[WARN ] 2018-03-06 15:54:57,669(553949) com.beta.ControllerMy.loginTest(ControllerMy.java:54) –> [http-nio-8080-exec-1] loginTest...WARN...LEVEL...Test  
+[ERROR] 2018-03-06 15:54:57,716(553996) com.beta.ControllerMy.loginTest(ControllerMy.java:55) –> [http-nio-8080-exec-1] loginTest...ERROR...LEVEL...Test  
+[WARN ] 2018-03-10 20:17:12,763(54833) com.beta.ControllerMy.loginTest(ControllerMy.java:59) –> [http-nio-8080-exec-8] loginTest...WARN...LEVEL...Test  
+[ERROR] 2018-03-10 20:17:12,763(54833) com.beta.ControllerMy.loginTest(ControllerMy.java:60) –> [http-nio-8080-exec-8] loginTest...ERROR...LEVEL...Test  
+[WARN ] 2018-03-17 11:30:42,043(55626) com.beta.ControllerMy.loginTest(ControllerMy.java:72) –> [http-nio-8080-exec-8] loginTest...WARN...LEVEL...Test  
+[ERROR] 2018-03-17 11:30:42,055(55638) com.beta.ControllerMy.loginTest(ControllerMy.java:73) –> [http-nio-8080-exec-8] loginTest...ERROR...LEVEL...Test  
+[WARN ] 2018-03-17 11:45:45,980(64040) com.beta.ControllerMy.loginTest(ControllerMy.java:72) –> [http-nio-8080-exec-5] loginTest...WARN...LEVEL...Test  
+[ERROR] 2018-03-17 11:45:45,980(64040) com.beta.ControllerMy.loginTest(ControllerMy.java:73) –> [http-nio-8080-exec-5] loginTest...ERROR...LEVEL...Test  
+[WARN ] 2018-03-17 11:47:18,396(22623) com.beta.ControllerMy.loginTest(ControllerMy.java:72) –> [http-nio-8080-exec-3] loginTest...WARN...LEVEL...Test  
+[ERROR] 2018-03-17 11:47:18,476(22703) com.beta.ControllerMy.loginTest(ControllerMy.java:73) –> [http-nio-8080-exec-3] loginTest...ERROR...LEVEL...Test  
+[WARN ] 2018-03-17 11:50:13,635(56475) com.beta.ControllerMy.loginTest(ControllerMy.java:72) –> [http-nio-8080-exec-3] loginTest...WARN...LEVEL...Test  
+[ERROR] 2018-03-17 11:50:13,635(56475) com.beta.ControllerMy.loginTest(ControllerMy.java:73) –> [http-nio-8080-exec-3] loginTest...ERROR...LEVEL...Test  
+[WARN ] 2018-03-17 12:03:13,335(54012) com.beta.ControllerMy.loginTest(ControllerMy.java:72) –> [http-nio-8080-exec-3] loginTest...WARN...LEVEL...Test  
+[ERROR] 2018-03-17 12:03:13,335(54012) com.beta.ControllerMy.loginTest(ControllerMy.java:73) –> [http-nio-8080-exec-3] loginTest...ERROR...LEVEL...Test  
+[WARN ] 2018-03-17 12:05:52,975(29003) com.beta.ControllerMy.loginTest(ControllerMy.java:72) –> [http-nio-8080-exec-3] loginTest...WARN...LEVEL...Test  
+[ERROR] 2018-03-17 12:05:52,975(29003) com.beta.ControllerMy.loginTest(ControllerMy.java:73) –> [http-nio-8080-exec-3] loginTest...ERROR...LEVEL...Test  
+[WARN ] 2018-03-17 12:07:33,749(40013) com.beta.ControllerMy.loginTest(ControllerMy.java:72) –> [http-nio-8080-exec-2] loginTest...WARN...LEVEL...Test  
+[ERROR] 2018-03-17 12:07:33,750(40014) com.beta.ControllerMy.loginTest(ControllerMy.java:73) –> [http-nio-8080-exec-2] loginTest...ERROR...LEVEL...Test  
+[WARN ] 2018-03-17 12:41:05,254(30574) com.beta.ControllerMy.loginTest(ControllerMy.java:72) –> [http-nio-8080-exec-3] loginTest...WARN...LEVEL...Test  
+[ERROR] 2018-03-17 12:41:05,255(30575) com.beta.ControllerMy.loginTest(ControllerMy.java:73) –> [http-nio-8080-exec-3] loginTest...ERROR...LEVEL...Test  
+[WARN ] 2018-03-17 12:46:06,451(21002) com.beta.ControllerMy.loginTest(ControllerMy.java:72) –> [http-nio-8080-exec-3] loginTest...WARN...LEVEL...Test  
+[ERROR] 2018-03-17 12:46:06,452(21003) com.beta.ControllerMy.loginTest(ControllerMy.java:73) –> [http-nio-8080-exec-3] loginTest...ERROR...LEVEL...Test  
+[WARN ] 2018-03-17 12:48:27,885(29552) com.beta.ControllerMy.loginTest(ControllerMy.java:72) –> [http-nio-8080-exec-3] loginTest...WARN...LEVEL...Test  
+[ERROR] 2018-03-17 12:48:27,885(29552) com.beta.ControllerMy.loginTest(ControllerMy.java:73) –> [http-nio-8080-exec-3] loginTest...ERROR...LEVEL...Test  
+[ERROR] 2018-03-17 16:13:54,971(22028) com.beta.exception.ExceptionController.jsonException(ExceptionController.java:24) –> [http-nio-8080-exec-1] Exception:返回页面指定json串表示异常；  
+[ERROR] 2018-03-17 16:14:12,950(40007) com.beta.exception.ExceptionController.nException(ExceptionController.java:18) –> [http-nio-8080-exec-2] Exception:将要到 thymeleaf模板error.html  
+[ERROR] 2018-03-17 16:16:21,230(38646) com.beta.exception.ExceptionController.nException(ExceptionController.java:20) –> [http-nio-8080-exec-1] Exception:将要到 thymeleaf模板error.html  
+[ERROR] 2018-03-17 16:16:30,484(47900) com.beta.exception.ExceptionController.jsonException(ExceptionController.java:27) –> [http-nio-8080-exec-2] Exception:返回页面指定json串表示异常；  
+[ERROR] 2018-03-17 16:24:36,344(45941) com.beta.exception.ExceptionController.jsonException(ExceptionController.java:26) –> [http-nio-8080-exec-1] Exception:返回页面指定json串表示异常；  
+[ERROR] 2018-03-17 16:24:57,988(67585) com.beta.exception.ExceptionController.nException(ExceptionController.java:20) –> [http-nio-8080-exec-2] Exception:将要到 thymeleaf模板error.html  
+[WARN ] 2018-03-17 17:30:02,114(28293) com.beta.ControllerMy.loginTest(ControllerMy.java:73) –> [http-nio-8080-exec-5] loginTest...WARN...LEVEL...Test  
+[ERROR] 2018-03-17 17:30:02,115(28294) com.beta.ControllerMy.loginTest(ControllerMy.java:74) –> [http-nio-8080-exec-5] loginTest...ERROR...LEVEL...Test  
+[WARN ] 2018-03-17 17:50:36,249(24514) com.beta.ControllerMy.loginTest(ControllerMy.java:73) –> [http-nio-8080-exec-2] loginTest...WARN...LEVEL...Test  
+[ERROR] 2018-03-17 17:50:36,314(24579) com.beta.ControllerMy.loginTest(ControllerMy.java:74) –> [http-nio-8080-exec-2] loginTest...ERROR...LEVEL...Test  
+[WARN ] 2018-03-17 17:57:05,877(23389) com.beta.ControllerMy.loginTest(ControllerMy.java:73) –> [http-nio-8080-exec-3] loginTest...WARN...LEVEL...Test  
+[ERROR] 2018-03-17 17:57:05,879(23391) com.beta.ControllerMy.loginTest(ControllerMy.java:74) –> [http-nio-8080-exec-3] loginTest...ERROR...LEVEL...Test  
+[ERROR] 2018-03-28 21:44:42,448(253660) com.beta.exception.ExceptionController.nException(ExceptionController.java:20) –> [http-nio-8080-exec-5] Exception:将要到 thymeleaf模板error.html  
