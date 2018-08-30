@@ -8,8 +8,8 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 
-import com.beta.mybatis.mapper.TbUser;
-import com.beta.service.IUserService;
+import com.beta.basic.mybatis.mapper.TbUser;
+import com.beta.basic.service.IUserService;
 
 @RunWith(SpringJUnit4ClassRunner.class)
 @SpringBootTest

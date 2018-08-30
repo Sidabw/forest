@@ -16,7 +16,7 @@ import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.context.request.RequestContextHolder;
 import org.springframework.web.context.request.ServletRequestAttributes;
 
-import com.beta.pojo.LoginUser;
+import com.beta.basic.pojo.LoginUser;
 
 @Controller
 @RequestMapping("/jwt")

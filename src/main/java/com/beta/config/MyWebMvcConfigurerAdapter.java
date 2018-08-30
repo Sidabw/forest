@@ -1,14 +1,17 @@
 package com.beta.config;
 
 import org.springframework.context.annotation.Configuration;
-import org.springframework.web.servlet.config.annotation.InterceptorRegistry;
-import org.springframework.web.servlet.config.annotation.ResourceHandlerRegistry;
-import org.springframework.web.servlet.config.annotation.ViewControllerRegistry;
-import org.springframework.web.servlet.config.annotation.WebMvcConfigurerAdapter;
+import org.springframework.web.servlet.config.annotation.*;
 
-import com.beta.interceptor.MyInterceptor;
+import com.beta.config.interceptor.MyInterceptor;
+/*import org.thymeleaf.spring4.SpringTemplateEngine;
+import org.thymeleaf.spring4.templateresolver.SpringResourceTemplateResolver;
+import org.thymeleaf.spring4.view.ThymeleafViewResolver;
+import org.thymeleaf.templateresolver.ITemplateResolver;*/
 
 @Configuration
+//@EnableWebMvc
+//@ComponentScan("com")
 public class MyWebMvcConfigurerAdapter extends WebMvcConfigurerAdapter{
 	/**
      * 配置静态访问资源
@@ -28,27 +31,64 @@ public class MyWebMvcConfigurerAdapter extends WebMvcConfigurerAdapter{
     @Override
     public void addViewControllers(ViewControllerRegistry registry) {
         registry.addViewController("/toLogin").setViewName("login");
-        registry.addViewController("/toHello").setViewName("hello");
-        registry.addViewController("/toupload").setViewName("uploadBase64");
-        registry.addViewController("/test").setViewName("test");
-        registry.addViewController("/echarts").setViewName("echarts");
-        registry.addViewController("/echarts2").setViewName("echarts2");
-        registry.addViewController("/echarts3").setViewName("echarts3");
-        registry.addViewController("/echarts4").setViewName("echarts4");
-        registry.addViewController("/a").setViewName("a");
         registry.addViewController("/beauty1").setViewName("beauty1");
         super.addViewControllers(registry);
     }
+
+    /*@Bean
+    public ViewResolver viewResolver() {
+        InternalResourceViewResolver resolver = new InternalResourceViewResolver();
+//            resolver.setPrefix("/WEB-INF/");
+//            resolver.setSuffix(".jsp");
+//            resolver.setViewNames("jsps/*");
+        resolver.setPrefix("/WEB-INF/");
+        resolver.setSuffix(".jsp");
+        resolver.setViewNames("jsp/*");
+        resolver.setOrder(2);
+        return resolver;
+    }
+    @Bean
+    public ITemplateResolver templateResolver() {
+        SpringResourceTemplateResolver templateResolver = new SpringResourceTemplateResolver();
+        templateResolver.setTemplateMode("HTML5");
+        templateResolver.setPrefix("/templates/");
+        templateResolver.setSuffix(".html");
+        templateResolver.setCharacterEncoding("utf-8");
+        templateResolver.setCacheable(false);
+        return templateResolver;
+    }
+    @Bean
+    public SpringTemplateEngine templateEngine() {
+        SpringTemplateEngine templateEngine = new SpringTemplateEngine();
+        templateEngine.setTemplateResolver(templateResolver());
+        // templateEngine
+        return templateEngine;
+    }
+    @Bean
+    public ThymeleafViewResolver viewResolverThymeLeaf() {
+        ThymeleafViewResolver viewResolver = new ThymeleafViewResolver();
+        viewResolver.setTemplateEngine(templateEngine());
+        viewResolver.setCharacterEncoding("utf-8");
+        viewResolver.setOrder(1);
+        //viewResolver.setViewNames(new String[]{"thyme/*"});
+        viewResolver.setViewNames(new String[]{"thymeleaf/*","vue/*"});
+        return viewResolver;
+    }
+    @Override
+    public void configureDefaultServletHandling(DefaultServletHandlerConfigurer configurer) {
+        configurer.enable();
+    }*/
+
     /**
     * 拦截器
     * @param registry
     */
-    /*@Override
+    @Override
     public void addInterceptors(InterceptorRegistry registry) {
         // addPathPatterns 用于添加拦截规则,/**拦截所有请求，但是对于the request added resource handler，不拦截；
     	//								/ 拦截除了静态资源外的所有请求；
         // excludePathPatterns 用户排除拦截String... 接受String类型的可变参数
-        registry.addInterceptor(new MyInterceptor()).addPathPatterns("/").excludePathPatterns("/toLogin","/login","/user/loginTest","/","/user/asynctest","/echarts");
+        registry.addInterceptor(new MyInterceptor()).addPathPatterns("/**").excludePathPatterns("/toLogin","/login","/user/loginTest","/","/user/asynctest","/echarts");
         super.addInterceptors(registry);
-    }*/
+    }
 }

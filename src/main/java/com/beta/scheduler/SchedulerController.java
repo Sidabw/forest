@@ -20,9 +20,10 @@ public class SchedulerController {
      * 更改现有的scheduler
      * @return
      */
-    @RequestMapping(value = "createScheduler", method = RequestMethod.POST)
+    @RequestMapping(value = "editSchduler", method = RequestMethod.POST)
     public String createScheduler(){
-
+        System.out.println("Controller In!");
+        schedulerService.schedulerJob();
         return "{\"result\":\"create scheduler success!\"}";
     }
 }

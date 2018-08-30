@@ -1,12 +1,7 @@
 package com.beta.scheduler.dao;
 
-import lombok.Getter;
-import lombok.Setter;
-
 import java.io.Serializable;
 
-@Getter
-@Setter
 public class SchedulerJob implements Serializable {
     private String userId;
 
@@ -16,5 +11,27 @@ public class SchedulerJob implements Serializable {
 
     private static final long serialVersionUID = 1L;
 
+    public String getUserId() {
+        return userId;
+    }
 
+    public void setUserId(String userId) {
+        this.userId = userId == null ? null : userId.trim();
+    }
+
+    public String getUserName() {
+        return userName;
+    }
+
+    public void setUserName(String userName) {
+        this.userName = userName == null ? null : userName.trim();
+    }
+
+    public String getUserJob() {
+        return userJob;
+    }
+
+    public void setUserJob(String userJob) {
+        this.userJob = userJob == null ? null : userJob.trim();
+    }
 }

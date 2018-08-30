@@ -8,11 +8,12 @@
 
 #Swagger使用相关
 swagger除了前后端交互使用外，在更改别人bug，定位请求方法时，也很好用
-src\main\java\com\beta\controller\ControllerSwagger.java
 
 #phantomjs相关;
 http://blinkfox.com/shi-yong-javadiao-yong-phantomjsdong-tai-dao-chu-echartstu-pian-dao-wordwen-jian-zhong/
 https://blog.csdn.net/tengdazhang770960436/article/details/41348035
+springboot 结合 mybatis 报错，多半是xml 不在target目录下，现通过在properties中
+加入mapping/*.xml，把xml移到resource/mapping下解决
 
 #aop环绕通知相关
 通过@pointcut("...")设置切面，该切面的名称就是方法名，余下注解都可通过指定方法名来指定切面。
@@ -28,6 +29,9 @@ https://blog.csdn.net/tengdazhang770960436/article/details/41348035
 logging.level.com.beta.mybatis.mapper=trace
 
 #quartz corn 表达式    ->  blog:   https://www.cnblogs.com/lazyInsects/p/8075487.html
-#quartz 实现：log
+#quartz 实现：项目启动读数据库注册定时任务，请求editScheduler更改定时规则。
 
 #mail 相关实现      ->  blog:https://www.cnblogs.com/xdp-gacl/p/4216311.html
+
+#springboot 在实现jsp和thyemleaf双模板引擎上太麻烦，各种问题，最终解决方案是使用jsp，
+#全局异常处理废弃，使用interceptor拦截500/404错误，并return到errorPage.jsp页面

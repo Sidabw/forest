@@ -9,7 +9,9 @@
 <meta name="description" content="此代码内容为超萌的猫头鹰登录界面" />
 <title>超萌的猫头鹰登录界面</title>
 
-<link rel="stylesheet" href="../../css/jq22.css"  th:href="@{/css/jq22.css}"  />
+<%--<link rel="stylesheet" href="/static/css/jq22.css"  th:href="@{/css/jq22.css}"  />/>--%>
+<link rel="stylesheet" href="../../login-resources/css/jq22.css"  th:href="@{/css/jq22.css}"  />
+    <%--<a href="../../abc.png">aa</a>--%>
 </head>
 <body>
 <!-- begin -->
@@ -46,7 +48,8 @@
             </form>
         </div>
     </div>
-    <script src="../../js/jquery.min.js" th:src="@{/js/jquery.min.js}"></script>
+    <input id="secId" type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}"/>
+    <script src="../../login-resources/js/jquery.min.js" th:src="@{/js/jquery.min.js}"></script>
     <script>
     $(function() {
         $('#login #password').focus(function() {
@@ -57,20 +60,21 @@
 
         //简单登录操作
         $("#doLogin").click(function (e) {
-        	/* var username=$("#userName").val();
-        	alert($.trim(username).length==0); */
-        	
+        	var secValue=$("#secId").val();
+
              $.ajax({
                 type : "POST",
                 url : "/user/loginTest",
                 data : {
                     "userName" : $("#userName").val(),
-                    "password" : $("#password").val()
+                    "password" : $("#password").val(),
+                    "_csrf" : secValue
                 },
                 dataType : "json",
                 success : function(data) {
                     if (data.result == "1") {
-                        window.location.href ="/user/dataList";
+                        //window.location.href ="/user/dataList";
+                        window.location.href ="/beauty1";
                     } else {
                         alert("账号密码不能为空！");
                     }

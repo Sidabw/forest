@@ -39,7 +39,11 @@
             <!--/.navbar-header-->
             <div id="main-nav" class="collapse navbar-collapse">
                 <ul class="nav navbar-nav" id="mainNav">
-                    <li class="active" id="firstLink"><a href="#home" class="scroll-link">Home</a></li>
+                    <li class="active" id="firstLink"><a href="#home" class="scroll-link">Home</a>
+                </ul>
+                <ul class="nav navbar-nav" id="mainNav1">
+                    <li class="active" id="firstLink1">
+                        <a href = "/logout"> 注销 </a>
                 </ul>
             </div>
             <!--/.navbar-collapse-->
@@ -109,10 +113,12 @@
             <!-- end: -->
 
             <!-- item -->
-            <div class="col-md-3 text-center"><i class="circle"> <img src="/beautyTemplate1/images/4.png" alt="" onclick="createSchduler()"/></i>
+            <div class="col-md-3 text-center"><i class="circle"> <img src="/beautyTemplate1/images/4.png" alt="" onclick="editSchduler()"/></i>
                 <h3>Scheduler Creater</h3>
                 <p>Create your scheduler and check out your email in half of minuter. Let's begin a journey.</p>
             </div>
+
+
             <!-- end:-->
         </div>
     </div>
@@ -124,28 +130,50 @@
     <p1>The People's Repulic of China was born in 1949...</p1>--%>
     <div style="width: 100%; height: 100%; background-color: #D22F2F"></div>
 </section>
-
+<input id="secId" type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}"/>
 <script src="/beautyTemplate1/js/modernizr-latest.js"></script>
 <script src="/beautyTemplate1/js/jquery-1.8.2.min.js"></script>
 <%--<script src="/js/jquery.min.js"></script>--%>
 <script>
 
-    function  createSchduler() {
+    function  editSchduler() {
+        var secValue = $("#secId").val();
+        alert(secValue);
         alert(1);
         $.ajax({
             type: "POST",
-            url: "/scheduler/createScheduler",
+            url: "/scheduler/editSchduler",
             data: {
+                "_csrf" : secValue
             },
-            /*dataType: "json",*/
+           /* dataType: "json",*/
             success: function (data) {
-
                 alert(data);
                 if (data.result == "1") {
                     window.location.href = "/user/dataList";
                 } else {
                     alert("账号密码不能为空！");
                 }
+            }
+        })
+    }
+
+    function  logout() {
+        alert(2);
+        $.ajax({
+            type: "GET",
+            url: "/logout",
+            data: {
+            },
+            /*dataType: "json",*/
+            success: function (data) {
+
+               /* alert(data);
+                if (data.result == "1") {
+                    window.location.href = "/user/dataList";
+                } else {
+                    alert("账号密码不能为空！");
+                }*/
             }
         })
     }

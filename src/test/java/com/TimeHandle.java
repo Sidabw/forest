@@ -15,10 +15,10 @@ public class TimeHandle {
 		System.out.println(format);
 		System.out.println(format2);*/
 		Calendar cal = Calendar.getInstance();
-		cal.add(Calendar.DAY_OF_MONTH,-31);
+		cal.add(Calendar.DAY_OF_MONTH,-1);
 		String yesterday = new SimpleDateFormat( "yyyy年MM月dd日HH时mm分ss秒").format(cal.getTime());
 		cal = Calendar.getInstance();
-		cal.add(Calendar.DAY_OF_MONTH,-182);
+		cal.add(Calendar.DAY_OF_MONTH,0);
 		String today = new SimpleDateFormat("yyyy年MM月dd日HH时mm分ss秒").format(cal.getTime());
 		cal = Calendar.getInstance();
 		cal.add(Calendar.YEAR, -1);
@@ -38,6 +38,11 @@ public class TimeHandle {
 		Date parse = new SimpleDateFormat("yyyy.MM.dd HH:mm:ss").parse("2018.07.03 23:59:00");
 		System.out.println(new SimpleDateFormat("yyyy.MM.dd HH:mm:ss").format(parse));
 		//System.out.println(parse.getTime());2018.07.03 23:59:00
-		
+
+		Calendar instance = Calendar.getInstance();
+		instance.add(Calendar.DAY_OF_MONTH, +2);
+		String aftertTomorrow = new SimpleDateFormat("yyyy年MM月dd日").format(instance.getTime());
+		String result = aftertTomorrow + " 00时00分00秒";
+		System.out.println(result);
 	}
 }
