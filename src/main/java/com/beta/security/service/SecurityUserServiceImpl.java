@@ -1,3 +1,4 @@
+/*
 package com.beta.security.service;
 
 import com.beta.security.dao.User;
@@ -10,9 +11,11 @@ import org.springframework.stereotype.Service;
 
 import java.util.List;
 
+*/
 /***
  *  Created by shao.guangze on 2018/8/21
- */
+ *//*
+
 @Service("springss")
 public class SecurityUserServiceImpl implements ISecurityUserService {
 
@@ -40,3 +43,4 @@ public class SecurityUserServiceImpl implements ISecurityUserService {
         return users.get(0);
     }
 }
+*/

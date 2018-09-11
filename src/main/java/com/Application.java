@@ -6,8 +6,8 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.builder.SpringApplicationBuilder;
 import org.springframework.boot.web.support.SpringBootServletInitializer;
 import org.springframework.scheduling.annotation.EnableAsync;
-import org.springframework.security.core.context.SecurityContextHolder;
-import org.springframework.security.core.userdetails.UserDetails;
+//import org.springframework.security.core.context.SecurityContextHolder;
+//import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
@@ -28,11 +28,11 @@ public class Application extends SpringBootServletInitializer{
 	@ResponseBody
 	public String greeting(){
 		//spring security 相关
-		UserDetails userDetails = (UserDetails) SecurityContextHolder.getContext()
+		/*UserDetails userDetails = (UserDetails) SecurityContextHolder.getContext()
 				.getAuthentication()
 				.getPrincipal();
 		System.out.println("到/ 这里来了" + userDetails.getUsername());
-		System.out.println(userDetails.getAuthorities());
+		System.out.println(userDetails.getAuthorities());*/
 
 		return "Hello SpringBoot"+"------";
 	}

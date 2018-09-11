@@ -1,3 +1,4 @@
+/*
 package com.beta.security.config;
 
 import com.beta.security.service.ISecurityUserService;
@@ -8,11 +9,13 @@ import org.springframework.security.config.annotation.web.builders.HttpSecurity;
 import org.springframework.security.config.annotation.web.configuration.EnableWebSecurity;
 import org.springframework.security.config.annotation.web.configuration.WebSecurityConfigurerAdapter;
 
+*/
 /***
  *  Created by shao.guangze on 2018/8/21
- */
-@Configuration
-@EnableWebSecurity
+ *//*
+
+//@Configuration
+//@EnableWebSecurity
 public class SecurityConfig extends WebSecurityConfigurerAdapter {
 
     @Autowired
@@ -50,3 +53,4 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
         //auth.userDetailsService(springss);
     }
 }
+*/

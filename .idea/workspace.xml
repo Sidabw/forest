@@ -2,84 +2,46 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="832dbe0f-6f14-40d0-8a74-ff9e8dcb6d88" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/beta/config/ViewResolverConfiguration.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/beta/scheduler/config/QuarzConfiguration.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/beta/scheduler/task/ScheduleTask.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/beta/security/config/LoginAuthenticationProvider.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/beta/security/config/SecurityConfig.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/beta/security/config/SecurityWebInitializer.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/beta/security/controller/AdminController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/beta/security/controller/SecurityController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/beta/security/controller/UserController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/beta/security/service/ISecurityUserService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/beta/security/service/SecurityUserServiceImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/errorPage.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/securityLogin.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/handsome_guy.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/com/poi/test/HeaderFooterTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/com/streamAndAll/README.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/com/streamAndAll/sysLearning/function/Demo.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/com/streamAndAll/sysLearning/interfaceDemo/MyActionClass.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/com/streamAndAll/sysLearning/interfaceDemo/MyActionInterface.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/com/streamAndAll/sysLearning/lambda/Demo.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/com/streamAndAll/sysLearning/optional/Demo.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/com/streamAndAll/sysLearning/pojo/User.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/com/streamAndAll/usualUse/UsualUse.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/artifacts/springboot_war_exploded.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/artifacts/springboot_war_exploded.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__aopalliance_aopalliance_1_0.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_security_spring_security_config_4_2_2_RELEASE.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_security_spring_security_core_4_2_2_RELEASE.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_security_spring_security_web_4_2_2_RELEASE.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/12.png" beforeDir="false" afterPath="$PROJECT_DIR$/12.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/springboot.iml" beforeDir="false" afterPath="$PROJECT_DIR$/springboot.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/Application.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/Application.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/beta/ControllerMy.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/beta/basic/controller/ControllerMy.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/beta/annotation/EnableRedis.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/beta/basic/annotation/EnableRedis.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/beta/aop/AspectTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/beta/config/aop/AspectTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/beta/config/MyWebMvcConfigurerAdapter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/beta/config/MyWebMvcConfigurerAdapter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/beta/controller/ControllerTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/beta/basic/controller/ControllerTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/beta/exception/ErrorInfo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/beta/config/exception/ErrorInfo.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/beta/exception/ExceptionController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/beta/config/exception/ExceptionController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/beta/exception/GlobalExceptionHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/beta/config/exception/GlobalExceptionHandler.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/beta/exception/MyException.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/beta/config/exception/MyException.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/beta/interceptor/MyInterceptor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/beta/config/interceptor/MyInterceptor.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/beta/jwt/LoginCtroller.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/beta/jwt/LoginCtroller.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/beta/mail/demo/SendHtmlMailDemo.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/beta/mail/demo/SendHtmlMailDemo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/demo/SendHtmlMailDemo.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/beta/mail/demo/SendMailDemo.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/beta/mail/demo/SendMailDemo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/demo/SendMailDemo.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/beta/mybatis/cache/MybatisRedisCache.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/beta/basic/mybatis/cache/MybatisRedisCache.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/beta/mybatis/mapper/TbUser.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/beta/basic/mybatis/mapper/TbUser.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/beta/mybatis/mapper/TbUserExample.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/beta/basic/mybatis/mapper/TbUserExample.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/beta/mybatis/mapper/TbUserMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/beta/basic/mybatis/mapper/TbUserMapper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/beta/mybatis/mapper/TbUserMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/mapping/TbUserMapper.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/beta/phantom/PhantomController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/beta/phantom/PhantomController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/beta/pojo/LoginUser.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/beta/basic/pojo/LoginUser.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/beta/pojo/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/beta/basic/pojo/User.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/beta/scheduler/Iservice/ISchedulerService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/beta/scheduler/Iservice/ISchedulerService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/beta/scheduler/IserviceImpl/SchedulerServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/beta/scheduler/IserviceImpl/SchedulerServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/beta/scheduler/SchedulerController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/beta/scheduler/SchedulerController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/beta/scheduler/dao/SchedulerJob.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/beta/scheduler/dao/SchedulerJob.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/beta/service/AsyncTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/beta/basic/service/AsyncTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/beta/service/AsyncTestImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/beta/basic/service/AsyncTestImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/beta/service/IUserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/beta/basic/service/IUserService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/beta/service/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/beta/basic/service/UserService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/beta/swgger/controller/ControllerSwagger.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/beta/basic/controller/controller/ControllerSwagger.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/beta/util/AjaxObject.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/beta/basic/util/AjaxObject.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/beta/util/PhantomjsFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/beta/basic/util/PhantomjsFactory.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/beta/util/RedisUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/beta/basic/util/RedisUtil.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/beta/util/SerializeUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/beta/basic/util/SerializeUtil.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/generator/generator.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/generator/generator.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/beauty1.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/beauty1.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/login.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/login.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/TimeHandle.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/TimeHandle.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/beta/test/SpringTestt.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/beta/test/SpringTestt.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/io/test/Demo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/io/test/Demo.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/phantom/test/DemoTemp.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/phantom/test/DemoTemp.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/beta/security/config/LoginAuthenticationProvider.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/beta/security/config/LoginAuthenticationProvider.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/beta/security/config/SecurityConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/beta/security/config/SecurityConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/beta/security/config/SecurityWebInitializer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/beta/security/config/SecurityWebInitializer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/beta/security/controller/SecurityController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/beta/security/controller/SecurityController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/beta/security/dao/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/beta/security/dao/User.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/beta/security/service/ISecurityUserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/beta/security/service/ISecurityUserService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/beta/security/service/SecurityUserServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/beta/security/service/SecurityUserServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/test.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/test.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/sort/Demo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/sort/Demo.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/Application.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/Application.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/beta/config/MyWebMvcConfigurerAdapter.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/beta/config/MyWebMvcConfigurerAdapter.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/beta/interceptor/MyInterceptor.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/beta/interceptor/MyInterceptor.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/beta/mail/demo/SendMailDemo.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/beta/mail/demo/SendMailDemo.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/beta/scheduler/Iservice/ISchedulerService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/beta/scheduler/Iservice/ISchedulerService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/beta/scheduler/IserviceImpl/SchedulerServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/beta/scheduler/IserviceImpl/SchedulerServiceImpl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/beta/scheduler/SchedulerController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/beta/scheduler/SchedulerController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/beta/scheduler/dao/SchedulerJob.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/beta/scheduler/dao/SchedulerJob.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/generator/generator.properties" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/generator/generator.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/com/TimeHandle.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/com/TimeHandle.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/com/io/test/Demo.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/com/io/test/Demo.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/com/phantom/test/DemoTemp.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/com/phantom/test/DemoTemp.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/beta/security/config/LoginAuthenticationProvider.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/beta/security/config/SecurityConfig.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/beta/security/config/SecurityWebInitializer.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/beta/security/controller/SecurityController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/beta/security/dao/User.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/beta/security/dao/User.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/beta/security/service/ISecurityUserService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/beta/security/service/ISecurityUserService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/beta/security/service/SecurityUserServiceImpl.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/com/sort/Demo$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/com/sort/Demo$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/com/sort/Demo.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/com/sort/Demo.class" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -94,94 +56,95 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="MyWebMvcConfigurerAdapter.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/beta/config/MyWebMvcConfigurerAdapter.java">
+      <file leaf-file-name="Demo.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/test/java/com/sort/Demo.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="357">
-              <caret line="29" column="7" lean-forward="true" selection-start-line="29" selection-start-column="7" selection-end-line="29" selection-end-column="7" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
+            <state relative-caret-position="1155">
+              <caret line="61" selection-start-line="61" selection-end-line="61" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="SecurityConfig.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/beta/security/config/SecurityConfig.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="202">
-              <caret line="40" column="63" selection-start-line="40" selection-start-column="63" selection-end-line="40" selection-end-column="63" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ControllerSwagger.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/beta/basic/controller/controller/ControllerSwagger.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="105">
-              <caret line="13" column="29" selection-start-line="13" selection-start-column="18" selection-end-line="13" selection-end-column="29" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ControllerMy.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/beta/basic/controller/ControllerMy.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="364">
-              <caret line="67" column="34" lean-forward="true" selection-start-line="67" selection-start-column="34" selection-end-line="67" selection-end-column="34" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="AspectTest.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/beta/config/aop/AspectTest.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-434">
-              <caret line="27" column="45" selection-start-line="27" selection-start-column="45" selection-end-line="27" selection-end-column="45" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="pom.xml" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/pom.xml">
+      <file leaf-file-name="UsualUse.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/test/java/com/streamAndAll/usualUse/UsualUse.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="147">
-              <caret line="160" column="47" lean-forward="true" selection-start-line="160" selection-start-column="47" selection-end-line="160" selection-end-column="47" />
+              <caret line="7" lean-forward="true" selection-start-line="7" selection-end-line="7" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="MyInterceptor.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/beta/config/interceptor/MyInterceptor.java">
+      <file leaf-file-name="Demo.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/test/java/com/streamAndAll/sysLearning/lambda/Demo.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="378">
-              <caret line="22" selection-start-line="22" selection-end-line="22" />
+            <state relative-caret-position="1428">
+              <caret line="68" column="48" selection-start-line="68" selection-start-column="48" selection-end-line="68" selection-end-column="48" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="login.jsp" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/login.jsp">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="175">
-              <caret line="67" column="24" lean-forward="true" selection-start-line="67" selection-start-column="24" selection-end-line="67" selection-end-column="24" />
+      <file leaf-file-name="README.md" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/test/java/com/streamAndAll/README.md">
+          <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+            <state split_layout="SPLIT">
+              <first_editor relative-caret-position="147">
+                <caret line="7" column="57" selection-start-line="7" selection-start-column="57" selection-end-line="7" selection-end-column="57" />
+              </first_editor>
+              <second_editor />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="securityLogin.jsp" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/securityLogin.jsp">
-          <provider selected="true" editor-type-id="text-editor" />
+      <file leaf-file-name="Demo.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/test/java/com/streamAndAll/sysLearning/optional/Demo.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="336">
+              <caret line="22" column="56" selection-start-line="22" selection-start-column="56" selection-end-line="22" selection-end-column="56" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
         </entry>
       </file>
-      <file leaf-file-name="beauty1.jsp" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/beauty1.jsp">
+      <file leaf-file-name="Demo.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/test/java/com/streamAndAll/sysLearning/function/Demo.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="217">
-              <caret line="163" column="24" lean-forward="true" selection-start-line="163" selection-start-column="24" selection-end-line="163" selection-end-column="24" />
+            <state relative-caret-position="315">
+              <caret line="22" column="37" selection-start-line="22" selection-start-column="37" selection-end-line="22" selection-end-column="37" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="User.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/test/java/com/streamAndAll/sysLearning/pojo/User.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="252">
+              <caret line="24" column="11" selection-start-line="24" selection-start-column="11" selection-end-line="24" selection-end-column="11" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="MyActionClass.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/test/java/com/streamAndAll/sysLearning/interfaceDemo/MyActionClass.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="252">
+              <caret line="14" column="44" selection-start-line="14" selection-start-column="44" selection-end-line="14" selection-end-column="44" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="MyActionInterface.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/test/java/com/streamAndAll/sysLearning/interfaceDemo/MyActionInterface.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="126">
+              <caret line="6" column="37" selection-start-line="6" selection-start-column="37" selection-end-line="6" selection-end-column="37" />
             </state>
           </provider>
         </entry>
@@ -192,8 +155,8 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Interface" />
-        <option value="Class" />
         <option value="Jsp File" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -225,6 +188,9 @@
       <find>注销</find>
       <find>Email</find>
       <find>font</find>
+      <find>poi</find>
+      <find>SEC</find>
+      <find>list.stream()</find>
     </findStrings>
     <replaceStrings>
       <replace>href=&quot;/beautyTemplate1/</replace>
@@ -237,16 +203,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/main/java/com/beta/util/RedisUtil.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/beta/exception/ExceptionController.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/beta/mybatis/mapper/TbUserMapper.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/beta/mybatis/mapper/TbUserMapper.xml" />
-        <option value="$PROJECT_DIR$/src/test/java/com/quartz/HelloQuartz.java" />
-        <option value="$PROJECT_DIR$/src/test/java/com/stringtetst/test/Demo.java" />
-        <option value="$PROJECT_DIR$/src/test/java/com/quartz/Demo.java" />
-        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/index.jsp" />
-        <option value="$PROJECT_DIR$/src/main/resources/generator/mybatis-generator.xml" />
-        <option value="$PROJECT_DIR$/src/main/java/com/beta/scheduler/dao/SchedulerJob.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/beta/mail/demo/Demo.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/beta/mail/demo/SendHtmlMailDemo.java" />
         <option value="$PROJECT_DIR$/src/test/java/com/io/test/Demo.java" />
@@ -254,40 +210,50 @@
         <option value="$PROJECT_DIR$/src/main/java/com/beta/scheduler/IserviceImpl/SchedulerServiceImpl.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/beta/scheduler/task/ScheduleTask.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/beta/scheduler/config/QuarzConfiguration.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/beta/security/config/SecurityWebInitializer.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/beta/security/SecurityConfig.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/beta/security/service/IUserService.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/beta/security/dao/User.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/beta/security/service/UserServiceImpl.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/beta/security/service/ISecurityUserService.java" />
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/securityLogin.jsp" />
         <option value="$PROJECT_DIR$/src/main/java/com/beta/security/config/MyAuthenticationProvider.java" />
         <option value="$PROJECT_DIR$/src/main/resources/generator/generator.properties" />
-        <option value="$PROJECT_DIR$/src/main/java/com/beta/security/service/SecurityUserServiceImpl.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/beta/security/config/LoginAuthenticationProvider.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/beta/security/controller/UserController.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/beta/security/controller/AdminController.java" />
         <option value="$PROJECT_DIR$/src/test/java/com/TimeHandle.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/beta/mail/demo/SendMailDemo.java" />
         <option value="$PROJECT_DIR$/src/test/java/com/phantom/test/DemoTemp.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/beta/scheduler/SchedulerController.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/Application.java" />
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/beauty1.jsp" />
         <option value="$PROJECT_DIR$/src/main/java/com/beta/ControllerMy.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/beta/config/ViewResolverConfiguration.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/beta/exception/GlobalExceptionHandler.java" />
         <option value="$PROJECT_DIR$/src/main/resources/application.properties" />
-        <option value="$PROJECT_DIR$/pom.xml" />
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/error.jsp" />
         <option value="$PROJECT_DIR$/src/main/java/com/beta/interceptor/MyInterceptor.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/beta/config/MyWebMvcConfigurerAdapter.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/beta/config/aop/AspectTest.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/beta/basic/controller/ControllerTest.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/beta/basic/annotation/EnableRedis.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/README.md" />
-        <option value="$PROJECT_DIR$/src/main/java/com/beta/security/controller/SecurityController.java" />
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/login.jsp" />
+        <option value="$PROJECT_DIR$/src/test/java/com/poi/test/HeaderFooterTest.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/beta/config/MyWebMvcConfigurerAdapter.java" />
+        <option value="$PROJECT_DIR$/pom.xml" />
+        <option value="$PROJECT_DIR$/src/main/java/com/beta/security/service/ISecurityUserService.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/Application.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/beta/security/dao/User.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/beta/security/config/LoginAuthenticationProvider.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/beta/security/config/SecurityConfig.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/beta/security/config/SecurityWebInitializer.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/beta/security/controller/SecurityController.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/beta/security/service/SecurityUserServiceImpl.java" />
+        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/test.jsp" />
+        <option value="$PROJECT_DIR$/src/test/java/com/streamAndAll/sysLearning/optional/Demo.java" />
+        <option value="$PROJECT_DIR$/src/test/java/com/streamAndAll/sysLearning/function/Demo.java" />
+        <option value="$PROJECT_DIR$/src/test/java/com/sort/Demo.java" />
+        <option value="$PROJECT_DIR$/src/test/java/com/streamAndAll/sysLearning/demooo/MyActionClass.java" />
+        <option value="$PROJECT_DIR$/src/test/java/com/streamAndAll/sysLearning/demooo/App.java" />
+        <option value="$PROJECT_DIR$/src/test/java/com/streamAndAll/sysLearning/lambda/Demo.java" />
+        <option value="$PROJECT_DIR$/src/test/java/com/streamAndAll/usualUse/UsualUse.java" />
+        <option value="$PROJECT_DIR$/src/test/java/com/streamAndAll/README.md" />
       </list>
     </option>
   </component>
@@ -319,11 +285,11 @@
   <component name="NodePackageJsonFileManager">
     <packageJsonPaths />
   </component>
-  <component name="ProjectFrameBounds" extendedState="7">
+  <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="-8" />
     <option name="y" value="-8" />
     <option name="width" value="1382" />
-    <option name="height" value="784" />
+    <option name="height" value="744" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -331,7 +297,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -339,12 +304,74 @@
               <item name="forest" type="b2602c69:ProjectViewProjectNode" />
               <item name="forest" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="forest" type="b2602c69:ProjectViewProjectNode" />
+              <item name="forest" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="forest" type="b2602c69:ProjectViewProjectNode" />
+              <item name="forest" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="forest" type="b2602c69:ProjectViewProjectNode" />
+              <item name="forest" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="test" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="forest" type="b2602c69:ProjectViewProjectNode" />
+              <item name="forest" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="test" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="forest" type="b2602c69:ProjectViewProjectNode" />
+              <item name="forest" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="test" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="com" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="forest" type="b2602c69:ProjectViewProjectNode" />
+              <item name="forest" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="test" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="com" type="462c0819:PsiDirectoryNode" />
+              <item name="streamAndAll" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="forest" type="b2602c69:ProjectViewProjectNode" />
+              <item name="forest" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="test" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="com" type="462c0819:PsiDirectoryNode" />
+              <item name="streamAndAll" type="462c0819:PsiDirectoryNode" />
+              <item name="sysLearning" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="forest" type="b2602c69:ProjectViewProjectNode" />
+              <item name="forest" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="test" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="com" type="462c0819:PsiDirectoryNode" />
+              <item name="streamAndAll" type="462c0819:PsiDirectoryNode" />
+              <item name="usualUse" type="462c0819:PsiDirectoryNode" />
+            </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
       <pane id="AndroidView" />
+      <pane id="Scope" />
+      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -357,10 +384,11 @@
     <property name="SearchEverywhereHistoryKey" value="ISecurityUserService&#9;FILE&#9;file://E:/workspaces/JavaHighClass/forest/src/main/java/com/beta/security/service/ISecurityUserService.java&#10;loginTest&#9;null&#9;null" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
+    <property name="ignore_missing_gitignore" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
-    <property name="project.structure.last.edited" value="Modules" />
+    <property name="project.structure.last.edited" value="SDKs" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
     <property name="settings.editor.selected.configurable" value="settings.github" />
@@ -377,11 +405,11 @@
       <recent name="E:\workspaces\JavaHighClass\springbootPOI\src\main\java\com\beta\util" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="E:\workspaces\JavaHighClass\forest\src\test\java\com\streamAndAll\sysLearning" />
+      <recent name="E:\workspaces\JavaHighClass\forest\src\test\java\com\streamAndAll" />
+      <recent name="E:\workspaces\JavaHighClass\forest\src\test\java\com\streamAndAll\sysLearning\pojo" />
+      <recent name="E:\workspaces\JavaHighClass\forest" />
       <recent name="E:\workspaces\JavaHighClass\forest\src\main\resources\static\login-resources" />
-      <recent name="E:\workspaces\JavaHighClass\forest\src\main\resources\static\js" />
-      <recent name="E:\workspaces\JavaHighClass\forest\src\main\resources\static" />
-      <recent name="E:\workspaces\JavaHighClass\forest\src\main\resources\static\loginpage\js" />
-      <recent name="E:\workspaces\JavaHighClass\forest\src\main\resources\static\loginpage" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -396,18 +424,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Spring Boot.Application">
-    <configuration name="Demo (1)" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.io.test.Demo" />
-      <module name="springboot" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.io.test.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-    </configuration>
+  <component name="RunManager" selected="Application.UsualUse">
     <configuration name="DemoTemp" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.phantom.test.DemoTemp" />
       <module name="springboot" />
@@ -419,13 +436,24 @@
         </pattern>
       </extension>
     </configuration>
-    <configuration name="SendHtmlMailDemo" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.demo.SendHtmlMailDemo" />
+    <configuration name="HeaderFooterTest" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.poi.test.HeaderFooterTest" />
       <module name="springboot" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.demo.*" />
+          <option name="PATTERN" value="com.poi.test.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+    </configuration>
+    <configuration name="MyActionClass" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.streamAndAll.sysLearning.interfaceDemo.MyActionClass" />
+      <module name="springboot" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.streamAndAll.sysLearning.interfaceDemo.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -441,13 +469,13 @@
         </pattern>
       </extension>
     </configuration>
-    <configuration name="TimeHandle" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.TimeHandle" />
+    <configuration name="UsualUse" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.streamAndAll.usualUse.UsualUse" />
       <module name="springboot" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.*" />
+          <option name="PATTERN" value="com.streamAndAll.usualUse.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -525,18 +553,18 @@
       <item itemvalue="Maven.clean" />
       <item itemvalue="Spring Boot.Application" />
       <item itemvalue="Application.SendMailDemo" />
-      <item itemvalue="Application.SendHtmlMailDemo" />
-      <item itemvalue="Application.TimeHandle" />
-      <item itemvalue="Application.Demo (1)" />
       <item itemvalue="Application.DemoTemp" />
+      <item itemvalue="Application.HeaderFooterTest" />
+      <item itemvalue="Application.MyActionClass" />
+      <item itemvalue="Application.UsualUse" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.UsualUse" />
+        <item itemvalue="Application.MyActionClass" />
+        <item itemvalue="Application.HeaderFooterTest" />
         <item itemvalue="Application.DemoTemp" />
         <item itemvalue="Application.SendMailDemo" />
-        <item itemvalue="Application.TimeHandle" />
-        <item itemvalue="Application.Demo (1)" />
-        <item itemvalue="Application.SendHtmlMailDemo" />
       </list>
     </recent_temporary>
   </component>
@@ -572,12 +600,20 @@
       <workItem from="1535103065315" duration="131000" />
       <workItem from="1535364774155" duration="551000" />
       <workItem from="1535427060687" duration="18681000" />
-      <workItem from="1535524065368" duration="14302000" />
+      <workItem from="1535524065368" duration="14456000" />
+      <workItem from="1535594063317" duration="66000" />
+      <workItem from="1535599074456" duration="3751000" />
+      <workItem from="1535639473269" duration="917000" />
+      <workItem from="1535957557382" duration="35000" />
+      <workItem from="1536200946813" duration="2360000" />
+      <workItem from="1536551903713" duration="885000" />
+      <workItem from="1536572405808" duration="6310000" />
+      <workItem from="1536629104399" duration="443000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="187865000" />
+    <option name="totallyTimeSpent" value="202786000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -589,10 +625,10 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1382" height="744" extended-state="7" />
+    <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
     <layout>
       <window_info anchor="right" id="Palette" order="6" />
-      <window_info active="true" anchor="bottom" id="Event Log" order="9" sideWeight="0.5015129" side_tool="true" visible="true" weight="0.2685026" />
+      <window_info anchor="bottom" id="Event Log" order="9" sideWeight="0.5015129" side_tool="true" weight="0.2685026" />
       <window_info anchor="right" id="Maven Projects" order="0" weight="0.22314675" />
       <window_info anchor="bottom" id="Database Changes" order="5" show_stripe_button="false" />
       <window_info id="Capture Tool" order="7" />
@@ -601,29 +637,63 @@
       <window_info id="Structure" order="6" sideWeight="0.36894825" side_tool="true" weight="0.17643923" />
       <window_info anchor="right" id="Ant Build" order="8" weight="0.25" />
       <window_info id="UI Designer" order="2" />
-      <window_info anchor="bottom" id="Debug" order="0" sideWeight="0.49848714" visible="true" weight="0.2685026" />
+      <window_info anchor="bottom" id="Debug" order="0" sideWeight="0.49848714" weight="0.2685026" />
       <window_info anchor="bottom" id="TODO" order="13" sideWeight="0.49946696" weight="0.32997763" />
-      <window_info anchor="bottom" id="Messages" order="3" weight="0.32702237" />
       <window_info anchor="right" id="Palette&#9;" order="3" />
       <window_info id="Image Layers" order="1" />
       <window_info anchor="bottom" id="Java Enterprise" order="4" weight="0.32997763" />
       <window_info anchor="right" id="Capture Analysis" order="1" />
-      <window_info anchor="bottom" id="Version Control" order="6" weight="0.3605823" />
-      <window_info anchor="bottom" id="Run" order="10" weight="0.387458" />
+      <window_info anchor="bottom" id="Version Control" order="6" visible="true" weight="0.20654045" />
+      <window_info anchor="bottom" id="Run" order="10" weight="0.29432014" />
       <window_info anchor="bottom" id="Spring" order="1" sideWeight="0.49946696" weight="0.32997763" />
       <window_info anchor="bottom" id="Terminal" order="2" weight="0.32922733" />
-      <window_info content_ui="combo" id="Project" order="5" sideWeight="0.55637705" visible="true" weight="0.2549168" />
+      <window_info active="true" content_ui="combo" id="Project" order="5" sideWeight="0.55637705" visible="true" weight="0.30332828" />
       <window_info anchor="right" id="Bean Validation" order="5" />
       <window_info id="Web" order="4" side_tool="true" />
-      <window_info anchor="bottom" id="Find" order="8" weight="0.32922733" />
       <window_info anchor="right" id="Theme Preview" order="4" />
       <window_info id="Favorites" order="3" sideWeight="0.44362292" side_tool="true" weight="0.17963752" />
+      <window_info anchor="bottom" id="Messages" order="3" weight="0.20716685" />
       <window_info anchor="bottom" id="Inspection" order="12" weight="0.4" />
       <window_info anchor="right" id="Commander" order="7" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="11" weight="0.25" />
       <window_info anchor="bottom" id="Message" order="7" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="9" weight="0.25" />
+      <window_info anchor="bottom" id="Find" order="8" weight="0.32922733" />
     </layout>
+    <layout-to-restore>
+      <window_info id="Designer" order="0" />
+      <window_info anchor="right" id="Palette" order="6" />
+      <window_info anchor="bottom" id="Spring" order="1" sideWeight="0.49946696" weight="0.32997763" />
+      <window_info id="Image Layers" order="1" />
+      <window_info active="true" anchor="bottom" id="Run" order="10" visible="true" weight="0.4492255" />
+      <window_info anchor="bottom" id="Cvs" order="11" weight="0.25" />
+      <window_info anchor="right" id="Ant Build" order="8" weight="0.25" />
+      <window_info id="UI Designer" order="2" />
+      <window_info id="Favorites" order="3" sideWeight="0.44362292" side_tool="true" weight="0.17963752" />
+      <window_info anchor="bottom" id="Terminal" order="2" weight="0.32922733" />
+      <window_info id="Capture Tool" order="7" />
+      <window_info anchor="right" id="Capture Analysis" order="1" />
+      <window_info anchor="right" id="Commander" order="7" weight="0.4" />
+      <window_info anchor="bottom" id="Event Log" order="9" sideWeight="0.5015129" side_tool="true" weight="0.2685026" />
+      <window_info anchor="bottom" id="Messages" order="3" weight="0.20716685" />
+      <window_info anchor="bottom" id="TODO" order="13" sideWeight="0.49946696" weight="0.32997763" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="9" weight="0.25" />
+      <window_info anchor="bottom" id="Java Enterprise" order="4" weight="0.32997763" />
+      <window_info anchor="bottom" id="Database Changes" order="5" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Version Control" order="6" weight="0.20693512" />
+      <window_info anchor="right" id="Maven Projects" order="0" weight="0.22314675" />
+      <window_info content_ui="combo" id="Project" order="5" sideWeight="0.55637705" visible="true" weight="0.22768533" />
+      <window_info anchor="right" id="Database" order="2" />
+      <window_info anchor="bottom" id="Message" order="7" />
+      <window_info id="Web" order="4" side_tool="true" />
+      <window_info anchor="right" id="Palette&#9;" order="3" />
+      <window_info anchor="right" id="Theme Preview" order="4" />
+      <window_info id="Structure" order="6" sideWeight="0.36894825" side_tool="true" weight="0.17643923" />
+      <window_info anchor="bottom" id="Inspection" order="12" weight="0.4" />
+      <window_info anchor="bottom" id="Find" order="8" weight="0.32922733" />
+      <window_info anchor="right" id="Bean Validation" order="5" />
+      <window_info anchor="bottom" id="Debug" order="0" sideWeight="0.49848714" weight="0.2685026" />
+    </layout-to-restore>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
@@ -674,13 +744,13 @@
         </line-breakpoint>
         <line-breakpoint type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/com/beta/security/service/SecurityUserServiceImpl.java</url>
-          <line>33</line>
+          <line>36</line>
           <properties />
           <option name="timeStamp" value="19" />
         </line-breakpoint>
         <line-breakpoint type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/com/beta/security/controller/SecurityController.java</url>
-          <line>38</line>
+          <line>41</line>
           <properties />
           <option name="timeStamp" value="22" />
         </line-breakpoint>
@@ -716,154 +786,6 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/beta/scheduler/SchedulerController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="168">
-          <caret line="12" column="26" selection-start-line="12" selection-start-column="17" selection-end-line="12" selection-end-column="26" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/beta/scheduler/task/ScheduleTask.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="13" column="13" selection-start-line="13" selection-start-column="13" selection-end-line="13" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/.idea/workspace.xml">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/mystaticdir/pageTemplate.html">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/target/classes/com/beta/config/MyWebMvcConfigurerAdapter.class">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/target/classes/com/beta/exception/GlobalExceptionHandler.class">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/application.properties">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="199">
-          <caret line="19" column="14" selection-start-line="19" selection-start-column="14" selection-end-line="19" selection-end-column="14" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/beta/config/exception/ExceptionController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="231">
-          <caret line="17" column="32" selection-start-line="17" selection-start-column="22" selection-end-line="17" selection-end-column="32" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/errorPage.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="273">
-          <caret line="13" column="13" selection-start-line="13" selection-start-column="13" selection-end-line="13" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-webmvc/4.3.7.RELEASE/spring-webmvc-4.3.7.RELEASE-sources.jar!/org/springframework/web/servlet/FrameworkServlet.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="177">
-          <caret line="1004" selection-start-line="1004" selection-end-line="1004" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/apache/tomcat/embed/tomcat-embed-core/8.5.11/tomcat-embed-core-8.5.11-sources.jar!/org/apache/catalina/core/ApplicationFilterChain.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="332">
-          <caret line="238" selection-start-line="238" selection-end-line="238" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-web/4.3.7.RELEASE/spring-web-4.3.7.RELEASE-sources.jar!/org/springframework/web/method/support/InvocableHandlerMethod.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="282">
-          <caret line="137" selection-start-line="137" selection-end-line="137" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-webmvc/4.3.7.RELEASE/spring-webmvc-4.3.7.RELEASE-sources.jar!/org/springframework/web/servlet/mvc/method/annotation/ServletInvocableHandlerMethod.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="366">
-          <caret line="140" selection-start-line="140" selection-end-line="140" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-webmvc/4.3.7.RELEASE/spring-webmvc-4.3.7.RELEASE-sources.jar!/org/springframework/web/servlet/mvc/method/annotation/ExceptionHandlerExceptionResolver.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="437">
-          <caret line="412" selection-start-line="412" selection-end-line="412" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-webmvc/4.3.7.RELEASE/spring-webmvc-4.3.7.RELEASE-sources.jar!/org/springframework/web/servlet/handler/AbstractHandlerMethodExceptionResolver.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="185">
-          <caret line="58" selection-start-line="58" selection-end-line="58" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-webmvc/4.3.7.RELEASE/spring-webmvc-4.3.7.RELEASE-sources.jar!/org/springframework/web/servlet/handler/AbstractHandlerExceptionResolver.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="269">
-          <caret line="139" selection-start-line="139" selection-end-line="139" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-webmvc/4.3.7.RELEASE/spring-webmvc-4.3.7.RELEASE-sources.jar!/org/springframework/web/servlet/handler/HandlerExceptionResolverComposite.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="262">
-          <caret line="75" selection-start-line="75" selection-end-line="75" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-webmvc/4.3.7.RELEASE/spring-webmvc-4.3.7.RELEASE-sources.jar!/org/springframework/web/servlet/View.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="325">
-          <caret line="87" column="32" selection-start-line="87" selection-start-column="32" selection-end-line="87" selection-end-column="32" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-webmvc/4.3.7.RELEASE/spring-webmvc-4.3.7.RELEASE-sources.jar!/org/springframework/web/servlet/ModelAndView.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="185">
-          <caret line="220" selection-start-line="220" selection-end-line="220" />
-          <folding>
-            <element signature="e#7003#7004#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/boot/spring-boot-autoconfigure/1.5.2.RELEASE/spring-boot-autoconfigure-1.5.2.RELEASE-sources.jar!/org/springframework/boot/autoconfigure/web/NonRecursivePropertyPlaceholderHelper.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="252">
-          <caret line="37" selection-start-line="37" selection-end-line="37" />
-          <folding>
-            <element signature="e#1570#1571#0" expanded="true" />
-            <element signature="e#1603#1604#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-webmvc/4.3.7.RELEASE/spring-webmvc-4.3.7.RELEASE-sources.jar!/org/springframework/web/servlet/DispatcherServlet.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="177">
-          <caret line="1036" selection-start-line="1036" selection-end-line="1036" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/boot/spring-boot-autoconfigure/1.5.2.RELEASE/spring-boot-autoconfigure-1.5.2.RELEASE-sources.jar!/org/springframework/boot/autoconfigure/web/ErrorMvcAutoConfiguration.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="185">
-          <caret line="219" selection-start-line="219" selection-end-line="219" />
-          <folding>
-            <element signature="e#8829#8845#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-core/4.3.7.RELEASE/spring-core-4.3.7.RELEASE-sources.jar!/org/springframework/util/PropertyPlaceholderHelper.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="177">
@@ -909,13 +831,6 @@
     <entry file="file://$PROJECT_DIR$/src/main/resources/mapping/TbUserMapper.xml">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/beta/security/dao/User.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="84">
-          <caret line="10" column="13" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/resources/mapping/UserMapper.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="63">
@@ -923,44 +838,11 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/beta/config/ViewResolverConfiguration.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="231">
-          <caret line="11" column="26" selection-start-line="11" selection-start-column="26" selection-end-line="11" selection-end-column="26" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/beta/config/ViewResolverConfiguration.java" />
     <entry file="file://$PROJECT_DIR$/src/main/java/com/beta/basic/mybatis/mapper/TbUserMapper.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="105">
           <caret line="7" column="17" selection-start-line="7" selection-start-column="17" selection-end-line="7" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/Application.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="273">
-          <caret line="25" column="27" selection-start-line="25" selection-start-column="27" selection-end-line="25" selection-end-column="27" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/README.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="SPLIT">
-          <first_editor relative-caret-position="-177">
-            <caret line="10" selection-start-line="10" selection-end-line="10" />
-          </first_editor>
-          <second_editor />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/beta/security/controller/UserController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="189">
-          <caret line="11" column="13" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="13" />
         </state>
       </provider>
     </entry>
@@ -978,23 +860,61 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/beta/security/controller/AdminController.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/beta/config/aop/AspectTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="273">
-          <caret line="15" column="35" selection-start-line="15" selection-start-column="35" selection-end-line="15" selection-end-column="35" />
-          <folding>
-            <element signature="e#457#458#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="147">
+          <caret line="27" column="45" selection-start-line="27" selection-start-column="45" selection-end-line="27" selection-end-column="45" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/beta/security/controller/SecurityController.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/beta/config/interceptor/MyInterceptor.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="346">
-          <caret line="27" column="23" lean-forward="true" selection-start-line="27" selection-start-column="23" selection-end-line="27" selection-end-column="23" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+        <state relative-caret-position="378">
+          <caret line="22" selection-start-line="22" selection-end-line="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/beauty1.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="3423">
+          <caret line="163" column="24" selection-start-line="163" selection-start-column="24" selection-end-line="163" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/securityLogin.jsp">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/login.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1407">
+          <caret line="67" column="24" selection-start-line="67" selection-start-column="24" selection-end-line="67" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/12.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.classpath">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="273">
+          <caret line="13" column="62" lean-forward="true" selection-start-line="13" selection-start-column="62" selection-end-line="13" selection-end-column="62" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/handsome_guy.jpg">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/com/poi/test/HeaderFooterTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="473">
+          <caret line="111" column="70" lean-forward="true" selection-start-line="111" selection-start-column="70" selection-end-line="111" selection-end-column="70" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/beta/config/MyWebMvcConfigurerAdapter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="287">
+          <caret line="39" column="40" lean-forward="true" selection-start-line="39" selection-start-column="40" selection-end-line="39" selection-end-column="40" />
         </state>
       </provider>
     </entry>
@@ -1012,68 +932,195 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/beta/config/aop/AspectTest.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/beta/security/controller/UserController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-434">
-          <caret line="27" column="45" selection-start-line="27" selection-start-column="45" selection-end-line="27" selection-end-column="45" />
+        <state relative-caret-position="189">
+          <caret line="11" column="13" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="13" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/beta/config/interceptor/MyInterceptor.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="378">
-          <caret line="22" selection-start-line="22" selection-end-line="22" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/beauty1.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="217">
-          <caret line="163" column="24" lean-forward="true" selection-start-line="163" selection-start-column="24" selection-end-line="163" selection-end-column="24" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/beta/config/MyWebMvcConfigurerAdapter.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="357">
-          <caret line="29" column="7" lean-forward="true" selection-start-line="29" selection-start-column="7" selection-end-line="29" selection-end-column="7" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/beta/security/config/SecurityConfig.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="202">
-          <caret line="40" column="63" selection-start-line="40" selection-start-column="63" selection-end-line="40" selection-end-column="63" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/securityLogin.jsp">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/login.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="175">
-          <caret line="67" column="24" lean-forward="true" selection-start-line="67" selection-start-column="24" selection-end-line="67" selection-end-column="24" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/beta/basic/controller/ControllerMy.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="364">
-          <caret line="67" column="34" lean-forward="true" selection-start-line="67" selection-start-column="34" selection-end-line="67" selection-end-column="34" />
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/README.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="21">
+            <caret line="10" selection-start-line="10" selection-end-line="10" />
+          </first_editor>
+          <second_editor />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/pom.xml">
       <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="252">
+          <caret line="240" column="20" lean-forward="true" selection-start-line="240" selection-start-column="20" selection-end-line="240" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/beta/security/service/ISecurityUserService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="63">
+          <caret line="3" column="2" selection-start-line="3" selection-start-column="2" selection-end-line="3" selection-end-column="2" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/Application.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="210">
+          <caret line="10" column="4" selection-start-line="10" selection-start-column="4" selection-end-line="10" selection-end-column="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/beta/security/dao/User.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="168">
+          <caret line="10" column="38" selection-start-line="10" selection-start-column="38" selection-end-line="10" selection-end-column="38" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/beta/security/config/LoginAuthenticationProvider.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="336">
+          <caret line="16" column="2" selection-end-line="51" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/beta/security/config/SecurityConfig.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="231">
+          <caret line="25" selection-end-line="56" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/beta/security/config/SecurityWebInitializer.java">
+      <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="147">
-          <caret line="160" column="47" lean-forward="true" selection-start-line="160" selection-start-column="47" selection-end-line="160" selection-end-column="47" />
+          <caret line="15" selection-start-line="15" selection-end-line="15" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/beta/security/controller/AdminController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="273">
+          <caret line="15" column="35" selection-start-line="15" selection-start-column="35" selection-end-line="15" selection-end-column="35" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/beta/security/controller/SecurityController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="231">
+          <caret line="28" column="23" selection-end-line="49" />
+          <folding>
+            <element signature="e#0#1635#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/beta/security/service/SecurityUserServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="84">
+          <caret line="20" selection-start-line="20" selection-end-line="20" />
+          <folding>
+            <element signature="e#0#1266#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/beta/basic/controller/ControllerMy.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="861">
+          <caret line="59" column="47" selection-start-line="59" selection-start-column="47" selection-end-line="59" selection-end-column="47" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/test.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="693">
+          <caret line="33" column="62" selection-start-line="33" selection-start-column="62" selection-end-line="33" selection-end-column="62" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/com/streamAndAll/sysLearning/b.java" />
+    <entry file="file://$PROJECT_DIR$/src/test/java/com/streamAndAll/sysLearning/interfaceDemo/MyActionInterface.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="126">
+          <caret line="6" column="37" selection-start-line="6" selection-start-column="37" selection-end-line="6" selection-end-column="37" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/com/streamAndAll/a.java" />
+    <entry file="file://$PROJECT_DIR$/src/test/java/com/sort/Demo.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1155">
+          <caret line="61" selection-start-line="61" selection-end-line="61" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/com/streamAndAll/sysLearning/demooo/App.java" />
+    <entry file="file://$PROJECT_DIR$/src/test/java/com/streamAndAll/sysLearning/optional/Demo.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="336">
+          <caret line="22" column="56" selection-start-line="22" selection-start-column="56" selection-end-line="22" selection-end-column="56" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/com/streamAndAll/sysLearning/interfaceDemo/MyActionClass.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="252">
+          <caret line="14" column="44" selection-start-line="14" selection-start-column="44" selection-end-line="14" selection-end-column="44" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/com/streamAndAll/sysLearning/function/Demo.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="315">
+          <caret line="22" column="37" selection-start-line="22" selection-start-column="37" selection-end-line="22" selection-end-column="37" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/com/streamAndAll/sysLearning/lambda/Demo.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1428">
+          <caret line="68" column="48" selection-start-line="68" selection-start-column="48" selection-end-line="68" selection-end-column="48" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/com/streamAndAll/sysLearning/pojo/User.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="252">
+          <caret line="24" column="11" selection-start-line="24" selection-start-column="11" selection-end-line="24" selection-end-column="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://D:/jdk1.8/src.zip!/java/util/function/Function.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="185">
+          <caret line="48" column="6" selection-start-line="48" selection-start-column="6" selection-end-line="48" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/com/streamAndAll/usualUse/UsualUse.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="147">
+          <caret line="7" lean-forward="true" selection-start-line="7" selection-end-line="7" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/com/streamAndAll/README.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="147">
+            <caret line="7" column="57" selection-start-line="7" selection-start-column="57" selection-end-line="7" selection-end-column="57" />
+          </first_editor>
+          <second_editor />
         </state>
       </provider>
     </entry>
@@ -1136,6 +1183,7 @@
             <option name="proportions">
               <list>
                 <option value="0.2" />
+                <option value="0.6" />
               </list>
             </option>
           </splitter-proportions>

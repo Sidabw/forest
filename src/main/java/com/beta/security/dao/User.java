@@ -1,14 +1,14 @@
 package com.beta.security.dao;
 
-import org.springframework.security.core.GrantedAuthority;
-import org.springframework.security.core.authority.SimpleGrantedAuthority;
-import org.springframework.security.core.userdetails.UserDetails;
+//import org.springframework.security.core.GrantedAuthority;
+//import org.springframework.security.core.authority.SimpleGrantedAuthority;
+//import org.springframework.security.core.userdetails.UserDetails;
 
 import java.io.Serializable;
 import java.util.Arrays;
 import java.util.Collection;
 
-public class User implements Serializable, UserDetails {
+public class User implements Serializable/*, UserDetails*/ {
     private Integer id;
 
     private String userName;
@@ -33,7 +33,7 @@ public class User implements Serializable, UserDetails {
         this.userName = userName == null ? null : userName.trim();
     }
 
-    @Override
+    /*@Override
     public Collection<? extends GrantedAuthority> getAuthorities() {
         //返回用户权限
         return Arrays.asList( new SimpleGrantedAuthority("USER"));
@@ -69,7 +69,7 @@ public class User implements Serializable, UserDetails {
     @Override
     public boolean isEnabled() {
         return true;
-    }
+    }*/
 
     public void setPassword(String password) {
         this.password = password == null ? null : password.trim();

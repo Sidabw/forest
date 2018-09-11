@@ -1,3 +1,4 @@
+/*
 package com.beta.security.config;
 
 import com.beta.security.service.ISecurityUserService;
@@ -10,10 +11,12 @@ import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UsernameNotFoundException;
 import org.springframework.stereotype.Component;
 
+*/
 /***
  *  Created by shao.guangze on 2018/8/21
- */
-@Component
+ *//*
+
+//@Component
 public class LoginAuthenticationProvider extends AbstractUserDetailsAuthenticationProvider {
 
     @Autowired
@@ -45,3 +48,4 @@ public class LoginAuthenticationProvider extends AbstractUserDetailsAuthenticati
         return loadedUser;
     }
 }
+*/

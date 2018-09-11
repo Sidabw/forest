@@ -17,6 +17,8 @@ import java.util.stream.Collectors;
 public class Demo {
 	
 	public static void main(String[] args){
+		ArrayList<Integer> list = new ArrayList<>();
+		//list.stream().collect(Collectors.su)
 		List<Map<String, Object>> sumList = new ArrayList<Map<String, Object>>();
 		HashMap<String, Object> hashMap = new HashMap<String, Object>();
 		hashMap.put("groupName", "国内新闻");

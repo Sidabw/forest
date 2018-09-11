@@ -1,3 +1,4 @@
+/*
 package com.beta.security.controller;
 
 import org.springframework.security.core.Authentication;
@@ -11,9 +12,11 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+*/
 /***
  *  Created by shao.guangze on 2018/8/21
- */
+ *//*
+
 @Controller
 public class SecurityController {
 
@@ -43,3 +46,4 @@ public class SecurityController {
         return "login";
     }
 }
+*/
