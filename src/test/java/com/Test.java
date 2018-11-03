@@ -1,14 +1,38 @@
 package com;
 
+import com.beta.security.dao.UserExample;
+import org.apache.commons.codec.digest.DigestUtils;
+
 import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.TreeMap;
+import java.util.stream.Stream;
 
 public class Test {
 	public static void main(String[] args) {
 		Long date = new Long("1528793116000");
 		System.out.println(new SimpleDateFormat("yyyy年MM月dd日 hh时mm分ss秒").format(new Date(date)));
 		System.out.println(new Date());
+		System.out.println("======		String Test		  ======");
+		String str = "我爱吃面包5";
+		byte[] bytes = str.getBytes();
+		for(byte e : bytes){
+			System.out.print(e + " ");	//result: -26 -120 -111 -25 -120 -79 -27 ......		[size:16]
+		}
+		System.out.println(" ");
+		String str2 = "1234567890";
+		byte[] bytes2 = str2.getBytes();
+		for(byte e2 : bytes2){
+			System.out.print(e2 + " ");		//result: 对应的ASCII值
+		}
+		System.out.println("/r/n");
+		System.out.println("================");
+		String null1 = null;
+		String str1 = "abc";
+		String null2 = null;
+		System.out.println(null1 + str1 + null2);
+
+		DigestUtils.md5Hex("");
 		/*User user = new User("面包",1);
 		User user2 = user;
 		user2.setGender(0);
@@ -32,6 +56,7 @@ public class Test {
 			}
 			
 		}*/
+		UserExample userExample = new UserExample();
 	}
 
 	public static void judeg(char each) {

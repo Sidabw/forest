@@ -1,6 +1,7 @@
 package com.beta.test;
 
 import java.util.List;
+import java.util.UUID;
 
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -29,5 +30,8 @@ public class SpringTestt {
 	}
 	public static void main(String[] args) {
 		//i++;
+		for(int i =0  ; i < 500; i++){
+			System.out.println(UUID.randomUUID());
+		}
 	}
 }

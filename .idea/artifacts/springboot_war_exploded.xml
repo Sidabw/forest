@@ -98,6 +98,18 @@
           <element id="library" level="project" name="Maven: javax.mail:mail:1.4" />
           <element id="library" level="project" name="Maven: dom4j:dom4j:1.6.1" />
           <element id="library" level="project" name="Maven: xml-apis:xml-apis:1.4.01" />
+          <element id="library" level="project" name="Maven: org.apache.kafka:kafka_2.12:2.0.0" />
+          <element id="library" level="project" name="Maven: org.apache.kafka:kafka-clients:2.0.0" />
+          <element id="library" level="project" name="Maven: org.lz4:lz4-java:1.4.1" />
+          <element id="library" level="project" name="Maven: org.xerial.snappy:snappy-java:1.1.7.1" />
+          <element id="library" level="project" name="Maven: net.sf.jopt-simple:jopt-simple:5.0.4" />
+          <element id="library" level="project" name="Maven: com.yammer.metrics:metrics-core:2.2.0" />
+          <element id="library" level="project" name="Maven: org.scala-lang:scala-library:2.12.6" />
+          <element id="library" level="project" name="Maven: org.scala-lang:scala-reflect:2.12.6" />
+          <element id="library" level="project" name="Maven: com.typesafe.scala-logging:scala-logging_2.12:3.9.0" />
+          <element id="library" level="project" name="Maven: com.101tec:zkclient:0.10" />
+          <element id="library" level="project" name="Maven: org.apache.zookeeper:zookeeper:3.4.13" />
+          <element id="library" level="project" name="Maven: org.apache.yetus:audience-annotations:0.5.0" />
         </element>
       </element>
       <element id="directory" name="META-INF">

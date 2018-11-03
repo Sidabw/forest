@@ -4,6 +4,7 @@ package com.diff.list;
 import com.alibaba.fastjson.JSONArray;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 
 //import net.minidev.json.JSONArray;
@@ -17,6 +18,23 @@ public class Demo {
 		arrayList.add(new User("wangwu",0));
 		list.add(arrayList);
 		System.out.println(JSONArray.toJSONString(list));
+		System.out.println("-----------------------------");
+		for(int i = 0 ; i < arrayList.size() ; i ++){
+			User user = arrayList.get(i);
+			if(user.getName().equals("lisi")){
+				user.setGender(1);
+			}
+		}
+		/*for(User user: arrayList){
+			if(user.getName().equals("lisi")){
+				user.setGender(1);
+			}
+		}*/
+		for(User user : arrayList){
+			System.out.println(user.getGender());
+		}
+
+		List<List<?>> lists = Arrays.asList(list, arrayList);
 
 	}
 }

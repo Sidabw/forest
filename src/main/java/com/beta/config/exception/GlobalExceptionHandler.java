@@ -13,7 +13,7 @@ import javax.servlet.http.HttpServletRequest;
 /**
  * Created by yando on 2017/11/10.
  */
-@ControllerAdvice
+//@ControllerAdvice
 public class GlobalExceptionHandler {
 
     public static final String DEFAULT_ERROR_VIEW = "error";

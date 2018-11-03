@@ -5,6 +5,7 @@ import java.util.Arrays;
 
 import javax.servlet.http.HttpServletRequest;
 
+import com.github.pagehelper.util.StringUtil;
 import org.aspectj.lang.JoinPoint;
 import org.aspectj.lang.ProceedingJoinPoint;
 import org.aspectj.lang.Signature;
@@ -17,6 +18,7 @@ import org.aspectj.lang.annotation.Before;
 import org.aspectj.lang.annotation.Pointcut;
 import org.aspectj.lang.reflect.MethodSignature;
 import org.springframework.stereotype.Component;
+import org.springframework.web.context.request.RequestAttributes;
 import org.springframework.web.context.request.RequestContextHolder;
 import org.springframework.web.context.request.ServletRequestAttributes;
 
@@ -25,7 +27,7 @@ import com.beta.basic.annotation.EnableRedis;
 @Aspect
 @Component
 public class AspectTest {
-	@Pointcut("execution(public * com.beta.basic.controller.*.*(..))")
+	@Pointcut("execution(public * com.beta.basic.controller..*.*(..))")
 	public void aspectTest() {}
 
 	@Before("aspectTest()")

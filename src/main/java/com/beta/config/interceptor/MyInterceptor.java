@@ -21,9 +21,9 @@ public class MyInterceptor implements HandlerInterceptor{
 			Object handler, ModelAndView modelAndView) throws Exception {
 		// TODO Auto-generated method stub
 		System.out.println("postHandle");
-		if(resp.getStatus() == 500 || resp.getStatus() == 404){
+		/*if(resp.getStatus() == 500 || resp.getStatus() == 404){
 			modelAndView.setViewName("errorPage");
-		}
+		}*/
 	}
 
 	@Override

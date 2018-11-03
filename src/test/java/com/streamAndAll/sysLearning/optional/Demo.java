@@ -12,6 +12,8 @@ import org.junit.Test;
 public class Demo {
 	
 	/**
+     * 类似空指针这样的异常，从某些层面来说正确的处理应该是告诉页面没有数据，而不是抛异常或者try catch。
+     *
 	 * Optional是1个可以为null的容器，如果值存在则方法isPresent返回true，调用get方法返回该对象。
 	 * 我们通常使用Optional来解决空指针的问题。
 	 * Optional提供了很多有用的方法，不需要再进行显式的空指针判断。
@@ -19,12 +21,7 @@ public class Demo {
 	 * 2.使用ofNullable构建时，可以使用isPresent判断是否为null。
 	 * */
 	public static void main(String[] args) {
-		List<Integer> asList = Arrays.asList(1,2,3,4,5,2,3);
-		Object[] array = asList.stream().sorted().toArray();
-		for(Object i: array){
-			System.out.println(i);
-		}
-		
+
 	}
 	@Test
 	public void test1(){
@@ -85,8 +82,14 @@ public class Demo {
 		hashMap.put(3D, new User(12,"nan","brew4"));
 		hashMap.put(2D, new User(16,"nan","brew5"));
 		Optional<Double> max = hashMap.keySet().stream().filter(e -> e>3D).max(Double::compareTo);
-		System.out.println(max.orElse(1D));
-		
+        Optional<Double> findFirst = hashMap.keySet().stream().filter(e -> e > 33D).findFirst();
+        if(findFirst.isPresent()){
+            System.out.println("可以这样判空！");
+        }else{
+            System.out.println("It's empty after filter operation in stream");
+        }
+        System.out.println(max.orElse(1D));
+
 		//List<User> user = hashMap.get(2D);
 		
 	}

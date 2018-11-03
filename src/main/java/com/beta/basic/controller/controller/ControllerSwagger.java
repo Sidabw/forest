@@ -24,7 +24,8 @@ public class ControllerSwagger {
 	        @ApiResponse(code=404,message="请求路径没有或页面跳转路径不对")
 	    })
 	@RequestMapping(value="/getUserSwagger",method=RequestMethod.GET)
-	public String swaggerTest1(){
+	public String swaggerTest1(String param){
+	  	System.out.println("param" + param);
 		String returnString = "";
 		return returnString;
 	}

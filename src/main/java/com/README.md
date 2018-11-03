@@ -12,7 +12,8 @@ swagger除了前后端交互使用外，在更改别人bug，定位请求方法�
 #phantomjs相关;
 http://blinkfox.com/shi-yong-javadiao-yong-phantomjsdong-tai-dao-chu-echartstu-pian-dao-wordwen-jian-zhong/
 https://blog.csdn.net/tengdazhang770960436/article/details/41348035
-springboot 结合 mybatis 报错，多半是xml 不在target目录下，现通过在properties中
+#springboot 结合 mybatis 报错，
+多半是xml 不在target目录下，现通过在properties中
 加入mapping/*.xml，把xml移到resource/mapping下解决
 
 #aop环绕通知相关
@@ -23,6 +24,13 @@ springboot 结合 mybatis 报错，多半是xml 不在target目录下，现通�
 4.@around 继续执行，走完
 5.@after 执行
 6.@afterrunning 执行
+补充说明excution配置
+execution(public * com.beta.basic.controller..*.*(..))
+第一个*代表不限制接口返回值
+第一个..代表 当前包及其子包
+第二个*代表所有的类
+第三个*代表所有的方法
+最后的(..)代表方法参数列表不为空
 
 #打印mybatis sql console
 在application.properties中加入；

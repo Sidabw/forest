@@ -7,7 +7,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 /**
  * Created by yando on 2017/11/10.
  */
-@Controller
+//@Controller
 public class ExceptionController {
 	private Logger logger = Logger.getLogger(ExceptionController.class);
 
