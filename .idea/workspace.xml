@@ -1,57 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="832dbe0f-6f14-40d0-8a74-ff9e8dcb6d88" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_101tec_zkclient_0_10.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_typesafe_scala_logging_scala_logging_2_12_3_9_0.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_yammer_metrics_metrics_core_2_2_0.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__net_sf_jopt_simple_jopt_simple_5_0_4.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_kafka_kafka_2_12_2_0_0.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_kafka_kafka_clients_2_0_0.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_yetus_audience_annotations_0_5_0.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_zookeeper_zookeeper_3_4_13.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_lz4_lz4_java_1_4_1.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_scala_lang_scala_library_2_12_6.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_scala_lang_scala_reflect_2_12_6.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_xerial_snappy_snappy_java_1_1_7_1.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/com/kafka/GroupConsumer.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/com/kafka/SimpleProducer.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/com/trs/Test.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/artifacts/springboot_war_exploded.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/artifacts/springboot_war_exploded.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/springboot.iml" beforeDir="false" afterPath="$PROJECT_DIR$/springboot.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/beta/basic/controller/controller/ControllerSwagger.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/beta/basic/controller/controller/ControllerSwagger.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/beta/config/MyWebMvcConfigurerAdapter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/beta/config/MyWebMvcConfigurerAdapter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/beta/config/aop/AspectTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/beta/config/aop/AspectTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/beta/config/exception/ExceptionController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/beta/config/exception/ExceptionController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/beta/config/exception/GlobalExceptionHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/beta/config/exception/GlobalExceptionHandler.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/beta/config/interceptor/MyInterceptor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/beta/config/interceptor/MyInterceptor.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/Test.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/Test.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/TimeHandle.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/TimeHandle.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/beta/test/SpringTestt.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/beta/test/SpringTestt.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/diff/list/Demo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/diff/list/Demo.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/streamAndAll/sysLearning/optional/Demo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/streamAndAll/sysLearning/optional/Demo.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/stringtetst/test/Demo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/stringtetst/test/Demo.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/beta/basic/controller/controller/ControllerSwagger.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/beta/basic/controller/controller/ControllerSwagger.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/beta/config/MyWebMvcConfigurerAdapter.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/beta/config/MyWebMvcConfigurerAdapter.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/beta/config/aop/AspectTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/beta/config/aop/AspectTest.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/beta/config/exception/ExceptionController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/beta/config/exception/ExceptionController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/beta/config/exception/GlobalExceptionHandler.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/beta/config/exception/GlobalExceptionHandler.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/beta/config/interceptor/MyInterceptor.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/beta/config/interceptor/MyInterceptor.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/com/Test.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/com/Test.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/com/TimeHandle.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/com/TimeHandle.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/com/User.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/com/User.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/com/beta/test/SpringTestt.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/com/beta/test/SpringTestt.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/com/diff/list/Demo.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/com/diff/list/Demo.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/com/diff/list/User.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/com/diff/list/User.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/com/foreach/switchtest/Demo.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/com/foreach/switchtest/Demo.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/com/stringtetst/test/Demo.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/com/stringtetst/test/Demo.class" afterDir="false" />
-    </list>
+    <list default="true" id="832dbe0f-6f14-40d0-8a74-ff9e8dcb6d88" name="Default" comment="" />
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -65,11 +15,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="pom.xml" pinned="false" current-in-tab="false">
+      <file leaf-file-name="pom.xml" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/pom.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-400">
-              <caret line="152" column="41" selection-start-line="152" selection-start-column="34" selection-end-line="152" selection-end-column="41" />
+            <state relative-caret-position="167">
+              <caret line="66" column="27" selection-start-line="66" selection-start-column="23" selection-end-line="66" selection-end-column="27" />
             </state>
           </provider>
         </entry>
@@ -83,14 +33,32 @@
           </provider>
         </entry>
       </file>
+      <file leaf-file-name="AspectTest.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/beta/config/aop/AspectTest.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="370">
+              <caret line="78" column="56" selection-start-line="78" selection-start-column="56" selection-end-line="78" selection-end-column="56" />
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file leaf-file-name="README.md" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/README.md">
           <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
             <state split_layout="SPLIT">
-              <first_editor relative-caret-position="126">
+              <first_editor relative-caret-position="63">
                 <caret line="6" column="14" lean-forward="true" selection-start-line="6" selection-start-column="14" selection-end-line="6" selection-end-column="14" />
               </first_editor>
               <second_editor />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ControllerSwagger.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/beta/basic/controller/controller/ControllerSwagger.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="97">
+              <caret line="21" column="23" lean-forward="true" selection-start-line="21" selection-start-column="23" selection-end-line="21" selection-end-column="23" />
             </state>
           </provider>
         </entry>
@@ -113,7 +81,7 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="MyWebMvcConfigurerAdapter.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="MyWebMvcConfigurerAdapter.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/beta/config/MyWebMvcConfigurerAdapter.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="-911">
@@ -125,7 +93,7 @@
       <file leaf-file-name="ControllerMy.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/beta/basic/controller/ControllerMy.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="615">
+            <state relative-caret-position="-204">
               <caret line="49" column="25" selection-start-line="49" selection-start-column="25" selection-end-line="49" selection-end-column="25" />
             </state>
           </provider>
@@ -134,26 +102,8 @@
       <file leaf-file-name="ControllerTest.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/beta/basic/controller/ControllerTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="147">
+            <state relative-caret-position="-134">
               <caret line="14" column="22" selection-start-line="14" selection-start-column="18" selection-end-line="14" selection-end-column="22" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ControllerSwagger.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/beta/basic/controller/controller/ControllerSwagger.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="273">
-              <caret line="21" column="23" lean-forward="true" selection-start-line="21" selection-start-column="23" selection-end-line="21" selection-end-column="23" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Application.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/Application.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="168">
-              <caret line="20" selection-start-line="20" selection-end-line="20" selection-end-column="15" />
             </state>
           </provider>
         </entry>
@@ -171,8 +121,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>dataList</find>
-      <find>href=&quot;</find>
       <find>src=&quot;</find>
       <find>Home</find>
       <find>@Dat</find>
@@ -201,6 +149,8 @@
       <find>dev</find>
       <find>page</find>
       <find>swagger</find>
+      <find>.Stream</find>
+      <find>test</find>
     </findStrings>
     <replaceStrings>
       <replace>href=&quot;/beautyTemplate1/</replace>
@@ -390,31 +340,7 @@
               <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="com" type="462c0819:PsiDirectoryNode" />
               <item name="beta" type="462c0819:PsiDirectoryNode" />
-              <item name="basic" type="462c0819:PsiDirectoryNode" />
-              <item name="mybatis" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="forest" type="b2602c69:ProjectViewProjectNode" />
-              <item name="forest" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="com" type="462c0819:PsiDirectoryNode" />
-              <item name="beta" type="462c0819:PsiDirectoryNode" />
-              <item name="basic" type="462c0819:PsiDirectoryNode" />
-              <item name="mybatis" type="462c0819:PsiDirectoryNode" />
-              <item name="mapper" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="forest" type="b2602c69:ProjectViewProjectNode" />
-              <item name="forest" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="com" type="462c0819:PsiDirectoryNode" />
-              <item name="beta" type="462c0819:PsiDirectoryNode" />
-              <item name="basic" type="462c0819:PsiDirectoryNode" />
-              <item name="service" type="462c0819:PsiDirectoryNode" />
+              <item name="config" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="forest" type="b2602c69:ProjectViewProjectNode" />
@@ -425,13 +351,48 @@
               <item name="com" type="462c0819:PsiDirectoryNode" />
               <item name="beta" type="462c0819:PsiDirectoryNode" />
               <item name="config" type="462c0819:PsiDirectoryNode" />
+              <item name="aop" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="forest" type="b2602c69:ProjectViewProjectNode" />
               <item name="forest" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="resources" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="com" type="462c0819:PsiDirectoryNode" />
+              <item name="beta" type="462c0819:PsiDirectoryNode" />
+              <item name="config" type="462c0819:PsiDirectoryNode" />
+              <item name="exception" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="forest" type="b2602c69:ProjectViewProjectNode" />
+              <item name="forest" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="test" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="forest" type="b2602c69:ProjectViewProjectNode" />
+              <item name="forest" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="test" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="forest" type="b2602c69:ProjectViewProjectNode" />
+              <item name="forest" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="test" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="com" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="forest" type="b2602c69:ProjectViewProjectNode" />
+              <item name="forest" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="test" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="com" type="462c0819:PsiDirectoryNode" />
+              <item name="trs" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -705,7 +666,7 @@
       <workItem from="1540806144793" duration="2644000" />
       <workItem from="1540879289179" duration="1205000" />
       <workItem from="1540889667703" duration="2108000" />
-      <workItem from="1541125856847" duration="17006000" />
+      <workItem from="1541125856847" duration="24270000" />
     </task>
     <task id="LOCAL-00001" summary="新整理了jdk1.8部分usual use和system learning:src/test/java/com/streamAndAll">
       <created>1536629672860</created>
@@ -714,11 +675,18 @@
       <option name="project" value="LOCAL" />
       <updated>1536629672860</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="为了提交而提交">
+      <created>1541231942951</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1541231942951</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="276056000" />
+    <option name="totallyTimeSpent" value="283320000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -748,13 +716,14 @@
       <window_info id="Image Layers" order="1" />
       <window_info anchor="bottom" id="Java Enterprise" order="4" weight="0.32997763" />
       <window_info anchor="right" id="Capture Analysis" order="1" />
-      <window_info anchor="bottom" id="Version Control" order="6" weight="0.25643897" />
+      <window_info anchor="bottom" id="Version Control" order="6" weight="0.4302926" />
       <window_info anchor="bottom" id="Run" order="10" sideWeight="0.49848714" weight="0.4251291" />
       <window_info anchor="bottom" id="Spring" order="1" sideWeight="0.49946696" weight="0.43201378" />
       <window_info anchor="bottom" id="Terminal" order="2" weight="0.32922733" />
       <window_info active="true" content_ui="combo" id="Project" order="5" sideWeight="0.55637705" visible="true" weight="0.33358547" />
       <window_info anchor="right" id="Bean Validation" order="5" />
       <window_info id="Web" order="4" side_tool="true" />
+      <window_info anchor="bottom" id="Find" order="8" weight="0.32922733" />
       <window_info anchor="right" id="Theme Preview" order="4" />
       <window_info id="Favorites" order="3" sideWeight="0.44362292" side_tool="true" weight="0.17963752" />
       <window_info anchor="bottom" id="Messages" order="3" weight="0.2362822" />
@@ -763,14 +732,14 @@
       <window_info anchor="bottom" id="Cvs" order="11" weight="0.25" />
       <window_info anchor="bottom" id="Message" order="7" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="9" weight="0.25" />
-      <window_info anchor="bottom" id="Find" order="8" weight="0.32922733" />
     </layout>
     <layout-to-restore>
       <window_info id="Designer" order="0" />
       <window_info anchor="right" id="Palette" order="6" />
+      <window_info anchor="bottom" id="Run" order="10" sideWeight="0.49848714" weight="0.4251291" />
       <window_info anchor="bottom" id="Spring" order="1" sideWeight="0.49946696" weight="0.43201378" />
       <window_info id="Image Layers" order="1" />
-      <window_info anchor="bottom" id="Run" order="10" weight="0.42857143" />
+      <window_info anchor="right" id="Commander" order="7" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="11" weight="0.25" />
       <window_info anchor="right" id="Ant Build" order="8" weight="0.25" />
       <window_info id="UI Designer" order="2" />
@@ -778,26 +747,25 @@
       <window_info anchor="bottom" id="Terminal" order="2" weight="0.32922733" />
       <window_info id="Capture Tool" order="7" />
       <window_info anchor="right" id="Capture Analysis" order="1" />
-      <window_info anchor="right" id="Commander" order="7" weight="0.4" />
-      <window_info anchor="bottom" id="Event Log" order="9" sideWeight="0.5015129" side_tool="true" weight="0.2685026" />
-      <window_info anchor="bottom" id="Messages" order="3" weight="0.2362822" />
+      <window_info anchor="bottom" id="Event Log" order="9" sideWeight="0.5015129" side_tool="true" weight="0.4251291" />
       <window_info anchor="bottom" id="TODO" order="13" sideWeight="0.49946696" weight="0.32874355" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="9" weight="0.25" />
+      <window_info anchor="right" id="Database" order="2" />
       <window_info anchor="bottom" id="Java Enterprise" order="4" weight="0.32997763" />
       <window_info anchor="bottom" id="Database Changes" order="5" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Version Control" order="6" weight="0.25643897" />
+      <window_info anchor="bottom" id="Version Control" order="6" visible="true" weight="0.4302926" />
       <window_info anchor="right" id="Maven Projects" order="0" weight="0.22314675" />
-      <window_info active="true" content_ui="combo" id="Project" order="5" sideWeight="0.55637705" visible="true" weight="0.2322239" />
-      <window_info anchor="right" id="Database" order="2" />
+      <window_info anchor="bottom" id="Find" order="8" weight="0.32922733" />
+      <window_info active="true" content_ui="combo" id="Project" order="5" sideWeight="0.55637705" visible="true" weight="0.33358547" />
+      <window_info anchor="bottom" id="Messages" order="3" weight="0.2362822" />
       <window_info anchor="bottom" id="Message" order="7" />
       <window_info id="Web" order="4" side_tool="true" />
       <window_info anchor="right" id="Palette&#9;" order="3" />
       <window_info anchor="right" id="Theme Preview" order="4" />
       <window_info id="Structure" order="6" sideWeight="0.36894825" side_tool="true" weight="0.17643923" />
       <window_info anchor="bottom" id="Inspection" order="12" weight="0.4" />
-      <window_info anchor="bottom" id="Find" order="8" weight="0.32922733" />
-      <window_info anchor="right" id="Bean Validation" order="5" />
       <window_info anchor="bottom" id="Debug" order="0" sideWeight="0.49848714" weight="0.26651737" />
+      <window_info anchor="right" id="Bean Validation" order="5" />
     </layout-to-restore>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -837,7 +805,8 @@
     <option name="CHECK_NEW_TODO" value="false" />
     <MESSAGE value="项目结构调整；放弃thymeleaf模板，error页面由拦截器负责302至error.jsp；&#10;下一次提交应是第一次定版spring security和第一次定版quartz。" />
     <MESSAGE value="新整理了jdk1.8部分usual use和system learning:src/test/java/com/streamAndAll" />
-    <option name="LAST_COMMIT_MESSAGE" value="新整理了jdk1.8部分usual use和system learning:src/test/java/com/streamAndAll" />
+    <MESSAGE value="为了提交而提交" />
+    <option name="LAST_COMMIT_MESSAGE" value="为了提交而提交" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1089,13 +1058,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/beta/config/aop/AspectTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="84">
-          <caret line="26" column="5" selection-start-line="26" selection-start-column="5" selection-end-line="26" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/com/TimeHandle.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="294">
@@ -1158,48 +1120,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/beta/basic/controller/controller/ControllerSwagger.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="273">
-          <caret line="21" column="23" lean-forward="true" selection-start-line="21" selection-start-column="23" selection-end-line="21" selection-end-column="23" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/Application.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="168">
           <caret line="20" selection-start-line="20" selection-end-line="20" selection-end-column="15" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/beta/basic/controller/ControllerTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="147">
-          <caret line="14" column="22" selection-start-line="14" selection-start-column="18" selection-end-line="14" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/README.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="SPLIT">
-          <first_editor relative-caret-position="126">
-            <caret line="6" column="14" lean-forward="true" selection-start-line="6" selection-start-column="14" selection-end-line="6" selection-end-column="14" />
-          </first_editor>
-          <second_editor />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/beta/basic/controller/ControllerMy.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="615">
-          <caret line="49" column="25" selection-start-line="49" selection-start-column="25" selection-end-line="49" selection-end-column="25" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-400">
-          <caret line="152" column="41" selection-start-line="152" selection-start-column="34" selection-end-line="152" selection-end-column="41" />
         </state>
       </provider>
     </entry>
@@ -1228,6 +1152,51 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-911">
           <caret line="34" column="48" selection-start-line="34" selection-start-column="48" selection-end-line="34" selection-end-column="48" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/README.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="63">
+            <caret line="6" column="14" lean-forward="true" selection-start-line="6" selection-start-column="14" selection-end-line="6" selection-end-column="14" />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/beta/basic/controller/controller/ControllerSwagger.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="97">
+          <caret line="21" column="23" lean-forward="true" selection-start-line="21" selection-start-column="23" selection-end-line="21" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/beta/basic/controller/ControllerMy.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-204">
+          <caret line="49" column="25" selection-start-line="49" selection-start-column="25" selection-end-line="49" selection-end-column="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/beta/basic/controller/ControllerTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-134">
+          <caret line="14" column="22" selection-start-line="14" selection-start-column="18" selection-end-line="14" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/beta/config/aop/AspectTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="370">
+          <caret line="78" column="56" selection-start-line="78" selection-start-column="56" selection-end-line="78" selection-end-column="56" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="167">
+          <caret line="66" column="27" selection-start-line="66" selection-start-column="23" selection-end-line="66" selection-end-column="27" />
         </state>
       </provider>
     </entry>
