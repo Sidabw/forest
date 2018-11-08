@@ -46,6 +46,18 @@ public class UsualUse {
         User user2 = new User(13,"women","sida");
         User user3 = new User(12,"women","sida");
         mapCollect(user,user1,user2,user3);
+
+        //param seed unary operator 参数 种子， 一元运算
+        //iterate 生成无限大的stream(懒加载，并非无限大) limit做限制
+        Stream.iterate(1, item -> item + 1).limit(10).forEach(System.out::println);
+        System.out.println("----------------------------");
+        //peek方法，接口一个Consumer,但与foreach不同
+        //1.void foreach ，Stream peek
+        //2.peek 只是给each element 包了一个consumer，不会立即执行，后面对each element有操作时才会执行
+        Stream.of(1,2,3,4).forEach(System.out::println);
+        System.out.println("----------------------------");
+        Stream.of(1,2,3,4).peek(System.out::println).forEach(e -> System.out.println(e + 1));
+        System.out.println("----------------------------");
     }
     public static void mapCollect(User... users){
         //将users中的所有age拿出来重新组成1个集合，--->[方便：不需要重新声明1个数组，不需要手动遍历users，不需要去手动赋值。满分！！！]
