@@ -2,769 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="5f7af912-b2ab-4cb4-8966-074008181b39" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.classpath" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.project" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.settings/.jsdtscope" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.settings/org.eclipse.core.resources.prefs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.settings/org.eclipse.jdt.core.prefs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.settings/org.eclipse.m2e.core.prefs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.settings/org.eclipse.wst.common.component" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.settings/org.eclipse.wst.common.project.facet.core.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.settings/org.eclipse.wst.jsdt.ui.superType.container" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.settings/org.eclipse.wst.jsdt.ui.superType.name" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.settings/org.eclipse.wst.validation.prefs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/11.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/12.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/handsome_guy.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/logs/debug.log" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/logs/error.log" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/logs/info.log" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/logs/warn.log" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/Application.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/README.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/beta/basic/annotation/EnableRedis.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/beta/basic/controller/ControllerMy.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/beta/basic/controller/ControllerTest.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/beta/basic/controller/controller/ControllerSwagger.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/beta/basic/mybatis/cache/MybatisRedisCache.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/beta/basic/mybatis/mapper/TbUser.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/beta/basic/mybatis/mapper/TbUserExample.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/beta/basic/mybatis/mapper/TbUserMapper.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/beta/basic/pojo/LoginUser.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/beta/basic/pojo/User.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/beta/basic/service/AsyncTest.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/beta/basic/service/AsyncTestImpl.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/beta/basic/service/IUserService.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/beta/basic/service/UserService.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/beta/basic/util/AjaxObject.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/beta/basic/util/PhantomjsFactory.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/beta/basic/util/RedisUtil.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/beta/basic/util/SerializeUtil.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/beta/config/DBConfig.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/beta/config/DateConverterConfig.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/beta/config/MyWebMvcConfigurerAdapter.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/beta/config/aop/AspectTest.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/beta/config/exception/ErrorInfo.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/beta/config/exception/ExceptionController.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/beta/config/exception/GlobalExceptionHandler.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/beta/config/exception/MyException.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/beta/config/interceptor/MyInterceptor.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/beta/jwt/LoginCtroller.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/beta/scheduler/Iservice/ISchedulerService.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/beta/scheduler/IserviceImpl/SchedulerServiceImpl.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/beta/scheduler/SchedulerController.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/beta/scheduler/config/QuarzConfiguration.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/beta/scheduler/dao/SchedulerJob.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/beta/scheduler/dao/SchedulerJobExample.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/beta/scheduler/dao/SchedulerJobMapper.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/beta/scheduler/dao/SchedulerJobMapper.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/beta/scheduler/task/ScheduleTask.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/beta/security/config/LoginAuthenticationProvider.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/beta/security/config/SecurityConfig.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/beta/security/config/SecurityWebInitializer.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/beta/security/controller/AdminController.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/beta/security/controller/SecurityController.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/beta/security/controller/UserController.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/beta/security/dao/User.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/beta/security/dao/UserExample.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/beta/security/dao/UserMapper.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/beta/security/service/ISecurityUserService.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/beta/security/service/SecurityUserServiceImpl.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/generator/generator.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/generator/mybatis-generator.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/log4j.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/mapping/TbUserMapper.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/mapping/UserMapper.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/mystaticdir/1.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/mystaticdir/pageTemplate.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/report/static/11.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/abc.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/beautyAlert/css/component.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/beautyAlert/css/default.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/beautyAlert/fonts/codropsicons/codropsicons.eot" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/beautyAlert/fonts/codropsicons/codropsicons.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/beautyAlert/fonts/codropsicons/codropsicons.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/beautyAlert/fonts/codropsicons/codropsicons.woff" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/beautyAlert/fonts/codropsicons/license.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/beautyAlert/js/classie.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/beautyAlert/js/css-filters-polyfill.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/beautyAlert/js/cssParser.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/beautyAlert/js/modalEffects.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/beautyAlert/js/modernizr.custom.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/beautyTemplate1/css/animate.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/beautyTemplate1/css/bootstrap.min.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/beautyTemplate1/css/isotope.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/beautyTemplate1/css/styles.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/beautyTemplate1/flexslider/flexslider.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/beautyTemplate1/flexslider/jquery.flexslider.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/beautyTemplate1/flexslider/setting.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/beautyTemplate1/font/css/font-awesome.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/beautyTemplate1/font/css/font-awesome.min.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/beautyTemplate1/font/fonts/FontAwesome.otf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/beautyTemplate1/font/fonts/fontawesome-webfont.eot" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/beautyTemplate1/font/fonts/fontawesome-webfont.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/beautyTemplate1/font/fonts/fontawesome-webfont.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/beautyTemplate1/font/fonts/fontawesome-webfont.woff" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/beautyTemplate1/font/fonts/glyphicons-halflings-regular.eot" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/beautyTemplate1/font/fonts/glyphicons-halflings-regular.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/beautyTemplate1/font/fonts/glyphicons-halflings-regular.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/beautyTemplate1/font/fonts/glyphicons-halflings-regular.woff" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/beautyTemplate1/font/less/bordered-pulled.less" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/beautyTemplate1/font/less/core.less" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/beautyTemplate1/font/less/fixed-width.less" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/beautyTemplate1/font/less/font-awesome.less" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/beautyTemplate1/font/less/icons.less" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/beautyTemplate1/font/less/larger.less" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/beautyTemplate1/font/less/list.less" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/beautyTemplate1/font/less/mixins.less" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/beautyTemplate1/font/less/path.less" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/beautyTemplate1/font/less/rotated-flipped.less" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/beautyTemplate1/font/less/spinning.less" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/beautyTemplate1/font/less/stacked.less" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/beautyTemplate1/font/less/variables.less" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/beautyTemplate1/font/scss/_bordered-pulled.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/beautyTemplate1/font/scss/_core.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/beautyTemplate1/font/scss/_fixed-width.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/beautyTemplate1/font/scss/_icons.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/beautyTemplate1/font/scss/_larger.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/beautyTemplate1/font/scss/_list.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/beautyTemplate1/font/scss/_mixins.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/beautyTemplate1/font/scss/_path.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/beautyTemplate1/font/scss/_rotated-flipped.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/beautyTemplate1/font/scss/_spinning.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/beautyTemplate1/font/scss/_stacked.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/beautyTemplate1/font/scss/_variables.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/beautyTemplate1/font/scss/font-awesome.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/beautyTemplate1/images/1.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/beautyTemplate1/images/2.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/beautyTemplate1/images/3.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/beautyTemplate1/images/4.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/beautyTemplate1/images/arrows.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/beautyTemplate1/images/banner-bg.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/beautyTemplate1/images/bg_direction_nav.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/beautyTemplate1/images/clients/client-1.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/beautyTemplate1/images/clients/client-2.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/beautyTemplate1/images/clients/client-3.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/beautyTemplate1/images/clients/client-4.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/beautyTemplate1/images/clients/client-5.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/beautyTemplate1/images/clients/client-6.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/beautyTemplate1/images/clients/client-7.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/beautyTemplate1/images/clients/client-8.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/beautyTemplate1/images/clients/client-9.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/beautyTemplate1/images/feature-img-1.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/beautyTemplate1/images/laptop.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/beautyTemplate1/images/links-arrow.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/beautyTemplate1/images/message.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/beautyTemplate1/images/nivo-bullets.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/beautyTemplate1/images/photo-1.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/beautyTemplate1/images/photo-2.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/beautyTemplate1/images/photo-3.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/beautyTemplate1/images/photo-4.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/beautyTemplate1/images/slides/1.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/beautyTemplate1/images/slides/2.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/beautyTemplate1/images/slides/3.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/beautyTemplate1/images/tag-1.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/beautyTemplate1/images/tag.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/beautyTemplate1/images/work/1.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/beautyTemplate1/images/work/2.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/beautyTemplate1/images/work/3.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/beautyTemplate1/images/work/4.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/beautyTemplate1/images/work/5.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/beautyTemplate1/images/work/6.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/beautyTemplate1/images/work/7.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/beautyTemplate1/images/work/8.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/beautyTemplate1/images/zoom.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/beautyTemplate1/js/bootstrap.min.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/beautyTemplate1/js/custom.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/beautyTemplate1/js/fancybox/Descr.WD3" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/beautyTemplate1/js/fancybox/blank.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/beautyTemplate1/js/fancybox/fancybox_loading.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/beautyTemplate1/js/fancybox/fancybox_loading_402x.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/beautyTemplate1/js/fancybox/fancybox_overlay.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/beautyTemplate1/js/fancybox/fancybox_sprite.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/beautyTemplate1/js/fancybox/fancybox_sprite_402x.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/beautyTemplate1/js/fancybox/jquery.fancybox.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/beautyTemplate1/js/fancybox/jquery.fancybox.pack.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/beautyTemplate1/js/gmaps.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/beautyTemplate1/js/jquery-1.8.2.min.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/beautyTemplate1/js/jquery.fittext.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/beautyTemplate1/js/jquery.isotope.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/beautyTemplate1/js/jquery.isotope.min.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/beautyTemplate1/js/jquery.nav.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/beautyTemplate1/js/modernizr-latest.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/beautyTemplate1/js/owl-carousel/AjaxLoader.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/beautyTemplate1/js/owl-carousel/grabbing.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/beautyTemplate1/js/owl-carousel/owl.carousel.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/beautyTemplate1/js/owl-carousel/owl.carousel.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/beautyTemplate1/js/owl-carousel/owl.carousel.min.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/beautyTemplate1/js/owl-carousel/owl.theme.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/beautyTemplate1/js/owl-carousel/owl.transitions.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/beautyTemplate1/js/waypoints.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/bootstrap-3.3.7-dist/css/bootstrap-theme.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/bootstrap-3.3.7-dist/css/bootstrap-theme.css.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/bootstrap-3.3.7-dist/css/bootstrap-theme.min.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/bootstrap-3.3.7-dist/css/bootstrap-theme.min.css.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/bootstrap-3.3.7-dist/css/bootstrap.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/bootstrap-3.3.7-dist/css/bootstrap.css.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/bootstrap-3.3.7-dist/css/bootstrap.min.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/bootstrap-3.3.7-dist/css/bootstrap.min.css.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/bootstrap-3.3.7-dist/fonts/glyphicons-halflings-regular.eot" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/bootstrap-3.3.7-dist/fonts/glyphicons-halflings-regular.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/bootstrap-3.3.7-dist/fonts/glyphicons-halflings-regular.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/bootstrap-3.3.7-dist/fonts/glyphicons-halflings-regular.woff" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/bootstrap-3.3.7-dist/fonts/glyphicons-halflings-regular.woff2" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/bootstrap-3.3.7-dist/js/bootstrap.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/bootstrap-3.3.7-dist/js/bootstrap.min.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/bootstrap-3.3.7-dist/js/npm.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/docs/css/docs.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/docs/css/prettify.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/docs/images/header-bg.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/docs/images/loading.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/docs/images/logo.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/docs/images/nicEditorIcons.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/docs/index.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/docs/js/general.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/login-resources/1.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/login-resources/css/jq22.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/login-resources/fonts/fontawesome-webfont.woff" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/login-resources/images/owl-login-arm.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/login-resources/images/owl-login-arm@2x.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/login-resources/images/owl-login.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/login-resources/images/owl-login@2x.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/login-resources/images/ph-owl-arm.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/login-resources/images/ph-owl-arm@2x.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/login-resources/images/ph-owl-arml.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/login-resources/images/ph-owl-arml@2x.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/login-resources/images/signup-arm.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/login-resources/images/signup-arm@2x.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/login-resources/js/echarts.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/login-resources/js/jquery.min.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/piggy.ico" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/vanilla-cream-css/css/bootstrap.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/vanilla-cream-css/css/chosen.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/vanilla-cream-css/css/jplayer.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/vanilla-cream-css/css/jquery-ui-1.8.20.custom.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/vanilla-cream-css/css/jslider.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/vanilla-cream-css/css/video-js.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/vanilla-cream-css/fonts/glyphicons-halflings-regular.eot" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/vanilla-cream-css/fonts/glyphicons-halflings-regular.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/vanilla-cream-css/fonts/glyphicons-halflings-regular.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/vanilla-cream-css/fonts/glyphicons-halflings-regular.woff" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/vanilla-cream-css/images/badges_text.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/vanilla-cream-css/images/bg.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/vanilla-cream-css/images/buttons-mini.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/vanilla-cream-css/images/buttons.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/vanilla-cream-css/images/calendar_arrows.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/vanilla-cream-css/images/chosen-close.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/vanilla-cream-css/images/chosen.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/vanilla-cream-css/images/comment_arrow2.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/vanilla-cream-css/images/dropdown-arrow.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/vanilla-cream-css/images/dropdown-arrow2.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/vanilla-cream-css/images/icons/categories_icons4.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/vanilla-cream-css/images/icons/plus.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/vanilla-cream-css/images/icons/star_off.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/vanilla-cream-css/images/icons/star_on.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/vanilla-cream-css/images/jp-controls.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/vanilla-cream-css/images/jp-controls2.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/vanilla-cream-css/images/jslider.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/vanilla-cream-css/images/knob-balance-bg.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/vanilla-cream-css/images/knob-balance.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/vanilla-cream-css/images/knob-volume-bg.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/vanilla-cream-css/images/knob-volume.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/vanilla-cream-css/images/list-selector.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/vanilla-cream-css/images/loading.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/vanilla-cream-css/images/menu-arrow.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/vanilla-cream-css/images/nicEditorIcons.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/vanilla-cream-css/images/play.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/vanilla-cream-css/images/post_image_controls.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/vanilla-cream-css/images/ribbons-shadow.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/vanilla-cream-css/images/ribbons.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/vanilla-cream-css/images/scrollbar.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/vanilla-cream-css/images/seeking.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/vanilla-cream-css/images/service-arrow.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/vanilla-cream-css/images/service-check.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/vanilla-cream-css/images/share.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/vanilla-cream-css/images/styled_checkbox.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/vanilla-cream-css/images/styled_checkbox_large.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/vanilla-cream-css/images/styled_checkbox_middle.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/vanilla-cream-css/images/styled_radiobutton.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/vanilla-cream-css/images/tabs-see-more.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/vanilla-cream-css/images/tag.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/vanilla-cream-css/images/temp/avatar.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/vanilla-cream-css/images/temp/avatar3.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/vanilla-cream-css/images/temp/tabimage4.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/vanilla-cream-css/images/temp/tabimage5.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/vanilla-cream-css/images/temp/tabimage6.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/vanilla-cream-css/images/temp/tabimage7.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/vanilla-cream-css/images/temp/top-slider-1.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/vanilla-cream-css/images/temp/top-slider-2.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/vanilla-cream-css/images/temp/top-slider-3.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/vanilla-cream-css/images/temp/top-slider-4.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/vanilla-cream-css/images/temp/top-slider-5.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/vanilla-cream-css/images/temp/vjs_poster2.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/vanilla-cream-css/images/topmenu-bg.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/vanilla-cream-css/images/video-js.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/vanilla-cream-css/images/video_controls.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/vanilla-cream-css/images/video_controls_bg.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/vanilla-cream-css/index.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/vanilla-cream-css/js/Jplayer.swf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/vanilla-cream-css/js/custom.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/vanilla-cream-css/js/excanvas.min.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/vanilla-cream-css/js/general.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/vanilla-cream-css/js/jplayer.playlist.min.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/vanilla-cream-css/js/jquery-ui.multidatespicker.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/vanilla-cream-css/js/jquery.chosen.min.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/vanilla-cream-css/js/jquery.customInput.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/vanilla-cream-css/js/jquery.flot.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/vanilla-cream-css/js/jquery.flot.resize.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/vanilla-cream-css/js/jquery.jplayer.min.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/vanilla-cream-css/js/jquery.jscrollpane.min.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/vanilla-cream-css/js/jquery.mousewheel.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/vanilla-cream-css/js/jquery.powerful-placeholder.min.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/vanilla-cream-css/js/jquery.slider.bundle.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/vanilla-cream-css/js/jquery.slider.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/vanilla-cream-css/js/knobRot-0.2.2.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/vanilla-cream-css/js/libs/bootstrap.min.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/vanilla-cream-css/js/libs/jquery-1.10.0.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/vanilla-cream-css/js/libs/jquery-ui.min.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/vanilla-cream-css/js/libs/modernizr.min.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/vanilla-cream-css/js/nicEdit.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/vanilla-cream-css/js/progressbar.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/vanilla-cream-css/js/respond.min.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/vanilla-cream-css/js/video.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/vanilla-cream-css/style.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/error.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/a.jsp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/beauty1.jsp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/echarts.jsp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/echarts2.jsp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/echarts3.jsp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/echarts4.jsp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/errorPage.jsp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/hello.jsp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/index.jsp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/login.jsp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/securityLogin.jsp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/test.jsp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/uploadBase64.jsp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/Test.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/TimeHandle.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/beta/test/SpringTestt.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/diff/list/Demo.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/foreach/switchtest/Demo.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/io/test/Demo.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/kafka/GroupConsumer.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/kafka/SimpleProducer.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/mail/demo/SendHtmlMailDemo.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/mail/demo/SendMailDemo.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/maptest/Demo.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/mybatis/descsort/Demio.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/oss/test/Demo.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/phantom/demo/Phantom.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/phantom/demo/PhantomController.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/phantom/demo/PhantomjsFactory.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/phantom/test/Demo.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/phantom/test/Demo2.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/phantom/test/DemoTemp.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/poi/test/HeaderFooterTest.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/quartz/Demo.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/quartz/HelloQuartz.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/redis/RedisPoolTest.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/redis/RedisTest.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/sort/Demo.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/springpublish/MyEvent.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/springpublish/MyListener.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/springpublish/MyListener2.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/springpublish/MyPublisher.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/springpublish/MyTest.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/springpublish/applicationContext.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/streamAndAll/README.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/streamAndAll/sysLearning/function/Demo.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/streamAndAll/sysLearning/interfaceDemo/MyActionClass.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/streamAndAll/sysLearning/interfaceDemo/MyActionInterface.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/streamAndAll/sysLearning/lambda/Demo.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/streamAndAll/sysLearning/optional/Demo.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/streamAndAll/sysLearning/pojo/User.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/streamAndAll/usualUse/UsualUse.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/stringtetst/test/Demo.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/trs/Test.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/trs/poi/Demo.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/trs/test/poi/CreateReport.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/trs/test/poi/POItest4SXSSF.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/trs/test/poi/POItest4XWPF.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/trs/test/poi/TableTest.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/trs/test/poi/WorldDemo.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/trs/test/poi/WorldDemo2.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/trs/test/poi/WorldDemo3.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/application.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/Application.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/beta/basic/annotation/EnableRedis.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/beta/basic/controller/ControllerMy.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/beta/basic/controller/ControllerTest.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/beta/basic/controller/controller/ControllerSwagger.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/beta/basic/mybatis/cache/MybatisRedisCache.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/beta/basic/mybatis/mapper/TbUser.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/beta/basic/mybatis/mapper/TbUserExample$Criteria.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/beta/basic/mybatis/mapper/TbUserExample$Criterion.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/beta/basic/mybatis/mapper/TbUserExample$GeneratedCriteria.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/beta/basic/mybatis/mapper/TbUserExample.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/beta/basic/mybatis/mapper/TbUserMapper.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/beta/basic/pojo/LoginUser.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/beta/basic/pojo/User.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/beta/basic/service/AsyncTest.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/beta/basic/service/AsyncTestImpl.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/beta/basic/service/IUserService.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/beta/basic/service/UserService.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/beta/basic/util/AjaxObject.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/beta/basic/util/PhantomjsFactory.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/beta/basic/util/RedisUtil.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/beta/basic/util/SerializeUtil.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/beta/config/DBConfig.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/beta/config/DateConverterConfig.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/beta/config/MyWebMvcConfigurerAdapter.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/beta/config/aop/AspectTest.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/beta/config/exception/ErrorInfo.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/beta/config/exception/ExceptionController.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/beta/config/exception/GlobalExceptionHandler.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/beta/config/exception/MyException.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/beta/config/interceptor/MyInterceptor.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/beta/jwt/LoginCtroller.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/beta/scheduler/Iservice/ISchedulerService.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/beta/scheduler/IserviceImpl/SchedulerServiceImpl.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/beta/scheduler/SchedulerController.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/beta/scheduler/config/QuarzConfiguration.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/beta/scheduler/dao/SchedulerJob.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/beta/scheduler/dao/SchedulerJobExample$Criteria.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/beta/scheduler/dao/SchedulerJobExample$Criterion.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/beta/scheduler/dao/SchedulerJobExample$GeneratedCriteria.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/beta/scheduler/dao/SchedulerJobExample.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/beta/scheduler/dao/SchedulerJobMapper.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/beta/scheduler/task/ScheduleTask.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/beta/security/controller/AdminController.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/beta/security/controller/UserController.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/beta/security/dao/User.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/beta/security/dao/UserExample$Criteria.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/beta/security/dao/UserExample$Criterion.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/beta/security/dao/UserExample$GeneratedCriteria.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/beta/security/dao/UserExample.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/beta/security/dao/UserMapper.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/beta/security/service/ISecurityUserService.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/debug.log" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/error.log" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/generator/generator.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/generator/mybatis-generator.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/info.log" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/log4j.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/mapping/TbUserMapper.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/mapping/UserMapper.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/mystaticdir/1.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/mystaticdir/pageTemplate.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/report/static/11.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/abc.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/beautyAlert/css/component.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/beautyAlert/css/default.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/beautyAlert/fonts/codropsicons/codropsicons.eot" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/beautyAlert/fonts/codropsicons/codropsicons.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/beautyAlert/fonts/codropsicons/codropsicons.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/beautyAlert/fonts/codropsicons/codropsicons.woff" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/beautyAlert/fonts/codropsicons/license.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/beautyAlert/js/classie.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/beautyAlert/js/css-filters-polyfill.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/beautyAlert/js/cssParser.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/beautyAlert/js/modalEffects.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/beautyAlert/js/modernizr.custom.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/beautyTemplate1/css/animate.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/beautyTemplate1/css/bootstrap.min.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/beautyTemplate1/css/isotope.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/beautyTemplate1/css/styles.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/beautyTemplate1/flexslider/flexslider.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/beautyTemplate1/flexslider/jquery.flexslider.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/beautyTemplate1/flexslider/setting.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/beautyTemplate1/font/css/font-awesome.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/beautyTemplate1/font/css/font-awesome.min.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/beautyTemplate1/font/fonts/FontAwesome.otf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/beautyTemplate1/font/fonts/fontawesome-webfont.eot" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/beautyTemplate1/font/fonts/fontawesome-webfont.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/beautyTemplate1/font/fonts/fontawesome-webfont.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/beautyTemplate1/font/fonts/fontawesome-webfont.woff" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/beautyTemplate1/font/fonts/glyphicons-halflings-regular.eot" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/beautyTemplate1/font/fonts/glyphicons-halflings-regular.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/beautyTemplate1/font/fonts/glyphicons-halflings-regular.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/beautyTemplate1/font/fonts/glyphicons-halflings-regular.woff" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/beautyTemplate1/font/less/bordered-pulled.less" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/beautyTemplate1/font/less/core.less" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/beautyTemplate1/font/less/fixed-width.less" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/beautyTemplate1/font/less/font-awesome.less" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/beautyTemplate1/font/less/icons.less" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/beautyTemplate1/font/less/larger.less" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/beautyTemplate1/font/less/list.less" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/beautyTemplate1/font/less/mixins.less" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/beautyTemplate1/font/less/path.less" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/beautyTemplate1/font/less/rotated-flipped.less" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/beautyTemplate1/font/less/spinning.less" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/beautyTemplate1/font/less/stacked.less" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/beautyTemplate1/font/less/variables.less" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/beautyTemplate1/font/scss/_bordered-pulled.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/beautyTemplate1/font/scss/_core.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/beautyTemplate1/font/scss/_fixed-width.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/beautyTemplate1/font/scss/_icons.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/beautyTemplate1/font/scss/_larger.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/beautyTemplate1/font/scss/_list.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/beautyTemplate1/font/scss/_mixins.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/beautyTemplate1/font/scss/_path.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/beautyTemplate1/font/scss/_rotated-flipped.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/beautyTemplate1/font/scss/_spinning.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/beautyTemplate1/font/scss/_stacked.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/beautyTemplate1/font/scss/_variables.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/beautyTemplate1/font/scss/font-awesome.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/beautyTemplate1/images/1.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/beautyTemplate1/images/2.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/beautyTemplate1/images/3.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/beautyTemplate1/images/4.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/beautyTemplate1/images/arrows.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/beautyTemplate1/images/banner-bg.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/beautyTemplate1/images/bg_direction_nav.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/beautyTemplate1/images/clients/client-1.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/beautyTemplate1/images/clients/client-2.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/beautyTemplate1/images/clients/client-3.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/beautyTemplate1/images/clients/client-4.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/beautyTemplate1/images/clients/client-5.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/beautyTemplate1/images/clients/client-6.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/beautyTemplate1/images/clients/client-7.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/beautyTemplate1/images/clients/client-8.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/beautyTemplate1/images/clients/client-9.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/beautyTemplate1/images/feature-img-1.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/beautyTemplate1/images/laptop.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/beautyTemplate1/images/links-arrow.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/beautyTemplate1/images/message.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/beautyTemplate1/images/nivo-bullets.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/beautyTemplate1/images/photo-1.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/beautyTemplate1/images/photo-2.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/beautyTemplate1/images/photo-3.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/beautyTemplate1/images/photo-4.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/beautyTemplate1/images/slides/1.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/beautyTemplate1/images/slides/2.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/beautyTemplate1/images/slides/3.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/beautyTemplate1/images/tag-1.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/beautyTemplate1/images/tag.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/beautyTemplate1/images/work/1.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/beautyTemplate1/images/work/2.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/beautyTemplate1/images/work/3.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/beautyTemplate1/images/work/4.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/beautyTemplate1/images/work/5.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/beautyTemplate1/images/work/6.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/beautyTemplate1/images/work/7.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/beautyTemplate1/images/work/8.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/beautyTemplate1/images/zoom.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/beautyTemplate1/js/bootstrap.min.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/beautyTemplate1/js/custom.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/beautyTemplate1/js/fancybox/Descr.WD3" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/beautyTemplate1/js/fancybox/blank.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/beautyTemplate1/js/fancybox/fancybox_loading.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/beautyTemplate1/js/fancybox/fancybox_loading_402x.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/beautyTemplate1/js/fancybox/fancybox_overlay.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/beautyTemplate1/js/fancybox/fancybox_sprite.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/beautyTemplate1/js/fancybox/fancybox_sprite_402x.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/beautyTemplate1/js/fancybox/jquery.fancybox.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/beautyTemplate1/js/fancybox/jquery.fancybox.pack.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/beautyTemplate1/js/gmaps.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/beautyTemplate1/js/jquery-1.8.2.min.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/beautyTemplate1/js/jquery.fittext.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/beautyTemplate1/js/jquery.isotope.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/beautyTemplate1/js/jquery.isotope.min.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/beautyTemplate1/js/jquery.nav.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/beautyTemplate1/js/modernizr-latest.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/beautyTemplate1/js/owl-carousel/AjaxLoader.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/beautyTemplate1/js/owl-carousel/grabbing.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/beautyTemplate1/js/owl-carousel/owl.carousel.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/beautyTemplate1/js/owl-carousel/owl.carousel.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/beautyTemplate1/js/owl-carousel/owl.carousel.min.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/beautyTemplate1/js/owl-carousel/owl.theme.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/beautyTemplate1/js/owl-carousel/owl.transitions.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/beautyTemplate1/js/waypoints.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/bootstrap-3.3.7-dist/css/bootstrap-theme.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/bootstrap-3.3.7-dist/css/bootstrap-theme.css.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/bootstrap-3.3.7-dist/css/bootstrap-theme.min.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/bootstrap-3.3.7-dist/css/bootstrap-theme.min.css.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/bootstrap-3.3.7-dist/css/bootstrap.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/bootstrap-3.3.7-dist/css/bootstrap.css.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/bootstrap-3.3.7-dist/css/bootstrap.min.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/bootstrap-3.3.7-dist/css/bootstrap.min.css.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/bootstrap-3.3.7-dist/fonts/glyphicons-halflings-regular.eot" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/bootstrap-3.3.7-dist/fonts/glyphicons-halflings-regular.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/bootstrap-3.3.7-dist/fonts/glyphicons-halflings-regular.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/bootstrap-3.3.7-dist/fonts/glyphicons-halflings-regular.woff" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/bootstrap-3.3.7-dist/fonts/glyphicons-halflings-regular.woff2" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/bootstrap-3.3.7-dist/js/bootstrap.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/bootstrap-3.3.7-dist/js/bootstrap.min.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/bootstrap-3.3.7-dist/js/npm.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/docs/css/docs.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/docs/css/prettify.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/docs/images/header-bg.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/docs/images/loading.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/docs/images/logo.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/docs/images/nicEditorIcons.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/docs/index.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/docs/js/general.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/login-resources/1.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/login-resources/css/jq22.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/login-resources/fonts/fontawesome-webfont.woff" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/login-resources/images/owl-login-arm.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/login-resources/images/owl-login-arm@2x.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/login-resources/images/owl-login.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/login-resources/images/owl-login@2x.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/login-resources/images/ph-owl-arm.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/login-resources/images/ph-owl-arm@2x.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/login-resources/images/ph-owl-arml.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/login-resources/images/ph-owl-arml@2x.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/login-resources/images/signup-arm.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/login-resources/images/signup-arm@2x.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/login-resources/js/echarts.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/login-resources/js/jquery.min.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/piggy.ico" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/vanilla-cream-css/css/bootstrap.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/vanilla-cream-css/css/chosen.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/vanilla-cream-css/css/jplayer.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/vanilla-cream-css/css/jquery-ui-1.8.20.custom.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/vanilla-cream-css/css/jslider.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/vanilla-cream-css/css/video-js.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/vanilla-cream-css/fonts/glyphicons-halflings-regular.eot" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/vanilla-cream-css/fonts/glyphicons-halflings-regular.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/vanilla-cream-css/fonts/glyphicons-halflings-regular.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/vanilla-cream-css/fonts/glyphicons-halflings-regular.woff" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/vanilla-cream-css/images/badges_text.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/vanilla-cream-css/images/bg.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/vanilla-cream-css/images/buttons-mini.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/vanilla-cream-css/images/buttons.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/vanilla-cream-css/images/calendar_arrows.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/vanilla-cream-css/images/chosen-close.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/vanilla-cream-css/images/chosen.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/vanilla-cream-css/images/comment_arrow2.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/vanilla-cream-css/images/dropdown-arrow.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/vanilla-cream-css/images/dropdown-arrow2.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/vanilla-cream-css/images/icons/categories_icons4.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/vanilla-cream-css/images/icons/plus.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/vanilla-cream-css/images/icons/star_off.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/vanilla-cream-css/images/icons/star_on.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/vanilla-cream-css/images/jp-controls.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/vanilla-cream-css/images/jp-controls2.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/vanilla-cream-css/images/jslider.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/vanilla-cream-css/images/knob-balance-bg.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/vanilla-cream-css/images/knob-balance.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/vanilla-cream-css/images/knob-volume-bg.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/vanilla-cream-css/images/knob-volume.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/vanilla-cream-css/images/list-selector.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/vanilla-cream-css/images/loading.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/vanilla-cream-css/images/menu-arrow.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/vanilla-cream-css/images/nicEditorIcons.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/vanilla-cream-css/images/play.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/vanilla-cream-css/images/post_image_controls.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/vanilla-cream-css/images/ribbons-shadow.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/vanilla-cream-css/images/ribbons.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/vanilla-cream-css/images/scrollbar.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/vanilla-cream-css/images/seeking.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/vanilla-cream-css/images/service-arrow.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/vanilla-cream-css/images/service-check.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/vanilla-cream-css/images/share.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/vanilla-cream-css/images/styled_checkbox.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/vanilla-cream-css/images/styled_checkbox_large.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/vanilla-cream-css/images/styled_checkbox_middle.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/vanilla-cream-css/images/styled_radiobutton.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/vanilla-cream-css/images/tabs-see-more.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/vanilla-cream-css/images/tag.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/vanilla-cream-css/images/temp/avatar.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/vanilla-cream-css/images/temp/avatar3.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/vanilla-cream-css/images/temp/tabimage4.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/vanilla-cream-css/images/temp/tabimage5.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/vanilla-cream-css/images/temp/tabimage6.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/vanilla-cream-css/images/temp/tabimage7.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/vanilla-cream-css/images/temp/top-slider-1.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/vanilla-cream-css/images/temp/top-slider-2.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/vanilla-cream-css/images/temp/top-slider-3.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/vanilla-cream-css/images/temp/top-slider-4.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/vanilla-cream-css/images/temp/top-slider-5.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/vanilla-cream-css/images/temp/vjs_poster2.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/vanilla-cream-css/images/topmenu-bg.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/vanilla-cream-css/images/video-js.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/vanilla-cream-css/images/video_controls.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/vanilla-cream-css/images/video_controls_bg.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/vanilla-cream-css/index.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/vanilla-cream-css/js/Jplayer.swf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/vanilla-cream-css/js/custom.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/vanilla-cream-css/js/excanvas.min.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/vanilla-cream-css/js/general.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/vanilla-cream-css/js/jplayer.playlist.min.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/vanilla-cream-css/js/jquery-ui.multidatespicker.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/vanilla-cream-css/js/jquery.chosen.min.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/vanilla-cream-css/js/jquery.customInput.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/vanilla-cream-css/js/jquery.flot.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/vanilla-cream-css/js/jquery.flot.resize.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/vanilla-cream-css/js/jquery.jplayer.min.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/vanilla-cream-css/js/jquery.jscrollpane.min.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/vanilla-cream-css/js/jquery.mousewheel.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/vanilla-cream-css/js/jquery.powerful-placeholder.min.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/vanilla-cream-css/js/jquery.slider.bundle.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/vanilla-cream-css/js/jquery.slider.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/vanilla-cream-css/js/knobRot-0.2.2.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/vanilla-cream-css/js/libs/bootstrap.min.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/vanilla-cream-css/js/libs/jquery-1.10.0.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/vanilla-cream-css/js/libs/jquery-ui.min.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/vanilla-cream-css/js/libs/modernizr.min.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/vanilla-cream-css/js/nicEdit.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/vanilla-cream-css/js/progressbar.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/vanilla-cream-css/js/respond.min.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/vanilla-cream-css/js/video.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/vanilla-cream-css/style.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/templates/error.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/warn.log" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/m2e-wtp/web-resources/META-INF/MANIFEST.MF" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/m2e-wtp/web-resources/META-INF/maven/com.beta/springboot/pom.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/m2e-wtp/web-resources/META-INF/maven/com.beta/springboot/pom.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/com/Test.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/com/TimeHandle.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/com/User.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/com/beta/test/SpringTestt.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/com/diff/list/Demo.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/com/diff/list/User.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/com/foreach/switchtest/Demo.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/com/io/test/Demo.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/com/mail/demo/SendHtmlMailDemo.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/com/mail/demo/SendMailDemo.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/com/maptest/Demo.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/com/maptest/Sida.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/com/mybatis/descsort/Demio.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/com/oss/test/Demo.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/com/phantom/demo/Phantom.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/com/phantom/demo/PhantomController.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/com/phantom/demo/PhantomjsFactory.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/com/phantom/test/Demo.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/com/phantom/test/Demo2.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/com/phantom/test/DemoTemp.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/com/phantom/test/User.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/com/quartz/Demo.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/com/quartz/HelloQuartz.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/com/redis/RedisPoolTest.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/com/redis/RedisTest.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/com/sort/Demo$1.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/com/sort/Demo.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/com/stringtetst/test/Demo.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/com/trs/poi/Demo.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/com/trs/test/poi/CreateReport.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/com/trs/test/poi/POItest4SXSSF.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/com/trs/test/poi/POItest4XWPF.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/com/trs/test/poi/TableTest.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/com/trs/test/poi/WorldDemo.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/com/trs/test/poi/WorldDemo2.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/com/trs/test/poi/WorldDemo3.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/beta/scheduler/quartz/StartListen.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/beta/scheduler/quartz/StartListen.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -779,7 +18,7 @@
       <file leaf-file-name="ScheduledTask.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/beta/scheduler/springscheduler/ScheduledTask.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="364">
+            <state relative-caret-position="722">
               <caret line="47" column="6" selection-start-line="47" selection-start-column="6" selection-end-line="47" selection-end-column="6" />
               <folding>
                 <element signature="imports" expanded="true" />
@@ -791,11 +30,17 @@
       <file leaf-file-name="StartListen.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/beta/scheduler/quartz/StartListen.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="285">
-              <caret line="54" column="4" selection-start-line="54" selection-start-column="4" selection-end-line="59" selection-end-column="5" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
+            <state relative-caret-position="83">
+              <caret line="15" selection-start-line="15" selection-end-line="15" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Application.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/Application.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="152">
+              <caret line="20" column="15" lean-forward="true" selection-start-line="20" selection-start-column="15" selection-end-line="20" selection-end-column="15" />
             </state>
           </provider>
         </entry>
@@ -812,20 +57,18 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name=".gitignore" pinned="false" current-in-tab="true">
+      <file leaf-file-name=".gitignore" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/.gitignore">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="301">
-              <caret line="31" lean-forward="true" selection-start-line="31" selection-end-line="31" />
+            <state relative-caret-position="190">
+              <caret line="10" column="9" lean-forward="true" selection-start-line="10" selection-start-column="9" selection-end-line="10" selection-end-column="9" />
             </state>
           </provider>
         </entry>
       </file>
       <file leaf-file-name="pom.xml" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/pom.xml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-3462" />
-          </provider>
+          <provider selected="true" editor-type-id="text-editor" />
         </entry>
       </file>
       <file leaf-file-name="README.md" pinned="false" current-in-tab="false">
@@ -843,7 +86,7 @@
       <file leaf-file-name="TaskPerform.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/beta/scheduler/quartz/TaskPerform.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="266">
+            <state relative-caret-position="285">
               <caret line="24" column="13" selection-start-line="24" selection-start-column="13" selection-end-line="24" selection-end-column="13" />
               <folding>
                 <element signature="imports" expanded="true" />
@@ -885,10 +128,10 @@
         <option value="$PROJECT_DIR$/src/main/java/com/beta/scheduler/quartz/config/BaseCronTrigger.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/beta/scheduler/quartz/README.md" />
         <option value="$PROJECT_DIR$/src/main/java/com/beta/scheduler/quartz/TaskPerform.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/beta/scheduler/quartz/StartListen.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/beta/scheduler/springscheduler/ScheduledTask.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/beta/scheduler/quartz/ScheduleService.java" />
         <option value="$PROJECT_DIR$/.gitignore" />
+        <option value="$PROJECT_DIR$/src/main/java/com/beta/scheduler/quartz/StartListen.java" />
       </list>
     </option>
   </component>
@@ -919,7 +162,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="AndroidView" />
       <pane id="ProjectPane">
         <subPane>
@@ -928,10 +170,46 @@
               <item name="forest" type="b2602c69:ProjectViewProjectNode" />
               <item name="forest" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="forest" type="b2602c69:ProjectViewProjectNode" />
+              <item name="forest" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="forest" type="b2602c69:ProjectViewProjectNode" />
+              <item name="forest" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="forest" type="b2602c69:ProjectViewProjectNode" />
+              <item name="forest" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="forest" type="b2602c69:ProjectViewProjectNode" />
+              <item name="forest" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="com" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="forest" type="b2602c69:ProjectViewProjectNode" />
+              <item name="forest" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="com" type="462c0819:PsiDirectoryNode" />
+              <item name="beta" type="462c0819:PsiDirectoryNode" />
+            </path>
           </expand>
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
       <pane id="PackagesPane" />
     </panes>
   </component>
@@ -1046,14 +324,24 @@
       <workItem from="1541651791646" duration="1853000" />
       <workItem from="1541680258528" duration="994000" />
       <workItem from="1541700261724" duration="4893000" />
+      <workItem from="1541740011979" duration="296000" />
     </task>
+    <task id="LOCAL-00001" summary="springboot整合quartz和spring schedule">
+      <created>1541740122819</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1541740122819</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="10582000" />
+    <option name="totallyTimeSpent" value="10878000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1680" height="1050" extended-state="0" />
+    <editor active="true" />
     <layout>
       <window_info anchor="right" id="Palette" order="3" />
       <window_info anchor="bottom" id="Event Log" order="7" side_tool="true" />
@@ -1067,13 +355,12 @@
       <window_info id="UI Designer" order="2" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.39979446" />
       <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info anchor="bottom" id="Messages" order="8" weight="0.3299075" />
       <window_info anchor="right" id="Palette&#9;" order="3" />
       <window_info id="Image Layers" order="2" />
       <window_info anchor="bottom" id="Java Enterprise" order="7" />
       <window_info anchor="right" id="Capture Analysis" order="3" />
       <window_info anchor="bottom" id="Run" order="2" />
-      <window_info anchor="bottom" id="Version Control" order="7" visible="true" weight="0.6176773" />
+      <window_info anchor="bottom" id="Version Control" order="7" visible="true" weight="0.48406988" />
       <window_info anchor="bottom" id="Spring" order="7" />
       <window_info anchor="bottom" id="Terminal" order="7" />
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.25367647" />
@@ -1081,6 +368,7 @@
       <window_info id="Web" order="2" side_tool="true" />
       <window_info anchor="right" id="Theme Preview" order="3" />
       <window_info id="Favorites" order="2" side_tool="true" />
+      <window_info anchor="bottom" id="Messages" order="8" weight="0.3299075" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
@@ -1124,70 +412,18 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="更新" />
     <MESSAGE value="Merge branch 'master' of github.com:Sidabw/forest&#10;&#10;# Conflicts:&#10;#&#9;.idea/workspace.xml" />
-    <option name="LAST_COMMIT_MESSAGE" value="Merge branch 'master' of github.com:Sidabw/forest&#10;&#10;# Conflicts:&#10;#&#9;.idea/workspace.xml" />
+    <MESSAGE value="springboot整合quartz和spring schedule" />
+    <option name="LAST_COMMIT_MESSAGE" value="springboot整合quartz和spring schedule" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/beta/scheduler/quartz/SchedulerController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="437">
-          <caret line="27" column="5" lean-forward="true" selection-start-line="27" selection-start-column="5" selection-end-line="27" selection-end-column="5" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/beta/scheduler/quartz/Iservice/ISchedulerService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="95">
-          <caret line="5" column="17" selection-start-line="5" selection-start-column="17" selection-end-line="5" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/beta/scheduler/quartz/config/QuarzConfiguration.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="323">
-          <caret line="23" column="76" selection-start-line="23" selection-start-column="76" selection-end-line="23" selection-end-column="76" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/beta/scheduler/quartz/config/BaseCronTrigger.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="247">
-          <caret line="25" column="59" lean-forward="true" selection-start-line="25" selection-start-column="59" selection-end-line="25" selection-end-column="59" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/beta/scheduler/quartz/dao/SchedulerJob.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="76">
-          <caret line="4" column="13" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/beta/scheduler/quartz/dao/SchedulerJobExample.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="76">
-          <caret line="5" column="13" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/beta/scheduler/quartz/dao/SchedulerJobMapper.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="38">
-          <caret line="2" selection-start-line="2" selection-end-line="2" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/beta/scheduler/quartz/dao/SchedulerJobMapper.xml">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/beta/scheduler/quartz/SchedulerController.java" />
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/beta/scheduler/quartz/Iservice/ISchedulerService.java" />
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/beta/scheduler/quartz/config/QuarzConfiguration.java" />
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/beta/scheduler/quartz/config/BaseCronTrigger.java" />
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/beta/scheduler/quartz/dao/SchedulerJob.java" />
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/beta/scheduler/quartz/dao/SchedulerJobExample.java" />
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/beta/scheduler/quartz/dao/SchedulerJobMapper.java" />
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/beta/scheduler/quartz/dao/SchedulerJobMapper.xml" />
     <entry file="file://$PROJECT_DIR$/src/main/java/com/beta/scheduler/springscheduler/ScheduledTask.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="152">
@@ -1198,13 +434,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/beta/scheduler/quartz/task/ScheduleTask.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="152">
-          <caret line="17" column="25" selection-start-line="17" selection-start-column="13" selection-end-line="17" selection-end-column="25" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/beta/scheduler/quartz/task/ScheduleTask.java" />
     <entry file="file://$PROJECT_DIR$/src/main/java/com/Application.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="342">
@@ -1212,47 +442,12 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/beta/scheduler/quartz/Iservice/ISchedulerService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="95">
-          <caret line="5" column="17" selection-start-line="5" selection-start-column="17" selection-end-line="5" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/beta/scheduler/quartz/config/QuarzConfiguration.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="304">
-          <caret line="18" column="38" lean-forward="true" selection-start-line="18" selection-start-column="38" selection-end-line="18" selection-end-column="38" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/beta/scheduler/quartz/dao/SchedulerJob.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="76">
-          <caret line="4" column="13" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/beta/scheduler/quartz/dao/SchedulerJobExample.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="76">
-          <caret line="5" column="13" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/beta/scheduler/quartz/dao/SchedulerJobMapper.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="38">
-          <caret line="2" column="43" selection-start-line="2" selection-start-column="30" selection-end-line="2" selection-end-column="43" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/beta/scheduler/quartz/dao/SchedulerJobMapper.xml">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/beta/scheduler/quartz/Iservice/ISchedulerService.java" />
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/beta/scheduler/quartz/config/QuarzConfiguration.java" />
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/beta/scheduler/quartz/dao/SchedulerJob.java" />
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/beta/scheduler/quartz/dao/SchedulerJobExample.java" />
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/beta/scheduler/quartz/dao/SchedulerJobMapper.java" />
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/beta/scheduler/quartz/dao/SchedulerJobMapper.xml" />
     <entry file="file://$PROJECT_DIR$/src/main/java/com/beta/scheduler/springscheduler/ScheduledTask.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="266">
@@ -1271,16 +466,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/beta/scheduler/quartz/SchedulerController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="228">
-          <caret line="12" column="28" lean-forward="true" selection-start-line="12" selection-start-column="28" selection-end-line="12" selection-end-column="28" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/beta/scheduler/quartz/SchedulerController.java" />
     <entry file="file://$PROJECT_DIR$/src/test/java/com/streamAndAll/README.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="SPLIT">
@@ -1352,13 +538,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/Application.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="342">
-          <caret line="30" column="28" selection-start-line="25" selection-start-column="12" selection-end-line="25" selection-end-column="27" />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-context/4.3.7.RELEASE/spring-context-4.3.7.RELEASE.jar!/org/springframework/scheduling/annotation/Scheduled.class">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="20">
@@ -1374,74 +553,15 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/beta/scheduler/quartz/dao/SchedulerJobExample.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="76">
-          <caret line="5" column="13" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/beta/scheduler/quartz/dao/SchedulerJobMapper.xml">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/beta/scheduler/quartz/Iservice/ISchedulerService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="95">
-          <caret line="5" column="17" selection-start-line="5" selection-start-column="17" selection-end-line="5" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/beta/scheduler/quartz/dao/SchedulerJob.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="76">
-          <caret line="4" column="13" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/beta/scheduler/quartz/dao/SchedulerJobMapper.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="38">
-          <caret line="2" selection-start-line="2" selection-end-line="2" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/beta/scheduler/quartz/SchedulerController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="513">
-          <caret line="27" column="5" selection-start-line="27" selection-start-column="5" selection-end-line="27" selection-end-column="5" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/beta/scheduler/quartz/config/QuarzConfiguration.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="323">
-          <caret line="23" column="76" selection-start-line="23" selection-start-column="76" selection-end-line="23" selection-end-column="76" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/beta/scheduler/quartz/task/ScheduleTask.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="304">
-          <caret line="27" lean-forward="true" selection-start-line="27" selection-end-line="27" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/beta/scheduler/quartz/config/BaseCronTrigger.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="25" column="59" selection-start-line="25" selection-start-column="59" selection-end-line="25" selection-end-column="59" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/beta/scheduler/quartz/dao/SchedulerJobExample.java" />
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/beta/scheduler/quartz/dao/SchedulerJobMapper.xml" />
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/beta/scheduler/quartz/Iservice/ISchedulerService.java" />
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/beta/scheduler/quartz/dao/SchedulerJob.java" />
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/beta/scheduler/quartz/dao/SchedulerJobMapper.java" />
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/beta/scheduler/quartz/SchedulerController.java" />
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/beta/scheduler/quartz/config/QuarzConfiguration.java" />
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/beta/scheduler/quartz/task/ScheduleTask.java" />
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/beta/scheduler/quartz/config/BaseCronTrigger.java" />
     <entry file="file://$PROJECT_DIR$/src/main/java/com/beta/scheduler/quartz/README.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="SPLIT">
@@ -1453,13 +573,11 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-3462" />
-      </provider>
+      <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/beta/scheduler/springscheduler/ScheduledTask.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="364">
+        <state relative-caret-position="722">
           <caret line="47" column="6" selection-start-line="47" selection-start-column="6" selection-end-line="47" selection-end-column="6" />
           <folding>
             <element signature="imports" expanded="true" />
@@ -1469,18 +587,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/beta/scheduler/quartz/TaskPerform.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="266">
-          <caret line="24" column="13" selection-start-line="24" selection-start-column="13" selection-end-line="24" selection-end-column="13" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/beta/scheduler/quartz/StartListen.java">
-      <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="285">
-          <caret line="54" column="4" selection-start-line="54" selection-start-column="4" selection-end-line="59" selection-end-column="5" />
+          <caret line="24" column="13" selection-start-line="24" selection-start-column="13" selection-end-line="24" selection-end-column="13" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -1502,8 +610,22 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/.gitignore">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="301">
-          <caret line="31" lean-forward="true" selection-start-line="31" selection-end-line="31" />
+        <state relative-caret-position="190">
+          <caret line="10" column="9" lean-forward="true" selection-start-line="10" selection-start-column="9" selection-end-line="10" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/beta/scheduler/quartz/StartListen.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="83">
+          <caret line="15" selection-start-line="15" selection-end-line="15" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/Application.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="152">
+          <caret line="20" column="15" lean-forward="true" selection-start-line="20" selection-start-column="15" selection-end-line="20" selection-end-column="15" />
         </state>
       </provider>
     </entry>
