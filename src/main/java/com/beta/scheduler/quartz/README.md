@@ -1,0 +1,5 @@
+#动态创建定时任务思路
+
+#可以在ScheduleService中定义一个全局的定时器，定时读取数据库创建相应定时任务。
+
+#动态创建定时任务写在TaskPerform中，向Scheduler任务队列中添加JobDetail和CronTrigger
