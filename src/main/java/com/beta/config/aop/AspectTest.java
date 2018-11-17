@@ -1,6 +1,7 @@
 package com.beta.config.aop;
 
 import java.lang.reflect.Method;
+import java.lang.reflect.Parameter;
 import java.util.Arrays;
 
 import javax.servlet.http.HttpServletRequest;
@@ -72,6 +73,7 @@ public class AspectTest {
         MethodSignature methodSignature = (MethodSignature)signature;
         Object target = pjp.getTarget();
         Method method = target.getClass().getMethod(methodSignature.getName(), methodSignature.getParameterTypes());
+        Parameter[] parameters = method.getParameters();
         if(method.isAnnotationPresent(EnableRedis.class)){
         	//...
         	

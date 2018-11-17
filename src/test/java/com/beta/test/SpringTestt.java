@@ -25,8 +25,8 @@ public class SpringTestt {
 
 	@Test
 	public void testt() {
-		List<TbUser> queryList = userService.queryList();
-		System.out.println(queryList.get(0).getUsername());
+		/*List<TbUser> queryList = userService.queryList();
+		System.out.println(queryList.get(0).getUsername());*/
 	}
 	public static void main(String[] args) {
 		//i++;

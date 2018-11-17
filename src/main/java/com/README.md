@@ -36,9 +36,8 @@ execution(public * com.beta.basic.controller..*.*(..))
 在application.properties中加入；
 logging.level.com.beta.mybatis.mapper=trace
 
-#quartz corn 表达式    ->  blog:   https://www.cnblogs.com/lazyInsects/p/8075487.html
-#quartz 实现：项目启动读数据库注册定时任务，请求editScheduler更改定时规则。
 
+#quartz     详细见com.beta.scheduler.quartz.README.md
 #mail 相关实现      ->  blog:https://www.cnblogs.com/xdp-gacl/p/4216311.html
 
 #springboot 在实现jsp和thyemleaf双模板引擎上太麻烦，各种问题，最终解决方案是使用jsp，

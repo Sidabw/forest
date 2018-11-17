@@ -50,6 +50,4 @@ public class DateConverterConfig implements Converter<String,Date> {
         }
         return date;
     }
-
-
 }
