@@ -42,3 +42,6 @@ logging.level.com.beta.mybatis.mapper=trace
 
 #springboot 在实现jsp和thyemleaf双模板引擎上太麻烦，各种问题，最终解决方案是使用jsp，
 #全局异常处理废弃，使用interceptor拦截500/404错误，并return到errorPage.jsp页面
+
+#elastic search 相关内容请查看/forest/src/main/java/com/beta/basic/elasticsearch
+
