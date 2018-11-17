@@ -35,7 +35,7 @@ public class EsController {
 
     @RequestMapping("/test")
     public Object esTest(){
-
+        System.out.println("service in");
         return esServiceImpl.esTest();
     }
 }
