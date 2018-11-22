@@ -5,6 +5,8 @@ import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
 import java.util.Date;
+import java.util.List;
+import java.util.stream.Collectors;
 
 public class TimeHandle {
 	public static void main(String[] args) throws ParseException {
@@ -51,5 +53,14 @@ public class TimeHandle {
 		Calendar currentTime = Calendar.getInstance();
 		currentTime.add(Calendar.MINUTE, -10);
 		System.out.println(new SimpleDateFormat("yyyy.MM.dd HH:mm:ss").format(currentTime.getTime()));
+
+		System.out.println("---------------------------------");
+		//nanoTime 纳秒值    毫秒 微秒 纳秒
+		long c1 = System.nanoTime();
+//      List<Model> th_zhaiwuyuqiweiqingchang = models.stream().filter(e -> e.getPinyinMongoId().equals("th_zhaiwuyuqiweiqingchang")).collect(Collectors.toList());
+//		List<Model> th_zhaiwuyuqiweiqingchang = models.parallelStream().filter(e -> e.getPinyinMongoId().equals("th_zhaiwuyuqiweiqingchang")).collect(Collectors.toList());
+		long c2 = System.nanoTime();
+		//long c3 = TimeUnit.NANOSECONDS.toMillis(c2 - c1);
+		System.out.println(c2 -c1);
 	}
 }
