@@ -12,7 +12,20 @@ import org.junit.Test;
 public class Demo {
 	
 	/**
-     * 类似空指针这样的异常，从某些层面来说正确的处理应该是告诉页面没有数据，而不是抛异常或者try catch。
+     * 1.存在即返回, 无则提供默认值
+	 * 	return user.orElse(null);
+	 * 	return user.orElse(UNKNOWN_USER);
+	 * 2.存在即返回, 无则由函数来产生
+	 * 	return user.orElseGet(() -> fetchAUserFromDatabase());
+	 * 3.存在才对它做点什么
+	 * http://www.importnew.com/22060.html
+	 * 	使用map
+	 *
+	 *--------
+	 * 尽可能不要使用isPresent和get，否则你会发现与之前判空没有什么区别
+	 *--------
+	 *
+	 * 类似空指针这样的异常，从某些层面来说正确的处理应该是告诉页面没有数据，而不是抛异常或者try catch。
      *
 	 * Optional是1个可以为null的容器，如果值存在则方法isPresent返回true，调用get方法返回该对象。
 	 * 我们通常使用Optional来解决空指针的问题。
@@ -23,6 +36,10 @@ public class Demo {
 	public static void main(String[] args) {
 
 	}
+
+	/***
+	 * 正常情况不会这样用
+	 */
 	@Test
 	public void test1(){
 		//这里传null的话会报nullPointException

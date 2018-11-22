@@ -1,5 +1,5 @@
 
-package com.foreach.switchtest;
+package com.javatest.test.switchtest;
 
 import java.util.ArrayList;
 import java.util.List;

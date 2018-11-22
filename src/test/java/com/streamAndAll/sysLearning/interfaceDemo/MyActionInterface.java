@@ -3,6 +3,7 @@ package com.streamAndAll.sysLearning.interfaceDemo;
 /**
  * @author  Brew
  * */
+@FunctionalInterface
 public interface MyActionInterface {
 	 public void saySomeThing(String str);
 	    /**

@@ -28,6 +28,9 @@ public class User {
 		this.gender = gender;
 		this.name = name;
 	}
+	public User(){
+
+	}
 	
 
 }

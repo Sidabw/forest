@@ -24,6 +24,7 @@ public class Demo {
 		
 		System.out.println(function.apply("1111"));
 		System.out.println(function2.apply("2222"));
+		System.out.println(function3.apply(new User(1, "女", "哈哈")));
 		
  		System.out.println("--------------------------------------------");
 		System.out.println("--------------------------------------------");

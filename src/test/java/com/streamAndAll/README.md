@@ -1,4 +1,10 @@
-#map接受的是Function	1进1出。可以写成User::getAge	此时User为进，getAge的结果为出
+
+###systemlearning/interfaceDemo
+Interface MyActionInterface can be called by a lambda expression, only because it contains exactly one abstract method declaration.
+You can use annotation @FunctionInterface to ensure the interface meets your requirements of only contained one abstract method.
+###::keyword
+Java 8 enables you to pass references of methods or constructors to the only abstract method defined in your function interface via the :: keyword .
+###map接受的是Function	1进1出。可以写成User::getAge	此时User为进，getAge的结果为出
 #foreach接受的是Consumer  只进不出。
 # ::相关
 #for (Object n : list) { System.out.println(n); }

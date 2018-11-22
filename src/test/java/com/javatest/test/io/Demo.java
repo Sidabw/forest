@@ -1,4 +1,4 @@
-package com.io.test;
+package com.javatest.test.io;
 
 import java.io.*;
 

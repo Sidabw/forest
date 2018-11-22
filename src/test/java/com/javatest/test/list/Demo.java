@@ -1,5 +1,5 @@
 
-package com.diff.list;
+package com.javatest.test.list;
 
 import com.alibaba.fastjson.JSONArray;
 

@@ -1,5 +1,5 @@
 
-package com.maptest;
+package com.javatest.test.maptest;
 
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
