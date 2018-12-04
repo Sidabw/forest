@@ -13,11 +13,7 @@ import java.util.Properties;
  */
 public class SimpleProducer {
     public static void main(String[] args){
-        if(args.length == 0){
-            System.out.println("Enter topic name!");
-            return;
-        }
-        String topicName = "MlutibrokerApplication";
+        String topicName = "Hello-Kafka";
         Properties props = new Properties();
         props.put("bootstrap.servers", "localhost:9092");
         props.put("acks", "all");

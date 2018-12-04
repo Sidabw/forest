@@ -15,7 +15,7 @@ import java.util.Properties;
 public class GroupConsumer {
     public static void main(String[] args){
 
-        String topic = "MlutibrokerApplication";
+        String topic = "Hello-Kafka";
         String group = "MyFirstGroup";
         Properties props = new Properties();
         props.put("bootstrap.servers", "localhost:9092");
