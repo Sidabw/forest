@@ -3,7 +3,7 @@ package com.beta.security.dao;
 import java.io.Serializable;
 import java.util.Date;
 
-public class User extends UserKey implements Serializable {
+public class CompanyInfo extends CompanyInfoKey implements Serializable {
     private String stockName;
 
     private String companyName;

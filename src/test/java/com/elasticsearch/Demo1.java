@@ -14,6 +14,7 @@ package com.elasticsearch;
 import com.alibaba.fastjson.JSONObject;
 import org.elasticsearch.action.ActionFuture;
 import org.elasticsearch.action.admin.indices.delete.DeleteIndexResponse;
+import org.elasticsearch.action.bulk.BulkRequestBuilder;
 import org.elasticsearch.action.delete.DeleteResponse;
 import org.elasticsearch.action.get.GetRequest;
 import org.elasticsearch.action.get.GetResponse;
@@ -43,6 +44,7 @@ import java.io.IOException;
 import java.net.InetAddress;
 import java.net.UnknownHostException;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 import java.util.concurrent.ExecutionException;
 
@@ -80,10 +82,31 @@ public class Demo1 {
     }
     //NOTE:这里firstname:o并不是不分词，而是库中的数据分词后没有和o能对上的，如果有Sida o 这样的fitstname那么就能对应
     //The standard query for performing full text queries, including fuzzy matching and phrase or proximity(接近) queries.
-    public static SearchResponse simpleMatchQuery(TransportClient client, String index) {
-        MatchQueryBuilder matchQueryBuilder = QueryBuilders.matchQuery("name", "Doe");
+    public static SearchResponse simpleMatchQuery(TransportClient client, String index, String name, String text) {
+        MatchQueryBuilder matchQueryBuilder = QueryBuilders.matchQuery(name, text);
+//        MatchQueryBuilder matchQueryBuilder = QueryBuilders.matchQuery("name", "Doe");
         SearchRequestBuilder searchRequestBuilder = client.prepareSearch(index);
         SearchResponse response = searchRequestBuilder.setQuery(matchQueryBuilder).get();
+        return response;
+    }
+    public static SearchResponse simpleMatchPhraseQuery(TransportClient client, String index, String name, String text) {
+        MatchPhraseQueryBuilder matchQueryBuilder = QueryBuilders.matchPhraseQuery(name, text);
+//        MatchQueryBuilder matchQueryBuilder = QueryBuilders.matchQuery("name", "Doe");
+        SearchRequestBuilder searchRequestBuilder = client.prepareSearch(index);
+        SearchResponse response = searchRequestBuilder.setQuery(matchQueryBuilder).get();
+        return response;
+    }
+    public static SearchResponse simpleWildcardQuery(TransportClient client, String index, String name, String text) {
+        WildcardQueryBuilder wildcardQueryBuilder = QueryBuilders.wildcardQuery(name, text);
+//        MatchQueryBuilder matchQueryBuilder = QueryBuilders.matchQuery("name", "Doe");
+        SearchRequestBuilder searchRequestBuilder = client.prepareSearch(index);
+        SearchResponse response = searchRequestBuilder.setQuery(wildcardQueryBuilder).get();
+        return response;
+    }
+    public static SearchResponse simpleMultiMatch(TransportClient client, String index, String text, String... fields){
+        MultiMatchQueryBuilder multiMatchQueryBuilder = QueryBuilders.multiMatchQuery(text, fields);
+        SearchRequestBuilder searchRequestBuilder = client.prepareSearch(index);
+        SearchResponse response = searchRequestBuilder.setQuery(multiMatchQueryBuilder).get();
         return response;
     }
     // gt大于, lt小于 gte、ge大于等于   lte、le 小于等于
@@ -113,16 +136,34 @@ public class Demo1 {
     /***
      * insert操作
      */
-    public static void indexNewRecored(TransportClient client) {
-        HashMap<String, String> newRecored = new HashMap<>();
+    public static void indexNewRecored(TransportClient client, String index, String type, String id, String jsonRecored) {
+        /*HashMap<String, String> newRecored = new HashMap<>();
         newRecored.put("name", "J");
-        String jsonRecored = JSONObject.toJSONString(newRecored);
-        IndexResponse response = client.prepareIndex("customer", "_doc", "4")
+        String jsonRecored = JSONObject.toJSONString(newRecored);*/
+        IndexResponse response = client.prepareIndex(index, type, id)
                 .setSource(jsonRecored, XContentType.JSON)
                 .get();
         System.out.println(response.status());
     }
 
+    /***
+     * 批量 insert操作
+     */
+    public static void bulkIndexNewRecoreds(TransportClient client, String index, String type, List<String> ids, List<String> jsonRecored){
+        BulkRequestBuilder bulkRequestBuilder = client.prepareBulk();
+        for(int i = 0 ; i < jsonRecored.size(); i++){
+            bulkRequestBuilder.add(client
+                    .prepareIndex(index, type, ids.get(i)).
+                    setSource(jsonRecored.get(i), XContentType.JSON));
+            if(i != 0 && i % 100 == 0){
+                //一次插入100条记录
+                bulkRequestBuilder.execute().actionGet();
+            }
+        }
+        //插入最后一组数据
+        bulkRequestBuilder.execute().actionGet();
+
+    }
 
     /***
      * update操作
@@ -179,11 +220,15 @@ public class Demo1 {
         /*update(client);*/
     }
     public static TransportClient getClient() throws UnknownHostException {
+        return getClient("localhost", "elasticsearch_feiyi");
+    }
+
+    public static TransportClient getClient(String address, String clusterName) throws UnknownHostException {
         Settings settings = Settings.builder()
-                .put("cluster.name", "elasticsearch_feiyi")
+                .put("cluster.name", clusterName)
                 .put("client.transport.sniff", true).build();
         TransportClient client = new PreBuiltTransportClient(settings)
-                .addTransportAddress(new TransportAddress(InetAddress.getByName("localhost"), 9300));
+                .addTransportAddress(new TransportAddress(InetAddress.getByName(address), 9300));
         return client;
     }
 

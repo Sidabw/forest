@@ -2,21 +2,36 @@
 package com.javatest.test.list;
 
 import com.alibaba.fastjson.JSONArray;
+import com.alibaba.fastjson.JSONObject;
 
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.List;
+import java.util.*;
 
 //import net.minidev.json.JSONArray;
 
 public class Demo {
 	public static void main(String[] args){
+		HashMap<String, Map<String , List>> map = new HashMap<>();
+		HashMap<String, List> mapContent = new HashMap<>();
+		ArrayList<User> dataList = new ArrayList<>();
+		User zhangsan = new User("zhangsan", 1);
+		dataList.add(zhangsan);
+		mapContent.put("data_list", dataList);
+		map.put("content", mapContent);
+		//
+		System.out.println(JSONObject.toJSONString(map));
+		User o1 = (User)map.get("content").get("data_list").get(0);
+		o1.setGender(0);
+		System.out.println(JSONObject.toJSONString(map));
+		System.out.println("---------------------------");
 		List<Object> list = new ArrayList<Object>();
 		list.add(new User("zhangsan",1));
 		ArrayList<User> arrayList = new ArrayList<User>();
 		arrayList.add(new User("lisi",0));
 		arrayList.add(new User("wangwu",0));
 		list.add(arrayList);
+		System.out.println(JSONArray.toJSONString(list));
+		List o = (List)list.get(1);
+		o.remove(0);
 		System.out.println(JSONArray.toJSONString(list));
 		System.out.println("-----------------------------");
 		for(int i = 0 ; i < arrayList.size() ; i ++){

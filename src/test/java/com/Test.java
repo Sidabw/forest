@@ -33,6 +33,8 @@ public class Test {
 		System.out.println(null1 + str1 + null2);
 
 		DigestUtils.md5Hex("");
+		System.out.println("-----------------------------");
+        System.out.println(1%10);
 		/*User user = new User("面包",1);
 		User user2 = user;
 		user2.setGender(0);

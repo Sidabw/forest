@@ -1,4 +1,4 @@
-package com.stringtetst.test;
+package com.javatest.test.test;
 
 /***
  *  Created by shao.guangze on 2018/7/26
@@ -26,5 +26,11 @@ public class Demo {
         System.out.println(aaa.equals(aaa1));
         Demo demo = new Demo();
         demo.equals(new Demo());
+        System.out.println("-----------------------------------");
+        Object o = new Demo();
+        Demo d = (Demo)o;
+        System.out.println(d == o); //所以说强转之后还是原来的对象
+        System.out.println("----------------------------------");
+        System.out.println(String.format("task.%s", 1));
     }
 }

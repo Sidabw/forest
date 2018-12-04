@@ -1,5 +1,5 @@
 
-package com.sort;
+package com.javatest.test.sort;
 
 import java.util.ArrayList;
 import java.util.Collections;
@@ -7,7 +7,6 @@ import java.util.Comparator;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
-import java.util.stream.Collectors;
 
 /**
  * List<Map<String,Object>> sorted by comparator

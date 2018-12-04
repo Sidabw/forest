@@ -2,6 +2,7 @@ package com.beta.security.dao;
 
 import com.beta.security.dao.User;
 import com.beta.security.dao.UserExample;
+import com.beta.security.dao.UserKey;
 import java.util.List;
 import org.apache.ibatis.annotations.Param;
 
@@ -10,7 +11,7 @@ public interface UserMapper {
 
     int deleteByExample(UserExample example);
 
-    int deleteByPrimaryKey(Integer id);
+    int deleteByPrimaryKey(UserKey key);
 
     int insert(User record);
 
@@ -18,7 +19,7 @@ public interface UserMapper {
 
     List<User> selectByExample(UserExample example);
 
-    User selectByPrimaryKey(Integer id);
+    User selectByPrimaryKey(UserKey key);
 
     int updateByExampleSelective(@Param("record") User record, @Param("example") UserExample example);
 

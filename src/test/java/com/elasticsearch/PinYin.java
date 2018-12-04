@@ -10,11 +10,16 @@
  */
 package com.elasticsearch;
 
+import com.alibaba.druid.util.StringUtils;
 import net.sourceforge.pinyin4j.PinyinHelper;
 import net.sourceforge.pinyin4j.format.HanyuPinyinOutputFormat;
 import net.sourceforge.pinyin4j.format.HanyuPinyinToneType;
 import net.sourceforge.pinyin4j.format.HanyuPinyinVCharType;
 import net.sourceforge.pinyin4j.format.exception.BadHanyuPinyinOutputFormatCombination;
+import org.elasticsearch.action.delete.DeleteResponse;
+import org.elasticsearch.client.transport.TransportClient;
+
+import java.net.UnknownHostException;
 
 /**
  * 〈一句话功能简述〉:
@@ -25,7 +30,7 @@ import net.sourceforge.pinyin4j.format.exception.BadHanyuPinyinOutputFormatCombi
  * @since 1.0.0
  */
 public class PinYin {
-    private String getPinyin(String hanzi){
+    public static String getPinyin(String hanzi){
         //ascii 32-126 是所有符号及大小写英文的10进制值
         StringBuffer convertResult = new StringBuffer();
         for(int i =0 ; i < hanzi.length(); i++){
@@ -56,8 +61,26 @@ public class PinYin {
         }
         return pinyin.toString().trim().toLowerCase();
     }
-    public static void main(String[] args){
-        char a = '、';
-        System.out.println(a);
+    public static void main(String[] args) throws UnknownHostException {
+        System.out.println(getPinyin("*"));
+        String str = "将阿里斯顿减肥啦时间都放辣椒似的";
+        System.out.println(str.toCharArray()[0]);
+        TransportClient client = Demo1.getClient();
+        DeleteResponse consumer = client.prepareDelete().setIndex("company_info").setType("text")
+                                        .execute().actionGet();
     }
+
+    public static String getSimplifiedPinyin(String companyName) {
+        if(StringUtils.isEmpty(companyName))
+            return null;
+        StringBuffer result = new StringBuffer();
+        for(char c : companyName.toCharArray()){
+            String pinyin = getPinyin(new StringBuffer().append(c).toString());
+            if(StringUtils.isEmpty(pinyin))
+                continue;
+            result.append(pinyin.substring(0,1));
+        }
+        return result.toString();
+    }
+
 }
