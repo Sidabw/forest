@@ -5,7 +5,9 @@ import org.apache.kafka.clients.consumer.ConsumerRecord;
 import org.apache.kafka.clients.consumer.ConsumerRecords;
 import org.apache.kafka.clients.consumer.KafkaConsumer;
 import org.apache.kafka.common.serialization.StringDeserializer;
+import org.junit.Test;
 
+import java.time.Duration;
 import java.util.Arrays;
 import java.util.Properties;
 
@@ -15,8 +17,9 @@ import java.util.Properties;
 public class GroupConsumer {
     public static void main(String[] args){
 
-        String topic = "Hello-Kafka";
-        String group = "MyFirstGroup";
+        String topic = "Multibrokerapplication";
+//        String topic = "Hello-Kafka";
+        String group = "MyFirstGroup343hgjhaaaaaaakjhk4";
         Properties props = new Properties();
         props.put("bootstrap.servers", "localhost:9092");
         props.put("group.id", group);
@@ -29,13 +32,21 @@ public class GroupConsumer {
                 StringDeserializer.class.getName());
         KafkaConsumer<String, String> consumer = new KafkaConsumer<String, String>(props);
         consumer.subscribe(Arrays.asList(topic));
-        System.out.println("Subscribed to topic  &plus; topic");
+        System.out.println("Subscribed to topic  " + topic);
 
         while (true) {
-            ConsumerRecords<String, String> records = consumer.poll(100);
+            //Duration: a time-based amount of time
+            //poll(Duration timeout) : timeout means the maximum time to block
+            ConsumerRecords<String, String> records = consumer.poll(Duration.ofMillis(100));
             for (ConsumerRecord<String, String> record : records)
             System.out.printf("offset = %d, key = %s, value = %s\n",
                         record.offset(), record.key(), record.value());
         }
+    }
+
+    @Test
+    public void testt(){
+        Duration duration = Duration.ofMillis(100);
+        System.out.println(duration.toMillis());
     }
 }
