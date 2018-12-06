@@ -8,10 +8,9 @@
  * <author>          <time>          <version>          <desc>
  * 作者姓名           修改时间           版本号              描述
  */
-package com.beta.basic.kafka;
+package com.beta.basic.widgets.kafka;
 
-import com.beta.basic.kafka.service.IProducerService;
-import org.springframework.beans.factory.annotation.Autowired;
+import com.beta.basic.widgets.kafka.service.IProducerService;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;

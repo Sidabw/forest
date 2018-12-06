@@ -8,11 +8,9 @@
  * <author>          <time>          <version>          <desc>
  * 作者姓名           修改时间           版本号              描述
  */
-package com.beta.scheduler.springscheduler;
+package com.beta.basic.widgets.scheduler.springscheduler;
 
 import org.springframework.beans.factory.annotation.Configurable;
-import org.springframework.scheduling.annotation.EnableScheduling;
-import org.springframework.scheduling.annotation.Scheduled;
 import org.springframework.stereotype.Component;
 
 import java.text.SimpleDateFormat;
