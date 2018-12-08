@@ -289,6 +289,12 @@
 			<artifactId>okhttp</artifactId>
 			<version>3.9.1</version>
 		</dependency>
+        <!-- wx -->
+        <dependency>
+            <groupId>com.thoughtworks.xstream</groupId>
+            <artifactId>xstream</artifactId>
+            <version>1.4.10</version>
+        </dependency>
 
 	</dependencies>
 	<build>

@@ -5,12 +5,14 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.UUID;
+import java.util.stream.Stream;
 
 import com.alibaba.druid.util.StringUtils;
 import com.alibaba.fastjson.JSONObject;
 import com.beta.security.dao.*;
 import com.elasticsearch.Demo1;
 import com.elasticsearch.PinYin;
+import com.sun.org.apache.xpath.internal.SourceTree;
 import com.sun.org.apache.xpath.internal.operations.Mod;
 import org.elasticsearch.action.search.SearchResponse;
 import org.elasticsearch.client.transport.TransportClient;
@@ -64,7 +66,7 @@ public class SpringTestt {
 			each.put("stock_name", companyInfo.getStockName());
 			each.put("used_name", companyInfo.getUsedName());
 			each.put("company_full_name", companyInfo.getCompanyName());
-			each.put("stock_code", companyInfo.getStockCode());
+			each.put("stock_code", removeStockcodeStr(companyInfo.getStockCode()));
 			String jsonEach = JSONObject.toJSONString(each);
 			String id = UUID.randomUUID().toString().replaceAll("-","");
 			System.out.println(i++);
@@ -153,4 +155,28 @@ public class SpringTestt {
 			System.out.println(UUID.randomUUID());
 		}
 	}
+	@Test
+	public void testStockCode(){
+        String s = removeStockcodeStr("000026.SZ");
+        System.out.println(s);
+    }
+	private String removeStockcodeStr(String stockCode){
+        if (StringUtils.isEmpty(stockCode))
+            return "";
+        char[] chars = stockCode.toCharArray();
+        StringBuffer result = new StringBuffer();
+        for (int i = 0; i < chars.length ; i ++){
+            if(isNum(chars[i]))
+                result.append(chars[i]);
+        }
+        return result.toString();
+    }
+    private boolean isNum(char a){
+	    // 47 58
+	    if( a > 47 && a < 58){
+	        //是数字
+	        return true;
+        }
+        return false;
+    }
 }
