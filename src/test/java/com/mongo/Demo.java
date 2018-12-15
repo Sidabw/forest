@@ -84,4 +84,5 @@ public class Demo {
         long count = mongoCollection.count();
         System.out.println(String.format("共有%s条记录", count));
     }
+    //条件查询 在find里加Filters.eq 或其他即可
 }
