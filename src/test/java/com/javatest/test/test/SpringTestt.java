@@ -1,5 +1,6 @@
 package com.javatest.test.test;
 
+import java.lang.reflect.Array;
 import java.net.UnknownHostException;
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -23,6 +24,7 @@ import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 
 import com.beta.basic.service.IUserService;
+import org.springframework.util.CollectionUtils;
 
 @RunWith(SpringJUnit4ClassRunner.class)
 @SpringBootTest
@@ -38,7 +40,40 @@ public class SpringTestt {
 	@Autowired
 	private ModelMapper modelMapper;
 
+	@Autowired
+	private SecuritiesProductInfoMapper securitiesProductInfoMapper;
 
+
+	@Test
+	public void testNew() throws Exception{
+        SecuritiesProductInfoExample example = new SecuritiesProductInfoExample();
+        List<SecuritiesProductInfo> companyList = securitiesProductInfoMapper.selectByExample(example);
+        int dataSize = companyList.size();
+        String index = "company_info";
+        String type = "company";
+        TransportClient client = Demo1.getClient("10.10.1.6","zk_es_data");
+        int i = 0;
+        ArrayList<String > ids = new ArrayList<>();
+        ArrayList<String> datas = new ArrayList<>();
+        for(SecuritiesProductInfo securitiesProductInfo : companyList){
+            HashMap<String, String> each = new HashMap<>();
+            System.out.println();
+            each.put("company_name", shortCompanyName(securitiesProductInfo.getCompanyName()));
+            each.put("stock_name", securitiesProductInfo.getName());
+            each.put("used_name", securitiesProductInfo.getHisNames());
+            each.put("company_full_name", securitiesProductInfo.getCompanyName());
+            each.put("stock_code", securitiesProductInfo.getCode());
+            String jsonEach = JSONObject.toJSONString(each);
+            String id = UUID.randomUUID().toString().replaceAll("-","");
+            System.out.println(i++);
+            ids.add(id);
+            datas.add(jsonEach);
+        }
+        List<String> idsCut = ids.subList(53902, dataSize);
+        List<String> datasCut = datas.subList(53902, dataSize);
+        Demo1.bulkIndexNewRecoreds(client, index, type, idsCut, datasCut);
+        System.out.println(companyList.size());
+    }
 	@Test
 	public void testt() throws UnknownHostException {
 		/*List<TbUser> queryList = userService.queryList();
@@ -48,8 +83,8 @@ public class SpringTestt {
 		String type = "company";
 //		String type = "text";
 		CompanyInfoExample companyInfoExample = new CompanyInfoExample();
-		List<CompanyInfo> companyInfos = mapper.selectByExample(companyInfoExample);
-		System.out.println(companyInfos.size());
+        List<CompanyInfo> companyInfos = mapper.selectByExample(companyInfoExample);
+        System.out.println(companyInfos.size());
 		//全文 公司名称
 		//全文 公司名称简称
 		//全文 股票代码
