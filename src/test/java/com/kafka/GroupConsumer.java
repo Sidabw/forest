@@ -37,7 +37,8 @@ public class GroupConsumer {
         while (true) {
             //Duration: a time-based amount of time
             //poll(Duration timeout) : timeout means the maximum time to block
-            ConsumerRecords<String, String> records = consumer.poll(Duration.ofMillis(100));
+//            Duration.ofMillis();
+            ConsumerRecords<String, String> records = consumer.poll(100L);
             for (ConsumerRecord<String, String> record : records)
             System.out.printf("offset = %d, key = %s, value = %s\n",
                         record.offset(), record.key(), record.value());

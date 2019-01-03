@@ -1,10 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
-<mapper namespace="com.beta.widgets.spring.security.dao.UserMapper">
-  <resultMap id="BaseResultMap" type="com.beta.widgets.spring.security.dao.User">
+<mapper namespace="com.beta.widgets.spring.security.dao.ModelMapper">
+  <resultMap id="BaseResultMap" type="com.beta.widgets.spring.security.dao.Model">
     <id column="id" jdbcType="INTEGER" property="id" />
-    <result column="user_name" jdbcType="VARCHAR" property="userName" />
-    <result column="password" jdbcType="VARCHAR" property="password" />
+    <result column="gmt_created" jdbcType="TIMESTAMP" property="gmtCreated" />
+    <result column="gmt_modified" jdbcType="TIMESTAMP" property="gmtModified" />
+    <result column="pinyin_mongo_id" jdbcType="VARCHAR" property="pinyinMongoId" />
+    <result column="comment" jdbcType="VARCHAR" property="comment" />
+    <result column="pinyin_all" jdbcType="VARCHAR" property="pinyinAll" />
   </resultMap>
   <sql id="Example_Where_Clause">
     <where>
@@ -65,16 +68,16 @@
     </where>
   </sql>
   <sql id="Base_Column_List">
-    id, user_name, password
+    id, gmt_created, gmt_modified, pinyin_mongo_id, comment, pinyin_all
   </sql>
-  <select id="selectByExample" parameterType="com.beta.widgets.spring.security.dao.UserExample" resultMap="BaseResultMap">
+  <select id="selectByExample" parameterType="com.beta.widgets.spring.security.dao.ModelExample" resultMap="BaseResultMap">
     select
     <if test="distinct">
       distinct
     </if>
     'true' as QUERYID,
     <include refid="Base_Column_List" />
-    from spring_security_user
+    from model
     <if test="_parameter != null">
       <include refid="Example_Where_Clause" />
     </if>
@@ -85,67 +88,96 @@
   <select id="selectByPrimaryKey" parameterType="java.lang.Integer" resultMap="BaseResultMap">
     select 
     <include refid="Base_Column_List" />
-    from spring_security_user
+    from model
     where id = #{id,jdbcType=INTEGER}
   </select>
   <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer">
-    delete from spring_security_user
+    delete from model
     where id = #{id,jdbcType=INTEGER}
   </delete>
-  <delete id="deleteByExample" parameterType="com.beta.widgets.spring.security.dao.UserExample">
-    delete from spring_security_user
+  <delete id="deleteByExample" parameterType="com.beta.widgets.spring.security.dao.ModelExample">
+    delete from model
     <if test="_parameter != null">
       <include refid="Example_Where_Clause" />
     </if>
   </delete>
-  <insert id="insert" parameterType="com.beta.widgets.spring.security.dao.User">
-    insert into spring_security_user (id, user_name, password
+  <insert id="insert" parameterType="com.beta.widgets.spring.security.dao.Model">
+    insert into model (id, gmt_created, gmt_modified, 
+      pinyin_mongo_id, comment, pinyin_all
       )
-    values (#{id,jdbcType=INTEGER}, #{userName,jdbcType=VARCHAR}, #{password,jdbcType=VARCHAR}
+    values (#{id,jdbcType=INTEGER}, #{gmtCreated,jdbcType=TIMESTAMP}, #{gmtModified,jdbcType=TIMESTAMP}, 
+      #{pinyinMongoId,jdbcType=VARCHAR}, #{comment,jdbcType=VARCHAR}, #{pinyinAll,jdbcType=VARCHAR}
       )
   </insert>
-  <insert id="insertSelective" parameterType="com.beta.widgets.spring.security.dao.User">
-    insert into spring_security_user
+  <insert id="insertSelective" parameterType="com.beta.widgets.spring.security.dao.Model">
+    insert into model
     <trim prefix="(" suffix=")" suffixOverrides=",">
       <if test="id != null">
         id,
       </if>
-      <if test="userName != null">
-        user_name,
+      <if test="gmtCreated != null">
+        gmt_created,
       </if>
-      <if test="password != null">
-        password,
+      <if test="gmtModified != null">
+        gmt_modified,
+      </if>
+      <if test="pinyinMongoId != null">
+        pinyin_mongo_id,
+      </if>
+      <if test="comment != null">
+        comment,
+      </if>
+      <if test="pinyinAll != null">
+        pinyin_all,
       </if>
     </trim>
     <trim prefix="values (" suffix=")" suffixOverrides=",">
       <if test="id != null">
         #{id,jdbcType=INTEGER},
       </if>
-      <if test="userName != null">
-        #{userName,jdbcType=VARCHAR},
+      <if test="gmtCreated != null">
+        #{gmtCreated,jdbcType=TIMESTAMP},
       </if>
-      <if test="password != null">
-        #{password,jdbcType=VARCHAR},
+      <if test="gmtModified != null">
+        #{gmtModified,jdbcType=TIMESTAMP},
+      </if>
+      <if test="pinyinMongoId != null">
+        #{pinyinMongoId,jdbcType=VARCHAR},
+      </if>
+      <if test="comment != null">
+        #{comment,jdbcType=VARCHAR},
+      </if>
+      <if test="pinyinAll != null">
+        #{pinyinAll,jdbcType=VARCHAR},
       </if>
     </trim>
   </insert>
-  <select id="countByExample" parameterType="com.beta.widgets.spring.security.dao.UserExample" resultType="java.lang.Long">
-    select count(*) from spring_security_user
+  <select id="countByExample" parameterType="com.beta.widgets.spring.security.dao.ModelExample" resultType="java.lang.Long">
+    select count(*) from model
     <if test="_parameter != null">
       <include refid="Example_Where_Clause" />
     </if>
   </select>
   <update id="updateByExampleSelective" parameterType="map">
-    update spring_security_user
+    update model
     <set>
       <if test="record.id != null">
         id = #{record.id,jdbcType=INTEGER},
       </if>
-      <if test="record.userName != null">
-        user_name = #{record.userName,jdbcType=VARCHAR},
+      <if test="record.gmtCreated != null">
+        gmt_created = #{record.gmtCreated,jdbcType=TIMESTAMP},
       </if>
-      <if test="record.password != null">
-        password = #{record.password,jdbcType=VARCHAR},
+      <if test="record.gmtModified != null">
+        gmt_modified = #{record.gmtModified,jdbcType=TIMESTAMP},
+      </if>
+      <if test="record.pinyinMongoId != null">
+        pinyin_mongo_id = #{record.pinyinMongoId,jdbcType=VARCHAR},
+      </if>
+      <if test="record.comment != null">
+        comment = #{record.comment,jdbcType=VARCHAR},
+      </if>
+      <if test="record.pinyinAll != null">
+        pinyin_all = #{record.pinyinAll,jdbcType=VARCHAR},
       </if>
     </set>
     <if test="_parameter != null">
@@ -153,30 +185,45 @@
     </if>
   </update>
   <update id="updateByExample" parameterType="map">
-    update spring_security_user
+    update model
     set id = #{record.id,jdbcType=INTEGER},
-      user_name = #{record.userName,jdbcType=VARCHAR},
-      password = #{record.password,jdbcType=VARCHAR}
+      gmt_created = #{record.gmtCreated,jdbcType=TIMESTAMP},
+      gmt_modified = #{record.gmtModified,jdbcType=TIMESTAMP},
+      pinyin_mongo_id = #{record.pinyinMongoId,jdbcType=VARCHAR},
+      comment = #{record.comment,jdbcType=VARCHAR},
+      pinyin_all = #{record.pinyinAll,jdbcType=VARCHAR}
     <if test="_parameter != null">
       <include refid="Update_By_Example_Where_Clause" />
     </if>
   </update>
-  <update id="updateByPrimaryKeySelective" parameterType="com.beta.widgets.spring.security.dao.User">
-    update spring_security_user
+  <update id="updateByPrimaryKeySelective" parameterType="com.beta.widgets.spring.security.dao.Model">
+    update model
     <set>
-      <if test="userName != null">
-        user_name = #{userName,jdbcType=VARCHAR},
+      <if test="gmtCreated != null">
+        gmt_created = #{gmtCreated,jdbcType=TIMESTAMP},
       </if>
-      <if test="password != null">
-        password = #{password,jdbcType=VARCHAR},
+      <if test="gmtModified != null">
+        gmt_modified = #{gmtModified,jdbcType=TIMESTAMP},
+      </if>
+      <if test="pinyinMongoId != null">
+        pinyin_mongo_id = #{pinyinMongoId,jdbcType=VARCHAR},
+      </if>
+      <if test="comment != null">
+        comment = #{comment,jdbcType=VARCHAR},
+      </if>
+      <if test="pinyinAll != null">
+        pinyin_all = #{pinyinAll,jdbcType=VARCHAR},
       </if>
     </set>
     where id = #{id,jdbcType=INTEGER}
   </update>
-  <update id="updateByPrimaryKey" parameterType="com.beta.widgets.spring.security.dao.User">
-    update spring_security_user
-    set user_name = #{userName,jdbcType=VARCHAR},
-      password = #{password,jdbcType=VARCHAR}
+  <update id="updateByPrimaryKey" parameterType="com.beta.widgets.spring.security.dao.Model">
+    update model
+    set gmt_created = #{gmtCreated,jdbcType=TIMESTAMP},
+      gmt_modified = #{gmtModified,jdbcType=TIMESTAMP},
+      pinyin_mongo_id = #{pinyinMongoId,jdbcType=VARCHAR},
+      comment = #{comment,jdbcType=VARCHAR},
+      pinyin_all = #{pinyinAll,jdbcType=VARCHAR}
     where id = #{id,jdbcType=INTEGER}
   </update>
 </mapper>

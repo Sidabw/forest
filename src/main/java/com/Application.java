@@ -19,7 +19,7 @@ import springfox.documentation.swagger2.annotations.EnableSwagger2;
 @Controller
 @EnableAsync
 @EnableSwagger2
-public class Application extends SpringBootServletInitializer{
+public class Application extends SpringBootServletInitializer {
 	
 	private Logger logger = Logger.getLogger(Application.class);  
 	

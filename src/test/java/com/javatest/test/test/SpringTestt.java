@@ -1,20 +1,15 @@
 package com.javatest.test.test;
 
-import java.lang.reflect.Array;
 import java.net.UnknownHostException;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.UUID;
-import java.util.stream.Stream;
 
 import com.alibaba.druid.util.StringUtils;
 import com.alibaba.fastjson.JSONObject;
-import com.beta.security.dao.*;
+import com.beta.widgets.spring.security.dao.*;
 import com.elasticsearch.Demo1;
-import com.elasticsearch.PinYin;
-import com.sun.org.apache.xpath.internal.SourceTree;
-import com.sun.org.apache.xpath.internal.operations.Mod;
 import org.elasticsearch.action.search.SearchResponse;
 import org.elasticsearch.client.transport.TransportClient;
 import org.junit.Test;
@@ -24,7 +19,6 @@ import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 
 import com.beta.basic.service.IUserService;
-import org.springframework.util.CollectionUtils;
 
 @RunWith(SpringJUnit4ClassRunner.class)
 @SpringBootTest

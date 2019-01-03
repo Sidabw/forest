@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
-<mapper namespace="com.beta.widgets.spring.security.dao.CompanyInfoMapper">
-  <resultMap id="BaseResultMap" type="com.beta.widgets.spring.security.dao.CompanyInfo">
+<mapper namespace="com.beta.widgets.spring.security.dao.UserMapper">
+  <resultMap id="BaseResultMap" type="com.beta.widgets.spring.security.dao.User">
     <id column="id" jdbcType="INTEGER" property="id" />
     <id column="stock_code" jdbcType="VARCHAR" property="stockCode" />
     <result column="stock_name" jdbcType="VARCHAR" property="stockName" />
@@ -93,7 +93,7 @@
     city, registered_address, office_address, reality_controler, final_controler, establishment_date, 
     update_time
   </sql>
-  <select id="selectByExample" parameterType="com.beta.widgets.spring.security.dao.CompanyInfoExample" resultMap="BaseResultMap">
+  <select id="selectByExample" parameterType="com.beta.widgets.spring.security.dao.UserExample" resultMap="BaseResultMap">
     select
     <if test="distinct">
       distinct
@@ -108,25 +108,25 @@
       order by ${orderByClause}
     </if>
   </select>
-  <select id="selectByPrimaryKey" parameterType="com.beta.widgets.spring.security.dao.CompanyInfoKey" resultMap="BaseResultMap">
+  <select id="selectByPrimaryKey" parameterType="com.beta.widgets.spring.security.dao.UserKey" resultMap="BaseResultMap">
     select 
     <include refid="Base_Column_List" />
     from company_info
     where id = #{id,jdbcType=INTEGER}
       and stock_code = #{stockCode,jdbcType=VARCHAR}
   </select>
-  <delete id="deleteByPrimaryKey" parameterType="com.beta.widgets.spring.security.dao.CompanyInfoKey">
+  <delete id="deleteByPrimaryKey" parameterType="com.beta.widgets.spring.security.dao.UserKey">
     delete from company_info
     where id = #{id,jdbcType=INTEGER}
       and stock_code = #{stockCode,jdbcType=VARCHAR}
   </delete>
-  <delete id="deleteByExample" parameterType="com.beta.widgets.spring.security.dao.CompanyInfoExample">
+  <delete id="deleteByExample" parameterType="com.beta.widgets.spring.security.dao.UserExample">
     delete from company_info
     <if test="_parameter != null">
       <include refid="Example_Where_Clause" />
     </if>
   </delete>
-  <insert id="insert" parameterType="com.beta.widgets.spring.security.dao.CompanyInfo">
+  <insert id="insert" parameterType="com.beta.widgets.spring.security.dao.User">
     insert into company_info (id, stock_code, stock_name, 
       company_name, used_name, transaction_currency, 
       stock_classes, ipo_date, listing_location, 
@@ -146,7 +146,7 @@
       #{realityControler,jdbcType=VARCHAR}, #{finalControler,jdbcType=VARCHAR}, #{establishmentDate,jdbcType=VARCHAR}, 
       #{updateTime,jdbcType=TIMESTAMP})
   </insert>
-  <insert id="insertSelective" parameterType="com.beta.widgets.spring.security.dao.CompanyInfo">
+  <insert id="insertSelective" parameterType="com.beta.widgets.spring.security.dao.User">
     insert into company_info
     <trim prefix="(" suffix=")" suffixOverrides=",">
       <if test="id != null">
@@ -303,7 +303,7 @@
       </if>
     </trim>
   </insert>
-  <select id="countByExample" parameterType="com.beta.widgets.spring.security.dao.CompanyInfoExample" resultType="java.lang.Long">
+  <select id="countByExample" parameterType="com.beta.widgets.spring.security.dao.UserExample" resultType="java.lang.Long">
     select count(*) from company_info
     <if test="_parameter != null">
       <include refid="Example_Where_Clause" />
@@ -423,7 +423,7 @@
       <include refid="Update_By_Example_Where_Clause" />
     </if>
   </update>
-  <update id="updateByPrimaryKeySelective" parameterType="com.beta.widgets.spring.security.dao.CompanyInfo">
+  <update id="updateByPrimaryKeySelective" parameterType="com.beta.widgets.spring.security.dao.User">
     update company_info
     <set>
       <if test="stockName != null">
@@ -499,7 +499,7 @@
     where id = #{id,jdbcType=INTEGER}
       and stock_code = #{stockCode,jdbcType=VARCHAR}
   </update>
-  <update id="updateByPrimaryKey" parameterType="com.beta.widgets.spring.security.dao.CompanyInfo">
+  <update id="updateByPrimaryKey" parameterType="com.beta.widgets.spring.security.dao.User">
     update company_info
     set stock_name = #{stockName,jdbcType=VARCHAR},
       company_name = #{companyName,jdbcType=VARCHAR},

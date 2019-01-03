@@ -1,13 +1,10 @@
 package com;
 
 import com.alibaba.fastjson.JSONObject;
-import com.beta.security.dao.UserExample;
 import org.apache.commons.codec.digest.DigestUtils;
-import org.bson.types.ObjectId;
 
 import java.text.SimpleDateFormat;
 import java.util.*;
-import java.util.stream.Stream;
 
 public class Test {
 	public static void main(String[] args) {
@@ -67,7 +64,7 @@ public class Test {
         list.add("bbb");
 
         System.out.println((JSONObject)list);*/
-//        Object user = new com.beta.security.dao.User();
+//        Object user = new User();
 //        System.out.println((Map) user);
         JSONObject jsonObject = new JSONObject();
         jsonObject.put("n", 10000000000L);

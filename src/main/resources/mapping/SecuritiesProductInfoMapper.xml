@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
-<mapper namespace="com.beta.security.dao.SecuritiesProductInfoMapper">
-  <resultMap id="BaseResultMap" type="com.beta.security.dao.SecuritiesProductInfo">
+<mapper namespace="com.beta.widgets.spring.security.dao.SecuritiesProductInfoMapper">
+  <resultMap id="BaseResultMap" type="com.beta.widgets.spring.security.dao.SecuritiesProductInfo">
     <id column="id" jdbcType="BIGINT" property="id" />
     <result column="gmt8_created" jdbcType="VARCHAR" property="gmt8Created" />
     <result column="gmt8_modified" jdbcType="VARCHAR" property="gmt8Modified" />
@@ -16,7 +16,7 @@
     <result column="transaction_currency" jdbcType="VARCHAR" property="transactionCurrency" />
     <result column="ipo_date" jdbcType="VARCHAR" property="ipoDate" />
   </resultMap>
-  <resultMap extends="BaseResultMap" id="ResultMapWithBLOBs" type="com.beta.security.dao.SecuritiesProductInfo">
+  <resultMap extends="BaseResultMap" id="ResultMapWithBLOBs" type="com.beta.widgets.spring.security.dao.SecuritiesProductInfo">
     <result column="extra_info" jdbcType="LONGVARCHAR" property="extraInfo" />
   </resultMap>
   <sql id="Example_Where_Clause">
@@ -84,7 +84,7 @@
   <sql id="Blob_Column_List">
     extra_info
   </sql>
-  <select id="selectByExampleWithBLOBs" parameterType="com.beta.security.dao.SecuritiesProductInfoExample" resultMap="ResultMapWithBLOBs">
+  <select id="selectByExampleWithBLOBs" parameterType="com.beta.widgets.spring.security.dao.SecuritiesProductInfoExample" resultMap="ResultMapWithBLOBs">
     select
     <if test="distinct">
       distinct
@@ -101,7 +101,7 @@
       order by ${orderByClause}
     </if>
   </select>
-  <select id="selectByExample" parameterType="com.beta.security.dao.SecuritiesProductInfoExample" resultMap="BaseResultMap">
+  <select id="selectByExample" parameterType="com.beta.widgets.spring.security.dao.SecuritiesProductInfoExample" resultMap="BaseResultMap">
     select
     <if test="distinct">
       distinct
@@ -128,13 +128,13 @@
     delete from securities_product_info
     where id = #{id,jdbcType=BIGINT}
   </delete>
-  <delete id="deleteByExample" parameterType="com.beta.security.dao.SecuritiesProductInfoExample">
+  <delete id="deleteByExample" parameterType="com.beta.widgets.spring.security.dao.SecuritiesProductInfoExample">
     delete from securities_product_info
     <if test="_parameter != null">
       <include refid="Example_Where_Clause" />
     </if>
   </delete>
-  <insert id="insert" parameterType="com.beta.security.dao.SecuritiesProductInfo">
+  <insert id="insert" parameterType="com.beta.widgets.spring.security.dao.SecuritiesProductInfo">
     insert into securities_product_info (id, gmt8_created, gmt8_modified, 
       is_delete, code, name, 
       his_names, cate_id, cate_name, 
@@ -146,7 +146,7 @@
       #{attrTags,jdbcType=VARCHAR}, #{companyName,jdbcType=VARCHAR}, #{transactionCurrency,jdbcType=VARCHAR}, 
       #{ipoDate,jdbcType=VARCHAR}, #{extraInfo,jdbcType=LONGVARCHAR})
   </insert>
-  <insert id="insertSelective" parameterType="com.beta.security.dao.SecuritiesProductInfo">
+  <insert id="insertSelective" parameterType="com.beta.widgets.spring.security.dao.SecuritiesProductInfo">
     insert into securities_product_info
     <trim prefix="(" suffix=")" suffixOverrides=",">
       <if test="id != null">
@@ -237,7 +237,7 @@
       </if>
     </trim>
   </insert>
-  <select id="countByExample" parameterType="com.beta.security.dao.SecuritiesProductInfoExample" resultType="java.lang.Long">
+  <select id="countByExample" parameterType="com.beta.widgets.spring.security.dao.SecuritiesProductInfoExample" resultType="java.lang.Long">
     select count(*) from securities_product_info
     <if test="_parameter != null">
       <include refid="Example_Where_Clause" />
@@ -332,7 +332,7 @@
       <include refid="Update_By_Example_Where_Clause" />
     </if>
   </update>
-  <update id="updateByPrimaryKeySelective" parameterType="com.beta.security.dao.SecuritiesProductInfo">
+  <update id="updateByPrimaryKeySelective" parameterType="com.beta.widgets.spring.security.dao.SecuritiesProductInfo">
     update securities_product_info
     <set>
       <if test="gmt8Created != null">
@@ -377,7 +377,7 @@
     </set>
     where id = #{id,jdbcType=BIGINT}
   </update>
-  <update id="updateByPrimaryKeyWithBLOBs" parameterType="com.beta.security.dao.SecuritiesProductInfo">
+  <update id="updateByPrimaryKeyWithBLOBs" parameterType="com.beta.widgets.spring.security.dao.SecuritiesProductInfo">
     update securities_product_info
     set gmt8_created = #{gmt8Created,jdbcType=VARCHAR},
       gmt8_modified = #{gmt8Modified,jdbcType=VARCHAR},
@@ -394,7 +394,7 @@
       extra_info = #{extraInfo,jdbcType=LONGVARCHAR}
     where id = #{id,jdbcType=BIGINT}
   </update>
-  <update id="updateByPrimaryKey" parameterType="com.beta.security.dao.SecuritiesProductInfo">
+  <update id="updateByPrimaryKey" parameterType="com.beta.widgets.spring.security.dao.SecuritiesProductInfo">
     update securities_product_info
     set gmt8_created = #{gmt8Created,jdbcType=VARCHAR},
       gmt8_modified = #{gmt8Modified,jdbcType=VARCHAR},
