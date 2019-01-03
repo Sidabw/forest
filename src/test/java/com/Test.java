@@ -1,11 +1,12 @@
 package com;
 
+import com.alibaba.fastjson.JSONObject;
 import com.beta.security.dao.UserExample;
 import org.apache.commons.codec.digest.DigestUtils;
+import org.bson.types.ObjectId;
 
 import java.text.SimpleDateFormat;
-import java.util.Date;
-import java.util.TreeMap;
+import java.util.*;
 import java.util.stream.Stream;
 
 public class Test {
@@ -58,8 +59,24 @@ public class Test {
 			}
 			
 		}*/
-		UserExample userExample = new UserExample();
-	}
+		/*UserExample userExample = new UserExample();
+
+        System.out.println("-----------------------------------");
+        List<Object> list = new ArrayList<>();
+        list.add("aaa");
+        list.add("bbb");
+
+        System.out.println((JSONObject)list);*/
+//        Object user = new com.beta.security.dao.User();
+//        System.out.println((Map) user);
+        JSONObject jsonObject = new JSONObject();
+        jsonObject.put("n", 10000000000L);
+        System.out.println(jsonObject.get("n"));
+        System.out.println(jsonObject.toJSONString());
+
+        System.out.println("--------------------");
+        System.out.println(new Integer(1) == new Integer(1));
+    }
 
 	public static void judeg(char each) {
 		char[] arr = new char[] { 'a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i',

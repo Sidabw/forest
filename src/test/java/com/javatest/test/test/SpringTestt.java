@@ -51,13 +51,12 @@ public class SpringTestt {
         int dataSize = companyList.size();
         String index = "company_info";
         String type = "company";
-        TransportClient client = Demo1.getClient("10.10.1.6","zk_es_data");
+        TransportClient client = Demo1.getClient("10.10.1.6","zk_es_data_online");
         int i = 0;
         ArrayList<String > ids = new ArrayList<>();
         ArrayList<String> datas = new ArrayList<>();
         for(SecuritiesProductInfo securitiesProductInfo : companyList){
             HashMap<String, String> each = new HashMap<>();
-            System.out.println();
             each.put("company_name", shortCompanyName(securitiesProductInfo.getCompanyName()));
             each.put("stock_name", securitiesProductInfo.getName());
             each.put("used_name", securitiesProductInfo.getHisNames());
@@ -71,7 +70,7 @@ public class SpringTestt {
         }
         List<String> idsCut = ids.subList(53902, dataSize);
         List<String> datasCut = datas.subList(53902, dataSize);
-        Demo1.bulkIndexNewRecoreds(client, index, type, idsCut, datasCut);
+        Demo1.bulkIndexNewRecoreds(client, index, type, ids, datas);
         System.out.println(companyList.size());
     }
 	@Test

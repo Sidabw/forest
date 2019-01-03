@@ -1,4 +1,4 @@
-package com.springpublish;
+package com.designMode.publish;
 
 import org.springframework.beans.BeansException;
 import org.springframework.context.ApplicationContext;
@@ -8,6 +8,7 @@ import org.springframework.context.ApplicationEvent;
 public class MyPublisher implements ApplicationContextAware {
 
 	private ApplicationContext applicationContext;
+
 	public void setApplicationContext(ApplicationContext applicationContext)
 			throws BeansException {
 		  this.applicationContext=applicationContext;

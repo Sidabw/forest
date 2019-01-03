@@ -19,6 +19,7 @@ import org.aspectj.lang.annotation.Before;
 import org.aspectj.lang.annotation.Pointcut;
 import org.aspectj.lang.reflect.MethodSignature;
 import org.springframework.stereotype.Component;
+import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.context.request.RequestAttributes;
 import org.springframework.web.context.request.RequestContextHolder;
 import org.springframework.web.context.request.ServletRequestAttributes;
@@ -111,4 +112,8 @@ public class AspectTest {
             return null;  
         } 
     }
+//    @Around("@annotation(requestMapping)")
+//    public Object authorize(ProceedingJoinPoint pjp, RequestMapping requestMapping) throws Throwable {
+//
+//    }
 }

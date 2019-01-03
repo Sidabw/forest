@@ -1,4 +1,4 @@
-package com.springpublish;
+package com.designMode.publish;
 
 import org.springframework.context.ApplicationEvent;
 

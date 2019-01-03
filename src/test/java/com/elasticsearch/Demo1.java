@@ -12,6 +12,7 @@ package com.elasticsearch;
 
 
 import com.alibaba.fastjson.JSONObject;
+import jdk.nashorn.internal.runtime.linker.LinkerCallSite;
 import org.elasticsearch.action.ActionFuture;
 import org.elasticsearch.action.admin.indices.delete.DeleteIndexResponse;
 import org.elasticsearch.action.bulk.BulkRequestBuilder;
@@ -43,6 +44,7 @@ import static org.elasticsearch.common.xcontent.XContentFactory.*;
 import java.io.IOException;
 import java.net.InetAddress;
 import java.net.UnknownHostException;
+import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
@@ -171,10 +173,12 @@ public class Demo1 {
      */
     public static void update(TransportClient client) throws IOException, ExecutionException, InterruptedException {
         //update by id. [officially called document merged]
-        UpdateRequest updateRequest = new UpdateRequest("customer", "_doc", "3")
+        ArrayList<String> list = new ArrayList<>();
+//        list.add("恒指法巴九甲牛Y");
+        UpdateRequest updateRequest = new UpdateRequest("gonggao_metadata_search", "gonggao", "AN201812211275485715")
                 .doc(jsonBuilder()
                         .startObject()
-                        .field("name", "Jo Doe")
+                        .field("subject_type_name", list)
                         .endObject());
         UpdateResponse updateResponse = client.update(updateRequest).get();
         System.out.println(updateResponse.status());
@@ -196,28 +200,31 @@ public class Demo1 {
 
         //delete by filter
         TermQueryBuilder termQueryBuilder = QueryBuilders.termQuery("name.keyword", "J");
+        MatchAllQueryBuilder matchAllQueryBuilder = QueryBuilders.matchAllQuery();
         BulkByScrollResponse deleteByFilterResponse = DeleteByQueryAction.INSTANCE
-                .newRequestBuilder(client).source("customer")
-                .filter(termQueryBuilder)
+                .newRequestBuilder(client).source("medcl")
+                .filter(matchAllQueryBuilder)
                 .execute().actionGet();
 
         System.out.println(deleteByFilterResponse.getStatus());
     }
 
+
     /***
      * 程序执行入口
      */
     public static void main(String[] args) throws Exception {
-        TransportClient client = getClient();
-        SearchResponse searchResponse = simpleTermQuery(client, "bank");
-        getResponseResult(searchResponse, "firstname");
+        TransportClient client = getClient("10.10.1.6","zk_es_data");
+//        TransportClient client = getClient();
+//        SearchResponse searchResponse = simpleTermQuery(client, "bank");
+//        getResponseResult(searchResponse, "firstname");
         /*SearchResponse searchResponse = simpleMatchQuery(client, "customer");
         getResponseResult(searchResponse, "name");*/
         /*SearchResponse response = simpleRangeQuery(client, "bank");
         getResponseResult(response, "firstname");*/
         /*indexNewRecored(client);*/
-        /*delete(client);*/
-        /*update(client);*/
+//        delete(client);
+        update(client);
     }
     public static TransportClient getClient() throws UnknownHostException {
         return getClient("localhost", "elasticsearch_feiyi");
@@ -228,7 +235,7 @@ public class Demo1 {
                 .put("cluster.name", clusterName)
                 .put("client.transport.sniff", true).build();
         TransportClient client = new PreBuiltTransportClient(settings)
-                .addTransportAddress(new TransportAddress(InetAddress.getByName(address), 9300));
+                .addTransportAddress(new TransportAddress(InetAddress.getByName(address), 9301));
         return client;
     }
 
