@@ -92,9 +92,14 @@
     <div class="container">
         <div class="row">
             <!-- item -->
-            <div class="col-md-3 text-center"> <i class="circle"><img src="/beautyTemplate1/images/1.png" alt=""></i>
-                <h3>Design</h3>
-                <p>Nullam ac rhoncus sapien, non gravida purus. Alinon elit imperdiet congue. Integer elit imperdiet congue.</p>
+            <div class="col-md-3 text-center"> <i class="circle"><img src="/beautyTemplate1/images/1.png" alt=""  onclick="clickUploadIcon()"></i>
+                <h3 onclick="clickUploadText()">Upload</h3>
+
+                <form id="uploadFormId" action="/user/upload2", method="post", enctype="multipart/form-data">
+                    <input type="file" style = "display: none" id="uploadFileId" name="uploadFile" multiple="multiple"/>
+                </form>
+
+                <p>click the icon to choose the files to be uploaded, and click the text "Upload" to confirm upload operation.</p>
             </div>
             <!-- end: -->
 
@@ -135,6 +140,18 @@
 <script src="/beautyTemplate1/js/jquery-1.8.2.min.js"></script>
 <%--<script src="/js/jquery.min.js"></script>--%>
 <script>
+
+    function clickUploadText() {
+        // alert(2);
+        var uploadFormId = document.getElementById("uploadFormId");
+        uploadFormId.submit();
+    }
+
+    function clickUploadIcon() {
+        // alert(1);
+        var uploadFileId = document.getElementById("uploadFileId");
+        uploadFileId.click();
+    }
 
     function  editSchduler() {
         var secValue = $("#secId").val();

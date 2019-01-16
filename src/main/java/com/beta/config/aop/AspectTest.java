@@ -26,13 +26,13 @@ import org.springframework.web.context.request.ServletRequestAttributes;
 
 import com.beta.basic.annotation.EnableRedis;
 
-@Aspect
-@Component
+//@Aspect
+//@Component
 public class AspectTest {
-	@Pointcut("execution(public * com.beta.basic.controller..*.*(..))")
+//	@Pointcut("execution(public * com.beta.basic.controller..*.*(..))")
 	public void aspectTest() {}
 
-	@Before("aspectTest()")
+//	@Before("aspectTest()")
 	public void doBefore(JoinPoint joinPoint) {
 		ServletRequestAttributes servletRequestAttributes = (ServletRequestAttributes) RequestContextHolder
 				.getRequestAttributes();
@@ -44,25 +44,25 @@ public class AspectTest {
 	    System.out.println("ARGS : " + Arrays.toString(joinPoint.getArgs()));  
 		
 	}
-	@AfterReturning(returning="returnValue",pointcut="aspectTest()")
+//	@AfterReturning(returning="returnValue",pointcut="aspectTest()")
 	public void doAfter(Object returnValue){
 		//请求处理完成
 		System.out.println("请求完成，返回：" + returnValue);
 	}
 	//后置异常通知  
-    @AfterThrowing("aspectTest()")  
+//    @AfterThrowing("aspectTest()")
     public void throwss(JoinPoint jp){  
         System.out.println("方法异常时执行.....");  
     }  
   
     //后置最终通知,final增强，不管是抛出异常或者正常退出都会执行  
-    @After("aspectTest()")  
+//    @After("aspectTest()")
     public void after(JoinPoint jp){  
         System.out.println("方法最后执行.....");  
     }  
   
     //环绕通知,环绕增强，相当于MethodInterceptor  
-    @Around("aspectTest()")  
+//    @Around("aspectTest()")
     public Object arround(ProceedingJoinPoint pjp) throws Exception {  
         System.out.println("方法环绕start....."); 
         Signature signature = pjp.getSignature();

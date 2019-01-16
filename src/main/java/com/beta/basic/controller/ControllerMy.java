@@ -1,9 +1,7 @@
 package com.beta.basic.controller;
 
 import java.io.*;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
+import java.util.*;
 
 import javax.servlet.http.HttpServletRequest;
 
@@ -13,6 +11,8 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.ResponseBody;
+import org.springframework.web.multipart.MultipartFile;
+import org.springframework.web.multipart.MultipartHttpServletRequest;
 import org.springframework.web.servlet.ModelAndView;
 
 import com.beta.basic.mybatis.mapper.TbUser;
@@ -55,23 +55,29 @@ public class ControllerMy {
 		return modelAndView;
 	}
 
-	@RequestMapping(value="/loginTest",method = RequestMethod.POST)
+	@RequestMapping(value="/loginTest")
 	@ResponseBody
-	public Map<String,?> loginTest(String userName, String password, HttpServletRequest request){
+	public Map<String,?> loginTest(String username, String password, String _csrf, HttpServletRequest request){
 		logger.info("loginTest...INFO...LEVEL...Test");
 		logger.warn("loginTest...WARN...LEVEL...Test");
 		logger.error("loginTest...ERROR...LEVEL...Test");
 		Map<String,Object> map =new HashMap<>();
-        if(!userName.equals("") && password!=""){
-            LoginUser user =new LoginUser(userName,password);
-            request.getSession().setAttribute("user",userName);
+        if(!username.equals("") && password!=""){
+            LoginUser user =new LoginUser(username,password);
+            request.getSession().setAttribute("user",username);
             map.put("result","1");
         }else{
             map.put("result","0");
         }
         return map;
 	}
-	
+
+	@RequestMapping(value = "/logout", method = RequestMethod.POST)
+    @ResponseBody
+	public Object logout(){
+	    return "logout success";
+    }
+
 	@RequestMapping(value="/formtest",method=RequestMethod.POST)
 	public String codingtest(HttpServletRequest request,String username,String password) throws UnsupportedEncodingException{
 		//request.setCharacterEncoding("utf-8");
@@ -79,6 +85,49 @@ public class ControllerMy {
 		System.out.println("password"+password);
 		return "hello";
 	}
+
+
+	//测试基本的多文件上传
+    @RequestMapping(value = "/upload", method = RequestMethod.POST)
+    @ResponseBody
+    public Object upload(MultipartFile[] uploadFile) throws IOException {
+        String originalFilename = uploadFile[0].getOriginalFilename();
+        String originalFilename2 = uploadFile[1].getOriginalFilename();
+        System.out.println(originalFilename);
+        System.out.println(originalFilename2);
+        InputStream inputStream = uploadFile[0].getInputStream();
+        return "11";
+    }
+
+
+
+    @RequestMapping(value = "/upload2", method = RequestMethod.POST)
+    @ResponseBody
+    public Object upload2(HttpServletRequest request) throws IOException {
+        MultipartHttpServletRequest multipartRequest = (MultipartHttpServletRequest)request;
+        Iterator<String> fileNames = multipartRequest.getFileNames();
+        List<MultipartFile> files = multipartRequest.getFiles("uploadFile");
+        for(MultipartFile file : files) {
+
+            File fileUpload = new File("/Users/feiyi/Documents/feiyiGitProject/" + "upload_test" +  new Random().nextInt(10) +file.getOriginalFilename());
+
+            file.transferTo(fileUpload);
+        }
+        System.out.println(files.size());
+        while (fileNames.hasNext()) {
+            System.out.println(fileNames.next());
+        }
+        return "11";
+    }
+
+
+    @RequestMapping(value = "/uploadStatus", method = RequestMethod.GET)
+    @ResponseBody
+    public Object getStatus(HttpServletRequest request){
+	    return request.getSession().getAttribute("uploadStatus");
+    }
+
+
 
 
 }

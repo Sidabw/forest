@@ -1,6 +1,7 @@
 package com;
 
 import com.alibaba.fastjson.JSONObject;
+import com.sun.org.apache.xpath.internal.SourceTree;
 import org.apache.commons.codec.digest.DigestUtils;
 
 import java.text.SimpleDateFormat;
@@ -88,6 +89,12 @@ public class Test {
 			}
 		}
 	}
+
+	public void methodTest(String str, String str2, String... str3){
+        System.out.println("str" + str);
+        System.out.println("str2" + str2);
+
+    }
 }
 class User{
 	private String username;

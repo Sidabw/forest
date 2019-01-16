@@ -1,46 +1,46 @@
-/*
-package com.beta.security.service;
+/***
+ *  Created by shao.guangze on 2018/8/21
+ */
+package com.beta.widgets.spring.security.service;
 
-import User;
-import UserExample;
-import UserMapper;
+/*import com.beta.widgets.spring.security.dao.SecurityUsers;
+import com.beta.widgets.spring.security.dao.SecurityUsersExample;
+import com.beta.widgets.spring.security.dao.SecurityUsersMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.userdetails.UserDetails;
+import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.core.userdetails.UsernameNotFoundException;
-import org.springframework.stereotype.Service;
+import org.springframework.stereotype.Service;*/
 
 import java.util.List;
 
-*/
-/***
- *  Created by shao.guangze on 2018/8/21
- *//*
-
-@Service("springss")
-public class SecurityUserServiceImpl implements ISecurityUserService {
+/*
+@Service
+public class SecurityUserServiceImpl implements UserDetailsService {
 
     @Autowired
-    private UserMapper userMapper;
+    private SecurityUsersMapper securityUsersMapper;
+*/
 
-    @Override
-    public boolean saveUser(User user) {
+    /*@Override
+    public boolean saveUser(SecurityUsers user) {
         return false;
     }
 
     @Override
     public void serviceTest() {
         System.out.println("哈哈哈");
-    }
+    }*/
 
-    @Override
+   /* @Override
     public UserDetails loadUserByUsername(String username) throws UsernameNotFoundException {
-        UserExample userExample = new UserExample();
-        userExample.createCriteria().andUserNameEqualTo(username);
-        List<User> users = userMapper.selectByExample(userExample);
+        SecurityUsersExample example = new SecurityUsersExample();
+        example.createCriteria().andUsernameEqualTo(username);
+        List<SecurityUsers> users = securityUsersMapper.selectByExample(example);
         if(users == null || users.size() == 0 ){
             throw new UsernameNotFoundException("not-exit");
         }
         return users.get(0);
-    }
-}
-*/
+    }*/
+//}
+

@@ -27,7 +27,7 @@ public class SpringTestt {
 	public static final int i = 1;
 	@Autowired
 	private IUserService userService;
-
+/*
 	@Autowired
 	private CompanyInfoMapper mapper;
 
@@ -69,8 +69,8 @@ public class SpringTestt {
     }
 	@Test
 	public void testt() throws UnknownHostException {
-		/*List<TbUser> queryList = userService.queryList();
-		System.out.println(queryList.get(0).getUsername());*/
+		*//*List<TbUser> queryList = userService.queryList();
+		System.out.println(queryList.get(0).getUsername());*//*
 		String index = "company_info";
 //		String index = "company_info";
 		String type = "company";
@@ -206,5 +206,5 @@ public class SpringTestt {
 	        return true;
         }
         return false;
-    }
+    }*/
 }

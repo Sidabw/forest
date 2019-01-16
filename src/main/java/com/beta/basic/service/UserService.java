@@ -12,13 +12,9 @@ import com.beta.basic.mybatis.mapper.TbUserMapper;
 @Service
 public class UserService implements IUserService{
 
-	@Autowired
-	private TbUserMapper tbUserMapper;
 	@Override
 	public List<TbUser> queryList() {
-		TbUserExample tbUserExample = new TbUserExample();
-		List<TbUser> list = tbUserMapper.selectByExample(tbUserExample);
-		return list;
+		return null;
 	}
 
 }

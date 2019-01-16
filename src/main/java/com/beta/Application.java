@@ -1,4 +1,4 @@
-package com;
+package com.beta;
 
 import org.apache.log4j.Logger;
 import org.springframework.boot.SpringApplication;
@@ -37,8 +37,6 @@ public class Application extends SpringBootServletInitializer {
 		return "Hello SpringBoot"+"------";
 	}
 	public static void main(String[] args){
-		Application application = new Application();
-		application.logger.info("项目启动");
 		SpringApplication.run(Application.class, args);
 	}
 	 @Override

@@ -66,7 +66,7 @@
                 type : "POST",
                 url : "/user/loginTest",
                 data : {
-                    "userName" : $("#userName").val(),
+                    "username" : $("#userName").val(),
                     "password" : $("#password").val(),
                     "_csrf" : secValue
                 },

@@ -54,7 +54,7 @@ public class Demo {
 
     @Test
     public void test(){
-        MongoCollection<Document> collection = MongoUtil.getCollection("mongo_demo", "col");
+        MongoCollection<Document> collection = MongoUtil.getCollection("zk_unstructure_data", "gonggao_structure_data");
 //        insert(collection);
         //updateByFilter(collection);
 //        deleteByFilter(collection);
@@ -231,9 +231,12 @@ public class Demo {
     }
     private void findAll(MongoCollection<Document> mongoCollection){
         JSONObject jsonObject = new JSONObject();
-        jsonObject.put("_id", "AN201812181272094638__gaoguancizhi");
+        jsonObject.put("_id", "AN201901101283782382__dongshihuijueyi");
         Bson parse = Document.parse(jsonObject.toJSONString());
         FindIterable<Document> documents = mongoCollection.find(parse);
+        for (Document doc : documents) {
+            System.out.println(doc.toJson());
+        }
         MongoCursor<Document> iterator = documents.iterator();
         while (iterator.hasNext()){
             Document eachModel = iterator.next();
@@ -241,12 +244,15 @@ public class Demo {
             System.out.println("------------------------");
             JsonWriterSettings build = JsonWriterSettings.builder()
                     .outputMode(JsonMode.EXTENDED)
-                    .int64Converter((Long value, StrictJsonWriter writer) ->writer.writeString(Long.toString(value)))
-                    .int32Converter((Integer value, StrictJsonWriter writer) ->writer.writeNumber(Integer.toString(value)))
+                    .doubleConverter((Double value, StrictJsonWriter writer) -> writer.writeString(Double.toString(value)))
+                    .int64Converter((Long value, StrictJsonWriter writer) -> writer.writeString(Long.toString(value)))
+                    .int32Converter((Integer value, StrictJsonWriter writer) -> writer.writeNumber(Integer.toString(value)))
                     .build();
-            JsonWriterSettings build1 = JsonWriterSettings.builder().outputMode(JsonMode.STRICT).build();
+//            JsonWriterSettings build1 = JsonWriterSettings.builder().outputMode(JsonMode.STRICT).build();
             String jsonStr = eachModel.toJson(build);
+            JSONObject jsonObject1 = JSONObject.parseObject(jsonStr);
             System.out.println(jsonStr);
+            System.out.println(jsonObject1.get("is_delete").getClass());
             System.out.println(JSONObject.parseObject(jsonStr).get("age"));
         }
         long count = mongoCollection.count();
