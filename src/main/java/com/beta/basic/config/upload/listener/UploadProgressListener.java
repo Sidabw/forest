@@ -29,6 +29,7 @@ import java.util.Map;
 @Component
 public class UploadProgressListener implements ProgressListener {
     private HttpSession session;
+    private int i = 0;
 
     public void setSession(HttpSession session){
         this.session = session;
@@ -42,6 +43,6 @@ public class UploadProgressListener implements ProgressListener {
         uploadStatus.put("readBytes", readBytes);
         uploadStatus.put("allBytes", allBytes);
         uploadStatus.put("index", index);
-
+        System.out.println(i++);
     }
 }
