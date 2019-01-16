@@ -35,7 +35,10 @@
                 <a href="/beauty1#home" class="navbar-brand scroll-top logo  animated bounceInLeft"><b><i>FOREST</i></b></a> </div>--%>
             <div class="navbar-header">
                 <button type="button" id="nav-toggle1" class="navbar-toggle" data-toggle="collapse" data-target="#main-nav"> <span class="sr-only">Toggle navigation</span> <span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span> </button>
-                <a href="/beauty1#home" class="navbar-brand scroll-top logo  animated bounceInLeft"><b><i> <img src="http://www.ujn.edu.cn/dfiles/9832/themes/ujnnew/public/images/ujnlogo.png" alt="ujnlogo"/></i></b></a> </div>
+                <a href="/beauty1#home" class="navbar-brand scroll-top logo  animated bounceInLeft"><b><i>
+                    <img src="/sida2.png" width="8%" height="8%" alt="ujnlogo"/>
+                    sidabw
+                </i></b></a> </div>
             <!--/.navbar-header-->
             <div id="main-nav" class="collapse navbar-collapse">
                 <ul class="nav navbar-nav" id="mainNav">
