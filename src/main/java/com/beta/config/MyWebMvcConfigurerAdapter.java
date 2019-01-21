@@ -1,5 +1,6 @@
 package com.beta.config;
 
+import com.beta.basic.config.upload.listener.filter.Interceptor;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.web.servlet.config.annotation.*;
 
@@ -84,13 +85,14 @@ public class MyWebMvcConfigurerAdapter extends WebMvcConfigurerAdapter{
     * 拦截器
     * @param registry
     */
-   /* @Override
-    public void addInterceptors(InterceptorRegistry registry) {
+//   @Override
+//    public void addInterceptors(InterceptorRegistry registry) {
         // addPathPatterns 用于添加拦截规则,/**拦截所有请求，但是对于the request added resource handler，不拦截；
     	//								/ 拦截除了静态资源外的所有请求；
         // excludePathPatterns 用户排除拦截String... 接受String类型的可变参数
-        registry.addInterceptor(new MyInterceptor()).addPathPatterns("/**").excludePathPatterns("/toLogin","/login","/user/loginTest","/","/user/asynctest","/echarts");
-        super.addInterceptors(registry);
-    }*/
+//        registry.addInterceptor(new MyInterceptor()).addPathPatterns("/**").excludePathPatterns("/toLogin","/login","/beauty1","/","/user/asynctest","/echarts");
+//        registry.addInterceptor(new Interceptor()).addPathPatterns("/**").excludePathPatterns("/toLogin","/login","/beauty1","/","/user/asynctest","/echarts");
+//        super.addInterceptors(registry);
+//    }
 
 }

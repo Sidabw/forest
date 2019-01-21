@@ -313,6 +313,23 @@
 			<artifactId>okhttp</artifactId>
 			<version>3.9.1</version>
 		</dependency>
+        <!-- http-apache -->
+        <dependency>
+            <groupId>org.apache.httpcomponents</groupId>
+            <artifactId>httpclient</artifactId>
+            <version>4.5.5</version>
+        </dependency>
+        <dependency>
+            <groupId>org.apache.httpcomponents</groupId>
+            <artifactId>fluent-hc</artifactId>
+            <version>4.5.5</version>
+        </dependency>
+        <dependency>
+            <groupId>org.apache.httpcomponents</groupId>
+            <artifactId>httpmime</artifactId>
+            <version>4.5.5</version>
+        </dependency>
+
         <!-- wx -->
         <dependency>
             <groupId>com.thoughtworks.xstream</groupId>

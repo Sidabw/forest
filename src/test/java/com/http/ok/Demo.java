@@ -8,16 +8,21 @@
  * <author>          <time>          <version>          <desc>
  * 作者姓名           修改时间           版本号              描述
  */
-package com.okhttp;
+package com.http.ok;
 
 import com.alibaba.fastjson.JSONObject;
 import okhttp3.*;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
+import java.io.File;
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
 import java.io.IOException;
-import java.util.HashMap;
-import java.util.Map;
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
+import java.util.UUID;
 import java.util.concurrent.TimeUnit;
 
 /**
@@ -35,8 +40,10 @@ public class Demo {
     private static Logger logger = LoggerFactory.getLogger(Demo.class);
     public static void main(String[] args) throws IOException {
 //        get("http://localhost:8018/dp/v1/source/getSug");
-        postNormal("http://localhost:8018/dp/v1/login");
-        postForm("http://localhost:8018/dp/v1/login");
+//        postNormal("http://localhost:8018/dp/v1/login");
+//        postForm("http://localhost:8018/dp/v1/login");
+        postMultipartUpload();
+
     }
     public static void get(String url) throws IOException {
         StringBuffer urlAndParam = new StringBuffer(url).append("?").append("searchText=\"富士康\"").append("&").append("queryType=\"company\"");
@@ -55,9 +62,42 @@ public class Demo {
         jsonObject.put("password", "Feiyizenki123");
         String param = jsonObject.toJSONString();
         RequestBody body = RequestBody.create(mediaType, param);
+        FileInputStream fileInputStream = new FileInputStream(new File(""));
         Request request = new Request.Builder().url(url).post(body).build();
         Response response = client.newCall(request).execute();
         logger.info("response body --> {}",response.body().string());
+    }
+
+    public static void postMultipartUpload() throws IOException {
+        FileInputStream fileInputStream = new FileInputStream(new File("/Users/feiyi/Desktop/zenki-note.txt"));
+        int length = 0;
+        byte[] temp = new byte[1024];
+        ArrayList<Byte> list = new ArrayList<>();
+        while ((length = fileInputStream.read(temp)) != -1){
+            for (int i = 0 ; i<length ; i ++){
+                list.add(temp[i]);
+            }
+        }
+        Object[] objects = list.toArray();
+        byte[] bytes = new byte[objects.length];
+        for (int i = 0 ; i < objects.length ; i ++){
+            bytes[i] = ((Byte)objects[i]).byteValue();
+        }
+        RequestBody requestBody = RequestBody.create(MediaType.parse("multipart/form-data"), bytes);
+        MultipartBody body = new MultipartBody.Builder().addFormDataPart("126", "126", requestBody).build();
+        RequestBody requestBody2 = new MultipartBody.Builder()
+                .addPart(
+                        Headers.of("Content-Disposition",
+                                "form-data; name=\"128\""),
+                        RequestBody.create(null, bytes)).build();
+        Request request = new Request.Builder()
+                .header("Accept-Language", "zh-cn")
+                .url("http://weedfs-filer.zenki.cn/feiyitest/128")
+                .post(requestBody2)
+                .build();
+        OkHttpClient client = new OkHttpClient();
+        Response response = client.newCall(request).execute();
+        System.out.println(response.message());
     }
 
     public static void postForm(String url) throws IOException {

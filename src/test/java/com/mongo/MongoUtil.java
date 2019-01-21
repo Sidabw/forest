@@ -54,7 +54,7 @@ public class MongoUtil {
         MongoClient mongoClient = new MongoClient(addrs,credentials);
         return mongoClient;
     }
-    private static MongoClient getMongoClient(){
+    public static MongoClient getMongoClient(){
         return new MongoClient( "localhost" , 27017 );
     }
 

@@ -101,6 +101,7 @@
 
                 <form id="uploadFormId" action="/user/upload2", method="post", enctype="multipart/form-data">
                     <input type="file" style = "display: none" id="uploadFileId" name="uploadFile" multiple="multiple"/>
+                    <input name="userIdtime" value="sidabw" style = "display: none"/>
                 </form>
 
                 <p id="websocketMessageId">click the icon to choose the files to be uploaded, and click the text "Upload" to confirm upload operation.</p>
@@ -199,7 +200,7 @@
         })
     }
     //web socket 相关
-    var websocket = null;
+    /*var websocket = null;
 
     //判断当前浏览器是否支持WebSocket
     if('WebSocket' in window){
@@ -248,7 +249,7 @@
     function send(){
         var message = document.getElementById('text').value;
         websocket.send(message);
-    }
+    }*/
 </script>
 </body>
 </html>
