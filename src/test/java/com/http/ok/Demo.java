@@ -83,8 +83,8 @@ public class Demo {
         for (int i = 0 ; i < objects.length ; i ++){
             bytes[i] = ((Byte)objects[i]).byteValue();
         }
-        RequestBody requestBody = RequestBody.create(MediaType.parse("multipart/form-data"), bytes);
-        MultipartBody body = new MultipartBody.Builder().addFormDataPart("126", "126", requestBody).build();
+//        RequestBody requestBody = RequestBody.create(MediaType.parse("multipart/form-data"), bytes);
+//        MultipartBody body = new MultipartBody.Builder().addFormDataPart("126", "126", requestBody).build();
         RequestBody requestBody2 = new MultipartBody.Builder()
                 .addPart(
                         Headers.of("Content-Disposition",
