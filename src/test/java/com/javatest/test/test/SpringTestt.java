@@ -8,6 +8,7 @@ import java.util.UUID;
 
 import com.alibaba.druid.util.StringUtils;
 import com.alibaba.fastjson.JSONObject;
+import com.beta.Application;
 import com.beta.widgets.spring.security.dao.*;
 import com.elasticsearch.Demo1;
 import org.elasticsearch.action.search.SearchResponse;
@@ -21,12 +22,23 @@ import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 import com.beta.basic.service.IUserService;
 
 @RunWith(SpringJUnit4ClassRunner.class)
-@SpringBootTest
+@SpringBootTest(classes = Application.class)
 public class SpringTestt {
 
 	public static final int i = 1;
 	@Autowired
 	private IUserService userService;
+
+	@Test
+	public void test(){
+        System.out.println(11);
+        System.out.println(userService);
+        HashMap<Object, Object> map = new HashMap<>();
+        map.put("name","sida");
+        System.out.println(JSONObject.toJSONString(map));
+        //logger.info(ZenkiLog.toJSON("{taskId} {recordId}", "123", 312))
+    }
+
 /*
 	@Autowired
 	private CompanyInfoMapper mapper;

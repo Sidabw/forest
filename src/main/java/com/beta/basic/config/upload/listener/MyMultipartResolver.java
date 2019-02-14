@@ -35,35 +35,23 @@ import java.util.Map;
  * @create 2019/1/15
  * @since 1.0.0
  */
-@Component
-public class MyMultipartResolver extends CommonsMultipartResolver {
-    @Autowired
-    private UploadProgressListener progressListener;
-
-    @Override
-    protected MultipartParsingResult parseRequest(HttpServletRequest request) throws MultipartException {
-        ServletContext servletContext = request.getSession().getServletContext();
-        Enumeration<String> initParameterNames = servletContext.getInitParameterNames();
-
-        HttpServlet httpServlet = new MyServlet();
-//        servletContext.res
-        Map<String, String[]> parameterMap = request.getParameterMap();
-        Enumeration<String> attributeNames = request.getAttributeNames();
-        String userIdtime = request.getParameter("userIdtime");
-        String encoding = super.determineEncoding(request);
-        progressListener.setSession(request.getSession());
-        FileUpload fileUpload = prepareFileUpload(encoding);
-        fileUpload.setProgressListener(progressListener);
-        Map<String, String[]> parameterMap2 = request.getParameterMap();
-        try {
-            List<FileItem> fileItemList = ((ServletFileUpload) fileUpload).parseRequest(request);
-            Map<String, String[]> parameterMap3 = request.getParameterMap();
-            MultipartParsingResult multipartParsingResult = super.parseFileItems(fileItemList, encoding);
-            Map<String, String[]> parameterMap4 = request.getParameterMap();
-            return multipartParsingResult;
-        } catch (FileUploadException e) {
-            e.printStackTrace();
-        }
-        return null;
-    }
-}
+//@Component
+//public class MyMultipartResolver extends CommonsMultipartResolver {
+//    @Autowired
+//    private UploadProgressListener progressListener;
+//
+//    @Override
+//    protected MultipartParsingResult parseRequest(HttpServletRequest request) throws MultipartException {
+//        String encoding = super.determineEncoding(request);
+//        progressListener.setSession(request.getSession());
+//        FileUpload fileUpload = prepareFileUpload(encoding);
+//        fileUpload.setProgressListener(progressListener);
+//        try {
+//            List<FileItem> fileItemList = ((ServletFileUpload) fileUpload).parseRequest(request);
+//            return super.parseFileItems(fileItemList, encoding);
+//        } catch (FileUploadException e) {
+//            e.printStackTrace();
+//        }
+//        return null;
+//    }
+//}

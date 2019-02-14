@@ -100,7 +100,7 @@
                 <h3 onclick="alert(1)">web socket</h3>
 
                 <form id="uploadFormId" action="/user/upload2", method="post", enctype="multipart/form-data">
-                    <input type="file" style = "display: none" id="uploadFileId" name="uploadFile" multiple="multiple"/>
+                    <input type="file" style = "display: none" id="uploadFileId" name="uploadFile" />
                     <input name="userIdtime" value="sidabw" style = "display: none"/>
                 </form>
 

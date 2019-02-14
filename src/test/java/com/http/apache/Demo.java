@@ -42,12 +42,12 @@ public class Demo {
     //seaweedFS 测试
     public static void test() throws IOException {
         CloseableHttpClient httpClient = HttpClients.createDefault();
-        HttpPost httpPost = new HttpPost("http://weedfs-filer.zenki.cn/feiyitest/123");
+        HttpPost httpPost = new HttpPost("http://weedfs-filer.zenki.cn/feiyitest/131");
         httpPost.setHeader(new BasicHeader("Accept-Language", "zh-cn"));
         HttpEntity reqEntity = MultipartEntityBuilder.create()
                 .setCharset(Charset.forName("UTF-8"))
                 .setMode(HttpMultipartMode.BROWSER_COMPATIBLE)
-                .addBinaryBody("123", new FileInputStream(new File("/Users/feiyi/Desktop/zenki-note.txt")))
+                .addBinaryBody("132", new FileInputStream(new File("/Users/feiyi/Desktop/sida2.png")))
                 .build();
 
         // 发起请求并返回请求的响应

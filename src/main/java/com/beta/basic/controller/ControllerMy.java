@@ -1,10 +1,21 @@
 package com.beta.basic.controller;
 
 import java.io.*;
+import java.nio.charset.Charset;
 import java.util.*;
 
+import javax.servlet.ServletInputStream;
 import javax.servlet.http.HttpServletRequest;
 
+import org.apache.commons.codec.digest.DigestUtils;
+import org.apache.http.HttpEntity;
+import org.apache.http.client.methods.CloseableHttpResponse;
+import org.apache.http.client.methods.HttpPost;
+import org.apache.http.entity.mime.HttpMultipartMode;
+import org.apache.http.entity.mime.MultipartEntityBuilder;
+import org.apache.http.impl.client.CloseableHttpClient;
+import org.apache.http.impl.client.HttpClients;
+import org.apache.http.message.BasicHeader;
 import org.apache.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -96,6 +107,7 @@ public class ControllerMy {
         System.out.println(originalFilename);
         System.out.println(originalFilename2);
         InputStream inputStream = uploadFile[0].getInputStream();
+
         return "11";
     }
 
@@ -103,20 +115,39 @@ public class ControllerMy {
 
     @RequestMapping(value = "/upload2", method = RequestMethod.POST)
     @ResponseBody
-    public Object upload2(HttpServletRequest request) throws IOException {
-        MultipartHttpServletRequest multipartRequest = (MultipartHttpServletRequest)request;
-        Iterator<String> fileNames = multipartRequest.getFileNames();
-        List<MultipartFile> files = multipartRequest.getFiles("uploadFile");
-        for(MultipartFile file : files) {
-
-            File fileUpload = new File("/Users/feiyi/Documents/feiyiGitProject/" + "upload_test" +  new Random().nextInt(10) +file.getOriginalFilename());
-
-            file.transferTo(fileUpload);
-        }
-        System.out.println(files.size());
-        while (fileNames.hasNext()) {
-            System.out.println(fileNames.next());
-        }
+    public Object upload2(MultipartFile uploadFile, String userIdtime) throws IOException {
+//        MultipartHttpServletRequest multipartRequest = (MultipartHttpServletRequest)request;
+//        Iterator<String> fileNames = uploadFile.getFileNames();
+//        ServletInputStream inputStream = uploadFile.getInputStream();
+//        List<MultipartFile> files = uploadFile.getFiles("uploadFile");
+//        for(MultipartFile file : files) {
+        InputStream inputStream = uploadFile.getInputStream();
+//        String fileMd5 = DigestUtils.md5Hex(inputStream);
+//        InputStream inputStream1 = uploadFile.getInputStream();
+//        System.out.println(inputStream == inputStream1);
+//        System.out.println(fileMd5);
+//        System.out.println(userIdtime);
+            CloseableHttpClient httpClient = HttpClients.createDefault();
+            HttpPost httpPost = new HttpPost("http://weedfs-filer.zenki.cn/a/b");
+            httpPost.setHeader(new BasicHeader("Accept-Language", "zh-cn"));
+            HttpEntity reqEntity = MultipartEntityBuilder.create()
+                    .setCharset(Charset.forName("UTF-8"))
+                    .setMode(HttpMultipartMode.BROWSER_COMPATIBLE)
+                    .addBinaryBody("b", inputStream)
+                    .build();
+//
+            // 发起请求并返回请求的响应
+            httpPost.setEntity(reqEntity);
+            CloseableHttpResponse response = httpClient.execute(httpPost);
+            System.out.println(response.getStatusLine());
+//            File fileUpload = new File("/Users/feiyi/Documents/feiyiGitProject/" + "upload_test/" +  new Random().nextInt(10) +uploadFile.getOriginalFilename());
+//
+//        uploadFile.transferTo(fileUpload);
+//        }
+//        System.out.println(files.size());
+//        while (fileNames.hasNext()) {
+//            System.out.println(fileNames.next());
+//        }
         return "11";
     }
 
