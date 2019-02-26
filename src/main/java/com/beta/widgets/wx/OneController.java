@@ -6,6 +6,7 @@ import com.beta.widgets.wx.pojo.AccessToken;
 import com.beta.widgets.wx.pojo.User;
 import com.beta.widgets.wx.pojo.WxPojo;
 import com.beta.widgets.wx.service.WeChatService;
+import com.beta.widgets.wx.util.MessageUtil;
 import com.beta.widgets.wx.util.MyX509TrustManager;
 import com.beta.widgets.wx.util.SignUtil;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -25,64 +26,56 @@ import java.net.URL;
 import java.util.Map;
 
 @Controller
+@RequestMapping("/wechat")
 public class OneController {
 
-	public static final String access_token_url = "https://api.weixin.qq.com/cgi-bin/token?grant_type=client_credential&appid=APPID&secret=APPSECRET";
+	public static final String get_access_token_url = "https://api.weixin.qq.com/cgi-bin/token?grant_type=client_credential&appid=APPID&secret=APPSECRET";
+	public static final String get_user_info_url = "https://api.weixin.qq.com/cgi-bin/user/info?access_token=ACCESS_TOKEN&openid=OPENID&lang=zh_CN";
 	public static final String appid = "wxc7ad201771fabfaa";
 	public static final String appsecret = "2ff6d0fcd279ef4720a78f643ccf1b74";
-	public static final String appidTestCount = "wx3b15c9af3dd48316";
-	public static final String appsecretTestCount = "cc64836e45b011313aaf422c66edfbaa";
+	//通过接口测试号的appid 和 appSecret 获取access_token
+	public static final String appidTestCount = "wx3cbe13f83ffac815";
+	public static final String appsecretTestCount = "475232751d242533109f77959e5d00bb";
 
 	@Autowired
     WeChatService weChatService;
 
-	@RequestMapping("/oneController")
-	@ResponseBody
-	public String index(@RequestParam String name) {
-
-		return "helllo  Spring Boot:::" + name + "|||";
-	}
-
-	@RequestMapping(value = "/hi", method = RequestMethod.POST, consumes = "application/json")
-	@ResponseBody
-	public String testt(@RequestBody Map<String, Object> reqMap) {
-		System.out.println(reqMap.get("name"));
-		return "nihao" + reqMap.get("name") + "你的电话是tel:" + reqMap.get("tel");
-	}
-
-	@RequestMapping("/hi3")
-	@ResponseBody
-	public String testtt(User user) {
-		System.out.println(user.getName());
-		return "nihao" + user.getName() + "你的电话是tel:" + user.getTel();
-	}
-
-	@RequestMapping("/hi2")
-	public String testtt(WxPojo pojo, HttpServletRequest request,
+	@RequestMapping("/hi")
+	public Object testtt(WxPojo pojo, HttpServletRequest request,
                          HttpServletResponse response) throws Exception {
-		HttpSession session = request.getSession();
-		// HttpServletResponse response = null;
+        //不设置编码格式的话会返回空
 		request.setCharacterEncoding("UTF-8");
 		response.setCharacterEncoding("UTF-8");
-		System.out.println("jinlaile");
-		System.out.println(pojo.getEchostr());
-		// 为true则代表请求来自微信服务器，这时候需要将请求带来的echostr原样返回
+//		// 为true则代表请求来自微信服务器，这时候需要将请求带来的echostr原样返回
 		boolean checkSignature = SignUtil.checkSignature(pojo.getSignature(),
 				pojo.getTimestamp(), pojo.getNonce());
-		System.out.println(checkSignature);
+        if (!checkSignature) {
+            return null;
+        }
+        // xml请求解析
+        Map<String, String> requestMap = MessageUtil.xmlToMap(request);
+        // 发送方帐号（open_id）
+        String openId = requestMap.get("FromUserName");
+		// 获取access_token
+		AccessToken accessToken = getAccessToken(appid, appsecret);
+		getCurrentUserInfo(accessToken, openId);
 		PrintWriter out = response.getWriter();
 		out.print(pojo.getEchostr());
-		out.print(weChatService.weixinPost(request));
+        String resContent = weChatService.weixinPost(requestMap);
+        out.print(resContent);
 		out.close();
-		// 获取access_token
-		AccessToken accessToken = getAccessToken(appidTestCount, appsecretTestCount);
-		System.out.println(accessToken);
-		return "NewFile";
+        return null;
 	}
-	 public static AccessToken getAccessToken(String appid, String appsecret) {  
+
+    private void getCurrentUserInfo(AccessToken accessToken, String openId) {
+        String requestUrl = get_user_info_url.replace("ACCESS_TOKEN", accessToken.getToken()).replace("OPENID", openId);
+        JSONObject jsonObject = httpRequest(requestUrl, "GET", null);
+        System.out.println(jsonObject);
+    }
+
+    public static AccessToken getAccessToken(String appid, String appsecret) {
 	        AccessToken accessToken = null;  
-	  
-	        String requestUrl = access_token_url.replace("APPID", appid).replace("APPSECRET", appsecret);  
+	        String requestUrl = get_access_token_url.replace("APPID", appid).replace("APPSECRET", appsecret);
 	        JSONObject jsonObject = httpRequest(requestUrl, "GET", null);
 	        // 如果请求成功  
 	        if (null != jsonObject) {  
@@ -93,11 +86,21 @@ public class OneController {
 	            } catch (JSONException e) {
 	                accessToken = null;  
 	                // 获取token失败  
-	                //log.error("获取token失败 errcode:{} errmsg:{}", jsonObject.getInteger("errcode"), jsonObject.getString("errmsg"));  
-	            }  
+	                //log.error("获取token失败 errcode:{} errmsg:{}", jsonObject.getInteger("errcode"), jsonObject.getString("errmsg"));
+	            }
 	        }  
 	        return accessToken;  
-	    }  
+	    }
+
+	/**
+	 * 功能描述:
+	 * 〈发送http请求〉
+	 *
+	 * @return:
+	 * @since: 1.0.0
+	 * @Author:feiyi
+	 * @Date: 2019/2/25 8:05 PM
+	 */
 	public static JSONObject httpRequest(String requestUrl,
                                          String requestMethod, String outputStr) {
 

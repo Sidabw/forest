@@ -1,6 +1,5 @@
 package com.beta.config;
 
-import com.beta.basic.config.upload.listener.filter.Interceptor;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.web.servlet.config.annotation.*;
 

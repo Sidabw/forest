@@ -13,16 +13,12 @@ public class WeChatService {
 	/**
      * 处理微信发来的请求
      * 
-     * @param request
+     * @param requestMap
      * @return
      */
-    public String weixinPost(HttpServletRequest request) {
+    public String weixinPost(Map<String, String> requestMap) {
         String respMessage = null;
         try {
-
-            // xml请求解析
-            Map<String, String> requestMap = MessageUtil.xmlToMap(request);
-
             // 发送方帐号（open_id）
             String fromUserName = requestMap.get("FromUserName");
             // 公众帐号
@@ -31,17 +27,13 @@ public class WeChatService {
             String msgType = requestMap.get("MsgType");
             // 消息内容
             String content = requestMap.get("Content");
-            
-//          LOGGER.info("FromUserName is:" + fromUserName + ", ToUserName is:" + toUserName + ", MsgType is:" + msgType);
-            System.out.println("	fromUserName"+fromUserName+"	toUserName"+toUserName+"	msgType"+msgType+"	content"+content);
-
-            // 文本消息
+            System.out.println("fromUserName:"+fromUserName+",toUserName:"+toUserName+",msgType:"+msgType+",content:"+content);
+            //根据不通的type，定位不同事件。当前：文本消息
             if (msgType.equals(MessageUtil.REQ_MESSAGE_TYPE_TEXT)) {
                 //这里根据关键字执行相应的逻辑，只有你想不到的，没有做不到的
                 if(content.equals("xxx")){
                     
                 }
-                
                 //自动回复
                 TextMessage text = new TextMessage();
                 text.setContent("Chérie Sida, Je t'aime beaucoup!");
