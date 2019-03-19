@@ -8,7 +8,7 @@
  * <author>          <time>          <version>          <desc>
  * 作者姓名           修改时间           版本号              描述
  */
-package com.elasticsearch;
+package com.elasticsearch.util;
 
 import com.alibaba.druid.util.StringUtils;
 import net.sourceforge.pinyin4j.PinyinHelper;
@@ -18,18 +18,27 @@ import net.sourceforge.pinyin4j.format.HanyuPinyinVCharType;
 import net.sourceforge.pinyin4j.format.exception.BadHanyuPinyinOutputFormatCombination;
 import org.elasticsearch.action.delete.DeleteResponse;
 import org.elasticsearch.client.transport.TransportClient;
+import scala.Int;
 
 import java.net.UnknownHostException;
 
 /**
  * 〈一句话功能简述〉:
- * 〈〉
+ * 〈汉字转拼音〉
  *
  * @author feiyi
  * @create 2018/11/22
  * @since 1.0.0
  */
 public class PinYin {
+    /**
+     * 功能描述:
+     * 〈汉字转拼音〉
+     *
+     * @since: 1.0.0
+     * @Author:feiyi
+     * @Date: 2019/3/19 11:42 AM
+     */
     public static String getPinyin(String hanzi){
         //ascii 32-126 是所有符号及大小写英文的10进制值
         StringBuffer convertResult = new StringBuffer();
@@ -61,15 +70,16 @@ public class PinYin {
         }
         return pinyin.toString().trim().toLowerCase();
     }
-    public static void main(String[] args) throws UnknownHostException {
-        System.out.println(getPinyin("*"));
-        String str = "将阿里斯顿减肥啦时间都放辣椒似的";
-        System.out.println(str.toCharArray()[0]);
-        TransportClient client = Demo1.getClient();
-        DeleteResponse consumer = client.prepareDelete().setIndex("company_info").setType("text")
-                                        .execute().actionGet();
-    }
 
+    /**
+     * 功能描述:
+     * 〈转拼音首字母〉
+     *
+     * @return:
+     * @since: 1.0.0
+     * @Author:feiyi
+     * @Date: 2019/3/19 11:43 AM
+     */
     public static String getSimplifiedPinyin(String companyName) {
         if(StringUtils.isEmpty(companyName))
             return null;
@@ -83,4 +93,10 @@ public class PinYin {
         return result.toString();
     }
 
+
+
+    public static void main(String[] args){
+        System.out.println(getPinyin("萝卜"));
+        System.out.println(getSimplifiedPinyin("萝卜"));
+    }
 }
