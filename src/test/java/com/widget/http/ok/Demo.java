@@ -24,9 +24,9 @@ import java.util.concurrent.TimeUnit;
 /**
  * 〈一句话功能简述〉:
  * 〈okhttp
- *  主要测试常规的get/post/form/header append/asyn
+ *  主要测试常规的get/post/form/header append/asyn/文件上传
  *  无关html
- *  有关文件上传、分块请求等赞不做测试。〉
+ *  有关分块请求等暂不做测试。〉
  *
  * @author feiyi
  * @create 2018/12/4
@@ -58,12 +58,30 @@ public class Demo {
         jsonObject.put("password", "Feiyizenki123");
         String param = jsonObject.toJSONString();
         RequestBody body = RequestBody.create(mediaType, param);
-        FileInputStream fileInputStream = new FileInputStream(new File(""));
         Request request = new Request.Builder().url(url).post(body).build();
         Response response = client.newCall(request).execute();
         logger.info("response body --> {}",response.body().string());
     }
 
+    public static void postForm(String url) throws IOException {
+        OkHttpClient client = new OkHttpClient();
+        FormBody body = new FormBody.Builder()
+                .add("name", "feiyi")
+                .add("password", "Feiyizenki123")
+                .build();
+        Request request = new Request.Builder().url(url).post(body).build();
+        Response response = client.newCall(request).execute();
+        logger.info("response body --> {}",response.body().string());
+    }
+
+    /**
+     * 功能描述:
+     *  有争议，详细见md of cur package
+     * @return:
+     * @since: 1.0.0
+     * @Author:feiyi
+     * @Date: 2019/3/20 8:15 PM
+     */
     public static void postMultipartUpload() throws IOException {
         FileInputStream fileInputStream = new FileInputStream(new File("/Users/feiyi/Desktop/zenki-note.txt"));
         int length = 0;
@@ -96,16 +114,7 @@ public class Demo {
         System.out.println(response.message());
     }
 
-    public static void postForm(String url) throws IOException {
-        OkHttpClient client = new OkHttpClient();
-        FormBody body = new FormBody.Builder()
-                .add("name", "feiyi")
-                .add("password", "Feiyizenki123")
-                .build();
-        Request request = new Request.Builder().url(url).post(body).build();
-        Response response = client.newCall(request).execute();
-        logger.info("response body --> {}",response.body().string());
-    }
+
 
     public static void addTimeout(){
         OkHttpClient client = new OkHttpClient.Builder()

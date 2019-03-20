@@ -10,14 +10,26 @@
  */
 package com.widget.mongo;
 
+import com.alibaba.fastjson.JSONArray;
+import com.alibaba.fastjson.JSONObject;
 import com.mongodb.MongoClient;
 import com.mongodb.MongoCredential;
 import com.mongodb.ServerAddress;
+import com.mongodb.client.FindIterable;
 import com.mongodb.client.MongoCollection;
+import com.mongodb.client.MongoCursor;
 import com.mongodb.client.MongoDatabase;
+import com.mongodb.client.model.Filters;
+import com.mongodb.client.result.DeleteResult;
 import org.bson.Document;
+import org.bson.conversions.Bson;
+import org.bson.json.JsonMode;
+import org.bson.json.JsonWriterSettings;
+import org.bson.json.StrictJsonWriter;
+import org.bson.types.ObjectId;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 
 /**
@@ -42,12 +54,12 @@ public class MongoUtil {
 
     public static MongoClient getMongoClientCredential(){
         //连接到MongoDB服务 如果是远程连接可以替换“localhost”为服务器所在IP地址
-        ServerAddress serverAddress = new ServerAddress("10.10.1.8",12000);
+        ServerAddress serverAddress = new ServerAddress("",12000);
         List<ServerAddress> addrs = new ArrayList<>();
         addrs.add(serverAddress);
 
         //MongoCredential.createScramSha1Credential()三个参数分别为 用户名 数据库名称 密码
-        MongoCredential credential = MongoCredential.createScramSha1Credential("unstructure", "zk_unstructure_data", "e10adc3949ba59abbe56e057f20f883e".toCharArray());
+        MongoCredential credential = MongoCredential.createScramSha1Credential("", "", "".toCharArray());
         List<MongoCredential> credentials = new ArrayList<>();
         credentials.add(credential);
         //通过连接认证获取MongoDB连接
@@ -58,4 +70,68 @@ public class MongoUtil {
         return new MongoClient( "localhost" , 27017 );
     }
 
+    public static void createCol(String colName){
+        //不需要动态建库，直接建表就行。
+        MongoClient mongoClient = MongoUtil.getMongoClient();
+        MongoDatabase mongoDatabase = mongoClient.getDatabase("");
+        mongoDatabase.createCollection(colName);
+    }
+
+    public static void insert(MongoCollection<Document> col){
+        //两种插入方式。建议使用document1，可以直接parse json str
+        String json = "{}";
+        Document document1 = Document.parse(json);
+        Document document2 = new Document()
+                .append("_id", "ssssadfasdfasdfa11111111s11212")
+                .append("name", "luobotou")
+                .append("list_test", Arrays.asList(1, 2, 3, 4, 5));
+        col.insertOne(document2);
+    }
+    public static void updateByFilter(MongoCollection<Document> mongoCollection){
+        //这里的写法类似原生的mongo语句；这里表示只修改负责条件的document的name字段的值
+        mongoCollection.updateOne(Filters.eq("ObjectId","jlsdjflkasjdfljsadl"),
+                new Document("$set", new Document("name","luobotouo")));
+    }
+
+    public static void deleteByFilter(MongoCollection<Document> mongoCollection){
+        DeleteResult result = mongoCollection.deleteOne(Filters.eq("_id", "5bf670f061ea9781177e7743"));
+        System.out.println(String.format("总共删除了%s条记录",result.getDeletedCount()));
+        DeleteResult result2 = mongoCollection.deleteOne(new Document().append("_id", new ObjectId("5bf66fc461ea9781177e7742")));
+        System.out.println(String.format("总共删除了%s条记录",result2.getDeletedCount()));
+    }
+
+    /***
+     * 1.json 转 条件：Bson parse = Document.parse(jsonObject.toJSONString());
+     * 2.通过JsonWriterSettings可以将long或double转为string。以防原有数据结构在json序列化时发生变化。
+     * @param mongoCollection
+     */
+    public static void findAll(MongoCollection<Document> mongoCollection){
+        JSONObject jsonObject = new JSONObject();
+        jsonObject.put("_id", "AN201901101283782382__dongshihuijueyi");
+        Bson parse = Document.parse(jsonObject.toJSONString());
+        FindIterable<Document> documents = mongoCollection.find(parse);
+        for (Document doc : documents) {
+            System.out.println(doc.toJson());
+        }
+        MongoCursor<Document> iterator = documents.iterator();
+        while (iterator.hasNext()){
+            Document eachModel = iterator.next();
+//            eachModel.keySet().stream().forEach(e -> System.out.println(eachModel.get(e)));
+            System.out.println("------------------------");
+            JsonWriterSettings build = JsonWriterSettings.builder()
+                    .outputMode(JsonMode.EXTENDED)
+                    .doubleConverter((Double value, StrictJsonWriter writer) -> writer.writeString(Double.toString(value)))
+                    .int64Converter((Long value, StrictJsonWriter writer) -> writer.writeString(Long.toString(value)))
+                    .int32Converter((Integer value, StrictJsonWriter writer) -> writer.writeNumber(Integer.toString(value)))
+                    .build();
+//            JsonWriterSettings build1 = JsonWriterSettings.builder().outputMode(JsonMode.STRICT).build();
+            String jsonStr = eachModel.toJson(build);
+            JSONObject jsonObject1 = JSONObject.parseObject(jsonStr);
+            System.out.println(jsonStr);
+            System.out.println(jsonObject1.get("is_delete").getClass());
+            System.out.println(JSONObject.parseObject(jsonStr).get("age"));
+        }
+        long count = mongoCollection.count();
+        System.out.println(String.format("共有%s条记录", count));
+    }
 }
