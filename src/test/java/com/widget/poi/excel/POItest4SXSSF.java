@@ -1,4 +1,4 @@
-package com.widget.poi;
+package com.widget.poi.excel;
 
 import java.awt.image.BufferedImage;
 import java.io.FileOutputStream;
@@ -11,8 +11,13 @@ import org.jfree.chart.plot.PlotOrientation;
 import org.jfree.data.category.DefaultCategoryDataset;
 
 public class POItest4SXSSF {
+    /***
+     * excel生成图表测试
+     * @param args
+     * @throws Exception
+     */
 	public static void main(String[] args) throws Exception{
-		
+
 		/*SXSSFWorkbook sxssfWorkbook = new SXSSFWorkbook();
 		SXSSFSheet sheet1 = sxssfWorkbook.createSheet("sheet1");
 		//创建样式 并设置居中

@@ -1,4 +1,4 @@
-package com.widget.poi;
+package com.widget.poi.word;
 
 import com.alibaba.druid.util.StringUtils;
 import org.apache.poi.util.Units;
