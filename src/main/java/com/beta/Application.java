@@ -35,7 +35,7 @@ public class Application extends SpringBootServletInitializer {
 		System.out.println("到/ 这里来了" + userDetails.getUsername());
 		System.out.println(userDetails.getAuthorities());*/
 
-		return "Hello SpringBoot"+"------";
+		return "Hello SpringBoot"+"------2";
 	}
 
     @RequestMapping(value = "/methodTest", method = RequestMethod.GET)
