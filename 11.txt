@@ -6,4 +6,7 @@ helloworld
 my revert test
 
 
+word 预览挺有意思... 
+方案一就是调offce的api，不过对应的你的文件就得放到公网上去了..不过这个给office加个白名单好像也不是不可以
+方案二就是word转pdf..  这个好像很多现成的api是有，但都是收费的...
 
