@@ -1,5 +1,9 @@
 package com.Java.basic.test;
 
+import java.text.SimpleDateFormat;
+import java.util.Date;
+import java.util.GregorianCalendar;
+
 /***
  *  Created by shao.guangze on 2018/7/26
  */
@@ -32,5 +36,33 @@ public class Demo {
         System.out.println(d == o); //所以说强转之后还是原来的对象
         System.out.println("----------------------------------");
         System.out.println(String.format("task.%s", 1));
+        System.out.println("---");
+        Date date = new Date();
+        SimpleDateFormat df = new SimpleDateFormat("HH");
+        String str222 = df.format(date);
+        int a = Integer.parseInt(str222);
+        if (a >= 0 && a <= 6) {
+            System.out.println("凌晨");
+        }
+        if (a > 6 && a <= 12) {
+            System.out.println("上午");
+        }
+        if (a > 12 && a <= 13) {
+            System.out.println("中午");
+        }
+        if (a > 13 && a <= 18) {
+            System.out.println("下午");
+        }
+        if (a > 18 && a <= 24) {
+            System.out.println("晚上");
+        }
+        System.out.println("-----");
+        int hour = 15;
+        int min = 51;
+
+        if ((hour >= 7 && hour <12) || (hour == 12 && min <=50)) {
+            System.out.println(11111);
+        }
+
     }
 }

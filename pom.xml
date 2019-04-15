@@ -343,6 +343,13 @@
             <version>1.4</version>
         </dependency>
 
+        <!-- excel4j -->
+        <dependency>
+            <groupId>com.github.crab2died</groupId>
+            <artifactId>Excel4J</artifactId>
+            <version>3.0.0-Alpha</version>
+        </dependency>
+
 
     </dependencies>
 	<build>
