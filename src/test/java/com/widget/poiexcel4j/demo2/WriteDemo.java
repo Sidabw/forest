@@ -29,7 +29,7 @@ import java.util.*;
 public class WriteDemo {
 
     @Test
-    public void test() throws IOException, Excel4JException {
+    public void basicExport1() throws IOException, Excel4JException {
         //1.非注解
         List<List<String>> list2 = new ArrayList<>();
         List<String> header = new ArrayList<>();
@@ -50,8 +50,13 @@ public class WriteDemo {
         }
         ExcelUtils.getInstance().exportObjects2Excel(list, Student.class, true, "sheet0", true, "/Users/feiyi/Documents/feiyiGitProject/forest/src/test/java/com/widget/poiexcel4j/excelfile/export2.xlsx");
 
-        //3.基于模版导出
 
+    }
+
+    @Test
+    public void templateExport1() throws Excel4JException {
+        //模版看不明白，就看excelfile 目录下的readme
+        //3.基于模版固定样式导出
         String tempPath = "/Users/feiyi/Documents/feiyiGitProject/forest/src/test/java/com/widget/poiexcel4j/excelfile/normal_template.xlsx";
         List<Student1> list1 = new ArrayList<>();
         list1.add(new Student1("1010001", "盖伦", "六年级三班"));
@@ -70,6 +75,37 @@ public class WriteDemo {
         ExcelUtils.getInstance().exportObjects2Excel(tempPath, 0, list1, data, Student1.class, false, "/Users/feiyi/Documents/feiyiGitProject/forest/src/test/java/com/widget/poiexcel4j/excelfile/export3.xlsx");
         // 不基于模板导出Excel
 //        ExcelUtils.getInstance().exportObjects2Excel(list, Student1.class, true, null, true, "D:/B.xlsx");
+    }
 
+    @Test
+    public void templateExport2() throws Excel4JException {
+        //基于模版自定义样式导出
+        Map<String, List> classes = new HashMap<>();
+
+        Map<String, String> data = new HashMap<>();
+        data.put("title", "战争学院花名册");
+        data.put("info", "学校统一花名册");
+
+        classes.put("class_one", new ArrayList<Student1>() {{
+            add(new Student1("1010009", "李四", "一年级一班"));
+            add(new Student1("1010002", "古尔丹", "一年级三班"));
+        }});
+        classes.put("class_two", new ArrayList<Student1>() {{
+            add(new Student1("1010008", "战三", "二年级一班"));
+        }});
+        classes.put("class_three", new ArrayList<Student1>() {{
+            add(new Student1("1010004", "萝卜特", "三年级二班"));
+            add(new Student1("1010005", "奥拉基", "三年级二班"));
+        }});
+        classes.put("class_four", new ArrayList<Student1>() {{
+            add(new Student1("1010006", "得嘞", "四年级二班"));
+        }});
+        classes.put("class_six", new ArrayList<Student1>() {{
+            add(new Student1("1010001", "盖伦", "六年级三班"));
+            add(new Student1("1010003", "蒙多", "六年级一班"));
+        }});
+
+        ExcelUtils.getInstance().exportObjects2Excel("/map_template.xlsx",
+                0, (List<?>) classes, data, Student1.class, false, "D:/C.xlsx");
     }
 }

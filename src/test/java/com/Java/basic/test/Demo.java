@@ -1,5 +1,6 @@
 package com.Java.basic.test;
 
+import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.GregorianCalendar;
@@ -8,7 +9,8 @@ import java.util.GregorianCalendar;
  *  Created by shao.guangze on 2018/7/26
  */
 public class Demo {
-    public static void main(String[] args){
+
+    public static void main(String[] args) throws ParseException {
         String str = "Ddabcdefghijklmnopqrst";
         System.out.println(str.indexOf("def"));
         String str2 = "aa\\aba\"";
@@ -64,5 +66,10 @@ public class Demo {
             System.out.println(11111);
         }
 
+        System.out.println("-----");
+        String da = "2019/01/01";
+        SimpleDateFormat simpleDateFormat = new SimpleDateFormat("yyyy/MM/dd HH:mm:ss");
+        Date parse = simpleDateFormat.parse(da);
+        System.out.println(parse.getTime());
     }
 }
