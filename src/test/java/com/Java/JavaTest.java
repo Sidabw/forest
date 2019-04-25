@@ -35,8 +35,6 @@ public class JavaTest {
         String format = decimalFormat.format(ll);
         System.out.println(format);
         System.out.println(Double.parseDouble(format));
-
         System.out.println("---");
-
     }
 }
