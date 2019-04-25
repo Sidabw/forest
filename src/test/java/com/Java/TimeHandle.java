@@ -62,6 +62,8 @@ public class TimeHandle {
 		long c2 = System.nanoTime();
 		//long c3 = TimeUnit.NANOSECONDS.toMillis(c2 - c1);
 		System.out.println(c2 -c1);
-
-	}
+        String sss = "0.0";
+        float v = Float.parseFloat(sss);
+        System.out.println(v == 0);
+    }
 }

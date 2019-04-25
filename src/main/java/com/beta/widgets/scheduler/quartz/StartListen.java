@@ -18,6 +18,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.context.event.ApplicationReadyEvent;
 import org.springframework.context.ApplicationListener;
 import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.Configuration;
 import org.springframework.stereotype.Component;
 
 /**
@@ -29,7 +30,7 @@ import org.springframework.stereotype.Component;
  * @since 1.0.0
  */
 @Component
-//@Configuration
+@Configuration
 public class StartListen implements ApplicationListener<ApplicationReadyEvent> {
 
 
@@ -52,7 +53,7 @@ public class StartListen implements ApplicationListener<ApplicationReadyEvent> {
      */
     @Bean
     public Scheduler scheduler() throws SchedulerException {
-        System.out.println("2222");
+        System.out.println("初始注入scheduler");
         SchedulerFactory schedulerFactoryBean = new StdSchedulerFactory();
         return schedulerFactoryBean.getScheduler();
     }
