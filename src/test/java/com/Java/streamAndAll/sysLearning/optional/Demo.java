@@ -54,6 +54,7 @@ public class Demo {
 			System.out.println(empty.get());
 		}
 	}
+
 	@Test
 	public void test2(){
 		//ofElse:如果有值则返回该值，如果没有值则返回指定值
@@ -68,7 +69,7 @@ public class Demo {
 		try {
 			ofNullable.orElseThrow(Exception::new);
 		} catch (Exception e) {
-			// TODO: handle exception
+			// handle exception
 			System.out.println(e.getMessage());
 		}
 	}
