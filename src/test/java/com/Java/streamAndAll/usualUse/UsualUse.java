@@ -5,6 +5,7 @@ import org.junit.Test;
 
 import java.util.*;
 import java.util.stream.Collectors;
+import java.util.stream.IntStream;
 import java.util.stream.Stream;
 
 /***
@@ -97,4 +98,39 @@ public class UsualUse {
         User sida3 = new User(19, "女", "sida3");
         List<User> users = Arrays.asList(sida1, sida2, sida3);
     }
+
+    @Test
+    public void sumTest() {
+        List<Integer> integers = Arrays.asList(1, 2, 4, 5);
+        int sum = IntStream.of(1, 2, 4).sum();
+        System.out.println(sum);
+
+        int sum1 = integers.stream().mapToInt(Integer::intValue).sum();
+        System.out.println(sum1);
+    }
+
+
+    @Test
+    public void collectTest(){
+        //指定collect的构造容器
+
+        //不指定的情况
+        List<Integer> collect = Stream.of(1, 2, 3, 4).collect(Collectors.toList());
+        //指定了的情况
+        ArrayList<Integer> collect1 = Stream.of(1, 2, 3, 4, 5).collect(Collectors.toCollection(ArrayList::new));
+
+        //partitioningBy 二值逻辑
+
+        User sida1 = new User(17, "女", "sida1");
+        User sida2 = new User(17, "女", "sida2");
+        User sida3 = new User(19, "男", "sida3");
+
+        Map<Boolean, List<User>> map = Stream.of(sida1, sida2, sida3).collect(Collectors.partitioningBy(e -> e.getGender().equals("男")));
+        System.out.println(map.get(Boolean.TRUE).size());
+        System.out.println(map.get(Boolean.FALSE).size());
+
+        String collect2 = Stream.of("I", "Love", "u", "sida").collect(Collectors.joining(",", "{", "}"));
+        System.out.println(collect2);
+    }
+
 }

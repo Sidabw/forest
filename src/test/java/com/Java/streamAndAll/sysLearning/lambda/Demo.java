@@ -1,9 +1,21 @@
 package com.Java.streamAndAll.sysLearning.lambda;
 
+import org.junit.Test;
+
+import java.util.Arrays;
+import java.util.List;
+import java.util.stream.Collectors;
+import java.util.stream.IntStream;
+import java.util.stream.Stream;
+
 /***
+ *  test from http://ifeve.com/stream/
  *  Created by shao.guangze on 2018/9/10
  */
 public class Demo {
+
+    @Test
+    public void testGetStart() {
         //Lambda入门
 		/*List<String> list = new ArrayList<String>();
 		Collections.sort(list, (a,b) -> a.compareTo(b));*/
@@ -37,16 +49,16 @@ public class Demo {
 		List<Integer> squareNums = nums.stream().map(n -> n*n).collect(Collectors.toList());
 		squareNums.stream().forEach(System.out::println);*/
 
-        //4.flatMap   一对多	不明白
-		/*Stream<List<Integer>> inputStream = Stream.of(
+       //4.flatMap 合并list
+		Stream<List<Integer>> inputStream = Stream.of(
 				 Arrays.asList(1),
 				 Arrays.asList(2, 3),
 				 Arrays.asList(4, 5, 6)
 				 );
-				Stream<Integer> outputStream = inputStream.
-				flatMap((childList) -> childList.stream());*/
+        List<Integer> collect = inputStream.
+                flatMap((childList) -> childList.stream()).collect(Collectors.toList());
 
-     //5.filter	filter对Stream进行某项测试，通过测试的元素被留下来生成一个新的Stream
+        //5.filter	filter对Stream进行某项测试，通过测试的元素被留下来生成一个新的Stream
      //留下偶数
     //Integer[] sixNums = {1, 2 , 3, 4, 5, 6};
     /*Integer[] events=
@@ -57,4 +69,13 @@ public class Demo {
              flatMap(line -> Stream.of(line.split(REGEXP))).
              filter(word -> word.length() > 0).
              collect(Collectors.toList());*/
+    }
+
+
+    @Test
+    public void test() {
+
+    }
+
+
 }

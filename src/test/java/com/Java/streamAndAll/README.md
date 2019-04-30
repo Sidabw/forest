@@ -11,7 +11,7 @@ to the only abstract method defined in your function interface
 via the :: keyword .
 可以用:: 关键字替换lambda表达式
 
-###     stream 的具体用法,	http://ifeve.com/stream/
+###     stream 的具体用法,	[ifeve](http://ifeve.com/stream/)
 
 ####     map
 接受的是Function	1进1出。可以写成User::getAge	此时User为进，getAge的结果为出
@@ -42,5 +42,26 @@ via the :: keyword .
 ####    skip
 返回一个丢弃原Stream的前N个元素后剩下元素组成的新Stream，如果原Stream中包含的元素
 个数小于N，那么返回空Stream；
+
+###     note from [CarpenterLee Blog](http://www.cnblogs.com/CarpenterLee/p/6545321.html)
+共有4中stream继承了BaseStream，分别是IntStream、LongStream、DoubleStream、Stream。
+*   前三者设计意图：减少自动装箱/拆箱的频率，提高性能
+*   为什么前三者不继承Stream：Java不支持返回值不同的方法进行重载。
+####   Stream操作类型
+*   中间操作(intermediate operations)：惰性执行，生成一个新的stream
+    *   示例： distinct() filter() flatMap() limit() map()  sorted() parallel() sequential() unordered()
+*   结束操作(terminal operations)：立即执行。执行时会把中间操作积攒的操作以**pipeline**
+的方式执行，减少迭代的次数。
+    *   示例：collect() count() findAny() findFirst() forEach() forEachOrdered()
+     max() min() noneMatch() reduce() toArray()
+    
+####    Stream汇聚操作(Reduce ops)
+两个通用的Reduce ops 分别是reduce()、collect()，除此之外sum()、max()、count()等是一些
+专门设计方便使用的汇聚操作。
+*   reduce 可以实现从一组操作中生成1个元素,比如mapToInt 或 IntStream的sum
+*   collect .. 基本上什么都可以做
+
+####    Stream中的pipeline
+
 
 
