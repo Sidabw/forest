@@ -35,16 +35,16 @@ public class Demo {
 //        map.put("c", "d");
 //        Set<String> keySet = map.keySet();
 
-        FileInputStream fis = new FileInputStream("/Users/feiyi/Desktop/MapTest2.java");
-        FileOutputStream fos = new FileOutputStream("/Users/feiyi/Desktop/MapTest3.java");
-        ByteArrayOutputStream out = new ByteArrayOutputStream();
-
-        byte[] buff = new byte[4096];
-        while(fis.read(buff) !=-1){
-            out.write(buff);
-        }
-
-        fos.write(out.toString("GBK").getBytes("UTF-8"));
+//        FileInputStream fis = new FileInputStream("/Users/feiyi/Desktop/MapTest2.java");
+//        FileOutputStream fos = new FileOutputStream("/Users/feiyi/Desktop/MapTest3.java");
+//        ByteArrayOutputStream out = new ByteArrayOutputStream();
+//
+//        byte[] buff = new byte[4096];
+//        while(fis.read(buff) !=-1){
+//            out.write(buff);
+//        }
+//
+//        fos.write(out.toString("GBK").getBytes("UTF-8"));
 
     }
 }

@@ -1,9 +1,12 @@
 package com.Java.basic.test;
 
+import org.junit.Test;
+
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.GregorianCalendar;
+import java.util.Random;
 
 /***
  *  Created by shao.guangze on 2018/7/26
@@ -71,5 +74,15 @@ public class Demo {
         SimpleDateFormat simpleDateFormat = new SimpleDateFormat("yyyy/MM/dd HH:mm:ss");
         Date parse = simpleDateFormat.parse(da);
         System.out.println(parse.getTime());
+    }
+
+    @Test
+    public void test(){
+        //伪随机数；密码学安全随机数；真随机数
+        //1。伪随机数：看着是随机的，但实际上有固定的生成规则
+        //2。密码学安全随机数，也不是真正意义上的随机数，但是没有办法根据已有样本推测出下一个元素
+        //3。真随机数：往往都是一些实际现象，如抛硬币等。对核裂变等要求的真正随机数，往往是非常复杂的。
+        int i = new Random().nextInt(10);
+        System.out.println(i);
     }
 }

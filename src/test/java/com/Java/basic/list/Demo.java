@@ -3,6 +3,7 @@ package com.Java.basic.list;
 
 import com.alibaba.fastjson.JSONArray;
 import com.alibaba.fastjson.JSONObject;
+import org.junit.Test;
 
 import java.util.*;
 
@@ -52,6 +53,15 @@ public class Demo {
 		List<List<?>> lists = Arrays.asList(list, arrayList);
 
 	}
+
+
+	@Test
+	public void testShuffle(){
+        List<Integer> integers = Arrays.asList(1, 2, 3, 4);
+        System.out.println(integers);
+        Collections.shuffle(integers);
+        System.out.println(integers);
+    }
 }
 class User{
 	private String name;

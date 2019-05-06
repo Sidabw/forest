@@ -15,6 +15,7 @@ import org.dom4j.Document;
 import org.dom4j.DocumentException;
 import org.dom4j.Element;
 import org.dom4j.io.SAXReader;
+import org.junit.Test;
 
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
@@ -40,5 +41,11 @@ public class Demo {
             String name = eL.getName();
             if ("version".equals(name))  System.out.println(eL.getText());
         });
+    }
+
+
+    @Test
+    public void test(){
+        System.out.println(1);
     }
 }
