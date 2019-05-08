@@ -89,8 +89,18 @@ public class MongoUtil {
     }
     public static void updateByFilter(MongoCollection<Document> mongoCollection){
         //这里的写法类似原生的mongo语句；这里表示只修改负责条件的document的name字段的值
+        //
+//        Filters.eq("_id", new ObjectId("sjdlfkjalsdjflak"));
         mongoCollection.updateOne(Filters.eq("ObjectId","jlsdjflkasjdfljsadl"),
                 new Document("$set", new Document("name","luobotouo")));
+    }
+
+    public static void replaceById(MongoCollection<Document> mongoCollection){
+        //replace的时候已经有id了下面的document就不用再放id了。要放也要放一样的。
+        mongoCollection.replaceOne(Filters.eq("_id", new ObjectId("sjdlfkjalsdjflak")),
+                new Document("name", "Green Salads Buffet")
+                        .append("contact", "TBD")
+                        .append("categories", Arrays.asList("Salads", "Health Foods", "Buffet")));
     }
 
     public static void deleteByFilter(MongoCollection<Document> mongoCollection){
