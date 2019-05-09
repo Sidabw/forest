@@ -22,11 +22,11 @@ import org.springframework.scheduling.quartz.QuartzJobBean;
  * @create 2018/11/9
  * @since 1.0.0
  */
-public class TaskPerform extends QuartzJobBean {
-
-
-    @Override
-    protected void executeInternal(JobExecutionContext jobExecutionContext) throws JobExecutionException {
-        System.out.println("定时任务执行 " + jobExecutionContext.getJobDetail().getDescription());
-    }
-}
+//public class TaskPerform extends QuartzJobBean {
+//
+//
+//    @Override
+//    protected void executeInternal(JobExecutionContext jobExecutionContext) throws JobExecutionException {
+//        System.out.println("定时任务执行 " + jobExecutionContext.getJobDetail().getDescription());
+//    }
+//}

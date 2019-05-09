@@ -33,6 +33,8 @@ public class MyWebMvcConfigurerAdapter extends WebMvcConfigurerAdapter{
         registry.addViewController("/toLogin").setViewName("login");
         registry.addViewController("/beauty1").setViewName("beauty1");
         registry.addViewController("/test").setViewName("test");
+        registry.addViewController("/map").setViewName("baidu/map");
+        registry.addViewController("/map2").setViewName("baidu/maplocate");
         super.addViewControllers(registry);
     }
 
