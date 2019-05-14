@@ -83,7 +83,8 @@ public class Demo {
      * @Date: 2019/3/20 8:15 PM
      */
     public static void postMultipartUpload() throws IOException {
-        FileInputStream fileInputStream = new FileInputStream(new File("/Users/feiyi/Desktop/zenki-note.txt"));
+//        FileInputStream fileInputStream = new FileInputStream(new File("/Users/feiyi/Desktop/zenki-note.txt"));
+        FileInputStream fileInputStream = new FileInputStream(new File("/Users/feiyi/Desktop/seaweedfs-file-test/doc-docs-test/11.docx"));
         int length = 0;
         byte[] temp = new byte[1024];
         ArrayList<Byte> list = new ArrayList<>();
@@ -102,11 +103,11 @@ public class Demo {
         RequestBody requestBody2 = new MultipartBody.Builder()
                 .addPart(
                         Headers.of("Content-Disposition",
-                                "form-data; name=\"128\""),
+                                "form-data; name=\"13\""),
                         RequestBody.create(null, bytes)).build();
         Request request = new Request.Builder()
                 .header("Accept-Language", "zh-cn")
-                .url("http://weedfs-filer.zenki.cn/feiyitest/128")
+                .url("http://localhost:8888/dataplus/13")
                 .post(requestBody2)
                 .build();
         OkHttpClient client = new OkHttpClient();

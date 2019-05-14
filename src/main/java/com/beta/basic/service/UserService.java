@@ -12,9 +12,11 @@ import com.beta.basic.mybatis.mapper.TbUserMapper;
 @Service
 public class UserService implements IUserService{
 
+
 	@Override
 	public List<TbUser> queryList() {
 		return null;
 	}
+
 
 }

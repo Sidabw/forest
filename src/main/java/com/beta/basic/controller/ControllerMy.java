@@ -158,7 +158,19 @@ public class ControllerMy {
 	    return request.getSession().getAttribute("uploadStatus");
     }
 
+    @RequestMapping(value = "/test", method = RequestMethod.GET)
+    @ResponseBody
+    public Object getTest(HttpServletRequest request){
+        System.out.println(11);
+        return "aaa";
+    }
 
+    @RequestMapping(value = "/test2", method = RequestMethod.GET)
+    @ResponseBody
+    public Object getTest2(HttpServletRequest request){
+        System.out.println(22);
+        return "aaa22";
+    }
 
 
 }
