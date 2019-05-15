@@ -1,4 +1,6 @@
 #   forest
+[![Travis](https://img.shields.io/badge/language-Java-yellow.svg)](https://developer.apple.com/.md)
+
 ### 🍺简介
 *   使用@ControllerAdvice进行统一的异常处理，异常捕获。提供了ExceptionHandler、ResponseStatus两个注解，可以针对不同异常、不同状态码做出细颗粒的处理。
 *   目前不知道如何跳转到error.jsp，可以跳到error.html
