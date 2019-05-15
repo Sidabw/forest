@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+   <!DOCTYPE struts PUBLIC
+	"-//Apache Software Foundation//DTD Struts Configuration 2.3//EN"
+	"http://struts.apache.org/dtds/struts-2.3.dtd">
+
+<struts>
+	<package name="user" namespace="/user" extends="struts-default">
+	<!--
+		<action name="userAction" class="com.zpark.user.UserAction" method="userTest">
+			<result name="toHome">/hello.jsp</result>
+		</action>
+	 -->
+		<!-- 请求转发到jsp 默认type-->
+	<!--  	
+		<action name="userAction" class="com.zpark.user.UserAction" >
+			<result name="success" type="dispatcher">/hello.jsp</result>
+		</action>
+	-->
+		<!-- 请求重定向到jsp -->
+	<!--  
+		<action name="userAction" class="com.zpark.user.UserAction" >
+			<result name="success" type="redirect">/hello.jsp</result>
+		</action>
+	-->	
+	<!-- 请求转发到action -->
+	<!--  
+		<action name="userAction" class="com.zpark.user.UserAction" >
+			<result name="success" type="chain">
+				<param name="actionName">action</param>
+				<param name="nameSpace">/hello</param>
+			</result>
+		</action>
+	-->
+	<!-- 请求重定向到action -->
+		<action name="userAction" class="com.zpark.a2user.UserAction">
+			<result name="success" type="redirectAction">
+				<param name="actionName">action2</param>
+				<param name="nameSpace">/hello</param>
+			</result>
+		</action>
+	</package>
+	
+</struts>

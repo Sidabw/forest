@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+ "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+ <!-- 每一个实体对应一个mapper，namespace必须指定！ -->
+ <mapper namespace="com.zpark.dao.IUserDao">
+ <!-- id 是调用的方法名	resultType返回类型的实体类 -->
+ 	<select id="selectTest" resultType="com.zpark.pojo.User">
+ <!-- sql语句 -->
+ 		select * from user where id=1;
+ 	</select>
+ 	<!-- 插入数据 -->
+ 	<insert id="add">
+ 		insert into user(id,name,tel) values(#{id},#{name},#{tel});
+ 	</insert>
+ 	<!-- 删除数据 (无参)-->
+	<delete id="del">
+		delete from user where id=15;
+	</delete>	
+	<!-- 删除数据(有参) -->
+	<delete id="del2">
+		delete from user where id=#{id};
+	</delete>
+	<update id="upd">
+		update user set id=#{id},name=#{name},tel=#{tel} where id=#{id};
+	</update>
+	
+<!-- 直接调用接口操作数据库 -->
+
+	<insert id="save">
+		insert into user(id,name,tel) values(#{id},#{name},#{tel});
+	</insert>
+	
+	<select id="find" resultType="com.zpark.pojo.User">
+		select * from user where id=${value};
+	</select>
+	
+	<!-- <select id="find2" resultType="com.zpark.pojo.User">
+		select * from user where id=#{id};
+	</select> -->
+	
+	<update id="upd2">
+		update user set id=#{id},name=#{name},tel=#{tel} where id=#{id};
+	</update>
+	
+<!-- 插入数据返回自增主键 -->
+	 <insert id="save2" useGeneratedKeys="true" keyProperty="id" keyColumn="id">
+		update user set id=#{id},name=#{name},tel=#{tel} where id=#{id};
+	</insert> 
+<!--
+	插入数据返回自增主键方式二
+	<insert id="save2">
+		update user set id=#{id},name=#{name},tel=#{tel} where id=#{id};
+		<selectKey keyProperty="id" keyColumn="id" resultType="Integer" order="AFTER">
+			select LAST_INSERT_ID()
+		</selectKey>
+	</insert> -->
+	
+<!-- 动态拼接sql 模糊查询 -->
+<!-- 注意！！！   返回类型是User  不是List -->
+	<select id="find2" resultType="com.zpark.pojo.User">
+		 select * from user where name like "%${name}%"; 
+	</select>
+<!-- Mybatis标签 -->
+	<select id="find3" resultType="com.zpark.pojo.User">
+		select * from user where 1=1
+		<if test="name!=null and name!=''">
+			and name like "%${name}%";
+		</if>
+	</select>
+	<select id="find4" resultType="com.zpark.pojo.User">
+		select * from user
+		<where>
+			<if test="name!=null and name!=''">
+				and name like "%${name}%";
+			</if>
+		</where>
+	</select>
+	<select id="find5" resultType="com.zpark.pojo.User">
+		select * from user
+		<where>
+			<foreach collection="ids" item="id" open="id in(" close=")" separator=",">
+				#{id}
+			</foreach>
+		</where>
+	</select>
+	
+	<!-- id 与实际select框中的resultMap相同 -->
+	<resultMap type="com.zpark.pojo.Student" id="userMap">
+		<id property="id" column="id"/>
+		<result property="name" column="name"/>
+		<result property="gender" column="gender"/>
+		<association property="c" javaType="com.zpark.pojo.Clazz">
+		<!-- column使用别名，真正匹配在select语句中的 on s.fk_c=c.id -->
+			<id property="id" column="cid"/>
+			<result property="floor" column="floor"/>
+			<result property="addr" column="addr"/>
+		</association>
+	</resultMap>
+	<!-- 两个对象属性名相同的情况下使用别名 -->
+	<select id="queryMap" resultMap="userMap">
+		select s.*,c.id as cid, c.floor ,c.addr from student s left join clazz c on s.fk_c=c.id;
+	</select>
+	
+<!-- 多对一关系  -->
+	<resultMap type="com.zpark.pojo.Clazz" id="clazzMap">
+		<id property="id" column="id"/>
+		<result property="floor" column="floor"/>
+		<result property="addr" column="addr"/>
+		
+		<collection property="stu" javaType="java.util.List" ofType="com.zpark.pojo.Student">
+			<id property="id" column="sid"/>
+			<result property="name" column="name"/>
+			<result property="gender" column="gender"/>
+		</collection>
+	</resultMap>
+	<select id="queryMap2" resultMap="clazzMap">
+		select c.*,s.id as sid,s.name,s.gender from clazz c left join student s on c.id=s.fk_c;
+	</select>
+
+<!-- sql片段 -->
+	<sql id="sqlFindAll">
+		select * 
+	</sql>
+	
+	<select id="find6" >
+		<include refid="sqlFindAll"/>
+		from user;
+	</select>
+	
+<!-- oracle 操作 -->
+	<select id="findO" resultType="com.zpark.pojo.User">
+		select * from shao 
+	</select>
+ </mapper>

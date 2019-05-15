@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:context="http://www.springframework.org/schema/context" xmlns:tx="http://www.springframework.org/schema/tx" xmlns:mvc="http://www.springframework.org/schema/mvc" xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-4.0.xsd http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-4.0.xsd http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx-4.0.xsd http://www.springframework.org/schema/mvc http://www.springframework.org/schema/mvc/spring-mvc-4.0.xsd ">
+	
+	<!-- serivce 层 -->
+	<context:component-scan base-package="com.zpark.service"></context:component-scan>
+	
+	<!-- 引入外部properties文件 -->
+	<context:property-placeholder location="classpath:db.properties"/>
+	
+	<!-- 数据源连接池 -->
+	<bean id="dataSource" class="org.apache.commons.dbcp.BasicDataSource" destroy-method="close">
+		<property name="url" value="${mysql.jdbcUrl}" ></property>
+		<property name="driverClassName" value="${mysql.driverClass}" ></property>
+		<property name="username" value="${mysql.user}" ></property>
+		<property name="password" value="${mysql.password}" ></property>
+		<property name="maxActive" value="10" ></property>
+		<property name="maxIdle" value="5" ></property>
+	</bean>
+	<!-- mybatis session 工厂 -->
+	<bean id="SqlSessionFactory" class="org.mybatis.spring.SqlSessionFactoryBean">
+		<property name="dataSource" ref="dataSource"></property>
+		<property name="configLocation" value="classpath:/config/mybatis.cfg.xml"></property>
+	</bean>
+	
+	<!-- mybatis 动态代理扫描 -->
+	<bean class="org.mybatis.spring.mapper.MapperScannerConfigurer">
+		<property name="basePackage" value="com.zpark.dao"></property>
+	</bean>
+	
+	<!-- 配置事务的核心管理器 -->
+	<bean id="transactionManager" class="org.springframework.jdbc.datasource.DataSourceTransactionManager">
+		<property name="dataSource" ref="dataSource"></property>
+	</bean>
+	<!-- 开启注解事务 -->
+	<tx:annotation-driven transaction-manager="transactionManager"/>
+</beans>

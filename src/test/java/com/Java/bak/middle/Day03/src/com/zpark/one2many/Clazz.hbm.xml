@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC 
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping package="com.zpark.one2many">
+	<class name="Clazz" table="clazz">
+    		<id name="id" column="id">
+    			<generator class="native"></generator>
+    		</id>
+    		<property name="floor" column="floor" ></property>
+    		<property name="addr" ></property>	
+    		<!-- 通过inverse反转让多去维护数据库操作。从而提高效率 
+    			  还可以在数据库中设置级联。这是在Clazz中，数据库设置是在student中
+    		-->
+    		<set name="set" inverse="true" cascade="save-update,delete">
+    			<!-- 生成外键 -->
+    			<key column="fk_c"></key>
+    			<!-- 关联对象 -->
+    			<one-to-many class="Student"/>
+    		</set>
+	</class>
+	
+</hibernate-mapping>

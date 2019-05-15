@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC 
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping package="com.zpark.many2many">
+	<class name="Course" table="course">
+    		<id name="id" column="id">
+    			<generator class="native"></generator>
+    		</id>
+    		<property name="name"  ></property>
+    		<!-- 通过inverse反转让多去维护数据库操作。从而提高效率 
+    			  还可以在数据库中设置级联。这是在Clazz中，数据库设置是在student中
+    		-->
+    		<set name="c_set" table="s_c_table" inverse="true" lazy="true">
+    			<key column="c_id"></key>
+				<many-to-many class="Student" column="s_id"></many-to-many>
+    		</set>
+	</class>
+	
+</hibernate-mapping>

@@ -1,0 +1,16 @@
+[WARN ] 2018-03-06 01:07:53,579(24013) com.beta.ControllerMy.loginTest(ControllerMy.java:43) –> [http-nio-8080-exec-1] loginTest...WARN...LEVEL...Test  
+[ERROR] 2018-03-06 01:07:53,581(24015) com.beta.ControllerMy.loginTest(ControllerMy.java:44) –> [http-nio-8080-exec-1] loginTest...ERROR...LEVEL...Test  
+[WARN ] 2018-03-06 10:46:23,890(74332) com.beta.ControllerMy.loginTest(ControllerMy.java:52) –> [http-nio-8080-exec-6] loginTest...WARN...LEVEL...Test  
+[ERROR] 2018-03-06 10:46:28,656(79098) com.beta.ControllerMy.loginTest(ControllerMy.java:53) –> [http-nio-8080-exec-6] loginTest...ERROR...LEVEL...Test  
+[WARN ] 2018-03-06 10:49:28,229(35690) com.beta.ControllerMy.loginTest(ControllerMy.java:52) –> [http-nio-8080-exec-1] loginTest...WARN...LEVEL...Test  
+[ERROR] 2018-03-06 10:49:31,881(39342) com.beta.ControllerMy.loginTest(ControllerMy.java:53) –> [http-nio-8080-exec-1] loginTest...ERROR...LEVEL...Test  
+[WARN ] 2018-03-06 10:50:30,588(18192) com.beta.ControllerMy.loginTest(ControllerMy.java:52) –> [http-nio-8080-exec-1] loginTest...WARN...LEVEL...Test  
+[ERROR] 2018-03-06 10:50:35,965(23569) com.beta.ControllerMy.loginTest(ControllerMy.java:53) –> [http-nio-8080-exec-1] loginTest...ERROR...LEVEL...Test  
+[WARN ] 2018-03-06 10:55:32,547(28129) com.beta.ControllerMy.loginTest(ControllerMy.java:52) –> [http-nio-8080-exec-1] loginTest...WARN...LEVEL...Test  
+[ERROR] 2018-03-06 10:55:38,652(34234) com.beta.ControllerMy.loginTest(ControllerMy.java:53) –> [http-nio-8080-exec-1] loginTest...ERROR...LEVEL...Test  
+[WARN ] 2018-03-06 10:57:17,216(40437) com.beta.ControllerMy.loginTest(ControllerMy.java:52) –> [http-nio-8080-exec-1] loginTest...WARN...LEVEL...Test  
+[ERROR] 2018-03-06 10:57:22,891(46112) com.beta.ControllerMy.loginTest(ControllerMy.java:53) –> [http-nio-8080-exec-1] loginTest...ERROR...LEVEL...Test  
+[WARN ] 2018-03-06 11:04:47,630(18757) com.beta.ControllerMy.loginTest(ControllerMy.java:54) –> [http-nio-8080-exec-1] loginTest...WARN...LEVEL...Test  
+[ERROR] 2018-03-06 11:04:47,631(18758) com.beta.ControllerMy.loginTest(ControllerMy.java:55) –> [http-nio-8080-exec-1] loginTest...ERROR...LEVEL...Test  
+[WARN ] 2018-03-06 11:10:19,643(39600) com.beta.ControllerMy.loginTest(ControllerMy.java:54) –> [http-nio-8080-exec-7] loginTest...WARN...LEVEL...Test  
+[ERROR] 2018-03-06 11:10:19,662(39619) com.beta.ControllerMy.loginTest(ControllerMy.java:55) –> [http-nio-8080-exec-7] loginTest...ERROR...LEVEL...Test  

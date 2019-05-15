@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+ "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+ <!-- 每一个实体对应一个mapper，namespace必须指定！ -->
+ <mapper namespace="com.zpark.dao.IUserDao">
+	<select id="find" resultType="com.zpark.pojo.User">
+		select * from user where id=#{id};
+	</select>
+	<select id="findTel" resultType="java.lang.String">
+		select u.tel from user u order by u.id
+	</select>
+ </mapper>

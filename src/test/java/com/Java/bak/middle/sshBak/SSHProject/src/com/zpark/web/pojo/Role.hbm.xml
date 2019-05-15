@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC 
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping package="com.zpark.web.pojo">
+	 <class name="Role" table="user_role">
+		<id name="role_id" column="role_id">
+			<generator class="native"></generator>
+		</id>
+		<property name="role_name"></property>
+		<property name="role_power"></property>
+		<property name="is_used"></property>
+		<set name="set">
+			<key column="role_id"></key>
+			<one-to-many class="User"/>
+		</set>
+	</class>
+</hibernate-mapping>

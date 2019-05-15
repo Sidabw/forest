@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+   <!DOCTYPE struts PUBLIC
+	"-//Apache Software Foundation//DTD Struts Configuration 2.3//EN"
+	"http://struts.apache.org/dtds/struts-2.3.dtd">
+
+<struts>
+	<package name="hello" namespace="/hello" extends="struts-default">
+		<action name="action1_*" class="com.zpark.a1action.HelloAction" method="{1}">
+			<result name="success">/hello.jsp</result>
+		</action>
+		<action name="action" class="com.zpark.a1action.Action1">
+			<result name="success">/hello.jsp</result>
+		</action>
+		<action name="action2" class="com.zpark.a1action.Action2">
+			<result name="success">/hello.jsp</result>
+		</action>
+		<action name="action3" class="com.zpark.a1action.Action3">
+			<result name="success">/hello.jsp</result>
+		</action>
+		<action name="demo1" class="com.zpark.a3scope.ActionContextDemo">
+			<result name="success">/hello.jsp</result>
+		</action>
+		<action name="demo2"  class="com.zpark.a3scope.ActionContextDemo2">
+			<result name="success">/hello.jsp</result>
+		</action>
+		<action name="demo3" class="com.zpark.a3scope.ActionContextDemo3">
+			<result name="success">/hello.jsp</result>
+		</action>
+	</package>
+	<package name="param" namespace="/param" extends="struts-default">
+		<action name="param1" class="com.zpark.a5paramfromjsp.Param1">
+			<result name="success">/hello.jsp</result>
+		</action>
+		<action name="param2" class="com.zpark.a5paramfromjsp.Param2">
+			<result name="success">/hello.jsp</result>
+		</action>
+		<action name="param3" class="com.zpark.a5paramfromjsp.Param3">
+			<result name="success">/hello.jsp</result>
+		</action>
+		<action name="param5" class="com.zpark.a5paramfromjsp.Param5">
+			<result name="success">/hello.jsp</result>
+		</action>
+		<action name="param6" class="com.zpark.a5paramfromjsp.Param6">
+			<result name="success">/hello.jsp</result>
+		</action>
+		<action name="param7" class="com.zpark.a5paramfromjsp.Param7">
+			<result name="success">/hello.jsp</result>
+		</action>
+		<action name="param8" class="com.zpark.a5paramfromjsp.Param8">
+			<result name="success">/hello.jsp</result>
+		</action>
+	</package>
+	<include file="com/zpark/a2user/user.xml"></include>
+	<constant name="struts.i18n.encoding" value="utf-8"></constant>
+	<!-- 表示已action为后缀或者什么后缀都不加-->
+	<constant name="struts.action.extension" value="action,,"></constant>
+	<!-- reload 热启动 -->
+	<constant name="struts.configuration.xml.reload" value="true"></constant>
+	<!-- 配置方法动态加载	 /hello/action!test2.action 需要此配置	通配符_* method="{1}"方法不需要此配置 -->
+	<constant name="struts.enable.DynamicMethodInvocation" value="true"></constant>
+</struts>

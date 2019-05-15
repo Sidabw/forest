@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+	   xmlns="http://www.springframework.org/schema/beans" 
+	   xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-4.2.xsd ">
+	<!-- 使用scope="prototype"实现多例 "singleton"实现单例,多例时，destory-method属性失效
+		   使用name属性 或id属性都可
+		  -->
+	<!-- 方式一：使用无参构造器 (推荐)-->
+	<bean name="user" class="com.zpark.pojo.User" 
+		  scope="singleton" init-method="initM" destroy-method="destoryM"></bean>
+	<!-- 方式二：静态工厂 -->
+	<bean name="user2" class="com.zpark.pojo.MyBeanFactory" factory-method="create1"></bean>
+	<!-- 方式三：实例化工厂 -->
+	<bean name="MyBeanFactory" class="com.zpark.pojo.MyBeanFactory"></bean>
+	<bean name="user3" factory-bean="MyBeanFactory" factory-method="create2"></bean>
+</beans>

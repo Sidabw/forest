@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-configuration PUBLIC
+	"-//Hibernate/Hibernate Configuration DTD 3.0//EN"
+	"http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd">
+<hibernate-configuration>
+	<session-factory>
+	<!-- 
+			1.数据库连接相关
+			#hibernate.dialect org.hibernate.dialect.MySQLDialect
+			#hibernate.dialect org.hibernate.dialect.MySQLInnoDBDialect
+			#hibernate.dialect org.hibernate.dialect.MySQLMyISAMDialect
+			#hibernate.connection.driver_class com.mysql.jdbc.Driverb
+			#hibernate.connection.url jdbc:mysql:///test
+			#hibernate.connection.username gavin
+			#hibernate.connection.password
+		 -->
+	<!--
+			必填属性配置5个
+		  -->
+			<property name="hibernate.connection.driver_class">com.mysql.jdbc.Driver</property>
+			<property name="hibernate.connection.url">jdbc:mysql:///514high</property>
+			<property name="hibernate.connection.username">root</property>
+			<property name="hibernate.connection.password">root</property>
+			
+			<!-- 设定方言 规定Hibernate使用mysql的sql语句 -->
+			<property name="hibernate.dialect">org.hibernate.dialect.MySQLDialect</property>
+<!-- 
+			2.sql相关
+			## print all generated SQL to the console
+			#hibernate.show_sql true
+			## format SQL in log and console
+			hibernate.format_sql true
+			
+			开发环境      测试环境       生产环境
+			#hibernate.hbm2ddl.auto create-drop ：自动创建表，测试完就删掉（开发环境）
+			#hibernate.hbm2ddl.auto create      ：自动创建表，每次项目启动时创建表。每次数据都被覆盖掉，丢失
+			#hibernate.hbm2ddl.auto update		：如果表存在，更新，不存在，自动创建表，每次项目启动时检查跟新。
+			#hibernate.hbm2ddl.auto validate	：校验，校验表和实体是否对应，不对应，直接失败
+		 -->
+		 
+		 <!-- 可选 显示打印sql语句 -->
+		 <property name="hibernate.show_sql">true</property>
+		 <!-- 可选 格式化sql语句 （缩进，换行）-->
+		 <property name="hibernate.format_sql">true</property>
+		 <!-- 可选 表的生成策略 ，如果表存在，更新（更新内容，不存在列再更新加入一列），不存在，自动创建表，每次项目启动时检查跟新。 -->
+		 <property name="hibernate.hbm2ddl.auto">update</property>
+		 <!-- 配置事务隔离级别 1(0001) 2(0010) 4(0100) 8(1000)-->
+		 <property name="hibernate.connection.isolation">4</property>
+		 <!-- 配置getCurrentSession -->
+		 <property name="hibernate.current_session_context_class">thread</property>
+		 
+		 <!-- 
+		 	3.引入外部的orm元数据（hbm.xml配置文件）
+		  -->
+		 <mapping resource="com/zpark/bean/UserInfo.hbm.xml"/>
+		 <mapping resource="com/zpark/one2many/Clazz.hbm.xml"/>
+		 <mapping resource="com/zpark/one2many/Student.hbm.xml"/>
+		 <mapping resource="com/zpark/many2many/Course.hbm.xml"/>
+		 <mapping resource="com/zpark/many2many/Student.hbm.xml"/>
+	</session-factory>
+</hibernate-configuration>

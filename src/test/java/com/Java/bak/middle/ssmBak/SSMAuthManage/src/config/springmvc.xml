@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://www.springframework.org/schema/beans" xmlns:context="http://www.springframework.org/schema/context" xmlns:mvc="http://www.springframework.org/schema/mvc" xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-4.0.xsd http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-4.0.xsd http://www.springframework.org/schema/mvc http://www.springframework.org/schema/mvc/spring-mvc-4.0.xsd ">
+	<context:component-scan base-package="com.zpark.web.controller"></context:component-scan>
+	
+<!-- 配置处理器映射器 -->
+<!-- 默认是DefaultAnnotationHandlerMapping	已不推荐使用 -->
+	<!-- <bean  class="org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping"></bean> -->
+
+<!-- 配置处理器适配器 -->	
+	<!-- <bean class="org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter "></bean> -->
+<!-- 开启springmvc注解驱动，代替前两项HandlerMapping 和 HandlerAdapter的配置
+	 使用springmvc推荐的HandlerMapping 和 HandlerAdapter -->	
+	<mvc:annotation-driven></mvc:annotation-driven>
+<!-- 配置视图映射器 -->
+	<bean class="org.springframework.web.servlet.view.InternalResourceViewResolver">
+	<!-- 配置前缀 -->
+		<property name="prefix" value="/jsp/"></property>
+	<!-- 配置后缀 -->	
+		<property name="suffix" value=".jsp"></property>
+	</bean>
+	<!-- 配置文件上传的实现类 -->
+	<bean id="multipartResolver" class="org.springframework.web.multipart.commons.CommonsMultipartResolver">
+    	<!-- B 1024*1024*5 5M -->
+    	<property name="maxUploadSize" value="5000000"/>
+    </bean>
+    
+ <mvc:interceptors>
+    <mvc:interceptor>
+        <mvc:mapping path="/**" />
+        <mvc:exclude-mapping path="/js/**" />
+        <mvc:exclude-mapping path="/css/**" />
+        <bean class="com.zpark.interceptor.ActionInterceptor" />
+    </mvc:interceptor>
+</mvc:interceptors>
+</beans>

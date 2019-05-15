@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.zpark.dao.UserInfoMapper" >
+
+  <resultMap id="BaseResultMap" type="com.zpark.pojo.UserInfo" >
+    <id column="user_id" property="userId" jdbcType="INTEGER" />
+    <result column="department_id" property="departmentId" jdbcType="INTEGER" />
+    <result column="role_id" property="roleId" jdbcType="INTEGER" />
+    <result column="pic" property="pic" jdbcType="VARCHAR" />
+    <result column="user_name" property="userName" jdbcType="VARCHAR" />
+    <result column="user_sex" property="userSex" jdbcType="VARCHAR" />
+    <result column="user_mobile" property="userMobile" jdbcType="VARCHAR" />
+    <result column="user_age" property="userAge" jdbcType="INTEGER" />
+    <result column="user_address" property="userAddress" jdbcType="VARCHAR" />
+    <result column="user_num" property="userNum" jdbcType="VARCHAR" />
+    <result column="user_pw" property="userPw" jdbcType="VARCHAR" />
+    <result column="user_tel" property="userTel" jdbcType="VARCHAR" />
+    <result column="user_idnum" property="userIdnum" jdbcType="VARCHAR" />
+    <result column="user_email" property="userEmail" jdbcType="VARCHAR" />
+    <result column="user_addtime" property="userAddtime" jdbcType="TIMESTAMP" />
+    <result column="user_addman" property="userAddman" jdbcType="VARCHAR" />
+    <result column="user_changetime" property="userChangetime" jdbcType="TIMESTAMP" />
+    <result column="user_changeman" property="userChangeman" jdbcType="VARCHAR" />
+    <result column="user_intest" property="userIntest" jdbcType="VARCHAR" />
+    <result column="user_diploma" property="userDiploma" jdbcType="VARCHAR" />
+    <result column="user_bankcard" property="userBankcard" jdbcType="VARCHAR" />
+    <result column="user_nation" property="userNation" jdbcType="VARCHAR" />
+    <result column="is_married" property="isMarried" jdbcType="VARCHAR" />
+    <result column="is_used" property="isUsed" jdbcType="VARCHAR" />
+    
+    
+    <association property="dept2" javaType="com.zpark.pojo.DepartmentInfo">
+    	<id property="departmentId" column="department_id"/>
+    	<result property="departmentName" column="department_name"/>
+    	<result property="departmentDesc" column="department_desc"/>
+    	<result property="isUsed" column="is_used"/>
+    </association>
+    
+    <association property="role2" javaType="com.zpark.pojo.UserRole">
+    	<id property="roleId" column="role_id"/>
+    	<result property="roleName" column="role_name"/>
+    	<result property="rolePower" column="role_power"/>
+    	<result property="isUsed" column="is_used"/>
+    </association>
+    
+  </resultMap>
+  
+  <select id="selectById" resultMap="BaseResultMap"  >
+  	select * from user_info where user_name=#{userName} and user_pw=#{userPw}
+  </select>
+  <insert id="insertUser" parameterType="com.zpark.pojo.UserInfo">
+  	 insert into user_info (user_id, department_id, role_id, 
+      pic, user_name, user_sex, 
+      user_mobile, user_age, user_address, 
+      user_num, user_pw, user_tel, 
+      user_idnum, user_email, user_addtime, 
+      user_addman, user_changetime, user_changeman, 
+      user_intest, user_diploma, user_bankcard, 
+      user_nation, is_married, is_used, 
+      dept, id)
+    values (#{userId,jdbcType=INTEGER}, #{departmentId,jdbcType=INTEGER}, #{roleId,jdbcType=INTEGER}, 
+      #{pic,jdbcType=VARCHAR}, #{userName,jdbcType=VARCHAR}, #{userSex,jdbcType=VARCHAR}, 
+      #{userMobile,jdbcType=VARCHAR}, #{userAge,jdbcType=INTEGER}, #{userAddress,jdbcType=VARCHAR}, 
+      #{userNum,jdbcType=VARCHAR}, #{userPw,jdbcType=VARCHAR}, #{userTel,jdbcType=VARCHAR}, 
+      #{userIdnum,jdbcType=VARCHAR}, #{userEmail,jdbcType=VARCHAR}, #{userAddtime,jdbcType=TIMESTAMP}, 
+      #{userAddman,jdbcType=VARCHAR}, #{userChangetime,jdbcType=TIMESTAMP}, #{userChangeman,jdbcType=VARCHAR}, 
+      #{userIntest,jdbcType=VARCHAR}, #{userDiploma,jdbcType=VARCHAR}, #{userBankcard,jdbcType=VARCHAR}, 
+      #{userNation,jdbcType=VARCHAR}, #{isMarried,jdbcType=VARCHAR}, #{isUsed,jdbcType=VARCHAR}, 
+      #{dept,jdbcType=INTEGER}, #{id,jdbcType=INTEGER})
+  </insert>
+  <insert id="deptAdd" parameterType="com.zpark.pojo.DepartmentInfo">
+  	insert into department_info (department_id, department_name, department_desc)
+    values (#{departmentId,jdbcType=INTEGER}, #{departmentName,jdbcType=VARCHAR}, #{departmentDesc,jdbcType=VARCHAR})
+  </insert>
+  <insert id="roleAdd" parameterType="com.zpark.pojo.UserRole">
+  	 insert into user_role (role_id, role_name, role_power)
+    values (#{roleId,jdbcType=INTEGER}, #{roleName,jdbcType=VARCHAR}, #{rolePower,jdbcType=INTEGER})
+  </insert>
+  <select id="rouCount" resultType="java.lang.Integer">
+  	select count(*) from user_info
+  </select>
+  <select id="userList" resultMap="BaseResultMap">
+  	select u.*,d.*,r.* from user_info u 
+  	RIGHT JOIN department_info d on u.department_id=d.department_id
+	RIGHT JOIN user_role r on u.role_id=r.role_id limit #{startRow},#{size}
+  </select>
+  <select id="userListAll" resultMap="BaseResultMap">
+  	select u.*,d.*,r.* from user_info u 
+  	RIGHT JOIN department_info d on u.department_id=d.department_id
+	RIGHT JOIN user_role r on u.role_id=r.role_id 
+  </select>
+</mapper>

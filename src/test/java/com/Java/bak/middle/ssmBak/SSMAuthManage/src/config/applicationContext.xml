@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+xmlns="http://www.springframework.org/schema/beans" 
+xmlns:aop="http://www.springframework.org/schema/aop" 
+xmlns:tx="http://www.springframework.org/schema/tx" 
+xmlns:context="http://www.springframework.org/schema/context" 
+xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-4.0.xsd http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop-4.0.xsd http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx-4.0.xsd http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-4.0.xsd ">
+
+	<!-- <bean name="userActionSpring" class="com.zpark.web.action.Demo" ></bean> -->
+
+	<!-- 注解扫描，扫描该包及其子包下的所有类的注解 -->
+	<context:component-scan base-package="com.zpark"></context:component-scan>
+	<!-- 加载properties -->
+	<context:property-placeholder location="classpath:db.properties"/>
+	
+	<!-- dbcp数据源连接池 -->
+	<bean id="dataSource" class="org.apache.commons.dbcp.BasicDataSource" destroy-method="close">
+		<property name="url" value="${mysql.jdbcUrl}" ></property>
+		<property name="driverClassName" value="${mysql.driverClass}" ></property>
+		<property name="username" value="${mysql.user}" ></property>
+		<property name="password" value="${mysql.password}" ></property>
+		<!-- maxActive 最大活跃数量
+			 maxIdle   最大不活跃数量 -->
+		<property name="maxActive" value="10" ></property>
+		<property name="maxIdle" value="5" ></property>
+	</bean>
+		<!-- mybatis session 工厂 -->
+	<bean id="SqlSessionFactory" class="org.mybatis.spring.SqlSessionFactoryBean">
+		<property name="dataSource" ref="dataSource"></property>
+		<!-- 加载mybatis核心配置文件 -->
+		<property name="configLocation" value="classpath:/config/mybatis-cfg.xml"></property>
+	</bean>
+	
+	<!-- mybatis 动态代理扫描 -->
+	<bean class="org.mybatis.spring.mapper.MapperScannerConfigurer">
+	<!-- 找到.java文件并且默认找与其名称相同的.xml文件 -->
+		<property name="basePackage" value="com.zpark.dao"></property>
+	</bean>
+	
+	<!-- 开启注解事务 -->
+	<bean name="transactionManager" class="org.springframework.jdbc.datasource.DataSourceTransactionManager">
+		<property name="dataSource" ref="dataSource"></property>
+	</bean>
+	
+</beans>

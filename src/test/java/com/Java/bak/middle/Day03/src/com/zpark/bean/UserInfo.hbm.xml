@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC 
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping package="com.zpark.bean">
+	<class name="User" table="user">
+<!-- 
+    			name:POJO的属性名
+    			column：表的列明
+    			generator：主键的生成策略
+    			
+    		 -->
+    		<id name="id" column="id">
+    		<!-- 主键的生成策略按照数据库的生成策略来 
+    			class="assigned" 时 自己在程序中维护，属于自然主键
+    			
+    			代理主键：
+    				identity：自增主键，mysql数据库维护。
+    				increasement：自增主键，hibernate维护，多线程不安全。其在插入数据确定主键大小之前先查询之前最大主键，然后+1
+    				hilo：自增主键，高低位运算法，hibernate维护，多线程安全
+    				sequence：自增主键，oracle数据库维护。
+    				native：holi+identity+sequence（mysql或orcale或holi（其他））
+    				uuid：主键32位随机字符串，占内存大，可读性不强
+    			-->
+    			<generator class="native"></generator>
+    		</id>
+    	
+    		<!--  
+    			普通属性：property元素配置
+    				name:普通属性
+    				以下可选：column：普通列名，type:指定列的类型（Java类型|数据库类型|hibernate类型），默认：根据对象属性类型自动检测映射到数据库相应的类型，not-null:true 非空约束
+    		-->
+    		<property name="name" column="name" ></property>
+    		<!-- column 不写时 数据库的字段按照与bean的字段相同来处理 -->
+    		<property name="tel" ></property>	
+	</class>
+	
+</hibernate-mapping>

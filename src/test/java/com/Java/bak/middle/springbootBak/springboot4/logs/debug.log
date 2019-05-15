@@ -1,0 +1,68 @@
+[INFO ] 2018-03-06 00:56:15,630(0) com.beta.ControllerMy.loginTest(ControllerMy.java:42) –> [http-nio-8080-exec-1] loginTest  
+[INFO ] 2018-03-06 00:58:00,089(0) com.beta.ControllerMy.loginTest(ControllerMy.java:42) –> [http-nio-8080-exec-7] loginTest  
+[INFO ] 2018-03-06 01:04:27,501(0) com.Application.main(Application.java:29) –> [main] 项目启动  
+[INFO ] 2018-03-06 01:07:29,566(0) com.Application.main(Application.java:29) –> [main] 项目启动  
+[INFO ] 2018-03-06 01:07:53,576(24010) com.beta.ControllerMy.loginTest(ControllerMy.java:42) –> [http-nio-8080-exec-1] loginTest...INFO...LEVEL...Test  
+[WARN ] 2018-03-06 01:07:53,579(24013) com.beta.ControllerMy.loginTest(ControllerMy.java:43) –> [http-nio-8080-exec-1] loginTest...WARN...LEVEL...Test  
+[ERROR] 2018-03-06 01:07:53,581(24015) com.beta.ControllerMy.loginTest(ControllerMy.java:44) –> [http-nio-8080-exec-1] loginTest...ERROR...LEVEL...Test  
+[INFO ] 2018-03-06 10:45:09,558(0) com.Application.main(Application.java:32) –> [main] 项目启动  
+[INFO ] 2018-03-06 10:46:23,889(74331) com.beta.ControllerMy.loginTest(ControllerMy.java:51) –> [http-nio-8080-exec-6] loginTest...INFO...LEVEL...Test  
+[WARN ] 2018-03-06 10:46:23,890(74332) com.beta.ControllerMy.loginTest(ControllerMy.java:52) –> [http-nio-8080-exec-6] loginTest...WARN...LEVEL...Test  
+[ERROR] 2018-03-06 10:46:28,656(79098) com.beta.ControllerMy.loginTest(ControllerMy.java:53) –> [http-nio-8080-exec-6] loginTest...ERROR...LEVEL...Test  
+[INFO ] 2018-03-06 10:46:31,410(81852) com.alibaba.druid.pool.DruidDataSource.init(DruidDataSource.java:722) –> [http-nio-8080-exec-6] {dataSource-1} inited  
+[INFO ] 2018-03-06 10:48:52,539(0) com.Application.main(Application.java:32) –> [main] 项目启动  
+[INFO ] 2018-03-06 10:49:28,228(35689) com.beta.ControllerMy.loginTest(ControllerMy.java:51) –> [http-nio-8080-exec-1] loginTest...INFO...LEVEL...Test  
+[WARN ] 2018-03-06 10:49:28,229(35690) com.beta.ControllerMy.loginTest(ControllerMy.java:52) –> [http-nio-8080-exec-1] loginTest...WARN...LEVEL...Test  
+[ERROR] 2018-03-06 10:49:31,881(39342) com.beta.ControllerMy.loginTest(ControllerMy.java:53) –> [http-nio-8080-exec-1] loginTest...ERROR...LEVEL...Test  
+[INFO ] 2018-03-06 10:49:32,453(39914) com.alibaba.druid.pool.DruidDataSource.init(DruidDataSource.java:722) –> [http-nio-8080-exec-1] {dataSource-1} inited  
+[INFO ] 2018-03-06 10:50:12,396(0) com.Application.main(Application.java:32) –> [main] 项目启动  
+[INFO ] 2018-03-06 10:50:30,583(18187) com.beta.ControllerMy.loginTest(ControllerMy.java:51) –> [http-nio-8080-exec-1] loginTest...INFO...LEVEL...Test  
+[WARN ] 2018-03-06 10:50:30,588(18192) com.beta.ControllerMy.loginTest(ControllerMy.java:52) –> [http-nio-8080-exec-1] loginTest...WARN...LEVEL...Test  
+[ERROR] 2018-03-06 10:50:35,965(23569) com.beta.ControllerMy.loginTest(ControllerMy.java:53) –> [http-nio-8080-exec-1] loginTest...ERROR...LEVEL...Test  
+[INFO ] 2018-03-06 10:50:36,505(24109) com.alibaba.druid.pool.DruidDataSource.init(DruidDataSource.java:722) –> [http-nio-8080-exec-1] {dataSource-1} inited  
+[INFO ] 2018-03-06 10:55:04,418(0) com.Application.main(Application.java:32) –> [main] 项目启动  
+[INFO ] 2018-03-06 10:55:32,546(28128) com.beta.ControllerMy.loginTest(ControllerMy.java:51) –> [http-nio-8080-exec-1] loginTest...INFO...LEVEL...Test  
+[WARN ] 2018-03-06 10:55:32,547(28129) com.beta.ControllerMy.loginTest(ControllerMy.java:52) –> [http-nio-8080-exec-1] loginTest...WARN...LEVEL...Test  
+[ERROR] 2018-03-06 10:55:38,652(34234) com.beta.ControllerMy.loginTest(ControllerMy.java:53) –> [http-nio-8080-exec-1] loginTest...ERROR...LEVEL...Test  
+[INFO ] 2018-03-06 10:55:39,258(34840) com.alibaba.druid.pool.DruidDataSource.init(DruidDataSource.java:722) –> [http-nio-8080-exec-1] {dataSource-1} inited  
+[INFO ] 2018-03-06 10:56:36,779(0) com.Application.main(Application.java:32) –> [main] 项目启动  
+[INFO ] 2018-03-06 10:57:17,214(40435) com.beta.ControllerMy.loginTest(ControllerMy.java:51) –> [http-nio-8080-exec-1] loginTest...INFO...LEVEL...Test  
+[WARN ] 2018-03-06 10:57:17,216(40437) com.beta.ControllerMy.loginTest(ControllerMy.java:52) –> [http-nio-8080-exec-1] loginTest...WARN...LEVEL...Test  
+[ERROR] 2018-03-06 10:57:22,891(46112) com.beta.ControllerMy.loginTest(ControllerMy.java:53) –> [http-nio-8080-exec-1] loginTest...ERROR...LEVEL...Test  
+[INFO ] 2018-03-06 10:57:23,469(46690) com.alibaba.druid.pool.DruidDataSource.init(DruidDataSource.java:722) –> [http-nio-8080-exec-1] {dataSource-1} inited  
+[INFO ] 2018-03-06 11:04:28,873(0) com.Application.main(Application.java:32) –> [main] 项目启动  
+[INFO ] 2018-03-06 11:04:47,629(18756) com.beta.ControllerMy.loginTest(ControllerMy.java:53) –> [http-nio-8080-exec-1] loginTest...INFO...LEVEL...Test  
+[WARN ] 2018-03-06 11:04:47,630(18757) com.beta.ControllerMy.loginTest(ControllerMy.java:54) –> [http-nio-8080-exec-1] loginTest...WARN...LEVEL...Test  
+[ERROR] 2018-03-06 11:04:47,631(18758) com.beta.ControllerMy.loginTest(ControllerMy.java:55) –> [http-nio-8080-exec-1] loginTest...ERROR...LEVEL...Test  
+[INFO ] 2018-03-06 11:04:49,883(21010) com.alibaba.druid.pool.DruidDataSource.init(DruidDataSource.java:722) –> [http-nio-8080-exec-2] {dataSource-1} inited  
+[INFO ] 2018-03-06 11:09:40,044(1) com.Application.main(Application.java:32) –> [main] 项目启动  
+[INFO ] 2018-03-06 11:10:19,641(39598) com.beta.ControllerMy.loginTest(ControllerMy.java:53) –> [http-nio-8080-exec-7] loginTest...INFO...LEVEL...Test  
+[WARN ] 2018-03-06 11:10:19,643(39600) com.beta.ControllerMy.loginTest(ControllerMy.java:54) –> [http-nio-8080-exec-7] loginTest...WARN...LEVEL...Test  
+[ERROR] 2018-03-06 11:10:19,662(39619) com.beta.ControllerMy.loginTest(ControllerMy.java:55) –> [http-nio-8080-exec-7] loginTest...ERROR...LEVEL...Test  
+[INFO ] 2018-03-06 11:10:22,373(42330) com.alibaba.druid.pool.DruidDataSource.init(DruidDataSource.java:722) –> [http-nio-8080-exec-8] {dataSource-1} inited  
+[INFO ] 2018-03-06 14:29:03,693(0) com.Application.main(Application.java:32) –> [main] 项目启动  
+[INFO ] 2018-03-06 14:32:27,298(0) com.Application.main(Application.java:32) –> [main] 项目启动  
+[INFO ] 2018-03-06 14:35:03,887(0) com.Application.main(Application.java:32) –> [main] 项目启动  
+[INFO ] 2018-03-06 14:36:13,824(0) com.Application.main(Application.java:32) –> [main] 项目启动  
+[INFO ] 2018-03-06 14:38:15,513(1) com.Application.main(Application.java:32) –> [main] 项目启动  
+[INFO ] 2018-03-06 14:47:36,468(0) com.Application.main(Application.java:32) –> [main] 项目启动  
+[INFO ] 2018-03-06 14:55:10,173(0) com.Application.main(Application.java:32) –> [main] 项目启动  
+[INFO ] 2018-03-06 14:56:43,095(0) com.Application.main(Application.java:32) –> [main] 项目启动  
+[INFO ] 2018-03-06 14:57:33,727(0) com.Application.main(Application.java:32) –> [main] 项目启动  
+[INFO ] 2018-03-06 14:59:05,810(0) com.Application.main(Application.java:32) –> [main] 项目启动  
+[INFO ] 2018-03-06 14:59:50,570(0) com.Application.main(Application.java:32) –> [main] 项目启动  
+[INFO ] 2018-03-06 15:00:49,095(0) com.Application.main(Application.java:32) –> [main] 项目启动  
+[INFO ] 2018-03-06 15:05:10,862(0) com.Application.main(Application.java:32) –> [main] 项目启动  
+[INFO ] 2018-03-06 15:05:59,449(0) com.Application.main(Application.java:32) –> [main] 项目启动  
+[INFO ] 2018-03-06 15:31:49,340(0) com.Application.main(Application.java:32) –> [main] 项目启动  
+[INFO ] 2018-03-06 15:35:15,584(0) com.Application.main(Application.java:32) –> [main] 项目启动  
+[INFO ] 2018-03-06 15:38:14,610(0) com.Application.main(Application.java:32) –> [main] 项目启动  
+[INFO ] 2018-03-06 15:45:43,720(0) com.Application.main(Application.java:32) –> [main] 项目启动  
+[INFO ] 2018-03-06 15:54:57,668(553948) com.beta.ControllerMy.loginTest(ControllerMy.java:53) –> [http-nio-8080-exec-1] loginTest...INFO...LEVEL...Test  
+[WARN ] 2018-03-06 15:54:57,669(553949) com.beta.ControllerMy.loginTest(ControllerMy.java:54) –> [http-nio-8080-exec-1] loginTest...WARN...LEVEL...Test  
+[ERROR] 2018-03-06 15:54:57,716(553996) com.beta.ControllerMy.loginTest(ControllerMy.java:55) –> [http-nio-8080-exec-1] loginTest...ERROR...LEVEL...Test  
+[INFO ] 2018-03-06 15:55:00,602(556882) com.alibaba.druid.pool.DruidDataSource.init(DruidDataSource.java:722) –> [http-nio-8080-exec-2] {dataSource-1} inited  
+[INFO ] 2018-03-06 21:36:16,559(0) com.alibaba.druid.pool.DruidDataSource.init(DruidDataSource.java:722) –> [main] {dataSource-1} inited  
+[INFO ] 2018-03-06 21:36:16,846(287) com.alibaba.druid.pool.DruidDataSource.close(DruidDataSource.java:1447) –> [Thread-2] {dataSource-1} closed  
+[INFO ] 2018-03-06 21:39:58,502(0) com.alibaba.druid.pool.DruidDataSource.init(DruidDataSource.java:722) –> [main] {dataSource-1} inited  
+[INFO ] 2018-03-06 21:39:58,645(143) com.alibaba.druid.pool.DruidDataSource.close(DruidDataSource.java:1447) –> [Thread-2] {dataSource-1} closed  

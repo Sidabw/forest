@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC 
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping package="com.zpark.web.pojo">
+	<class name="User" table="user_info">
+    		<id name="user_id" column="user_id">
+    			<generator class="native"></generator>
+    		</id>
+    		<property name="pic" ></property>	
+    		<property name="user_name" ></property>	
+    		<property name="user_sex" ></property>	
+    		<property name="user_mobile" ></property>	
+    		<property name="user_age" ></property>	
+    		<property name="user_address" ></property>	
+    		<property name="user_num" ></property>	
+    		<property name="user_pw" ></property>	
+    		<property name="user_tel" ></property>	
+    		<property name="user_idnum" ></property>	
+    		<property name="user_email" ></property>	
+    		<property name="user_addtime" ></property>	
+    		<property name="user_addman" ></property>	
+    		<property name="user_changetime" ></property>	
+    		<property name="user_changeman" ></property>	
+    		<property name="user_intest" ></property>	
+    		<property name="user_diploma" ></property>	
+    		<property name="user_bankcard" ></property>	
+    		<property name="user_nation" ></property>	
+    		<property name="is_married" ></property>	
+    		<property name="is_used" ></property>	
+    		
+    		<many-to-one name="dept" column="department_id" class="Department"></many-to-one>
+    		<many-to-one name="role" column="role_id" class="Role"></many-to-one>
+	</class>
+</hibernate-mapping>

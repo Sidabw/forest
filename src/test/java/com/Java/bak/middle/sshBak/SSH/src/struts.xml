@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+   <!DOCTYPE struts PUBLIC
+	"-//Apache Software Foundation//DTD Struts Configuration 2.3//EN"
+	"http://struts.apache.org/dtds/struts-2.3.dtd">
+<struts>
+<!-- 在常量配置中将创建对象的控制权交给spring -->
+	<constant name="struts.objectFactory" value="spring"></constant>
+	
+	<package name="crm" namespace="/crm" extends="struts-default">
+		<action name="userAction_*" class="userActionSpring" method="{1}">
+			<result name="success">/hello.jsp</result>
+		</action>
+		<action name="userDao_*" class="userDao" method="{1}">
+			<result name="success">/hello.jsp</result>
+		</action>
+	</package>
+</struts>

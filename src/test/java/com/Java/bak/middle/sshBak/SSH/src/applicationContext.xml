@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns="http://www.springframework.org/schema/beans" xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:aop="http://www.springframework.org/schema/aop" xmlns:tx="http://www.springframework.org/schema/tx"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-4.2.xsd http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-4.2.xsd http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop-4.2.xsd http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx-4.2.xsd ">
+
+	<!-- <bean name="userActionSpring" class="com.zpark.web.action.Demo" ></bean> -->
+
+	<!-- 注解扫描，扫描该包及其子包下的所有类的注解 -->
+	<context:component-scan base-package="com.zpark"></context:component-scan>
+	<!-- 加载properties -->
+	<context:property-placeholder location="classpath:db.properties"/>
+	
+	<!-- 配置c3p0连接池，将dataSource交由spring管理 -->
+	<bean name="dataSource" class="com.mchange.v2.c3p0.ComboPooledDataSource">
+		<property name="driverClass" value="${mysql.driverClass}"></property>
+		<property name="jdbcUrl" value="${mysql.jdbcUrl}"></property>
+		<property name="user" value="${mysql.user}"></property>
+		<property name="password" value="${mysql.password}"></property>
+		<property name="minPoolSize" value="${mysql.minPoolSize}"></property>
+		<property name="maxPoolSize" value="${mysql.maxPoolSize}"></property>
+	</bean>
+	<!-- Spring中管理sessionFactory -->
+	<bean name="sessionFactory" class="org.springframework.orm.hibernate5.LocalSessionFactoryBean">
+	<!-- 引入c3p0连接池 -->
+		<property name="dataSource" ref="dataSource"></property>
+	<!-- hibernate配置 -->
+		<property name="hibernateProperties">
+			<props>
+			<!-- 必选5个  前4个在c3p0处已经配置-->
+				<prop key="hibernate.dialect">org.hibernate.dialect.MySQLDialect</prop>
+			<!-- 可选3个 -->	
+				<prop key="hibernate.show_sql">true</prop>
+				<prop key="hibernate.format_sql">true</prop>
+				<prop key="hibernate.hbm2ddl.auto">update</prop>
+			</props>
+		</property>
+		<!-- 引入外部orm元素，只需要指定相关包，不需要到具体类 -->
+		<property name="mappingDirectoryLocations" value="classpath:com/zpark/web/pojo"></property>
+	</bean>
+	<!-- UserDao继承的HibernateDaoSupport 需要一个sessionFactory -->
+	<bean name="userDao" class="com.zpark.dao.UserDao">
+		<property name="sessionFactory" ref="sessionFactory"></property>
+	</bean>
+	
+	<!--注解事务： 1.配置事务核心管理器 -->
+	<bean name="transactionManager" class="org.springframework.orm.hibernate5.HibernateTransactionManager">
+		<property name="sessionFactory" ref="sessionFactory"></property>
+	</bean>
+	<!-- 2.配置aop注解事务 -->
+	<tx:annotation-driven transaction-manager="transactionManager"/>
+	
+</beans>

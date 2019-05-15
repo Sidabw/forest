@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.zpark.dao.StudentMapper" >
+  <resultMap id="BaseResultMap" type="com.zpark.web.pojo.Student" >
+    <id column="id" property="id" jdbcType="INTEGER" />
+    <result column="name" property="name" jdbcType="VARCHAR" />
+    <result column="gender" property="gender" jdbcType="VARCHAR" />
+    <association property="clazz" javaType="com.zpark.web.pojo.Clazz">
+    	<id property="id" column="cid"/>
+    	<result property="floor" column="floor"/>
+    	<result property="addr" column="addr"/>
+    </association>
+  </resultMap>
+  <sql id="Base_Column_List" >
+    id, name, gender,fk_c
+  </sql>
+  <select id="list" resultMap="BaseResultMap">
+  	select
+  	s.*,c.id as cid, c.floor ,c.addr 
+  	from student s left join clazz c on s.fk_c=c.id order by s.id;
+  </select>
+  <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="java.lang.Integer" >
+    select 
+     s.*,c.id as cid, c.floor ,c.addr 
+    from student s left join clazz c on s.fk_c=c.id
+    where s.id = #{id,jdbcType=INTEGER}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer" >
+    delete from student
+    where id = #{id,jdbcType=INTEGER}
+  </delete>
+</mapper>

@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+   <!DOCTYPE struts PUBLIC
+	"-//Apache Software Foundation//DTD Struts Configuration 2.3//EN"
+	"http://struts.apache.org/dtds/struts-2.3.dtd">
+<struts>
+<!-- 在常量配置中将创建对象的控制权交给spring -->
+	<constant name="struts.objectFactory" value="spring"></constant>
+	
+	<package name="crm" namespace="/user" extends="struts-default">
+		<!-- 拦截器放到package的开头 -->
+		<interceptors>
+		<!-- 1.注册自己的拦截器 -->
+			<interceptor name="myInterceptor" class="com.zpark.interceptor.InterceptorSession"></interceptor>
+		<!-- 2.注册拦截器栈 -->
+			<interceptor-stack name="myStack">
+		<!-- 引入自己的拦截器 -->
+				<interceptor-ref name="myInterceptor">
+		<!-- 指定要拦截的方法
+					<param name="includeMethods">add,find</param>	 
+		-->
+		<!-- 指定不拦截的方法 -->
+					<param name="excludeMethods">login</param>	
+		
+				</interceptor-ref>
+		<!-- 引入默认的20个拦截器 -->
+				<interceptor-ref name="defaultStack"></interceptor-ref>
+			</interceptor-stack>
+	</interceptors>
+	<!-- 3.启用拦截器 -->
+		 <default-interceptor-ref name="myStack"></default-interceptor-ref> 
+	<!-- 设置全局结果集 -->
+		<global-results>
+			<result name="tologin">/login.jsp</result>
+		</global-results>
+		<action name="userAction_*" class="userActionSpring" method="{1}">
+			<result name="success" >/view/frame/main.jsp</result>
+			<result name="tologin" type="redirect">/login.jsp</result>
+			<result name="findAllSuccess" >/view/employee/emp_list.jsp</result>
+			<result name="updateSuccess" type="redirectAction">
+				<param name="namespace">/user</param>
+				<param name="actionName">userAction_findAllUser</param>
+			</result>
+			<result name="deleteSuccess" type="redirectAction" >
+				<param name="namespace">/user</param>
+				<param name="actionName">userAction_findAllUser</param>
+			</result>
+			<result name="empEditSuccess" >/view/employee/emp_edit.jsp</result>
+			<result name="detailSuccess" >/view/employee/emp_detail.jsp</result>
+			<result name="addEmployeeSuccess" >/success.jsp</result>
+		</action>
+	</package>
+	<!-- 指定编码格式 -->
+	<constant name="struts.i18n.encoding" value="utf-8"></constant>
+	<!-- 表示已action为后缀或者什么后缀都不加-->
+	<constant name="struts.action.extension" value="action,,"></constant>
+	<!-- reload 热启动 -->
+	<constant name="struts.configuration.xml.reload" value="true"></constant>
+</struts>

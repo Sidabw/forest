@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+ xmlns="http://www.springframework.org/schema/beans" 
+ xmlns:p="http://www.springframework.org/schema/p" 
+ xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-4.2.xsd ">
+	<!-- 使用scope="prototype"实现多例 "singleton"实现单例,多例时，destory-method属性失效
+		   使用name属性 或id属性都可
+		  -->
+	<!-- 使用set方法注入初始化信息 -->
+	<bean name="us" class="com.zpark.pojo.User" scope="prototype" init-method="initM">
+		<property name="id" value="1"></property>	  
+		<property name="name" value="Sida"></property>	  
+		<property name="rose" ref="Rose"></property>	  
+	</bean>
+	<bean name="Rose" class="com.zpark.pojo.Rose">
+		<property name="color" value="red"></property>
+		<property name="count" value="99"></property>
+	</bean>
+	<!-- 使用构造器注入初始化信息 -->
+	<bean name="us2" class="com.zpark.pojo.User">
+		<constructor-arg name="id" value="2"></constructor-arg>
+		<constructor-arg name="name" value="Brew"></constructor-arg>
+		<constructor-arg name="rose" ref="Rose"></constructor-arg>
+	</bean>
+	<!-- 使用p命名空间注入初始化信息 -->
+	<bean name="us3" class="com.zpark.pojo.User" p:id="3" p:name="luobotou" p:rose-ref="Rose"></bean>
+	<!-- 使用srping表达式注入初始化信息 -->
+	<bean name="us4" class="com.zpark.pojo.User">
+		<property name="id" value="#{us2.id}"></property>
+		<property name="name" value="#{us3.name}"></property>
+		<property name="rose" ref="Rose"></property>
+	</bean>
+	<!-- 注入list&object[] -->
+	<bean name="us5" class="com.zpark.pojo.User" scope="singleton">
+		<property name="id" value="#{us2.id}"></property>
+		<property name="name" value="#{us3.name}"></property>
+		<property name="rose" ref="Rose"></property>
+	<!-- 数组注入 -->
+		<property name="obj">
+			<array>
+				<value>12</value>
+				<value>luobo</value>
+	<!-- Object[] 存放对象 -->
+				<ref bean="Rose"/>
+			</array>
+		</property>
+	<!-- list注入 -->
+		<property name="list">
+			<list>
+				<value>1111</value>
+				<value>lllllllll</value>
+	<!-- list中存放对象 -->
+				<ref bean="Rose"/>
+			</list>
+		</property>	
+	<!-- properties注入 -->
+		<property name="prop">
+			<props>
+				<prop key="url">jdbc:mysql///514</prop>
+				<prop key="driver">com.mysql.jdbc.Driver</prop>
+				<prop key="username">root</prop>
+				<prop key="password">root</prop>
+			</props>
+		</property>
+	<!-- Map注入 -->
+		<property name="map">
+			<map>
+				<entry key="name" value="Sida"></entry>
+				<entry key="gender" value="girl"></entry>
+	<!-- map中存放对象
+		 map中对象指向对象时: key-ref="..."
+	 -->
+				<entry key="hobby" value-ref="Rose"></entry>
+			</map>
+		</property>
+	</bean>
+</beans>
