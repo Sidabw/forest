@@ -44,7 +44,7 @@ public class MongoUtil {
     //mongo shell
     //1.
     /*db.getCollection('ps1554085431232_data_source').find().forEach( function(doc){
-        db.ps1554085431232_data_source.update({_id: doc._id}, {$set: {is_delete: 0}});
+        db.ps1554085431232_data_source.update({_id: doc._id}, {$set: {is_delete: NumberInt(0)}});
     })*/
 
     public static MongoCollection<Document> getCollection(String databaseName, String collectionName){
