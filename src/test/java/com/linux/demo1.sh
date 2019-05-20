@@ -1,4 +1,9 @@
 #!/bin/bash
+#echo printf 命令学习
+#
+#
+#
+#
 echo "Hello Shell!"
 # -e 允许使用转义字符， \c表示不换行。 echo默认自动添加了\n
 echo -e "aaa \c"

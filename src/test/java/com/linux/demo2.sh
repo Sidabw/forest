@@ -1,4 +1,8 @@
 #! /bin/bash
+#
+#
+#
+#
 #shell 学习 —— shell变量
 sida="luobotou"
 echo ${sida}

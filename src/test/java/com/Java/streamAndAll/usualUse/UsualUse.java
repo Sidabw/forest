@@ -3,6 +3,7 @@ package com.Java.streamAndAll.usualUse;
 import com.Java.streamAndAll.sysLearning.pojo.User;
 import org.junit.Test;
 
+import java.sql.SQLOutput;
 import java.util.*;
 import java.util.stream.Collectors;
 import java.util.stream.IntStream;
@@ -131,6 +132,28 @@ public class UsualUse {
 
         String collect2 = Stream.of("I", "Love", "u", "sida").collect(Collectors.joining(",", "{", "}"));
         System.out.println(collect2);
+    }
+
+    @Test
+    public void parallelStreamTest() throws InterruptedException {
+
+        ArrayList<Integer> integers = new ArrayList<>();
+        for (int i = 0 ; i <  10 ; i ++) {
+            integers.add(i);
+        }
+
+        long date = System.nanoTime();
+        integers.stream().forEach(e ->{
+            System.out.println(e);
+        });
+        long date2 = System.nanoTime();
+        integers.parallelStream().forEach(e ->{
+            if (e == 2) System.out.println(e);
+        });
+        long date3 = System.nanoTime();
+        System.out.println("-------------------");
+        System.out.println(date2 - date);
+        System.out.println(date3 - date2);
     }
 
 }

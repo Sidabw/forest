@@ -85,4 +85,13 @@ public class Demo {
         int i = new Random().nextInt(10);
         System.out.println(i);
     }
+
+    //string 和 StringBuffer 在使用上的一点区别。不考虑字符缓冲区等内容
+    @Test
+    public void diffBetweenStr(){
+        String a = null;
+//        System.out.println(new StringBuffer(a).append("aaaa").toString()); //会抛异常
+        System.out.println(new StringBuffer().append("aaa").append(a).toString());
+        System.out.println(a + "aaa");
+    }
 }

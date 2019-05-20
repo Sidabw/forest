@@ -12,6 +12,7 @@ package com.widget.http.ok;
 
 import com.alibaba.fastjson.JSONObject;
 import okhttp3.*;
+import org.junit.Test;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -33,13 +34,13 @@ import java.util.concurrent.TimeUnit;
  * @since 1.0.0
  */
 public class Demo {
+
     private static Logger logger = LoggerFactory.getLogger(Demo.class);
     public static void main(String[] args) throws IOException {
 //        get("http://localhost:8018/dp/v1/source/getSug");
 //        postNormal("http://localhost:8018/dp/v1/login");
 //        postForm("http://localhost:8018/dp/v1/login");
         postMultipartUpload();
-
     }
     public static void get(String url) throws IOException {
         StringBuffer urlAndParam = new StringBuffer(url).append("?").append("searchText=\"富士康\"").append("&").append("queryType=\"company\"");
@@ -148,4 +149,6 @@ public class Demo {
             }
         });
     }
+
+
 }

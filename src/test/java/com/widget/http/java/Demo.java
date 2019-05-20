@@ -10,6 +10,8 @@
  */
 package com.widget.http.java;
 
+import org.springframework.http.HttpHeaders;
+
 import java.io.IOException;
 import java.io.InputStream;
 import java.net.HttpURLConnection;
@@ -40,5 +42,7 @@ public class Demo {
         InputStream res = connection.getInputStream();
         System.out.println("get result from response input stream ....");
         connection.disconnect();
+
+        HttpHeaders httpHeaders = new HttpHeaders();
     }
 }
