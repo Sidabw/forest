@@ -21,7 +21,10 @@ import java.util.Random;
  * 〈本demo是基于 网易云信 搭建
  *  api: https://dev.yunxin.163.com/docs/product/%E7%9F%AD%E4%BF%A1/%E7%9F%AD%E4%BF%A1%E6%8E%A5%E5%8F%A3%E6%8C%87%E5%8D%97
  *  home: https://app.yunxin.163.com/index#/app/info/15671052
- *  terminal: curl -X POST -H "AppKey: 0a14f3d45f2000252264b4ad4ab38ae6" -H "CurTime: 1557287936115" -H "CheckSum: f3aa41d3a67445ead7626255fcbb3fd29e17654c" -H "Nonce: -1937279936" -H "Content-Type: application/x-www-form-urlencoded" -d 'mobile=17610170622' 'https://api.netease.im/sms/sendcode.action'
+ *  terminal:
+ *  curl -X POST -H "AppKey: 0a14f3d45f2000252264b4ad4ab38ae6" -H "CurTime: 1557287936115"
+ *  -H "CheckSum: f3aa41d3a67445ead7626255fcbb3fd29e17654c" -H "Nonce: -1937279936"
+ *  -H "Content-Type: application/x-www-form-urlencoded" -d 'mobile=17610170622' 'https://api.netease.im/sms/sendcode.action'
  *  注意：使用curl时，要求put full url whit in double quote。 就是在二重认真quote时，把上边输入的命令再输入一边..
  * 〉
  *

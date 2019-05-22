@@ -19,6 +19,8 @@ import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 import java.awt.*;
 import java.awt.image.BufferedImage;
+import java.util.HashMap;
+import java.util.Map;
 import java.util.Random;
 
 /**
@@ -30,6 +32,8 @@ import java.util.Random;
  * @since 1.0.0
  */
 public class RandomValidateCodeUtil {
+    public static Map<String, String> allCode = new HashMap<>();
+
     public static final String RANDOMCODEKEY= "RANDOMVALIDATECODEKEY";//放到session中的key
 //    private String randString = "0123456789";//随机产生只有数字的字符串
     //private String randString = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";//随机产生只有字母的字符串
@@ -44,31 +48,10 @@ public class RandomValidateCodeUtil {
     private Random random = new Random();
 
     /**
-     * 获得字体
-     */
-    private Font getFont() {
-        return new Font("Fixedsys", Font.CENTER_BASELINE, 18);
-    }
-
-    /**
-     * 获得颜色
-     */
-    private Color getRandColor(int fc, int bc) {
-        if (fc > 255)
-            fc = 255;
-        if (bc > 255)
-            bc = 255;
-        int r = fc + random.nextInt(bc - fc - 16);
-        int g = fc + random.nextInt(bc - fc - 14);
-        int b = fc + random.nextInt(bc - fc - 18);
-        return new Color(r, g, b);
-    }
-
-    /**
      * 生成随机图片
+     * @param clientId
      */
-    public void getRandcode(HttpServletRequest request, HttpServletResponse response) {
-        HttpSession session = request.getSession();
+    public BufferedImage getRandcode(String clientId) {
         // BufferedImage类是具有缓冲区的Image类,Image类是用于描述图像信息的类
         BufferedImage image = new BufferedImage(width, height, BufferedImage.TYPE_INT_BGR);
         Graphics g = image.getGraphics();// 产生Image对象的Graphics对象,改对象可以在图像上进行各种绘制操作
@@ -85,17 +68,9 @@ public class RandomValidateCodeUtil {
             randomString = drowString(g, randomString, i);
         }
         logger.info(randomString);
-        //将生成的verify code 保存到session中
-        session.removeAttribute(RANDOMCODEKEY);
-        session.setAttribute(RANDOMCODEKEY, randomString);
+        allCode.put(clientId, randomString);
         g.dispose();
-        try {
-            // 将内存中的图片通过流动形式输出到客户端
-            ImageIO.write(image, "JPEG", response.getOutputStream());
-        } catch (Exception e) {
-            logger.error("将内存中的图片通过流动形式输出到客户端失败>>>>   ", e);
-        }
-
+        return image;
     }
 
     /**
@@ -129,5 +104,26 @@ public class RandomValidateCodeUtil {
      */
     public String getRandomString(int num) {
         return String.valueOf(randString.charAt(num));
+    }
+
+    /**
+     * 获得字体
+     */
+    private Font getFont() {
+        return new Font("Fixedsys", Font.CENTER_BASELINE, 18);
+    }
+
+    /**
+     * 获得颜色
+     */
+    private Color getRandColor(int fc, int bc) {
+        if (fc > 255)
+            fc = 255;
+        if (bc > 255)
+            bc = 255;
+        int r = fc + random.nextInt(bc - fc - 16);
+        int g = fc + random.nextInt(bc - fc - 14);
+        int b = fc + random.nextInt(bc - fc - 18);
+        return new Color(r, g, b);
     }
 }
