@@ -32,8 +32,6 @@ import java.util.Random;
  * @since 1.0.0
  */
 public class RandomValidateCodeUtil {
-    public static Map<String, String> allCode = new HashMap<>();
-
     public static final String RANDOMCODEKEY= "RANDOMVALIDATECODEKEY";//放到session中的key
 //    private String randString = "0123456789";//随机产生只有数字的字符串
     //private String randString = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";//随机产生只有字母的字符串
@@ -49,9 +47,9 @@ public class RandomValidateCodeUtil {
 
     /**
      * 生成随机图片
-     * @param clientId
+     * @param request
      */
-    public BufferedImage getRandcode(String clientId) {
+    public BufferedImage getRandcode(HttpServletRequest request) {
         // BufferedImage类是具有缓冲区的Image类,Image类是用于描述图像信息的类
         BufferedImage image = new BufferedImage(width, height, BufferedImage.TYPE_INT_BGR);
         Graphics g = image.getGraphics();// 产生Image对象的Graphics对象,改对象可以在图像上进行各种绘制操作
@@ -68,7 +66,8 @@ public class RandomValidateCodeUtil {
             randomString = drowString(g, randomString, i);
         }
         logger.info(randomString);
-        allCode.put(clientId, randomString);
+        HttpSession session = request.getSession();
+        session.setAttribute(RANDOMCODEKEY, randomString);
         g.dispose();
         return image;
     }

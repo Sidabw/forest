@@ -15,6 +15,7 @@ import okhttp3.*;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
+import javax.servlet.http.HttpServletRequest;
 import java.io.IOException;
 import java.security.MessageDigest;
 import java.security.NoSuchAlgorithmException;
@@ -33,8 +34,6 @@ import java.util.Random;
  */
 public class TelephoneValidateCodeUtil {
 
-    public static Map<String, String> allCode = new HashMap<>();
-
     private static final String appSecret = "1ff941bbeede";
 
     private static final char[] HEX_DIGITS = { '0', '1', '2', '3', '4', '5',
@@ -46,13 +45,13 @@ public class TelephoneValidateCodeUtil {
 
     private static Logger logger = LoggerFactory.getLogger(TelephoneValidateCodeUtil.class);
 
-    public static String getTelephoneValidateCode(String phoneNum) throws NoSuchAlgorithmException, IOException {
+    public static String getTelephoneValidateCode(String phoneNum, HttpServletRequest request) throws NoSuchAlgorithmException, IOException {
         String nonce = new Integer(new Random().nextInt()).toString();
         String curTime = new Long(new Date().getTime()).toString();
         String checkSum = getCheckSum(appSecret, nonce, curTime);
         logger.debug("nonce: {}, curTime: {}, checkSum: {}", nonce, curTime, checkSum);
         String code = postNormal(nonce, curTime, checkSum, phoneNum);
-        allCode.put(phoneNum, code);
+        request.getSession().setAttribute(phoneNum, code);
         return code;
     }
 

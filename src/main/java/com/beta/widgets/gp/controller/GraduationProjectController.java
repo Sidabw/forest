@@ -41,14 +41,14 @@ public class GraduationProjectController {
      * 生成图片验证码
      */
     @RequestMapping(value = "/getImgVerifyCode")
-    public void getImgVerify(String clientId, HttpServletResponse response) {
+    public void getImgVerify(HttpServletRequest request, HttpServletResponse response) {
         try {
             response.setContentType("image/jpeg");//设置相应类型,告诉浏览器输出的内容为图片
             response.setHeader("Pragma", "No-cache");//设置响应头信息，告诉浏览器不要缓存此内容
             response.setHeader("Cache-Control", "no-cache");
             response.setDateHeader("Expire", 0);
             RandomValidateCodeUtil randomValidateCode = new RandomValidateCodeUtil();
-            BufferedImage image = randomValidateCode.getRandcode(clientId);//输出验证码图片方法
+            BufferedImage image = randomValidateCode.getRandcode(request);//输出验证码图片方法
             try {
                 // 将内存中的图片通过流动形式输出到客户端
                 ImageIO.write(image, "JPEG", response.getOutputStream());
@@ -64,10 +64,10 @@ public class GraduationProjectController {
      * 校验图片验证码
      */
     @RequestMapping(value = "/checkImgVerify", method = RequestMethod.POST, headers = "Accept=application/json")
-    public boolean checkImgVerify(@RequestParam String verifyInput, String clientId) {
+    public boolean checkImgVerify(@RequestParam String verifyInput, HttpServletRequest request) {
         try{
             String inputStr = verifyInput;
-            String code = RandomValidateCodeUtil.allCode.get(clientId);
+            String code = request.getSession().getAttribute(RandomValidateCodeUtil.RANDOMCODEKEY).toString();
             if (code == null || !code.equals(inputStr)) return false;
             return true;
         }catch (Exception e){
@@ -81,9 +81,9 @@ public class GraduationProjectController {
      */
     @RequestMapping(value = "/getPhoneVerify")
     @ResponseBody
-    public void getPhoneVerify(String phoneNum) {
+    public void getPhoneVerify(String phoneNum, HttpServletRequest request) {
         try {
-            TelephoneValidateCodeUtil.getTelephoneValidateCode(phoneNum);
+            TelephoneValidateCodeUtil.getTelephoneValidateCode(phoneNum, request);
         } catch (Exception e) {
             logger.error("获取验证码失败>>>>   ", e);
         }
@@ -93,10 +93,10 @@ public class GraduationProjectController {
      * 校验图片验证码
      */
     @RequestMapping(value = "/checkPhoneVerify", method = RequestMethod.POST, headers = "Accept=application/json")
-    public boolean checkPhoneVerify(@RequestParam String verifyInput, String phoneNum) {
+    public boolean checkPhoneVerify(@RequestParam String verifyInput, String phoneNum, HttpServletRequest request) {
         try{
             String inputStr = verifyInput;
-            String code = TelephoneValidateCodeUtil.allCode.get(phoneNum);
+            String code = request.getSession().getAttribute(phoneNum).toString();
             if (code == null || !code.equals(inputStr)) return false;
             return true;
         }catch (Exception e){
