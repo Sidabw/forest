@@ -93,5 +93,16 @@ public class Demo {
 //        System.out.println(new StringBuffer(a).append("aaaa").toString()); //会抛异常
         System.out.println(new StringBuffer().append("aaa").append(a).toString());
         System.out.println(a + "aaa");
+        System.out.println('-');
+        String bb = "aa\n";
+        System.out.print(bb.replaceAll("\\\\n",""));
+        System.out.print('-');
+        System.out.print(bb);
+    }
+
+    @Test
+    public void assertTest(){
+        //断言之所以本地测试会被启动是因为启动参数上加上了-ea ，即-enableassert
+        assert(true);
     }
 }
