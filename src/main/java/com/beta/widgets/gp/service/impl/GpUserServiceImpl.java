@@ -13,12 +13,13 @@ package com.beta.widgets.gp.service.impl;
 import com.beta.widgets.gp.dao.GpUser;
 import com.beta.widgets.gp.dao.GpUserExample;
 import com.beta.widgets.gp.dao.GpUserMapper;
-import com.beta.widgets.gp.service.IUserService;
+import com.beta.widgets.gp.service.IGpUserService;
 import org.apache.commons.codec.digest.DigestUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.util.CollectionUtils;
 
+import javax.annotation.Resource;
 import java.util.List;
 
 /**
@@ -29,8 +30,8 @@ import java.util.List;
  * @create 2019/5/23
  * @since 1.0.0
  */
-@Service
-public class UserServiceImpl implements IUserService {
+//@Resource(name = "gpUserService")
+public class GpUserServiceImpl implements IGpUserService {
 
     @Autowired
     private GpUserMapper userMapper;

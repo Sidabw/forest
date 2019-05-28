@@ -31,6 +31,11 @@ public class Demo {
         System.out.println(decimal1.subtract(decimal2));//减
         System.out.println(decimal1.multiply(decimal2));//乘
         System.out.println(decimal1.divide(decimal2));  //除
+
+        //The BigDecimal class gives its user complete control over rounding behavior. If no rounding mode is specified
+        // and the exact result cannot be represented, an exception is thrown;
+        //如果没指定舍入模式且无法表示准确结果，那就抛异常。
+        //实际进去的是一个char数组，小数点前的和小数点后的分开计算
     }
 
 }

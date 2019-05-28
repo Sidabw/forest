@@ -14,12 +14,12 @@ public class DynamicSubject implements InvocationHandler {
 	public Object invoke(Object proxy, Method method, Object[] args) throws Throwable {
 		// TODO Auto-generated method stub
 		System.out.println("invoked befor the real request"+method);
-        //method?????Client??subject.request()??request??
+
 		if("haha".equals(args[0])){
 			Object iobj=method.invoke(obj, "aa");	
 		}
 		Object iobj=method.invoke(obj, args);
-        //method?????Client??subject.request()??request??
+
 		System.out.println("Invoked after the real request"+ method);
 		return iobj;
 	}

@@ -10,20 +10,22 @@
  */
 package com.beta.widgets.gp.controller;
 
-import com.beta.widgets.gp.service.IUserService;
+import com.beta.widgets.gp.service.IGpUserService;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Controller;
+import org.springframework.stereotype.Service;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
 
+import javax.annotation.Resource;
 import javax.imageio.ImageIO;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-import javax.servlet.http.HttpSession;
 import java.awt.image.BufferedImage;
 
 /**
@@ -41,8 +43,10 @@ public class GraduationProjectController {
 
     private static final Logger logger = LoggerFactory.getLogger(GraduationProjectController.class);
 
+//    @Qualifier("gpUserService")
     @Autowired
-    private IUserService userService;
+    private IGpUserService gpUserService;
+
     /**
      * 生成图片验证码
      */
@@ -113,12 +117,12 @@ public class GraduationProjectController {
 
     @RequestMapping(value = "/user/regist", method = RequestMethod.POST)
     public boolean regist(String username, String password, String realname, String groupCode){
-        return userService.regist(username, password, realname, groupCode);
+        return gpUserService.regist(username, password, realname, groupCode);
     }
 
     @RequestMapping(value = "/user/login", method = RequestMethod.POST)
     public boolean login(String username, String password){
-        return userService.login(username, password);
+        return gpUserService.login(username, password);
     }
 
 }

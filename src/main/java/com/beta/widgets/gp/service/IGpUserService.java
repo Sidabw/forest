@@ -10,6 +10,8 @@
  */
 package com.beta.widgets.gp.service;
 
+import org.springframework.stereotype.Service;
+
 /**
  * 〈一句话功能简述〉: 
  * 〈〉
@@ -18,7 +20,8 @@ package com.beta.widgets.gp.service;
  * @create 2019/5/23
  * @since 1.0.0
  */
-public interface IUserService {
+@Service
+public interface IGpUserService {
     boolean login(String username, String passwrod);
 
     boolean regist(String username, String password, String realname, String groupCode);
