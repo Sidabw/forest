@@ -17,10 +17,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Controller;
 import org.springframework.stereotype.Service;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
-import org.springframework.web.bind.annotation.RequestParam;
-import org.springframework.web.bind.annotation.ResponseBody;
+import org.springframework.web.bind.annotation.*;
 
 import javax.annotation.Resource;
 import javax.imageio.ImageIO;
@@ -50,9 +47,10 @@ public class GraduationProjectController {
     /**
      * 生成图片验证码
      */
-    @RequestMapping(value = "/verify/getImg")
-    public void getImgVerify(HttpServletRequest request, HttpServletResponse response) {
+    @RequestMapping(value = "/verify/getImg/{id}")
+    public void getImgVerify(HttpServletRequest request, HttpServletResponse response, @PathVariable("id") String id) {
         try {
+            System.out.println("in");
             response.setContentType("image/jpeg");//设置相应类型,告诉浏览器输出的内容为图片
             response.setHeader("Pragma", "No-cache");//设置响应头信息，告诉浏览器不要缓存此内容
             response.setHeader("Cache-Control", "no-cache");
