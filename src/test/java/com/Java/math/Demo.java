@@ -11,6 +11,7 @@
 package com.Java.math;
 
 import java.math.BigDecimal;
+import java.math.BigInteger;
 
 /**
  * 〈一句话功能简述〉:
@@ -36,6 +37,12 @@ public class Demo {
         // and the exact result cannot be represented, an exception is thrown;
         //如果没指定舍入模式且无法表示准确结果，那就抛异常。
         //实际进去的是一个char数组，小数点前的和小数点后的分开计算
+
+        System.out.println("-----");
+//        new BigInteger()
+
+//        BigInteger bigInteger = new BigInteger("{");
+//        System.out.println(bigInteger);
     }
 
 }
