@@ -6,6 +6,8 @@ import io.swagger.annotations.ApiImplicitParams;
 import io.swagger.annotations.ApiOperation;
 import io.swagger.annotations.ApiResponse;
 import io.swagger.annotations.ApiResponses;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.core.env.Environment;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
@@ -14,6 +16,9 @@ import org.springframework.web.bind.annotation.RestController;
 @RequestMapping("/userSwagger")
 @Api("ControllerSwagger相关api")
 public class ControllerSwagger {
+
+    @Autowired
+    Environment env;
 	  @ApiOperation("获取用户信息")
 	    @ApiImplicitParams({
 	        @ApiImplicitParam(paramType="header",name="username",dataType="String",required=true,value="用户的姓名",defaultValue="zhaojigang"),
@@ -29,7 +34,17 @@ public class ControllerSwagger {
 		String returnString = "";
 		return returnString;
 	}
-	  
+
+    @RequestMapping(value="/test",method=RequestMethod.GET)
+    public String test() {
+        String property = env.getProperty("server.tomcat.basedir");
+        System.out.println(property);
+        System.out.println(env.getProperty("server.port"));
+        String returnString = "aaa";
+        return returnString;
+    }
+
+
 	  
 	  
 }
