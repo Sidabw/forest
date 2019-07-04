@@ -15,6 +15,7 @@ import org.junit.Test;
 import java.math.BigDecimal;
 import java.math.RoundingMode;
 import java.text.DecimalFormat;
+import java.util.LinkedHashMap;
 
 /**
  * 〈一句话功能简述〉:
@@ -82,5 +83,15 @@ public class JavaTest {
         double rd = Math.random();
         String rdStr = String.format("%." + (digit - 1) + "f", rd).replace("0.", "") + (int)(Math.random() * 10.0D) % 10;
         return rdStr;
+    }
+
+    @Test
+    public void test4(){
+        LinkedHashMap<String, Object> linkedHashMap = new LinkedHashMap<>();
+    }
+
+    @Test
+    public void test5(){
+
     }
 }
