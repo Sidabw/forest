@@ -193,5 +193,15 @@ public class ModelNodeTest {
         System.out.println(arr[0][1]);
         System.out.println(arr[1][0]);
         System.out.println(arr[2][0]);
+
+        int[] arr2 = new int[5];
+        System.out.println(arr2[1]);
+    }
+
+    @Test
+    public void test2(){
+        String a1 = "f52339a00dddf5f2c631b2a844732b26";
+        String a2 = "f52339a00dddf5f2c631b2a844732b26";
+        System.out.println(a1.equals(a2));
     }
 }
