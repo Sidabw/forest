@@ -77,7 +77,7 @@ public class FileTypeJudge {
      * @Author: feiyi
      * @Date: 2019/7/16 11:10 AM
      **/
-    public static String getFileType(String filePath){
+    public static String getFileType(String filePath) {
         FileInputStream fileInputStream = null;
         try {
             fileInputStream = new FileInputStream(filePath);
