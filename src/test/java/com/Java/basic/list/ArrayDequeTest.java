@@ -8,7 +8,7 @@
  * <author>          <time>          <version>          <desc>
  * 作者姓名           修改时间           版本号              描述
  */
-package com.Java.basic.test;
+package com.Java.basic.list;
 
 import org.junit.Test;
 
@@ -66,11 +66,13 @@ public class ArrayDequeTest {
     }
 
     /**
-     * Get topological ordering of the input directed graph
-     * @param n number of nodes in the graph
-     * @param adjacencyList adjacency list representation of the input directed graph
-     * @return topological ordering of the graph stored in an List<Integer>.
-     */
+     * @Description 有向无环图排序
+     * @param
+     * @return:
+     * @since: 2.0.5
+     * @Author: feiyi
+     * @Date: 2019/7/17 3:42 PM
+     **/
     public List<Integer> topologicalSort(int n, int[][] adjacencyList) {
         List<Integer> topoRes = new ArrayList<>();
         int[] inDegree = new int[n];
