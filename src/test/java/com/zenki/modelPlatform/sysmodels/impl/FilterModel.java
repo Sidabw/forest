@@ -10,6 +10,7 @@
  */
 package com.zenki.modelPlatform.sysmodels.impl;
 
+import com.alibaba.druid.util.StringUtils;
 import com.zenki.modelPlatform.sysmodels.SysModel;
 
 /**
@@ -21,9 +22,19 @@ import com.zenki.modelPlatform.sysmodels.SysModel;
  * @since 1.0.0
  */
 public class FilterModel implements SysModel {
-    @Override
-    public Object process(Object object) throws Exception {
 
-        return null;
+    private String str = "";
+
+    @Override
+    public void init(Object object) {
+        str = object.toString();
+    }
+
+    @Override
+    public Boolean process(Object object) throws Exception {
+        if (object == null && StringUtils.isEmpty(str)) return true;
+        else if (object == null) return false;
+        else if (object.equals(str)) return true;
+        else return false;
     }
 }

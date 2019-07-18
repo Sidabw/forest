@@ -53,6 +53,11 @@ public class FileTypeJudgeModel implements SysModel {
     }
 
     @Override
+    public void init(Object object) {
+
+    }
+
+    @Override
     public Object process(Object object) {
         if (!(object instanceof InputStream)) return null;
         InputStream fileInputStream = (InputStream) object;

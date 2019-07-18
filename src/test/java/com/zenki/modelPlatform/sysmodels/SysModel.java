@@ -19,5 +19,8 @@ package com.zenki.modelPlatform.sysmodels;
  * @since 1.0.0
  */
 public interface SysModel {
+
+    void init(Object object);
     Object process(Object object) throws Exception;
+
 }
