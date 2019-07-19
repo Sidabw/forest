@@ -8,7 +8,7 @@
  * <author>          <time>          <version>          <desc>
  * 作者姓名           修改时间           版本号              描述
  */
-package com.zenki.modelPlatform.sysmodels;
+package com.beta.zenki.modelPlatform.sysmodels;
 
 /**
  * 〈一句话功能简述〉: 
@@ -21,6 +21,7 @@ package com.zenki.modelPlatform.sysmodels;
 public interface SysModel {
 
     void init(Object object);
+
     Object process(Object object) throws Exception;
 
 }

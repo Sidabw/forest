@@ -1,24 +1,25 @@
 /**
  * Copyright (C), 2018-2019, zenki.ai
- * FileName: Basic
+ * FileName: ModelsProceedServiceImpl
  * Author:   feiyi
- * Date:     2019/7/18 3:28 PM
- * Description: 基础实体
+ * Date:     2019/7/18 7:34 PM
+ * Description:
  * History:
  * <author>          <time>          <version>          <desc>
  * 作者姓名           修改时间           版本号              描述
  */
-package com.zenki.modelPlatform.sysmodels.entity.config;
+package com.beta.zenki.modelPlatform.domain.service.impl;
+
+import com.beta.zenki.modelPlatform.domain.service.ModelsProceedService;
 
 /**
  * 〈一句话功能简述〉:
- * 〈基础实体〉
+ * 〈〉
  *
  * @author feiyi
  * @create 2019/7/18
  * @since 1.0.0
  */
-public class Basic {
-
+public class ModelsProceedServiceImpl implements ModelsProceedService {
 
 }
