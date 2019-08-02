@@ -17,9 +17,10 @@ public class TimeHandle {
 		System.out.println(format);
 		System.out.println(format2);*/
 		Calendar cal = Calendar.getInstance();
-		cal.add(Calendar.DAY_OF_MONTH,0);   //week时，这里0表示明天，-1表示今天
+		cal.add(Calendar.DAY_OF_MONTH,9);   //week时，这里0表示明天，-1表示今天
 		String yesterday = new SimpleDateFormat( "yyyy年MM月dd日HH时mm分ss秒").format(cal.getTime());
         System.out.println("明天周"+ cal.get(Calendar.DAY_OF_WEEK));
+        System.out.println(yesterday);
 
 		cal = Calendar.getInstance();
 		cal.add(Calendar.DAY_OF_MONTH,0);

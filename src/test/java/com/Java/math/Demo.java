@@ -10,8 +10,12 @@
  */
 package com.Java.math;
 
+import org.junit.Test;
+
 import java.math.BigDecimal;
 import java.math.BigInteger;
+import java.util.ArrayList;
+import java.util.List;
 
 /**
  * 〈一句话功能简述〉:
@@ -43,6 +47,16 @@ public class Demo {
 
 //        BigInteger bigInteger = new BigInteger("{");
 //        System.out.println(bigInteger);
+    }
+
+
+    @Test
+    public void test() {
+        List list = new ArrayList<>();
+        list.forEach(e -> {
+            System.out.println(e.toString());
+        });
+        System.out.println(false & true);
     }
 
 }

@@ -19,6 +19,12 @@ package com.Java.basic.extendstest;
  * @since 1.0.0
  */
 public class Parent {
+
+    private String testt = "2";
+
+    Parent(){
+        System.out.println(this.testt);
+    }
     private String name;
 
     private String id;

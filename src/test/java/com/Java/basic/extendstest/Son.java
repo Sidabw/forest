@@ -19,6 +19,12 @@ package com.Java.basic.extendstest;
  * @since 1.0.0
  */
 public class Son extends Parent {
+
+    private String testt = "1";
+
+    Son(){
+        System.out.println(testt);
+    }
     private Integer age;
 
     public Integer getAge() {

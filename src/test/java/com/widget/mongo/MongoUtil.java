@@ -75,14 +75,14 @@ public class MongoUtil {
         return new MongoClient( "localhost" , 27017 );
     }
 
-    public static void createCol(String colName){
+    public static void createCol(String colName) {
         //不需要动态建库，直接建表就行。
         MongoClient mongoClient = MongoUtil.getMongoClient();
         MongoDatabase mongoDatabase = mongoClient.getDatabase("");
         mongoDatabase.createCollection(colName);
     }
 
-    public static void insert(MongoCollection<Document> col){
+    public static void insert(MongoCollection<Document> col) {
         //两种插入方式。建议使用document1，可以直接parse json str
         String json = "{}";
         Document document1 = Document.parse(json);
