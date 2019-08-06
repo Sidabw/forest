@@ -30,7 +30,7 @@ import java.util.concurrent.CopyOnWriteArraySet;
  * @create 2019/1/16
  * @since 1.0.0
  */
-/*@ServerEndpoint(value = "/websocket")
+@ServerEndpoint(value = "/websocket")
 @Component
 public class WebSocket {
 
@@ -46,8 +46,8 @@ public class WebSocket {
 
     private int i = 1000;
 
-    *//**
-     * 连接建立成功调用的方法*//*
+    /**
+     * 连接建立成功调用的方法*/
     @OnOpen
     public void onOpen(Session session) {
         System.out.println("in on open");
@@ -69,9 +69,9 @@ public class WebSocket {
         }
     }
 
-    *//**
+    /**
      * 连接关闭调用的方法
-     *//*
+     */
     @OnClose
     public void onClose() {
         webSocketSet.remove(this);  //从set中删除
@@ -79,14 +79,13 @@ public class WebSocket {
         System.out.println("有一连接关闭！当前在线人数为" + getOnlineCount());
     }
 
-    *//**
+    /**
      * 收到客户端消息后调用的方法
      *
-     * @param message 客户端发送过来的消息*//*
+     * @param message 客户端发送过来的消息*/
     @OnMessage
     public void onMessage(String message, Session session) {
         System.out.println("来自客户端的消息:" + message);
-
         //群发消息
         for (WebSocket item : webSocketSet) {
             try {
@@ -97,24 +96,22 @@ public class WebSocket {
         }
     }
 
-    *//**
-     * 发生错误时调用*//*
+    /**
+     * 发生错误时调用*/
      @OnError
      public void onError(Session session, Throwable error) {
      System.out.println("发生错误");
      error.printStackTrace();
      }
 
-
      public void sendMessage(String message) throws IOException {
      this.session.getBasicRemote().sendText(message);
      //this.session.getAsyncRemote().sendText(message);
      }
 
-
-     *//**
+     /**
       * 群发自定义消息
-      * *//*
+      * */
     public static void sendInfo(String message) throws IOException {
         for (WebSocket item : webSocketSet) {
             try {
@@ -136,4 +133,4 @@ public class WebSocket {
     public static synchronized void subOnlineCount() {
         WebSocket.onlineCount--;
     }
-}*/
+}

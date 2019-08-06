@@ -40,7 +40,7 @@ public class Demo {
 //        get("http://localhost:8018/dp/v1/source/getSug");
 //        postNormal("http://localhost:8018/dp/v1/login");
 //        postForm("http://localhost:8018/dp/v1/login");
-        postMultipartUpload();
+        postMultipartUpload2();
     }
     public static void get(String url) throws IOException {
         StringBuffer urlAndParam = new StringBuffer(url).append("?").append("searchText=\"富士康\"").append("&").append("queryType=\"company\"");
@@ -85,7 +85,7 @@ public class Demo {
      */
     public static void postMultipartUpload() throws IOException {
 //        FileInputStream fileInputStream = new FileInputStream(new File("/Users/feiyi/Desktop/zenki-note.txt"));
-        FileInputStream fileInputStream = new FileInputStream(new File("/Users/feiyi/Desktop/seaweedfs-file-test/doc-docs-test/11.docx"));
+        FileInputStream fileInputStream = new FileInputStream(new File("/Users/feiyi/Desktop/handsome_guy.jpg"));
         int length = 0;
         byte[] temp = new byte[1024];
         ArrayList<Byte> list = new ArrayList<>();
@@ -99,16 +99,31 @@ public class Demo {
         for (int i = 0 ; i < objects.length ; i ++){
             bytes[i] = ((Byte)objects[i]).byteValue();
         }
-        RequestBody requestBody = RequestBody.create(MediaType.parse("multipart/form-data"), bytes);
-        MultipartBody body = new MultipartBody.Builder().addFormDataPart("126", "126", requestBody).build();
+
+//        FileInputStream fileInputStream2 = new FileInputStream(new File("/Users/feiyi/Desktop/models-proceed-demo.png"));
+//        int length2 = 0;
+//        byte[] temp2 = new byte[1024];
+//        ArrayList<Byte> list2 = new ArrayList<>();
+//        while ((length2 = fileInputStream2.read(temp)) != -1){
+//            for (int i = 0 ; i<length2 ; i ++){
+//                list2.add(temp2[i]);
+//            }
+//        }
+//        Object[] objects2 = list2.toArray();
+//        byte[] bytes2 = new byte[objects2.length];
+//        for (int i = 0 ; i < objects2.length ; i ++){
+//            bytes2[i] = ((Byte)objects2[i]).byteValue();
+//        }
+
         RequestBody requestBody2 = new MultipartBody.Builder()
                 .addPart(
                         Headers.of("Content-Disposition",
-                                "form-data; name=\"13\""),
-                        RequestBody.create(null, bytes)).build();
+                                "form-data; name=\"file\""),
+                        RequestBody.create(null, bytes))
+               .build();
         Request request = new Request.Builder()
                 .header("Accept-Language", "zh-cn")
-                .url("http://localhost:8888/dataplus/13")
+                .url("http://localhost:8020/dp/api/v1/pmc/proceed/filetest")
                 .post(requestBody2)
                 .build();
         OkHttpClient client = new OkHttpClient();
@@ -116,7 +131,24 @@ public class Demo {
         System.out.println(response.message());
     }
 
+    //多文件上传
+    public static void postMultipartUpload2() throws IOException {
+        //TODO  OkHttp official example. practice. https://square.github.io/okhttp/recipes/#posting-a-multipart-request
+        OkHttpClient okHttpClient = new OkHttpClient();
+        RequestBody requestBody = new MultipartBody.Builder()
+                .setType(MultipartBody.FORM)
+                .addFormDataPart("file", "handsome_guy.jpg",
+                        RequestBody.create(MediaType.parse("image/jpg"), new File("/Users/feiyi/Desktop/handsome_guy.jpg")))
+                .addFormDataPart("file", "models-proceed-demo.png",
+                RequestBody.create(MediaType.parse("image/png"), new File("/Users/feiyi/Desktop/models-proceed-demo.png")))
+                .build();
 
+        Request request = new Request.Builder()
+                .url("http://localhost:8020/dp/api/v1/pmc/proceed/filetest")
+                .post(requestBody)
+                .build();
+        okHttpClient.newCall(request).execute();
+    }
 
     public static void addTimeout(){
         OkHttpClient client = new OkHttpClient.Builder()
@@ -136,7 +168,7 @@ public class Demo {
                 .build();
     }
 
-    public static void asyn(OkHttpClient client, Request request){
+    public static void asyn(OkHttpClient client, Request request) {
         client.newCall(request).enqueue(new Callback() {
             @Override
             public void onFailure(Call call, IOException e) {

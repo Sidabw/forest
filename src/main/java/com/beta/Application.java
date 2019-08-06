@@ -45,7 +45,7 @@ public class Application extends SpringBootServletInitializer {
 	@RequestMapping("/")
 	@ResponseBody
 	public String greeting(){
-        registMapping();
+//        registMapping();
 		//spring security 相关
 		/*UserDetails userDetails = (UserDetails) SecurityContextHolder.getContext()
 				.getAuthentication()
@@ -83,13 +83,10 @@ public class Application extends SpringBootServletInitializer {
             Method getMappingForMethod =ReflectionUtils.findMethod(RequestMappingHandlerMapping.class, "getMappingForMethod",Method.class,Class.class);
             getMappingForMethod.setAccessible(true);
 
-//            FileInputStream stdin = new FileInputStream("/Users/feiyi/Desktop/stdin");
-//            FileOutputStream stdout = new FileOutputStream("/Users/feiyi/Desktop/stdout");
-//            FileOutputStream stderr = new FileOutputStream("/Users/feiyi/Desktop/stderr");
 //            String javaPath = "/Users/feiyi/Desktop/Demo2.java";
 //            String classPath = "Users.feiyi.Desktop.Demo2.class";
 //            JavaCompiler systemJavaCompiler = ToolProvider.getSystemJavaCompiler();
-//            systemJavaCompiler.run(stdin, stdout, stderr, javaPath);
+//            systemJavaCompiler.run(null, null, null , javaPath);
             MyClassloader myClassloader = new MyClassloader();
             Class<?> demo2Class = myClassloader.findClass("Demo2");
             Object demo2Obj = demo2Class.newInstance();
