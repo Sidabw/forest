@@ -204,7 +204,8 @@
 
     //判断当前浏览器是否支持WebSocket
     if('WebSocket' in window){
-        websocket = new WebSocket("ws://localhost:8017/websocket");
+        // websocket = new WebSocket("ws://localhost:8017/websocket");
+        websocket = new WebSocket("ws://localhost:8020/dp/api/v1/pmc/proceed/preview");
     }
     else{
         alert('Not support websocket')

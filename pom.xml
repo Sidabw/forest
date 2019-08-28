@@ -3,9 +3,9 @@
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>com.beta</groupId>
 	<artifactId>forest</artifactId>
-	<packaging>jar</packaging>
+	<packaging>pom</packaging>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>springboot Maven Webapp</name>
+    <name>springboot Maven Webapp</name>
 	<url>http://maven.apache.org</url>
 	<parent>
 		<groupId>org.springframework.boot</groupId>
@@ -357,6 +357,12 @@
             <version>1.6</version>
         </dependency>
 
+        <!-- https://mvnrepository.com/artifact/net.sourceforge.cpdetector/cpdetector -->
+        <dependency>
+            <groupId>net.sourceforge.cpdetector</groupId>
+            <artifactId>cpdetector</artifactId>
+            <version>1.0.7</version>
+        </dependency>
 
 
     </dependencies>

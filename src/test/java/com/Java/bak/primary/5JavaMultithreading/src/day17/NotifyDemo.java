@@ -1,8 +1,7 @@
 package day17;
 
 public class NotifyDemo {
-	public static void main(String[] args)
-	{
+	public static void main(String[] args) {
 		Res r=new Res();
 		Input in =new Input(r);
 		Output out=new Output(r);

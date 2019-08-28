@@ -3,9 +3,9 @@ package day17;
 public class NotifyDemo2 {
 	public static void main(String[] args)
 	{
-	Res r=new Res();
-	new Thread(new Input(r)).start();
-	new Thread(new Output(r)).start();
+	Res1 r=new Res1();
+	new Thread(new Input1(r)).start();
+	new Thread(new Output1(r)).start();
 	}
 }
 class Res1

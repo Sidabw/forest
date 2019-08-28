@@ -1,6 +1,7 @@
 package com.producerconsumer;
 /*
- * PS：在多线程中调用wait()方法时会释放synchronized锁。--->此Demo中如果有多个Producer就可能导致set方法等待线程池中有多个线程在等待，当唤醒一次、二次，不再flag判断，导致重复生产两次。
+ * PS：在多线程中调用wait()方法时会释放synchronized锁。
+ * --->此Demo中如果有多个Producer就可能导致set方法等待线程池中有多个线程在等待，当唤醒一次、二次，不再flag判断，导致重复生产两次。
  * 		当线程池中有多个wait线程时，notify只能唤醒随机单个线程。
  * 
  * 正常生产者消费者模型： 生产者产生的数据存到容器中，消费者从容器中提取数据
@@ -37,7 +38,6 @@ class Resourse
 			try {
 				this.wait();
 			} catch (InterruptedException e) {
-				// TODO: handle exception
 			}
 		}
 		this.name=name+count;
@@ -55,7 +55,6 @@ class Resourse
 				this.wait();
 				
 			} catch (InterruptedException e) {
-				// TODO: handle exception
 			}
 		}
 		System.out.println(Thread.currentThread().getName()+"........消费者......"+this.name);
@@ -67,12 +66,10 @@ class Producer implements Runnable
 {
 	private Resourse r;
 	 public Producer(Resourse r) {
-		// TODO Auto-generated constructor stub
 		 this.r=r;
 	 }
 	@Override
 	public void run() {
-		// TODO Auto-generated method stub
 		while(true)
 		{
 			r.set("馒头");
@@ -83,12 +80,10 @@ class Consumer implements Runnable
 {
 	private Resourse r;
 	 public Consumer(Resourse r) {
-		// TODO Auto-generated constructor stub
 		 this.r=r;
 	 }
 	@Override
 	public void run() {
-		// TODO Auto-generated method stub
 		while(true)
 		{
 			r.get();

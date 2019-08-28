@@ -19,6 +19,7 @@ import org.slf4j.LoggerFactory;
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.IOException;
+import java.io.InputStream;
 import java.util.ArrayList;
 import java.util.concurrent.TimeUnit;
 
@@ -133,23 +134,41 @@ public class Demo {
 
     //多文件上传
     public static void postMultipartUpload2() throws IOException {
+        File file = new File("/Users/feiyi/Desktop/handsome_guy.jpg");
+        FileInputStream fileInputStream = new FileInputStream(file);
+        byte[] bytes =inputStreamToByte(fileInputStream);
         //TODO  OkHttp official example. practice. https://square.github.io/okhttp/recipes/#posting-a-multipart-request
         OkHttpClient okHttpClient = new OkHttpClient();
         RequestBody requestBody = new MultipartBody.Builder()
                 .setType(MultipartBody.FORM)
-                .addFormDataPart("file", "handsome_guy.jpg",
-                        RequestBody.create(MediaType.parse("image/jpg"), new File("/Users/feiyi/Desktop/handsome_guy.jpg")))
-                .addFormDataPart("file", "models-proceed-demo.png",
-                RequestBody.create(MediaType.parse("image/png"), new File("/Users/feiyi/Desktop/models-proceed-demo.png")))
+                .addFormDataPart("file", "file",
+                        RequestBody.create(null, bytes))
+//                .addFormDataPart("file", "models-proceed-demo.png",
+//                RequestBody.create(MediaType.parse("image/png"), new File("/Users/feiyi/Desktop/models-proceed-demo.png")))
                 .build();
 
         Request request = new Request.Builder()
-                .url("http://localhost:8020/dp/api/v1/pmc/proceed/filetest")
+                .url("http://localhost:8020/dp/api/v1/pmc/proceed/aaaa")
                 .post(requestBody)
                 .build();
         okHttpClient.newCall(request).execute();
     }
-
+    private static byte[] inputStreamToByte(InputStream inputStream) throws IOException {
+        int length ;
+        byte[] temp = new byte[1024];
+        ArrayList<Byte> list = new ArrayList<>();
+        while ((length = inputStream.read(temp)) != -1){
+            for (int i = 0 ; i<length ; i ++) {
+                list.add(temp[i]);
+            }
+        }
+        Object[] objects = list.toArray();
+        byte[] bytes = new byte[objects.length];
+        for (int i = 0 ; i < objects.length ; i ++){
+            bytes[i] = ((Byte)objects[i]).byteValue();
+        }
+        return bytes;
+    }
     public static void addTimeout(){
         OkHttpClient client = new OkHttpClient.Builder()
                 .connectTimeout(10, TimeUnit.SECONDS)
