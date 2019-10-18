@@ -12,6 +12,7 @@ package com.widget.mongo;
 
 import com.alibaba.fastjson.JSONArray;
 import com.alibaba.fastjson.JSONObject;
+import com.mongodb.MongoClient;
 import com.mongodb.client.FindIterable;
 import com.mongodb.client.MongoCollection;
 import com.mongodb.client.MongoCursor;
@@ -41,11 +42,13 @@ public class Demo {
 
     @Test
     public void test(){
-        MongoCollection<Document> collection = MongoUtil.getCollection("zk_unstructure_data", "gonggao_structure_data");
+//        MongoCollection<Document> collection = MongoUtil.getCollection("zk_unstructure_data", "gonggao_structure_data");
+        MongoClient mongoClient = MongoUtil.getMongoClient();
+        MongoCollection<Document> collection = mongoClient.getDatabase("demo").getCollection("demo1");
 //        MongoUtil.insert(collection);
 //        MongoUtil.updateByFilter(collection);
 //        MongoUtil.deleteByFilter(collection);
-        MongoUtil.findAll(collection);
+        MongoUtil.aggs(collection);
 
     }
 

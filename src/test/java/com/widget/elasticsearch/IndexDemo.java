@@ -104,13 +104,13 @@ public class IndexDemo {
         //DeleteIndexResponse deleteIndexResponse = client.admin().indices().prepareDelete("").execute().actionGet();
 
         //delete by filter
-        TermQueryBuilder termQueryBuilder = QueryBuilders.termQuery("name.keyword", "J");
-        MatchAllQueryBuilder matchAllQueryBuilder = QueryBuilders.matchAllQuery();
-        BulkByScrollResponse deleteByFilterResponse = DeleteByQueryAction.INSTANCE
-                .newRequestBuilder(client).source("medcl")
-                .filter(matchAllQueryBuilder)
-                .execute().actionGet();
+//        TermQueryBuilder termQueryBuilder = QueryBuilders.termQuery("name.keyword", "J");
+//        MatchAllQueryBuilder matchAllQueryBuilder = QueryBuilders.matchAllQuery();
+//        BulkByScrollResponse deleteByFilterResponse = DeleteByQueryAction.INSTANCE
+//                .newRequestBuilder(client).source("medcl")
+//                .filter(matchAllQueryBuilder)
+//                .execute().actionGet();
 
-        System.out.println(deleteByFilterResponse.getStatus());
+//        System.out.println(deleteByFilterResponse.getStatus());
     }
 }

@@ -72,7 +72,7 @@ public class ClientDemo {
 
     public static void getResponseResult(SearchResponse response, String showField){
         SearchHit[] hits = response.getHits().getHits();
-        System.out.println("total hits:::" + response.getHits().totalHits);
+//        System.out.println("total hits:::" + response.getHits().totalHits);
         for(SearchHit searchHit : hits){
             Map<String, Object> sourceAsMap = searchHit.getSourceAsMap();
             System.out.println(sourceAsMap.get(showField));

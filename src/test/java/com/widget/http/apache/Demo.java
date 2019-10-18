@@ -13,11 +13,13 @@ package com.widget.http.apache;
 import org.apache.http.HttpEntity;
 import org.apache.http.client.methods.CloseableHttpResponse;
 import org.apache.http.client.methods.HttpPost;
+import org.apache.http.entity.ContentType;
 import org.apache.http.entity.mime.HttpMultipartMode;
 import org.apache.http.entity.mime.MultipartEntityBuilder;
 import org.apache.http.impl.client.CloseableHttpClient;
 import org.apache.http.impl.client.HttpClients;
 import org.apache.http.message.BasicHeader;
+import org.junit.Test;
 
 import java.io.File;
 import java.io.FileInputStream;
@@ -34,19 +36,16 @@ import java.nio.charset.Charset;
  */
 public class Demo {
 
-    public static void main(String[] args) throws IOException {
-        test();
-    }
-
     //seaweedFS 测试
+    @Test
     public static void test() throws IOException {
         CloseableHttpClient httpClient = HttpClients.createDefault();
-        HttpPost httpPost = new HttpPost("http://weedfs-filer.zenki.cn/feiyitest/131");
+        HttpPost httpPost = new HttpPost("http://weedfs-filer.zenki.cn/dataplus/spider_conf_example");
         httpPost.setHeader(new BasicHeader("Accept-Language", "zh-cn"));
         HttpEntity reqEntity = MultipartEntityBuilder.create()
                 .setCharset(Charset.forName("UTF-8"))
                 .setMode(HttpMultipartMode.BROWSER_COMPATIBLE)
-                .addBinaryBody("132", new FileInputStream(new File("/Users/feiyi/Desktop/sida2.png")))
+                .addBinaryBody("spider_conf_example.json", new FileInputStream(new File("/Users/feiyi/Desktop/spider_conf_example.json")), ContentType.MULTIPART_FORM_DATA, "spider_conf_example.json")
                 .build();
 
         // 发起请求并返回请求的响应

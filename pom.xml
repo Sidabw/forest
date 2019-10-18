@@ -278,23 +278,58 @@
 			<artifactId>spring-kafka</artifactId>
 		</dependency>
 		<!-- elasticsearch -->
-		<dependency>
-			<groupId>org.elasticsearch.client</groupId>
-			<artifactId>transport</artifactId>
-			<version>6.4.3</version>
-		</dependency>
-		<dependency>
-			<groupId>org.elasticsearch</groupId>
-			<artifactId>elasticsearch</artifactId>
-			<version>6.4.3</version>
-			<!--<scope>compile</scope>-->
-		</dependency>
-		<dependency>
-			<groupId>org.elasticsearch.plugin</groupId>
-			<artifactId>transport-netty4-client</artifactId>
-			<version>6.4.3</version>
-		</dependency>
 
+        <!-- 6.4.3版本依赖 start -->
+		<!--<dependency>-->
+			<!--<groupId>org.elasticsearch.client</groupId>-->
+			<!--<artifactId>transport</artifactId>-->
+			<!--<version>6.4.3</version>-->
+		<!--</dependency>-->
+		<!--<dependency>-->
+			<!--<groupId>org.elasticsearch</groupId>-->
+			<!--<artifactId>elasticsearch</artifactId>-->
+			<!--<version>6.4.3</version>-->
+			<!--&lt;!&ndash;<scope>compile</scope>&ndash;&gt;-->
+		<!--</dependency>-->
+		<!--<dependency>-->
+			<!--<groupId>org.elasticsearch.plugin</groupId>-->
+			<!--<artifactId>transport-netty4-client</artifactId>-->
+			<!--<version>6.4.3</version>-->
+		<!--</dependency>-->
+        <!-- 6.4.3版本依赖 end -->
+
+        <!-- 7.4.0版本依赖 start -->
+        <dependency>
+            <groupId>org.elasticsearch.client</groupId>
+            <artifactId>elasticsearch-rest-high-level-client</artifactId>
+            <version>7.4.0</version>
+        </dependency>
+        <dependency>
+            <groupId>org.elasticsearch.client</groupId>
+            <artifactId>elasticsearch-rest-client</artifactId>
+            <version>7.4.0</version>
+        </dependency>
+        <dependency>
+            <groupId>org.elasticsearch</groupId>
+            <artifactId>elasticsearch</artifactId>
+            <version>7.4.0</version>
+        </dependency>
+        <!-- 此依赖并非REST client 需要 -->
+        <dependency>
+            <groupId>org.elasticsearch.plugin</groupId>
+            <artifactId>transport-netty4-client</artifactId>
+            <version>7.4.0</version>
+        </dependency>
+        <!-- 此依赖并非REST client 需要 -->
+        <dependency>
+            <groupId>org.elasticsearch.client</groupId>
+            <artifactId>transport</artifactId>
+            <version>7.4.0</version>
+        </dependency>
+        <!-- 7.4.0版本依赖 end -->
+
+
+        <!-- 7.4.0版本依赖 end -->
 		<!--汉子转拼音-->
 		<dependency>
 			<groupId>com.belerweb</groupId>
@@ -361,9 +396,8 @@
         <dependency>
             <groupId>net.sourceforge.cpdetector</groupId>
             <artifactId>cpdetector</artifactId>
-            <version>1.0.7</version>
+            <version>1.0.6</version>
         </dependency>
-
 
     </dependencies>
 	<build>

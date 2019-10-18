@@ -8,10 +8,10 @@
  * <author>          <time>          <version>          <desc>
  * 作者姓名           修改时间           版本号              描述
  */
-package com.Java.callback.callbackdemo.domain;
+package com.Java.designMode.callback.callbackdemo.domain;
 
-import com.Java.callback.callbackdemo.student.StudentSida;
-import com.Java.callback.callbackdemo.teacher.TeacherBrew;
+import com.Java.designMode.callback.callbackdemo.student.StudentSida;
+import com.Java.designMode.callback.callbackdemo.teacher.TeacherBrew;
 import org.junit.Test;
 
 /**

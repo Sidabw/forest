@@ -1,24 +1,24 @@
 /**
  * Copyright (C), 2018-2019, zenki.ai
- * FileName: ITeacherCallback
+ * FileName: 等额本金
  * Author:   feiyi
- * Date:     2019/4/30 2:23 PM
+ * Date:     2019/10/17 5:22 PM
  * Description:
  * History:
  * <author>          <time>          <version>          <desc>
  * 作者姓名           修改时间           版本号              描述
  */
-package com.Java.callback.callbackdemo.teacher;
+package com.widget.home;
 
 /**
- * 〈一句话功能简述〉: 
+ * 〈一句话功能简述〉:
  * 〈〉
  *
  * @author feiyi
- * @create 2019/4/30
+ * @create 2019/10/17
  * @since 1.0.0
  */
-public interface ITeacherCallback {
+public class 等额本金 {
 
-    void tellAnswer(Object answer);
+
 }

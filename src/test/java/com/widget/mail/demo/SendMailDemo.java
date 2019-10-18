@@ -24,11 +24,11 @@ public class SendMailDemo {
 
     public static void main(String[] args) throws Exception {
         //1.发送简单纯文本邮件
-        //sendTextMail();
+        sendTextMail();
         //2.发送文本+图片的邮件
         //sendImageMail();
         //3.发送文本+图片+附件的邮件+html文本(font 标签)
-        sendMixedMail();
+//        sendMixedMail();
     }
     public static void sendTextMail()  throws Exception {
         Properties prop = new Properties();
@@ -199,7 +199,8 @@ public class SendMailDemo {
     public static String getPasswordFromDB(String user) throws Exception {
         String URL="jdbc:mysql://127.0.0.1:3306/ego?useUnicode=true&amp;characterEncoding=utf-8";
         String USER="root";
-        String PASSWORD="123456";
+        String PASSWORD="root";
+//        String PASSWORD="123456";
         //1.加载驱动程序
         Class.forName("com.mysql.jdbc.Driver");
         //2.获得数据库链接

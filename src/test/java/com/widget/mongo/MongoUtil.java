@@ -10,15 +10,13 @@
  */
 package com.widget.mongo;
 
+import com.Java.basic.extendstest.test190723.B;
 import com.alibaba.fastjson.JSONArray;
 import com.alibaba.fastjson.JSONObject;
 import com.mongodb.MongoClient;
 import com.mongodb.MongoCredential;
 import com.mongodb.ServerAddress;
-import com.mongodb.client.FindIterable;
-import com.mongodb.client.MongoCollection;
-import com.mongodb.client.MongoCursor;
-import com.mongodb.client.MongoDatabase;
+import com.mongodb.client.*;
 import com.mongodb.client.model.Filters;
 import com.mongodb.client.result.DeleteResult;
 import org.bson.Document;
@@ -31,6 +29,7 @@ import org.bson.types.ObjectId;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
+import java.util.regex.Pattern;
 
 /**
  * 〈一句话功能简述〉:
@@ -148,5 +147,54 @@ public class MongoUtil {
         }
         long count = mongoCollection.count();
         System.out.println(String.format("共有%s条记录", count));
+    }
+
+    //模糊匹配
+    public static void findFuzzy (MongoCollection<Document> mongoCollection) {
+        Pattern pattern = Pattern.compile("^.*替换.*$", Pattern.CASE_INSENSITIVE);
+        Bson name = Filters.regex("name", pattern);
+        FindIterable<Document> documents = mongoCollection.find(name);
+        MongoCursor<Document> iterator = documents.iterator();
+        while (iterator.hasNext()) {
+            Document next = iterator.next();
+            System.out.println(next.toJson());
+        }
+    }
+
+    public static void aggs(MongoCollection<Document> mongoCollection) {
+//        String str = "[      \n" +
+//                "          {\"$project\": {\n" +
+//                "                 \"_id\":0,\n" +
+//                "                 \"item\":1,        \n" +
+//                "                 \"sizeOfColors\": {\"$size\": \"$content\"}         \n" +
+//                "                 }\n" +
+//                "           },\n" +
+//                "            { $group : { \"_id\": \"$_id\", num_tutorial : {$sum : \"$sizeOfColors\"}}}\n" +
+//                "]";
+//        JSONArray array = JSONArray.parseArray(str);
+        ArrayList<Bson> bsons = new ArrayList<>();
+//        for (Object o : array) {
+//            Bson parse = Document.parse(o.toString());
+//            bsons.add(parse);
+//        }
+        String s1 = " {\"$project\": {\n" +
+                "                 \"_id\":0,\n" +
+                "                 \"item\":1,        \n" +
+                "                 \"sizeOfColors\": {\"$size\": \"$content\"}         \n" +
+                "                 }\n" +
+                "           }";
+        String s2 = "{ \"$group\" : { \"_id\": \"$_id\", \"num_tutorial\" : {\"$sum\" : \"$sizeOfColors\"} }}  ";
+
+
+        JSONObject j1 = JSONObject.parseObject(s1);
+        JSONObject j2 = JSONObject.parseObject(s2);
+        bsons.add(Document.parse(j1.toJSONString()));
+        bsons.add(Document.parse(j2.toJSONString()));
+
+        AggregateIterable<Document> aggregate = mongoCollection.aggregate(bsons);
+        MongoCursor<Document> iterator = aggregate.iterator();
+        while (iterator.hasNext()) {
+            System.out.println(JSONObject.toJSONString(iterator.next()));
+        }
     }
 }

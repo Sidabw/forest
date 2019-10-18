@@ -8,9 +8,9 @@
  * <author>          <time>          <version>          <desc>
  * 作者姓名           修改时间           版本号              描述
  */
-package com.Java.callback.callbackdemo.teacher;
+package com.Java.designMode.callback.callbackdemo.teacher;
 
-import com.Java.callback.callbackdemo.student.IStudent;
+import com.Java.designMode.callback.callbackdemo.student.IStudent;
 
 /**
  * 〈一句话功能简述〉:
