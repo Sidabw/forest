@@ -51,7 +51,8 @@ public class JwtUtil {
         byte[] apiKeySecretBytes = DatatypeConverter.parseBase64Binary(SALT);
         Key signingKey = new SecretKeySpec(apiKeySecretBytes, signatureAlgorithm.getJcaName());
 
-        JwtBuilder builder = Jwts.builder().setId(id)
+        JwtBuilder builder = Jwts.builder()
+                .setId(id)
                 .setIssuedAt(now)
                 .setSubject(subject)
                 .setIssuer(ISS)
@@ -84,7 +85,14 @@ public class JwtUtil {
 //    }
 
     public static String createSingleUserJwt() {
-        Long time = new Date().getTime();
-        return createJWT(time.toString(), time.toString());
+        JSONObject jsonObject = new JSONObject();
+        jsonObject.put("name" , "sida");
+        jsonObject.put("hus", "brew");
+        return createJWT("12", jsonObject.toJSONString());
     }
+
+    public static void main(String[] args) {
+        System.out.println(createSingleUserJwt());
+    }
+
 }

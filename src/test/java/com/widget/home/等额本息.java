@@ -22,7 +22,10 @@ package com.widget.home;
  */
 public class 等额本息 {
 
+    //按月结息，按月还本，等额本息
     public static void main(String[] args) {
-        System.out.println(1);
+        int loanAmount = 51000;    //贷款金额
+        int loanPeriod = 10; //贷款时间
+
     }
 }

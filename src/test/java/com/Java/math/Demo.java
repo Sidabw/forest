@@ -27,7 +27,7 @@ import java.util.List;
  */
 public class Demo {
 
-    public static void main(String[] args){
+    public static void main(String[] args) {
         //创建BigDecimal的两种推荐方式
         BigDecimal decimal1 = new BigDecimal("0.1");
         BigDecimal decimal2 = BigDecimal.valueOf(0.2);
@@ -47,16 +47,6 @@ public class Demo {
 
 //        BigInteger bigInteger = new BigInteger("{");
 //        System.out.println(bigInteger);
-    }
-
-
-    @Test
-    public void test() {
-        List list = new ArrayList<>();
-        list.forEach(e -> {
-            System.out.println(e.toString());
-        });
-        System.out.println(false & true);
     }
 
 }

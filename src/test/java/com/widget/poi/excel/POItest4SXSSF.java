@@ -67,7 +67,5 @@ public class POItest4SXSSF {
 										true);
 		BufferedImage createBufferedImage = chart.createBufferedImage(1000, 500);
 		ImageIO.write(createBufferedImage, "png", new FileOutputStream("11.png"));
-		
-				
 	}
 }
