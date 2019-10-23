@@ -27,4 +27,10 @@ public class Demo {
     public void test1(){
 
     }
+
+    //归并
+    @Test
+    public void test2(){
+
+    }
 }
