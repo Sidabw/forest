@@ -1,8 +1,10 @@
 package com.Java.streamAndAll.sysLearning.lambda;
 
+import com.alibaba.fastjson.JSONObject;
 import org.junit.Test;
 
 import java.util.Arrays;
+import java.util.HashSet;
 import java.util.List;
 import java.util.stream.Collectors;
 import java.util.stream.IntStream;
@@ -74,6 +76,24 @@ public class Demo {
 
     @Test
     public void test() {
+//        HashSet<String> set1 = new HashSet<>();
+//        HashSet<String> set2 = new HashSet<>();
+//        set1.add("aa");
+//        set1.add("bb");
+//        set2.add("aa");
+//        set2.add("bb");
+//        set1.addAll(set2);
+//        System.out.println(set1.size());
+
+        JSONObject j1 = new JSONObject();
+        j1.put("a", "aa");
+        j1.put("b", "bb");
+        Object clone = j1.clone();
+        if (clone instanceof JSONObject) {
+            JSONObject cloneJson = (JSONObject)clone;
+            cloneJson.put("a", "ab");
+            System.out.println(j1.getString("a"));
+        }
 
     }
 

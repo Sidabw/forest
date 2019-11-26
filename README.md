@@ -6,8 +6,8 @@
 *   目前不知道如何跳转到error.jsp，可以跳到error.html
 *   日期处理，DateConverterConfig
 *   加入swagger
-*   **phantomjs**   http://blinkfox.com/shi-yong-javadiao-yong-phantomjsdong-tai-dao-chu-echartstu-pian-dao-wordwen-jian-zhong/
-https://blog.csdn.net/tengdazhang770960436/article/details/41348035
+*   **phantomjs**   [参考1](http://blinkfox.com/shi-yong-javadiao-yong-phantomjsdong-tai-dao-chu-echartstu-pian-dao-wordwen-jian-zhong/)
+[参考2](https://blog.csdn.net/tengdazhang770960436/article/details/41348035)
 *	springboot 结合 mybatis 报错，多半是xml 不在target目录下，可以加入mybatis.mapperLocations配置，扫描resource下的.xml文件
 *	aop环绕通知，切面处理。详细见config/aop包下readme
 *   quartz，详细见com.beta.scheduler.quartz.README.md

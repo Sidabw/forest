@@ -10,12 +10,16 @@
  */
 package com.Java;
 
+import com.alibaba.fastjson.JSONObject;
 import org.junit.Test;
 
 import java.math.BigDecimal;
 import java.math.RoundingMode;
 import java.text.DecimalFormat;
+import java.util.Collections;
+import java.util.HashMap;
 import java.util.LinkedHashMap;
+import java.util.Map;
 
 /**
  * 〈一句话功能简述〉:
@@ -92,6 +96,21 @@ public class JavaTest {
 
     @Test
     public void test5(){
-
+        HashMap<String, Object> map = new HashMap<>();
+        System.out.println(map.getOrDefault("aa", "asdfsdf"));
+        Runtime runtime = Runtime.getRuntime();
+        System.out.println(runtime.availableProcessors());
+        map.put("a", "b");
+        map.put("b", "c");
+        JSONObject jsonObject = new JSONObject(map);
+        System.out.println(jsonObject.getString("a"));
+        jsonObject.remove("a");
+        System.out.println(map.get("a"));
+        Map<String, String> map2 = Collections.singletonMap("a", "v");
+        map.put("c",map2);
+        System.out.println(jsonObject.getJSONObject("c") == jsonObject.getJSONObject("c"));
+//        System.out.println(jsonObject.getJSONObject("c").get("a"));
+//        jsonObject.getJSONObject("c").put("a", "aaa");
+//        System.out.println(map2.get("a"));
     }
 }

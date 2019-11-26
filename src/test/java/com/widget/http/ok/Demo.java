@@ -21,6 +21,7 @@ import java.io.FileInputStream;
 import java.io.IOException;
 import java.io.InputStream;
 import java.util.ArrayList;
+import java.util.Date;
 import java.util.concurrent.TimeUnit;
 
 /**
@@ -199,6 +200,23 @@ public class Demo {
                 logger.info("response body --> {}",response.body().string());
             }
         });
+    }
+
+    @Test
+    public void test() throws IOException {
+
+        OkHttpClient client = new OkHttpClient();
+        Request request = new Request.Builder()
+                .header("Cookie","UM_distinctid=16d7c40ff5e769-011fea921754e6-38607501-1aeaa0-16d7c40ff5f4ad; zenki.ops=MTU3MzY5Njk5OXxEdi1CQkFFQ180SUFBUXdCRUFBQWN2LUNBQUVGZEc5clpXNEdjM1J5YVc1bkRGOEFYWHNpWjJsMlpXNU9ZVzFsSWpvaTZJS2w2WUdYSWl3aWN5STZJbU00TVRsaFlUUTNOelpqT1RJeU56QTNaakEzWTJVd1l6ZGlZbUU1TURaaUlpd2lkR2x0WlNJNk1UVTNNelk1TmprNU9Td2lkV2xrSWpvaVptVnBlV2tpZlE9PXzGfznVis3g7pNtMi9QlhPUK8_6r5k6YRfzf1O9TYIeyg==; zenki.act=MTU3MzcwMjQ1NnxEdi1CQkFFQ180SUFBUXdCRUFBQV83WF9nZ0FCQlhSdmEyVnVCbk4wY21sdVp3el9vUURfbm5zaWFXUWlPamN6TkRVc0luQm9iMjVsYm5WdFltVnlJam9pTVRjMk1UQXhOekEyTWpJaUxDSnpJam9pTjJOak5UTmlZV1l6TWpSa09UaGlNelEzTlRRNU1UZzBZak14TVRWaFl6TWlMQ0owYVcxbElqb3hOVGN6TnpBeU5EVTJMQ0oxYVdRaU9pSTRNRFkzTVRFeFptVm1OamxpTnpReVkyVTVObUpsWTJJeVpUa3lNR05rWWlJc0luVnpaWEp1WVcxbElqb2lXRlZKVjBsTFVpSjl8v4RunzfXwPvlm_o5cq5-YAUu5It7Wd5oFCkDUuvBigE=")
+                .url("http://localhost:8020/dp/api/v1/pmc/proceed/test").build();
+        Response response = client.newCall(request).execute();
+        System.out.println(response.body().contentType());
+        System.out.println(response.header("Content-Disposition"));
+//        ResponseBody body = response.body();
+//        InputStream inputStream = body.byteStream();
+//        System.out.println(inputStream.available());
+//        System.out.println(inputStream.read());
+//        System.out.println(response.body().string());
     }
 
 
