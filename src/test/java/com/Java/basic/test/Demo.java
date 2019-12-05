@@ -1,7 +1,19 @@
 package com.Java.basic.test;
 
+import com.alibaba.fastjson.JSONObject;
+import com.mongodb.MongoClient;
+import com.mongodb.client.FindIterable;
+import com.mongodb.client.MongoCollection;
+import com.mongodb.client.MongoDatabase;
+import com.mongodb.client.model.Filters;
+import com.widget.mongo.MongoUtil;
+import org.bson.Document;
+import org.bson.json.JsonMode;
+import org.bson.json.JsonWriterSettings;
+import org.bson.json.StrictJsonWriter;
 import org.junit.Test;
 
+import java.io.*;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
@@ -104,5 +116,51 @@ public class Demo {
     public void assertTest(){
         //断言之所以本地测试会被启动是因为启动参数上加上了-ea ，即-enableassert
         assert(true);
+    }
+
+    @Test
+    public void test2() throws IOException {
+        InputStreamReader inputStreamReader = new InputStreamReader(new FileInputStream("/Users/feiyi/Desktop/1.txt"));
+        BufferedReader bufferedReader = new BufferedReader(inputStreamReader);
+        String res = "";
+        String line ;
+        while ((line = bufferedReader.readLine()) != null) {
+            res +=line;
+        }
+        bufferedReader.close();
+
+        System.out.println(res);
+        JSONObject jsonObject = JSONObject.parseObject(res);
+        System.out.println(jsonObject.getJSONObject("a").getJSONObject("b").getJSONObject("c").get("data"));
+    }
+
+    @Test
+    public void test3(){
+        MongoClient mongoClient = MongoUtil.getMongoClient();
+        MongoDatabase demo = mongoClient.getDatabase("demo");
+        MongoCollection<Document> col = demo.getCollection("demo1");
+        FindIterable<Document> id = col.find(Filters.eq("_id", "1"));
+        Document next = id.iterator().next();
+        String s = next.toJson();
+        System.out.println(s);
+
+
+        JsonWriterSettings build = JsonWriterSettings.builder()
+                .outputMode(JsonMode.EXTENDED)
+                .doubleConverter((Double value, StrictJsonWriter writer) -> writer.writeNumber(Double.toString(value)))
+                .int64Converter((Long value, StrictJsonWriter writer) -> {
+                    if (value > 9007199254740992L)
+                        writer.writeString(Long.toString(value));
+                    else
+                        writer.writeNumber(Long.toString(value));
+                })
+                .int32Converter((Integer value, StrictJsonWriter writer) -> writer.writeNumber(Integer.toString(value)))
+                .build();
+//            JsonWriterSettings build1 = JsonWriterSettings.builder().outputMode(JsonMode.STRICT).build();
+        String jsonStr = next.toJson(build);
+        System.out.println(jsonStr);
+
+
+
     }
 }

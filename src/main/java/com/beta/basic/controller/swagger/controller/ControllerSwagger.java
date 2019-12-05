@@ -1,4 +1,4 @@
-package com.beta.basic.controller.controller;
+package com.beta.basic.controller.swagger.controller;
 
 import com.alibaba.fastjson.JSONArray;
 import com.beta.basic.controller.ClassOut;

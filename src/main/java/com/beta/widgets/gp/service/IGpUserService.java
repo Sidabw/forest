@@ -12,6 +12,9 @@ package com.beta.widgets.gp.service;
 
 import org.springframework.stereotype.Service;
 
+import java.io.IOException;
+import java.io.InputStream;
+
 /**
  * 〈一句话功能简述〉: 
  * 〈〉
@@ -23,6 +26,6 @@ import org.springframework.stereotype.Service;
 @Service
 public interface IGpUserService {
     boolean login(String username, String passwrod);
-
     boolean regist(String username, String password, String realname, String groupCode);
+
 }

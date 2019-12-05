@@ -6,6 +6,7 @@ import java.util.*;
 
 import javax.servlet.ServletInputStream;
 import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
 
 import org.apache.commons.codec.digest.DigestUtils;
 import org.apache.http.HttpEntity;
@@ -43,6 +44,8 @@ public class ControllerMy {
 	
 	@Autowired
 	private AsyncTest asyncTest;
+
+
 	
 	@RequestMapping(value="/asynctest",method=RequestMethod.GET)
 	@ResponseBody
@@ -82,6 +85,17 @@ public class ControllerMy {
         }
         return map;
 	}
+
+    @RequestMapping(value="/logintest2")
+    @ResponseBody
+    public Map<String,?> loginTest2(String username, String password, String _csrf,
+                                    HttpServletRequest request, HttpServletResponse response){
+        logger.error("loginTest...ERROR...LEVEL...Test");
+        Map<String,Object> map =new HashMap<>();
+        map.put("result","1");
+        response.setStatus(401);
+        return map;
+    }
 
 	@RequestMapping(value = "/logout", method = RequestMethod.POST)
     @ResponseBody
@@ -170,6 +184,22 @@ public class ControllerMy {
     public Object getTest2(HttpServletRequest request){
         System.out.println(22);
         return "aaa22";
+    }
+
+    //在mysql中使用blob存储二进制图片数据
+    @RequestMapping(value = "/binaryImageDbStorage", method = RequestMethod.POST)
+    @ResponseBody
+    public boolean binaryImageDbStorage(MultipartFile multipartFile) throws IOException {
+        String filename = multipartFile.getOriginalFilename();
+        InputStream fileInputStream = multipartFile.getInputStream();
+        return userService.binaryImageDbStorage(filename, fileInputStream);
+    }
+
+    //在mysql中使用blob存储二进制图片数据
+    @RequestMapping(value = "/binaryImageDbRead", method = RequestMethod.GET)
+    @ResponseBody
+    public boolean binaryImageDbRead(String id) {
+        return userService.binaryImageDbRead(id);
     }
 
 

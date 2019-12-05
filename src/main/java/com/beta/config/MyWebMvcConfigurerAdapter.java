@@ -80,16 +80,16 @@ public class MyWebMvcConfigurerAdapter extends WebMvcConfigurerAdapter{
     public void configureDefaultServletHandling(DefaultServletHandlerConfigurer configurer) {
         configurer.enable();
     }*/
-
-    /**
-    * 拦截器
-    * @param registry
-    */
+//
+//    /**
+//    * 拦截器
+//    * @param registry
+//    */
 //   @Override
 //    public void addInterceptors(InterceptorRegistry registry) {
-        // addPathPatterns 用于添加拦截规则,/**拦截所有请求，但是对于the request added resource handler，不拦截；
-    	//								/ 拦截除了静态资源外的所有请求；
-        // excludePathPatterns 用户排除拦截String... 接受String类型的可变参数
+//         addPathPatterns 用于添加拦截规则,/**拦截所有请求，但是对于the request added resource handler，不拦截；*/
+////    									/ 拦截除了静态资源外的所有请求；
+////         excludePathPatterns 用户排除拦截String... 接受String类型的可变参数
 //        registry.addInterceptor(new MyInterceptor()).addPathPatterns("/**").excludePathPatterns("/toLogin","/login","/beauty1","/","/user/asynctest","/echarts");
 //        registry.addInterceptor(new Interceptor()).addPathPatterns("/**").excludePathPatterns("/toLogin","/login","/beauty1","/","/user/asynctest","/echarts");
 //        super.addInterceptors(registry);

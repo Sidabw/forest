@@ -1,5 +1,7 @@
 package com.beta.basic.service;
 
+import java.io.IOException;
+import java.io.InputStream;
 import java.util.List;
 
 import com.beta.basic.mybatis.mapper.TbUser;
@@ -7,4 +9,7 @@ import com.beta.basic.mybatis.mapper.TbUser;
 
 public interface IUserService {
 	public List<TbUser> queryList();
+    boolean binaryImageDbStorage(String filename, InputStream fileInputStream) throws IOException;
+
+    boolean binaryImageDbRead(String id);
 }

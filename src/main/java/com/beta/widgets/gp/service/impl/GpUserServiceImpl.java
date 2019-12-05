@@ -10,9 +10,7 @@
  */
 package com.beta.widgets.gp.service.impl;
 
-import com.beta.widgets.gp.dao.GpUser;
-import com.beta.widgets.gp.dao.GpUserExample;
-import com.beta.widgets.gp.dao.GpUserMapper;
+import com.beta.widgets.gp.dao.*;
 import com.beta.widgets.gp.service.IGpUserService;
 import org.apache.commons.codec.digest.DigestUtils;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -20,6 +18,8 @@ import org.springframework.stereotype.Service;
 import org.springframework.util.CollectionUtils;
 
 import javax.annotation.Resource;
+import java.io.IOException;
+import java.io.InputStream;
 import java.util.List;
 
 /**
@@ -35,6 +35,7 @@ public class GpUserServiceImpl implements IGpUserService {
 
     @Autowired
     private GpUserMapper userMapper;
+
 
     @Override
     public boolean login(String username, String password) {
@@ -56,4 +57,6 @@ public class GpUserServiceImpl implements IGpUserService {
         int insert = userMapper.insert(gpUser);
         return insert == 1 ? true : false;
     }
+
+
 }
