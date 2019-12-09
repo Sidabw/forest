@@ -45,29 +45,9 @@ public class Application extends SpringBootServletInitializer {
 	@RequestMapping("/")
 	@ResponseBody
 	public String greeting(){
-//        registMapping();
-		//spring security 相关
-		/*UserDetails userDetails = (UserDetails) SecurityContextHolder.getContext()
-				.getAuthentication()
-				.getPrincipal();
-		System.out.println("到/ 这里来了" + userDetails.getUsername());
-		System.out.println(userDetails.getAuthorities());*/
 
 		return "Hello SpringBoot"+"------2";
 	}
-
-    @RequestMapping(value = "/methodTest", method = RequestMethod.GET)
-    @ResponseBody
-    public String greeting2(){
-        //spring security 相关
-		/*UserDetails userDetails = (UserDetails) SecurityContextHolder.getContext()
-				.getAuthentication()
-				.getPrincipal();
-		System.out.println("到/ 这里来了" + userDetails.getUsername());
-		System.out.println(userDetails.getAuthorities());*/
-        System.out.println(1);
-        return "hi";
-    }
 
 	public static void main(String[] args){
 		SpringApplication.run(Application.class, args);
@@ -77,34 +57,5 @@ public class Application extends SpringBootServletInitializer {
 
 		return application.sources(Application.class);
 	}
-	private void registMapping(){
-	    try {
-            RequestMappingHandlerMapping requestMappingHandlerMapping = applicationContext.getBean(RequestMappingHandlerMapping.class);
-            Method getMappingForMethod =ReflectionUtils.findMethod(RequestMappingHandlerMapping.class, "getMappingForMethod",Method.class,Class.class);
-            getMappingForMethod.setAccessible(true);
 
-//            String javaPath = "/Users/feiyi/Desktop/Demo2.java";
-//            String classPath = "Users.feiyi.Desktop.Demo2.class";
-//            JavaCompiler systemJavaCompiler = ToolProvider.getSystemJavaCompiler();
-//            systemJavaCompiler.run(null, null, null , javaPath);
-            MyClassloader myClassloader = new MyClassloader();
-            Class<?> demo2Class = myClassloader.findClass("Demo2");
-            Object demo2Obj = demo2Class.newInstance();
-            Method dyReqTest = demo2Class.getMethod("dyReqTest");
-            RequestMappingInfo mapping_info = (RequestMappingInfo) getMappingForMethod.invoke(requestMappingHandlerMapping, dyReqTest,demo2Class);
-            requestMappingHandlerMapping.registerMapping(mapping_info, demo2Obj, dyReqTest);
-            System.out.println(1);
-        } catch (Exception e) {
-	        e.printStackTrace();
-        }
-        System.out.println(0);
-    }
-
-//    @Bean
-//    MultipartConfigElement multipartConfigElement() {
-//        MultipartConfigFactory factory = new MultipartConfigFactory();
-//        factory.setLocation("/Users/feiyi/Desktop/tmptest2");
-//        System.out.println(2);
-//        return factory.createMultipartConfig();
-//    }
 }

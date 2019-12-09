@@ -46,7 +46,7 @@ public class GraduationProjectController {
 
 //    @Qualifier("gpUserService")
     @Autowired
-    private IGpUserService gpUserService;
+    private IGpUserService gpUserServiceImpl;
 
     /**
      * 生成图片验证码
@@ -119,12 +119,12 @@ public class GraduationProjectController {
 
     @RequestMapping(value = "/user/regist", method = RequestMethod.POST)
     public boolean regist(String username, String password, String realname, String groupCode){
-        return gpUserService.regist(username, password, realname, groupCode);
+        return gpUserServiceImpl.regist(username, password, realname, groupCode);
     }
 
     @RequestMapping(value = "/user/login", method = RequestMethod.POST)
     public boolean login(String username, String password){
-        return gpUserService.login(username, password);
+        return gpUserServiceImpl.login(username, password);
     }
 
 

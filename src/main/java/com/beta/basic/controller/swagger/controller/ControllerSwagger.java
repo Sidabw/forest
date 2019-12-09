@@ -1,7 +1,6 @@
 package com.beta.basic.controller.swagger.controller;
 
 import com.alibaba.fastjson.JSONArray;
-import com.beta.basic.controller.ClassOut;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiImplicitParam;
 import io.swagger.annotations.ApiImplicitParams;
@@ -16,6 +15,7 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
 
 import javax.servlet.http.HttpServletResponse;
+import java.util.List;
 
 @RestController
 @RequestMapping("/userSwagger")
@@ -50,7 +50,68 @@ public class ControllerSwagger {
         return "aa";
     }
 
+}
+class ClassIn {
 
-	  
-	  
+    private String manageId;
+
+    private String manageName;
+
+    private String aId;
+
+    public String getManageId() {
+        return manageId;
+    }
+
+    public void setManageId(String manageId) {
+        this.manageId = manageId;
+    }
+
+    public String getManageName() {
+        return manageName;
+    }
+
+    public void setManageName(String manageName) {
+        this.manageName = manageName;
+    }
+
+    public String getaId() {
+        return aId;
+    }
+
+    public void setaId(String aId) {
+        this.aId = aId;
+    }
+}
+class ClassOut {
+
+    private String platId;
+
+    private String type;
+
+    private List<ClassIn> list;
+
+    public String getPlatId() {
+        return platId;
+    }
+
+    public void setPlatId(String platId) {
+        this.platId = platId;
+    }
+
+    public String getType() {
+        return type;
+    }
+
+    public void setType(String type) {
+        this.type = type;
+    }
+
+    public List<ClassIn> getList() {
+        return list;
+    }
+
+    public void setList(List<ClassIn> list) {
+        this.list = list;
+    }
 }

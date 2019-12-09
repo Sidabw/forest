@@ -23,7 +23,7 @@ import java.io.InputStream;
  * @create 2019/5/23
  * @since 1.0.0
  */
-@Service
+
 public interface IGpUserService {
     boolean login(String username, String passwrod);
     boolean regist(String username, String password, String realname, String groupCode);

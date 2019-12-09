@@ -30,7 +30,7 @@ import java.util.List;
  * @create 2019/5/23
  * @since 1.0.0
  */
-//@Resource(name = "gpUserService")
+@Service
 public class GpUserServiceImpl implements IGpUserService {
 
     @Autowired

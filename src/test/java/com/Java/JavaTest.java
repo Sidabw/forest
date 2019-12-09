@@ -34,30 +34,6 @@ public class JavaTest {
 
 
     @Test
-    public void test3(){
-//        double rd = Math.random();
-//        System.out.println(rd);
-//        String rdStr = String.format("%." + (3 - 1) + "f", rd).replace("0.", "") + (int)(Math.random() * 10.0D) % 10;
-//        System.out.println(rdStr);
-//        System.out.println("---");
-//        System.out.println(String.format("%.2f", 0.444));
-        JavaTest javaTest = new JavaTest();
-        while (true){
-            String result = javaTest.randomTest(3);
-            if (result.contains("\\.")) {
-                System.out.println(result);
-                break;
-            }
-        }
-    }
-
-    public String randomTest(int digit){
-        double rd = Math.random();
-        String rdStr = String.format("%." + (digit - 1) + "f", rd).replace("0.", "") + (int)(Math.random() * 10.0D) % 10;
-        return rdStr;
-    }
-
-    @Test
     public void test5(){
         HashMap<String, Object> map = new HashMap<>();
         System.out.println(map.getOrDefault("aa", "asdfsdf"));
