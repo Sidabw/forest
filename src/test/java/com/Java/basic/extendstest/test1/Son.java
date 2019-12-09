@@ -8,7 +8,7 @@
  * <author>          <time>          <version>          <desc>
  * 作者姓名           修改时间           版本号              描述
  */
-package com.Java.basic.extendstest;
+package com.Java.basic.extendstest.test1;
 
 /**
  * 〈一句话功能简述〉:
@@ -20,10 +20,22 @@ package com.Java.basic.extendstest;
  */
 public class Son extends Parent {
 
-    private String testt = "1";
+    private static String a;
 
+    static {
+        a = "子类静态成员变量，被子类静态代码块赋值";
+        System.out.println(a);
+    }
+
+    private String b;
+
+    {
+        b = "子类非静态成员变量，被子类非静态代码块赋值";
+        System.out.println(b);
+
+    }
     Son(){
-        System.out.println(testt);
+        System.out.println("子类构造函数");
     }
     private Integer age;
 

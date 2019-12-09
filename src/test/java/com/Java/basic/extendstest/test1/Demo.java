@@ -1,22 +1,26 @@
 /**
  * Copyright (C), 2018-2019, zenki.ai
- * FileName: Test
+ * FileName: Demo
  * Author:   feiyi
- * Date:     2019/1/2 下午2:25
+ * Date:     2019/4/9 7:45 PM
  * Description:
  * History:
  * <author>          <time>          <version>          <desc>
  * 作者姓名           修改时间           版本号              描述
  */
-package com.Java.designMode;
+package com.Java.basic.extendstest.test1;
 
 /**
  * 〈一句话功能简述〉:
  * 〈〉
  *
  * @author feiyi
- * @create 2019/1/2
+ * @create 2019/4/9
  * @since 1.0.0
  */
-public class Test {
+public class Demo {
+
+    public static void main(String[] args){
+        new Son();
+    }
 }

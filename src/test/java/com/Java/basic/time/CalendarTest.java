@@ -1,5 +1,5 @@
 
-package com.Java;
+package com.Java.basic.time;
 
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
@@ -8,7 +8,7 @@ import java.util.Date;
 import java.util.List;
 import java.util.stream.Collectors;
 
-public class TimeHandle {
+public class CalendarTest {
 	public static void main(String[] args) throws ParseException {
 		/*Calendar calendar = Calendar.getInstance();
 		String format = new SimpleDateFormat("yyyyMMddHHmmss").format(calendar.getTime());

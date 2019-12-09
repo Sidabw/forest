@@ -10,8 +10,6 @@
  */
 package com.widget.mongo;
 
-import com.Java.basic.extendstest.test190723.B;
-import com.alibaba.fastjson.JSONArray;
 import com.alibaba.fastjson.JSONObject;
 import com.mongodb.MongoClient;
 import com.mongodb.MongoCredential;
@@ -135,7 +133,12 @@ public class MongoUtil {
             JsonWriterSettings build = JsonWriterSettings.builder()
                     .outputMode(JsonMode.EXTENDED)
                     .doubleConverter((Double value, StrictJsonWriter writer) -> writer.writeString(Double.toString(value)))
-                    .int64Converter((Long value, StrictJsonWriter writer) -> writer.writeString(Long.toString(value)))
+                    .int64Converter((Long value, StrictJsonWriter writer) -> {
+                        if (value > 9007199254740992L)
+                            writer.writeString(Long.toString(value));
+                        else
+                            writer.writeNumber(Long.toString(value));
+                    })
                     .int32Converter((Integer value, StrictJsonWriter writer) -> writer.writeNumber(Integer.toString(value)))
                     .build();
 //            JsonWriterSettings build1 = JsonWriterSettings.builder().outputMode(JsonMode.STRICT).build();

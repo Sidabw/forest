@@ -24,7 +24,7 @@ import java.util.Set;
  * @create 2019/6/19
  * @since 1.0.0
  */
-public class Demo {
+public class JVMTest {
 
     public static void main(String[] args) {
         Properties properties = System.getProperties();

@@ -8,7 +8,7 @@
  * <author>          <time>          <version>          <desc>
  * 作者姓名           修改时间           版本号              描述
  */
-package com.Java.math.sort;
+package com.Java.math.sort.merge;
 
 import com.alibaba.fastjson.JSONArray;
 import org.junit.Test;

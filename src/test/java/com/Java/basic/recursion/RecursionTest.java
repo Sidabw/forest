@@ -25,7 +25,7 @@ import java.util.Set;
  * @create 2019/4/25
  * @since 1.0.0
  */
-public class Demo {
+public class RecursionTest {
 
     @Test
     public void test(){
