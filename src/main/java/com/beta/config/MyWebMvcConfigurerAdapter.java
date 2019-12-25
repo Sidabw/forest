@@ -20,6 +20,7 @@ public class MyWebMvcConfigurerAdapter extends WebMvcConfigurerAdapter{
     public void addResourceHandlers(ResourceHandlerRegistry registry) {
     	//配置资源映射路径+真实路径
     	registry.addResourceHandler("/my/**").addResourceLocations("classpath:/mystaticdir/");
+    	registry.addResourceHandler("/**").addResourceLocations("classpath:/static/admin-lte/");
         super.addResourceHandlers(registry);
     }
     /**
@@ -34,6 +35,7 @@ public class MyWebMvcConfigurerAdapter extends WebMvcConfigurerAdapter{
         registry.addViewController("/test").setViewName("test");
         registry.addViewController("/map").setViewName("baidu/map");
         registry.addViewController("/map2").setViewName("baidu/maplocate");
+        registry.addViewController("/admin1").setViewName("admin-lte/adminStyle1");
         super.addViewControllers(registry);
     }
 

@@ -26,7 +26,7 @@ public class CalendarTest {
 		cal.add(Calendar.DAY_OF_MONTH,0);
 		String today = new SimpleDateFormat("yyyy年MM月dd日HH时mm分ss秒").format(cal.getTime());
 		cal = Calendar.getInstance();
-		cal.add(Calendar.YEAR, -1);
+        cal.add(Calendar.YEAR, -1);
 		String lastYear = new SimpleDateFormat("yyyy年MM月dd日HH时mm分ss秒").format(cal.getTime());
 		System.out.println("yesterday"+yesterday);
 		System.out.println(today);

@@ -134,6 +134,29 @@ public class UsualUse {
         System.out.println(collect2);
     }
 
+    //reduce 擅长的是从一组值中生成一个值
+    @Test
+    public void reduceTest(){
+        //使用reduce 找出最长单词
+        Stream<String> strStream = Stream.of("I", "LOVE", "YOU", "TOO");
+        Optional<String> reduce = strStream.reduce((s1, s2) -> s1.length() >= s2.length() ? s1 : s2);
+        System.out.println(reduce.get());
+        //使用reduce求长度之和
+        Stream<String> strStream2 = Stream.of("I", "LOVE", "YOU", "TOO");
+        Integer result = strStream2.reduce(
+                0,  //初始值
+                (sum, l1) -> sum += l1.length(),    //累加器
+                (a, b) -> a + b);   //并行时用到的拼接器
+        System.out.println(result);
+
+        Stream<String> strStream3 = Stream.of("I", "LOVE", "YOU", "TOO");
+        Optional<String> max = strStream3.max((s1, s2) -> s1.length() - s2.length());
+        //reduce的变种-max
+//        Optional<String> max = strStream3.max(Comparator.comparingInt(String::length));
+        System.out.println(max.get());
+
+    }
+
     @Test
     public void parallelStreamTest() throws InterruptedException {
 
@@ -154,6 +177,45 @@ public class UsualUse {
         System.out.println("-------------------");
         System.out.println(date2 - date);
         System.out.println(date3 - date2);
+    }
+
+
+    /**
+     * @Description 测试 stream.map是处理完一个给后边还是等全部处理完了再给后边
+     * @param
+     * @return: void
+     * @since: 2.0.5
+     * @Author: feiyi
+     * @Date: 2019/12/23 10:17 AM
+     **/
+    @Test
+    public void concurrentMapTest() {
+        List<String> strings = Arrays.asList("1", "2", "3", "4", "5", "6", "7");
+//        System.out.println("⬇️️⬇️️⬇️️⬇️️⬇️️⬇️️⬇️️⬇️️⬇️️⬇️️⬇️️⬇️️⬇️️⬇️️⬇️️️️⬇️️️");
+//        strings.stream().map(e -> {
+//            System.out.print(e);
+//            return e+" z";
+//        }).map(e ->{
+//            System.out.print(" map2 ");
+//            return e;
+//        }).forEach(e -> {
+//            System.out.print(" -> foreach :: ");
+//            System.out.println(e);
+//        });
+//        System.out.println("⬆️⬆️⬆️⬆️⬆️⬆️⬆️⬆️⬆️⬆️⬆️⬆️⬆️⬆️⬆️⬆️⬆️");
+
+        Stream<String> stream = strings.stream();
+
+//        //内部通过spliterator.forEachRemaining实现迭代
+//        Spliterator<String> spliterator = stream.spliterator();
+//        spliterator.forEachRemaining(System.out::println);
+
+        stream.map(e ->{
+            System.out.println(e);
+            return e + 'z';
+        }).forEach(e ->{
+            System.out.println(e);
+        });
     }
 
 }

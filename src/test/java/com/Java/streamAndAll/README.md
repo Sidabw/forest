@@ -43,7 +43,10 @@ via the :: keyword .
 返回一个丢弃原Stream的前N个元素后剩下元素组成的新Stream，如果原Stream中包含的元素
 个数小于N，那么返回空Stream；
 
-###     note from [CarpenterLee Blog](http://www.cnblogs.com/CarpenterLee/p/6545321.html)
+###     note from 
+###### [CarpenterLee Blog1](http://www.cnblogs.com/CarpenterLee/p/6545321.html)
+###### [CarpenterLee Blog2](https://www.cnblogs.com/CarpenterLee/p/6550212.html)
+###### [CarpenterLee Blog3](https://www.cnblogs.com/CarpenterLee/p/6637118.html)
 共有4中stream继承了BaseStream，分别是IntStream、LongStream、DoubleStream、Stream。
 *   前三者设计意图：减少自动装箱/拆箱的频率，提高性能
 *   为什么前三者不继承Stream：Java不支持返回值不同的方法进行重载。
