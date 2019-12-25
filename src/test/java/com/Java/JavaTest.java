@@ -110,6 +110,21 @@ public class JavaTest {
             System.out.println(e);
             return "d".equals(e);
         });
+
+    }
+
+
+    @Test
+    public void test2(){
+        System.out.println(2);
+        System.out.println(2);
+        System.out.println(2);
+        System.out.println(2);
+        System.out.println(2);
+        System.out.println(2);
+        System.out.println(2);
+        System.out.println(2);
+        System.out.println(2);
     }
 
 }
