@@ -116,12 +116,12 @@ public class JavaTest {
 
     @Test
     public void test2(){
-        System.out.println(2);
-        System.out.println(2);
-        System.out.println(2);
-        System.out.println(2);
-        System.out.println(2);
-        System.out.println(2);
+        System.out.println(22);
+        System.out.println(22);
+        System.out.println(22);
+        System.out.println(22);
+        System.out.println(22);
+        System.out.println(22);
         System.out.println(2);
         System.out.println(2);
         System.out.println(2);
