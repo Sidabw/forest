@@ -22,13 +22,13 @@ import org.springframework.stereotype.Service;
  * @create 2018/12/4
  * @since 1.0.0
  */
-@Service("producerService")
-public class ProducerServiceImpl implements IProducerService {
+//@Service("producerService")
+//public class ProducerServiceImpl implements IProducerService {
 //    @Autowired
 //    private KafkaTemplate<String, String> kafkaTemplate;
-
-    @Override
-    public void send(String topic, String payload) {
+//
+//    @Override
+//    public void send(String topic, String payload) {
 //        kafkaTemplate.send(topic, payload);
-    }
-}
+//    }
+//}

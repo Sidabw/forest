@@ -13,6 +13,7 @@ package com.Java;
 import com.alibaba.fastjson.JSONObject;
 import org.junit.Test;
 
+import java.io.*;
 import java.math.BigDecimal;
 import java.math.RoundingMode;
 import java.text.DecimalFormat;
@@ -28,8 +29,6 @@ import java.util.*;
  * @since 1.0.0
  */
 public class JavaTest {
-
-
 
     @Test
     public void test5(){
@@ -113,40 +112,62 @@ public class JavaTest {
 
     }
 
-
     @Test
-    public void test2(){
-//<<<<<<< HEAD
-        System.out.println(1);
-        System.out.println(1);
-        System.out.println(1);
-        System.out.println(1);
-        System.out.println(2);
-        System.out.println(2);
-//=======
-        System.out.println(22);
-        System.out.println(22);
-        System.out.println(22);
-        System.out.println(22);
-        System.out.println(22);
-        System.out.println(22);
-//>>>>>>> develop-v2
-        System.out.println(2);
-        System.out.println(2);
-        System.out.println(2);
+    public void testIo() throws IOException {
+        FileInputStream fileInputStream = new FileInputStream(new File("/Users/feiyi/Desktop/20191214预发user重复数据删除"));
+        System.out.println(fileInputStream.available());
+        byte[] bytes = new byte[1024];
+        int len = 0;
+
+        FileOutputStream fileOutputStream = new FileOutputStream(new File("/Users/feiyi/Desktop/20191214预发user重复数据删除2"));
+        while ((len = fileInputStream.read(bytes)) != -1) {
+            System.out.println(len);
+            fileOutputStream.write(bytes, 0, len);
+        }
     }
 
 
     @Test
-    public void test1(){
-        System.out.println(1);
-        System.out.println(1);
-        System.out.println(1);
-        System.out.println(1);
-        System.out.println(1);
-        System.out.println(1);
-        System.out.println(1);
-        System.out.println(1);
+    public void testTime(){
+        long l1 = Double.valueOf(1577693319.86831 * 1000).longValue();
+        System.out.println();
+        Date date = new Date(l1);
+        Date date2 = new Date(1577693319868L);
+        System.out.println(new SimpleDateFormat("yyyy-MM-dd HH:mm:ss:SSS").format(date));
+
+        int i = 0;
+        int j = 0;
+
+        int a = i++;
+        int b = ++j;
+        System.out.println(a);
+        System.out.println(b);
+        System.out.println(i++);
+        System.out.println(++j);
+    }
+
+
+    //unicode 转 utf-8
+    //
+    @Test
+    public void encodingTest() throws UnsupportedEncodingException {
+        String str = "21\u4e16\u7eaa\u7ecf\u6d4e\u62a5\u9053";
+        System.out.println(new String (str.getBytes(), "UTF-8")); //21世纪经济报道
+
+        String str2 = "\u83b7\u53d6\u62bd\u53d6\u6570\u636e\u5931\u8d25";
+        System.out.println(new String (str2.getBytes(), "UTF-8")); //获取抽取数据失败
+    }
+
+    @Test
+    public void regexTest(){
+        String str = "aa$.bb";
+        String str2 = "aa$bb.cc";
+        //index of 不接受regex...
+        System.out.println(str.indexOf("\\."));
+
+        String str3 = " $.param.meta_info";
+        String substring = str3.substring(2);
+        System.out.println(substring);
     }
 
 }

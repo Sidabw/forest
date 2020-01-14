@@ -1,13 +1,6 @@
 package com.widget.quartz;
 
-import org.quartz.JobBuilder;
-import org.quartz.JobDetail;
-import org.quartz.Scheduler;
-import org.quartz.SchedulerException;
-import org.quartz.SchedulerFactory;
-import org.quartz.SimpleScheduleBuilder;
-import org.quartz.Trigger;
-import org.quartz.TriggerBuilder;
+import org.quartz.*;
 import org.quartz.impl.StdSchedulerFactory;
 
 /***
@@ -26,18 +19,19 @@ public class Demo {
             JobDetail job = JobBuilder.newJob(HelloQuartz.class).withIdentity("JobName", "JobGroupName").build();
             // 定义调度触发规则
             // SimpleTrigger
-            Trigger trigger=TriggerBuilder.newTrigger().withIdentity("SimpleTrigger", "SimpleTriggerGroup")
-                    .withSchedule(SimpleScheduleBuilder.repeatSecondlyForever(2).withRepeatCount(3))
-                    .startNow().build();
-            //  corn表达式  每五秒执行一次
-//            Trigger trigger=TriggerBuilder.newTrigger().withIdentity("CronTrigger1", "CronTriggerGroup")
-//                    .withSchedule(CronScheduleBuilder.cronSchedule("*/5 * * * * ?"))
+//            Trigger trigger=TriggerBuilder.newTrigger().withIdentity("SimpleTrigger", "SimpleTriggerGroup")
+//                    .withSchedule(SimpleScheduleBuilder.repeatSecondlyForever(2).withRepeatCount(3))
 //                    .startNow().build();
+            //  corn表达式  每五秒执行一次
+            Trigger trigger=TriggerBuilder.newTrigger().withIdentity("CronTrigger1", "CronTriggerGroup")
+                    .withSchedule(CronScheduleBuilder.cronSchedule("*/2 * * * * ?"))
+                    .startNow().build();
             // 把作业和触发器注册到任务调度中
             scheduler.scheduleJob(job, trigger);
             // 启动调度
             scheduler.start();
-            Thread.sleep(100000);
+            Thread.sleep(15000);
+            System.out.println(scheduler.getCurrentlyExecutingJobs().size());
             // 停止调度
             scheduler.shutdown();
         }catch(SchedulerException e){

@@ -24,6 +24,8 @@ class ThreadTest1 {
 
     public static void main(String[] args) {
         Runner runner=new Runner();
+        //run的话不是多线程，就是普通的调用方法。
+//        runner.run();
         Thread t1=new Thread(runner);
         t1.start();
         for(int x=0;x<100;x++)	//t1 线程与main线程同时运行，如果不加Thread.sleep(100)的话很难看出两个线程在交叉运行
@@ -98,7 +100,7 @@ class ThreadTest3 {
         try {
             Thread.sleep(10000);
         } catch (Exception e) {
-            // TODO: handle exception
+            e.printStackTrace();
         }
         System.out.println("main线程在运行");
 //		md.shutdown();
@@ -112,7 +114,7 @@ class ThreadTest3 {
         try {
             Thread.sleep(10000);
         } catch (Exception e) {
-            // TODO: handle exception
+           e.printStackTrace();
         }
         System.out.println("======="+new Date()+"=========");
     }
@@ -127,7 +129,7 @@ class MyThread extends Thread
             try {
                 Thread.sleep(1000);
             } catch (Exception e) {
-                // TODO: handle exception
+                e.printStackTrace();
                 System.out.println("I'm interrupted,help!help!!!");
                 return;
             }
@@ -195,7 +197,6 @@ class ThreadTest5 {
 class MyThread3 extends Thread
 {
     public MyThread3(String name) {
-        // TODO Auto-generated constructor stub
         super(name);
     }
     public void run()
@@ -265,7 +266,6 @@ class ThreadTest7 implements Runnable {
     }
     @Override
     public void run() {
-        // TODO Auto-generated method stub
         timer.add(Thread.currentThread().getName());		//Thread.currentThread()	返回当前执行的线程的引用
     }
 }
@@ -379,8 +379,14 @@ class ThreadTest9<synchronizedvoid> implements Runnable  {
     }
 }
 
-//10
+//10：生产者消费者
 //Object 的wait 和 notify方法使用
+
+//wait：导致当前线程等待，直到其他线程调用此对象的notify()方法或notifyAll()方法。
+//wait方法会释放当前对象的锁(如下代码)，并等待，直到其他线程调用了当前对象的notify
+
+//notify:唤醒在此对象监视器上等待的单个线程
+//notifyAll:唤醒在此对象监视器上等待的所有线程。
 class ThreadTest91 {
 
     public static void main(String[] args) {
