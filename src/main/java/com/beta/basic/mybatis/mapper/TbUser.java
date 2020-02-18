@@ -20,6 +20,10 @@ public class TbUser implements Serializable {
     
     private static final long serialVersionUID = 1L;
 
+    public TbUser(Long id) {
+        this.id = id;
+    }
+
     public Long getId() {
         return id;
     }

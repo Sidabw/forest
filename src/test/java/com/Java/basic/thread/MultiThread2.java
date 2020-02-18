@@ -8,7 +8,7 @@
  * <author>          <time>          <version>          <desc>
  * 作者姓名           修改时间           版本号              描述
  */
-package com.Java.basic.thread;
+package thread;
 
 import org.junit.Test;
 
@@ -32,10 +32,9 @@ public class MultiThread2 {
             TimeUnit.MILLISECONDS,
             new LinkedBlockingQueue<Runnable>(1));
 
-
-
     @Test
     public void test1() throws InterruptedException {
+        blockingTestThreadPool.shutdown();
         for (int i = 0; i< 6 ; i ++) {
             int activeCount = blockingTestThreadPool.getActiveCount();
             System.out.println("activeCount : " + activeCount);
@@ -59,8 +58,22 @@ public class MultiThread2 {
     }
 
     @Test
-    public void test2(){
-//        ExecutorService es = Executors.newFixedThreadPool(5);
+    public void test2() throws InterruptedException {
+        ExecutorService es = Executors.newFixedThreadPool(5);
+        for (int i = 0 ;i < 100; i ++) {
+            try {
+                int finalI = i;
+                System.out.println(finalI);
+                es.execute(() -> {
+                    if (finalI % 2 == 0)
+                        throw new RuntimeException("(finalI % 2 == 0");
+                });
+                Thread.sleep(1000L);
+            } catch (Exception e) {
+                System.out.println("sleep");
+                Thread.sleep(1000L);
+            }
+        }
 //        es.execute();
 //        es.submit()
 //        blockingTestThreadPool.submit()

@@ -2,8 +2,11 @@ package com.beta.basic.service;
 
 import java.io.IOException;
 import java.io.InputStream;
+import java.lang.reflect.Array;
+import java.util.Arrays;
 import java.util.List;
 
+import com.alibaba.fastjson.JSONObject;
 import com.beta.widgets.gp.dao.BlobTestEntity;
 import com.beta.widgets.gp.dao.BlobTestEntityExample;
 import com.beta.widgets.gp.dao.BlobTestEntityMapper;
@@ -23,7 +26,10 @@ public class UserService implements IUserService{
 
 	@Override
 	public List<TbUser> queryList() {
-		return null;
+        List<BlobTestEntity> blobTestEntities = blobTestEntityMapper.selectByExample(new BlobTestEntityExample());
+        System.out.println(JSONObject.toJSONString(blobTestEntities));
+//        return Arrays.asList(new TbUser())
+        return null;
 	}
 
     @Override

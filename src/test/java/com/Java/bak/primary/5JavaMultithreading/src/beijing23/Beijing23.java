@@ -382,8 +382,9 @@ class ThreadTest9<synchronizedvoid> implements Runnable  {
 //10：生产者消费者
 //Object 的wait 和 notify方法使用
 
-//wait：导致当前线程等待，直到其他线程调用此对象的notify()方法或notifyAll()方法。
-//wait方法会释放当前对象的锁(如下代码)，并等待，直到其他线程调用了当前对象的notify
+//wait：
+//1.导致当前线程等待，直到其他线程调用此对象的notify()方法或notifyAll()方法。
+//2.当前线程会释放当前对象(s)的锁，并等待，直到其他线程调用了当前对象的notify
 
 //notify:唤醒在此对象监视器上等待的单个线程
 //notifyAll:唤醒在此对象监视器上等待的所有线程。

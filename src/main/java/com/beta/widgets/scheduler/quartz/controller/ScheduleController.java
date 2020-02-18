@@ -77,7 +77,7 @@ public class ScheduleController {
         System.out.println(jobkeyStr);
         System.out.println(scheduler.getCurrentlyExecutingJobs().size());
         scheduler.interrupt(jobKey);
-//        scheduler.deleteJob(jobKey);
+        scheduler.deleteJob(jobKey);
         System.out.println("dynamicCancel success");
         return "dynamicCancel success!";
     }

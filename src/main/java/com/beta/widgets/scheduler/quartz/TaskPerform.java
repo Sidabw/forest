@@ -59,6 +59,11 @@ public class TaskPerform extends QuartzJobBean implements InterruptableJob {
         mergedJobDataMap.put("b", ++b2);
         System.out.println("b from CronTrigger :" + mergedJobDataMap.getInt("b"));
 
+        try {
+            Thread.sleep(5000L);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
         System.out.println("⬇");
         System.out.println(jobExecutionContext.getJobDetail().getKey().toString() + a);
     }

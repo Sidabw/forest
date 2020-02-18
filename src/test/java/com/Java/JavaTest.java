@@ -10,10 +10,12 @@
  */
 package com.Java;
 
+import com.Java.basic.extendstest.test1.Son;
 import com.alibaba.fastjson.JSONObject;
 import org.junit.Test;
 
 import java.io.*;
+import java.lang.reflect.Array;
 import java.math.BigDecimal;
 import java.math.RoundingMode;
 import java.text.DecimalFormat;
@@ -168,6 +170,39 @@ public class JavaTest {
         String str3 = " $.param.meta_info";
         String substring = str3.substring(2);
         System.out.println(substring);
+    }
+
+    @Test
+    public void test1(){
+        Son son1 = new Son();
+        son1.setAge(1);
+
+        List<Son> sons = Arrays.asList(son1);
+        test1S(sons);
+        System.out.println(sons.get(0).getAge());
+
+        Son son = new Son();
+        son.setAge(11);
+        son11(son);
+        System.out.println(son.getAge());
+    }
+
+    public static void son11(Son son) {
+        Son son1 = new Son();
+        son1.setAge(12);
+
+        son = son1;
+
+    }
+
+
+
+
+    //在方法内部直接通过改变引用的方式改变对象是无效的。
+    public static void test1S(List<Son> sons) {
+        Son son = new Son();
+        son.setAge(2);
+        sons = Arrays.asList();
     }
 
 }

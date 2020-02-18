@@ -34,7 +34,7 @@ public class Son extends Parent {
         System.out.println(b);
 
     }
-    Son(){
+    public Son(){
         System.out.println("子类构造函数");
     }
     private Integer age;

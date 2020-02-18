@@ -41,7 +41,7 @@ class Resource {
 		lock.lock();
 		try {
 			while(flag)		
-			    condition_pro.await();//造成当前线程在接到信号或被中断之前一直处于等待状态。
+			    condition_pro.await();//造成当前线程在接到信号或被中断之前一直处于等待状态；同时lock会被释放。
             this.name=name+count++;
             System.out.println(Thread.currentThread().getName()+"....生产者...."+this.name);
             flag=true;
