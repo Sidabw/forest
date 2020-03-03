@@ -25,6 +25,7 @@ import org.junit.Test;
 public class QuickSort {
 
     public static void quickSort(int[] arr, int low, int high){
+        double a = getA(0, 0, 1);
         //temp就是基准位
         int i = low,j = high;
         if(low>high) return;
@@ -98,5 +99,10 @@ public class QuickSort {
         //递归调用右半数组
         quickSort2(arr, j+1, high);
 
+    }
+
+
+    public static <T> T getA (T... ts) {
+        return ts[0];
     }
 }

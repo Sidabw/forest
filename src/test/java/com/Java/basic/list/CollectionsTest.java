@@ -32,6 +32,7 @@ public class CollectionsTest {
         System.out.println(integers);
         Collections.shuffle(integers);
         System.out.println(integers);
+
     }
 
 }

@@ -81,7 +81,8 @@ public class JsonPathDemo {
         //4.
         System.out.println(context.read("$..book.length()").toString());
         //5.give me everything
-//        System.out.println(context.read("$..*").toString());
+        Object obj = context.read("$");
+        System.out.println(obj.toString());
     }
 
     @Test

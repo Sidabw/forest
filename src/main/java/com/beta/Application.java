@@ -36,19 +36,6 @@ import java.lang.reflect.Method;
 @EnableSwagger2
 public class Application extends SpringBootServletInitializer {
 	
-	private Logger logger = Logger.getLogger(Application.class);
-
-    @Autowired
-    private ApplicationContext applicationContext;
-	
-	//url:	localhost:8081/
-	@RequestMapping("/")
-	@ResponseBody
-	public String greeting(){
-
-		return "Hello SpringBoot"+"------2";
-	}
-
 	public static void main(String[] args){
 		SpringApplication.run(Application.class, args);
 	}
