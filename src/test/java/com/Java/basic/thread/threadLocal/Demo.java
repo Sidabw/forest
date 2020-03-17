@@ -11,6 +11,7 @@
 package com.Java.basic.thread.threadLocal;
 
 import java.text.SimpleDateFormat;
+import java.util.Date;
 
 /**
  * 〈一句话功能简述〉:
@@ -31,7 +32,14 @@ public class Demo {
             return new SimpleDateFormat("");
         }
     };
+
     public static void main(String[] args) {
 
     }
+
+
+    public String format(Date date) {
+        return threadLocal.get().format(date);
+    }
+
 }
