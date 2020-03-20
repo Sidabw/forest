@@ -4,7 +4,9 @@ import org.junit.Test;
 
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
+import java.util.ArrayList;
 import java.util.Date;
+import java.util.List;
 import java.util.Random;
 
 /***
@@ -98,6 +100,21 @@ public class BasicTest {
     public void assertTest(){
         //断言之所以本地测试会被启动是因为启动参数上加上了-ea ，即-enableassert
         assert(true);
+    }
+
+
+    //Test
+    @Test
+    public void geTest(){
+        //泛型测试
+        ArrayList<Integer> integers = new ArrayList<>();
+        ArrayList<String> strings = new ArrayList<>();
+        ge1(strings);
+//        ge1(integers);
+    }
+
+    public static void ge1(List<String> strs) {
+        strs.forEach(System.out::print);
     }
 
 }

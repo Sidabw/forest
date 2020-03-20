@@ -4,7 +4,7 @@ import java.util.Date;
 
 /*
  * Sychronized
- *  这个整理的不对.. 详细的看笔记吧
+ *  这个整理的不对.. 也有对的...详细的看笔记吧
  * 	1.成员锁：某一线程进入锁之后，其他线程必须等待此线程执行完锁内的程序才能继续调用锁所在的方法
  * 		<1>Synchronized 在方法上声明，在public 之后，void之前， 比如：public Synchronized void method(){}
  * 			<2>Synchronized（） 对某一代码块上，括号里可以进入的变量
