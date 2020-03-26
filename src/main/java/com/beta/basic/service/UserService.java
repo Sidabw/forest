@@ -7,15 +7,14 @@ import java.util.Arrays;
 import java.util.List;
 
 import com.alibaba.fastjson.JSONObject;
-import com.beta.widgets.gp.dao.BlobTestEntity;
-import com.beta.widgets.gp.dao.BlobTestEntityExample;
-import com.beta.widgets.gp.dao.BlobTestEntityMapper;
+import com.beta.widgets.gp.dao.*;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import com.beta.basic.mybatis.mapper.TbUser;
 import com.beta.basic.mybatis.mapper.TbUserExample;
 import com.beta.basic.mybatis.mapper.TbUserMapper;
+import org.springframework.transaction.annotation.Transactional;
 
 @Service
 public class UserService implements IUserService{
@@ -23,6 +22,9 @@ public class UserService implements IUserService{
 
     @Autowired
     private BlobTestEntityMapper blobTestEntityMapper;
+
+    @Autowired
+    private GpUserMapper gpUserMapper;
 
 	@Override
 	public List<TbUser> queryList() {
@@ -57,5 +59,24 @@ public class UserService implements IUserService{
 //        BlobTestEntity blobTestEntity = blobTestEntityMapper.selectByPrimaryKey(1);
 //        System.out.println(blobTestEntity.getImageBin().length);
         return false;
+    }
+
+    @Override
+    @Transactional(rollbackFor = Exception.class)
+    public String transactionalTest() {
+        GpUser user = createUser();
+        gpUserMapper.insert(user);
+        throw new NullPointerException("异常了...");   //这是抛出异常了，同时上面的insert语句也回滚了。哈哈哈.. 好开心
+//        return "success";
+    }
+
+    private GpUser createUser() {
+        GpUser gpUser = new GpUser();
+        gpUser.setId(2);
+        gpUser.setUsername("feiyi--2");
+        gpUser.setGroupCode("feiyi--2");
+        gpUser.setPassword("feiyi--2");
+        gpUser.setRealname("feiyi--2");
+        return gpUser;
     }
 }

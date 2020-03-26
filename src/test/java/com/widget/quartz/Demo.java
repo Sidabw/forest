@@ -24,13 +24,13 @@ public class Demo {
 //                    .startNow().build();
             //  corn表达式  每五秒执行一次
             Trigger trigger=TriggerBuilder.newTrigger().withIdentity("CronTrigger1", "CronTriggerGroup")
-                    .withSchedule(CronScheduleBuilder.cronSchedule("*/2 * * * * ?"))
+                    .withSchedule(CronScheduleBuilder.cronSchedule("*/10 * * * * ?"))
                     .startNow().build();
             // 把作业和触发器注册到任务调度中
             scheduler.scheduleJob(job, trigger);
             // 启动调度
             scheduler.start();
-            Thread.sleep(15000);
+            Thread.sleep(150000);
             System.out.println(scheduler.getCurrentlyExecutingJobs().size());
             // 停止调度
             scheduler.shutdown();

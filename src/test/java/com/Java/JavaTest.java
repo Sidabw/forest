@@ -205,4 +205,43 @@ public class JavaTest {
         sons = Arrays.asList();
     }
 
+    @Test
+    public void test21(){
+        //不能这么搞...
+        DataTest dataTest = new DataTest();
+        Integer age = dataTest.getAge();
+        age++;
+        age = age + 1;
+        System.out.println(age);
+        System.out.println(dataTest.getAge());
+    }
+
+    @Test
+    public void test22() {
+        //HashMap的正确遍历方式
+        //原先获取keyset 然后get(key)的方式效率是很低的
+        //原文 https://wiki.jikexueyuan.com/project/java-collection/hashmap.html
+        HashMap<String, String> hashMap = new HashMap<>();
+        Iterator<Map.Entry<String, String>> iterator = hashMap.entrySet().iterator();
+        while (iterator.hasNext()) {
+            Map.Entry<String, String> next = iterator.next();
+            String key = next.getKey();
+            String value = next.getValue();
+        }
+
+    }
+
+}
+
+class DataTest{
+
+    private Integer age = 0;
+
+    public Integer getAge() {
+        return age;
+    }
+
+    public void setAge(Integer age) {
+        this.age = age;
+    }
 }

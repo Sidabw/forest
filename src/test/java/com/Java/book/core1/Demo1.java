@@ -12,6 +12,12 @@ package com.Java.book.core1;
 
 import org.junit.Test;
 
+import java.util.HashMap;
+import java.util.Map;
+import java.util.concurrent.LinkedBlockingQueue;
+import java.util.concurrent.ThreadPoolExecutor;
+import java.util.concurrent.TimeUnit;
+
 
 /**
  * 〈一句话功能简述〉:
@@ -42,4 +48,20 @@ public class Demo1 {
         System.out.println(a4); //因为 'a'对应ascii码表的十进制值是97
 
     }
+
+
+    //TODO fix this, 泛型相关的case
+
+//    private static Map<String, ThreadPoolExecutor> threadPoolExecutorMap = new HashMap<>();
+//    ThreadPoolExecutor blockingThreadPool = getThreadPool(threadPoolExecutorMap, "threadPool_" + proceedId);
+
+//    //从指定map中根据指定key取ThreadPoolExecutor，取不到就创建一个新的并放到Map里面去
+//    private ThreadPoolExecutor getThreadPool(Map<String, ThreadPoolExecutor> dataMap, String key) {
+//        if (dataMap.get(key) instanceof ThreadPoolExecutor)
+//            return (ThreadPoolExecutor)dataMap.get(key);
+//        ThreadPoolExecutor threadPoolExecutor = new ThreadPoolExecutor(corePoolSize, maximumPoolSize, keepAliveTime,
+//                TimeUnit.MILLISECONDS, new LinkedBlockingQueue<>(1));
+//        dataMap.put(key, threadPoolExecutor);
+//        return threadPoolExecutor;
+//    }
 }

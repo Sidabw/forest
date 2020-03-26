@@ -185,18 +185,18 @@ public class UsualUse {
     @Test
     public void concurrentMapTest() {
         List<String> strings = Arrays.asList("1", "2", "3", "4", "5", "6", "7");
-//        System.out.println("⬇️️⬇️️⬇️️⬇️️⬇️️⬇️️⬇️️⬇️️⬇️️⬇️️⬇️️⬇️️⬇️️⬇️️⬇️️️️⬇️️️");
-//        strings.stream().map(e -> {
-//            System.out.print(e);
-//            return e+" z";
-//        }).map(e ->{
-//            System.out.print(" map2 ");
-//            return e;
-//        }).forEach(e -> {
-//            System.out.print(" -> foreach :: ");
-//            System.out.println(e);
-//        });
-//        System.out.println("⬆️⬆️⬆️⬆️⬆️⬆️⬆️⬆️⬆️⬆️⬆️⬆️⬆️⬆️⬆️⬆️⬆️");
+        System.out.println("⬇️️⬇️️⬇️️⬇️️⬇️️⬇️️⬇️️⬇️️⬇️️⬇️️⬇️️⬇️️⬇️️⬇️️⬇️️️️⬇️️️");
+        strings.stream().map(e -> {
+            System.out.print(e);
+            return e+" z";
+        }).map(e ->{
+            System.out.print(" map2 ");
+            return e;
+        }).forEach(e -> {
+            System.out.print(" -> foreach :: ");
+            System.out.println(e);
+        });
+        System.out.println("⬆️⬆️⬆️⬆️⬆️⬆️⬆️⬆️⬆️⬆️⬆️⬆️⬆️⬆️⬆️⬆️⬆️");
 
         Stream<String> stream = strings.stream();
 

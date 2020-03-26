@@ -45,7 +45,7 @@ public class Demo {
 		/**
 		 * 3.Consumer<T>	T为输入。没有输出
 		 * */
-		Consumer<String> consumer = x ->System.out.println(x);
+		Consumer<String> consumer = x -> System.out.println(x);
 		consumer.accept("consumer");
 		
 		System.out.println("--------------------------------------------");
