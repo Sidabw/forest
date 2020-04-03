@@ -231,6 +231,21 @@ public class JavaTest {
 
     }
 
+    @Test
+    public void test23() {
+        HashMap<String, DataTest> dataMap = new HashMap<>();
+        DataTest aaa = dataMap.get("aaa");
+        if (aaa == null)
+             aaa = new DataTest();
+        aaa.setAge(1);
+        dataMap.put("aaa", aaa);
+        System.out.println();
+        if (dataMap.keySet().size() == 1)
+            System.out.println(dataMap.get("aaa").getAge());
+        else
+            System.out.println("不好使啊...");
+    }
+
 }
 
 class DataTest{

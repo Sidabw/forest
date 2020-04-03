@@ -11,7 +11,7 @@ import java.util.function.Supplier;
 
 
 public class Demo {
-	public static void main(String[] args){
+	public static void main(String[] args) {
 		/**
 		 * 1.Function<T,R>	T 输入， R 输出
 		 * Function即为1个标准的lambad函数。stream操作中的map接受的就是1个Function
