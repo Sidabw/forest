@@ -38,9 +38,10 @@ public class UsualUse {
         //iterate 生成无限大的stream(懒加载，并非无限大) limit做限制
         Stream.iterate(1, item -> item + 1).limit(10).forEach(System.out::println);
         System.out.println("----------------------------");
-        //peek方法，接口一个Consumer,但与foreach不同
+        //peek方法，接受一个Consumer,但与foreach不同
         //1.void foreach ，Stream peek
         //2.peek 只是给each element 包了一个consumer，不会立即执行，后面对each element有操作时才会执行
+        //3.peek 和 map 的区别。如果只是在每个元素上e.setxx 这样的操作，就可以使用peek，但是如果要 Person -> Dog 则需要map
         Stream.of(1,2,3,4).forEach(System.out::println);
         System.out.println("----------------------------");
         Stream.of(1,2,3,4).peek(System.out::println).forEach(e -> System.out.println(e + 1));

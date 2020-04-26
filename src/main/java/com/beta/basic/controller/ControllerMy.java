@@ -267,4 +267,27 @@ public class ControllerMy {
 	    return userService.transactionalTest();
     }
 
+    @RequestMapping(value = "/restfulTest", method = RequestMethod.GET)
+    @ResponseBody
+    public String restfulTest() {
+        return "get";
+    }
+
+    @RequestMapping(value = "/restfulTest", method = RequestMethod.POST)
+    @ResponseBody
+    public String restfulTest2() {
+        return "post";
+    }
+
+    @RequestMapping(value = "/restfulTest", method = RequestMethod.PUT)
+    @ResponseBody
+    public String restfulTest3() {
+        return "put";
+    }
+
+    @RequestMapping(value = "/restfulTest", method = RequestMethod.DELETE)
+    @ResponseBody
+    public String restfulTest4() {
+        return "delete";
+    }
 }

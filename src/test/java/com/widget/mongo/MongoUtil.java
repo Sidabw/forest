@@ -15,6 +15,8 @@ import com.mongodb.MongoClient;
 import com.mongodb.MongoCredential;
 import com.mongodb.ServerAddress;
 import com.mongodb.client.*;
+import com.mongodb.client.model.Accumulators;
+import com.mongodb.client.model.Aggregates;
 import com.mongodb.client.model.Filters;
 import com.mongodb.client.result.DeleteResult;
 import org.bson.Document;
@@ -195,6 +197,19 @@ public class MongoUtil {
         bsons.add(Document.parse(j2.toJSONString()));
 
         AggregateIterable<Document> aggregate = mongoCollection.aggregate(bsons);
+        MongoCursor<Document> iterator = aggregate.iterator();
+        while (iterator.hasNext()) {
+            System.out.println(JSONObject.toJSONString(iterator.next()));
+        }
+    }
+
+    public static void aggs2(MongoCollection<Document> collection) {
+        AggregateIterable<Document> aggregate = collection.aggregate(
+                Arrays.asList(
+                        Aggregates.match(Filters.ne("_id", 1.0)),
+                        Aggregates.group("_id", Accumulators.sum("sum", "$num"))
+                )
+        );
         MongoCursor<Document> iterator = aggregate.iterator();
         while (iterator.hasNext()) {
             System.out.println(JSONObject.toJSONString(iterator.next()));

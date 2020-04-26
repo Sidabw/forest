@@ -244,6 +244,14 @@ public class JavaTest {
             System.out.println(dataMap.get("aaa").getAge());
         else
             System.out.println("不好使啊...");
+
+        byte b = 2, e =3;
+//        byte f = b + e;   //编译错误
+    }
+
+    @Test
+    public void test24(){
+        Shunxu shunxu = new Shunxu();
     }
 
 }
@@ -258,5 +266,18 @@ class DataTest{
 
     public void setAge(Integer age) {
         this.age = age;
+    }
+}
+
+class Shunxu{
+
+    private static final DataTest DATA_TEST = create();
+
+    public Shunxu(){
+        System.out.println("Shunxu");
+    }
+    private static DataTest create() {
+        System.out.println("create");
+        return null;
     }
 }

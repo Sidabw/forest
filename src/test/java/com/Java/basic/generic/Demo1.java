@@ -36,6 +36,7 @@ public class Demo1 {
         son.m1(1);
         son.m1("11");
 
+        //传递是引用，故而引用类型即栈类型是什么，那么调用的时候就去找参数列表是该栈类型的..
         Son2 son2 = new Son2();
         son2.m1(new Object());
         son2.m1("222");
@@ -46,7 +47,8 @@ public class Demo1 {
 
 
 //准确的说，这是一个方法的重载和多态造成冲突的问题
-//B2编译后会拥有两个eq方法，父类的eq方法会被jvm修改为一个桥方法，指向B2原有的eq
+//B2编译后会拥有两个eq方法，父类的eq方法会被jvm修改为一个桥方法，
+//指向B2原有的eq,却依然调用自己的方法。。 这算哪门子指向啊
 class C1 {
     public void eq(Collection col) {
         System.out.println("c1");
@@ -58,8 +60,6 @@ class B2 extends C1{
         System.out.println("B2");
     }
 }
-
-
 
 
 class Father<T> {
@@ -75,11 +75,6 @@ class Son extends Father<String> {
         System.out.println("son");
     }
 }
-
-
-
-
-
 
 class Son2{
 

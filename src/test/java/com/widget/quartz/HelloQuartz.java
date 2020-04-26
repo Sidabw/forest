@@ -10,7 +10,7 @@ import java.util.Date;
  *  Created by shao.guangze on 2018/7/25
  *  This is a JobDetail which implements Job.
  */
-@DisallowConcurrentExecution
+@DisallowConcurrentExecution    //这里每10秒执行一次，执行时睡11秒，那下一次执行不是整除计算，即下一次执行会立刻执行。
 @PersistJobDataAfterExecution
 //public class HelloQuartz implements Job {
 public class HelloQuartz extends QuartzJobBean implements InterruptableJob{
@@ -30,7 +30,7 @@ public class HelloQuartz extends QuartzJobBean implements InterruptableJob{
 
         System.out.println("Hello quarze world !!!   ::" + new SimpleDateFormat("yyyy-MM-dd HH:mm:ss:SSS").format(new Date()));
 //        try {
-//            Thread.sleep(5000L);
+//            Thread.sleep(11000L);
 //        } catch (InterruptedException e) {
 //            e.printStackTrace();
 //        }
