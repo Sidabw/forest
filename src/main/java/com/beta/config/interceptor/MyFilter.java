@@ -22,20 +22,22 @@ import java.io.IOException;
  * @create 2019/1/18
  * @since 1.0.0
  */
-//@WebFilter(filterName = "testFilter1", urlPatterns = "/*")
-//public class MyFilter implements Filter {
-//    @Override
-//    public void init(FilterConfig filterConfig) throws ServletException {
-//
-//    }
-//
-//    @Override
-//    public void doFilter(ServletRequest servletRequest, ServletResponse servletResponse, FilterChain filterChain) throws IOException, ServletException {
-//        servletRequest.setAttribute("user1","sidabw");
-//    }
-//
-//    @Override
-//    public void destroy() {
-//
-//    }
-//}
+@WebFilter(filterName = "testFilter1", urlPatterns = "/*")
+public class MyFilter implements Filter {
+
+    @Override
+    public void init(FilterConfig filterConfig) throws ServletException {
+        System.out.println("init");
+    }
+
+    @Override
+    public void doFilter(ServletRequest servletRequest, ServletResponse servletResponse, FilterChain filterChain) throws IOException, ServletException {
+        filterChain.doFilter(servletRequest, servletResponse);
+        System.out.println("doFilter");
+    }
+
+    @Override
+    public void destroy() {
+        System.out.println("destroy");
+    }
+}

@@ -11,6 +11,8 @@
 package com.Java.basic.generic;
 
 
+import org.apache.poi.ss.formula.functions.T;
+
 import java.util.ArrayList;
 import java.util.Collection;
 import java.util.List;
@@ -34,7 +36,7 @@ public class Demo1 {
 
         Son son = new Son();
         son.m1(1);
-        son.m1("11");
+        son.m1("11");//这本身就是一个桥方法。因为Father实际只有一个 m1(Object)的方法
 
         //传递是引用，故而引用类型即栈类型是什么，那么调用的时候就去找参数列表是该栈类型的..
         Son2 son2 = new Son2();
@@ -42,6 +44,15 @@ public class Demo1 {
         son2.m1("222");
         Object strObj = "aa";
         son2.m1(strObj);
+
+        mm(new Father<C1>());
+        mm(new Father<B2>());
+//        mm(new Father<Son>());//这样的就编译错误🙅‍了。
+    }
+
+
+    public static void mm(Father< ? extends C1> f) {
+
     }
 }
 
@@ -74,6 +85,7 @@ class Son extends Father<String> {
     public void m1(Integer i) {
         System.out.println("son");
     }
+
 }
 
 class Son2{
@@ -87,3 +99,22 @@ class Son2{
     }
 
 }
+
+//测试桥方法
+//这样写是编译不过的，
+
+//class F1 {
+//
+//    public String m1(){
+//        return "f1";
+//    }
+//
+//}
+//
+//class Son3 extends F1 {
+//
+//    public Integer m1() {
+//
+//    }
+//}
+
