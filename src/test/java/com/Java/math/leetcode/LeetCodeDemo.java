@@ -888,6 +888,34 @@ public class LeetCodeDemo {
     public void test12(){
         
     }
+    
+    /**
+     * @Description 请判断一个链表是否为回文链表。
+     * 示例 1:
+     * 输入: 1->2
+     * 输出: false
+     * 示例 2:
+     * 输入: 1->2->2->1
+     * 输出: true
+     * 进阶：
+     * 你能否用 O(n) 时间复杂度和 O(1) 空间复杂度解决此题？
+     * 来源：力扣（LeetCode）
+     * 链接：https://leetcode-cn.com/problems/palindrome-linked-list
+     * 著作权归领扣网络所有。商业转载请联系官方授权，非商业转载请注明出处。
+     * @param  
+     * @return: void
+     * @since: 2.0.5
+     * @Author: feiyi
+     * @Date: 2020/5/21 9:13 AM
+     **/
+    @Test
+    public void test13() {
+        //笨方法：第一次遍历拿到中间点；第二次遍历把中间点之后的数据放到一个ArrayList中；第三次遍历看 链表first node 到中间点的
+        //元素 和 ArrayList中的元素是否相同，ArrayList倒序遍历。
+    }
+
+
+
 }
 
 class ListNode{
