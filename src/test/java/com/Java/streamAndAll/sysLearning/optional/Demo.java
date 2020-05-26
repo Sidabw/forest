@@ -8,6 +8,22 @@ import org.junit.Test;
 
 
 public class Demo {
+
+    /**
+     * @Description
+     * note from Effective Java
+     * 1.Optional是一个不可变集合，最多只有一个元素
+     * 2.创建Optional的3种工厂方式.of .ofNullable .empty
+     * 3.使用Optional的3种最简洁方式
+     *      .orElse(T t) 提供默认值
+     *      .orElseGet(Supplier<? extends T> other) 提供默认处理
+     *      .ofElseThrow(Supplier<? extends X> exceptionSupplier) 提供特定异常处理
+     *
+     * 4.尽量不要将Optional用到除返回值之外的任何地方
+     * @since: 2.0.5
+     * @Author: feiyi
+     * @Date: 2020/2/17 11:16 PM
+     **/
 	
 	/**
      * 1.存在即返回, 无则提供默认值

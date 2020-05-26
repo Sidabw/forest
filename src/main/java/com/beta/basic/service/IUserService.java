@@ -12,4 +12,7 @@ public interface IUserService {
     boolean binaryImageDbStorage(String filename, InputStream fileInputStream) throws IOException;
 
     boolean binaryImageDbRead(String id);
+
+    String transactionalTest();
+
 }

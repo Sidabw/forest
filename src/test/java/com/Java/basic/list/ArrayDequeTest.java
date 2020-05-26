@@ -12,10 +12,7 @@ package com.Java.basic.list;
 
 import org.junit.Test;
 
-import java.util.ArrayDeque;
-import java.util.ArrayList;
-import java.util.Deque;
-import java.util.List;
+import java.util.*;
 
 /**
  * 〈一句话功能简述〉:
@@ -102,4 +99,13 @@ public class ArrayDequeTest {
 
         return topoRes.size() == n ? topoRes : new ArrayList<>();
     }
+
+    @Test
+    public void testShuffle(){
+        List<Integer> integers = Arrays.asList(1, 2, 3, 4);
+        System.out.println(integers);
+        Collections.shuffle(integers);
+        System.out.println(integers);
+    }
+
 }

@@ -25,16 +25,16 @@ import javax.annotation.Resource;
  * @create 2018/12/4
  * @since 1.0.0
  */
-@RestController
-@RequestMapping(value = "/kafka")
-public class KafkaController {
-
-    @Resource(name = "producerService")
-    private IProducerService producerService;
-
-    @RequestMapping(value = "/test", method = RequestMethod.GET)
-    public Object kafkaTest(){
-        producerService.send("Hello-Kafka", "kkkkkkkkkkkk");
-        return "kkk";
-    }
-}
+//@RestController
+//@RequestMapping(value = "/kafka")
+//public class KafkaController {
+//
+//    @Resource(name = "producerService")
+//    private IProducerService producerService;
+//
+//    @RequestMapping(value = "/test", method = RequestMethod.GET)
+//    public Object kafkaTest(){
+//        producerService.send("Hello-Kafka", "kkkkkkkkkkkk");
+//        return "kkk";
+//    }
+//}

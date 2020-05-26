@@ -50,8 +50,6 @@ public class ControllerMy {
 	@Autowired
 	private AsyncTest asyncTest;
 
-
-	
 	@RequestMapping(value="/asynctest",method=RequestMethod.GET)
 	@ResponseBody
 	public String asyncTest() throws Exception{
@@ -177,20 +175,6 @@ public class ControllerMy {
 	    return request.getSession().getAttribute("uploadStatus");
     }
 
-    @RequestMapping(value = "/test", method = RequestMethod.GET)
-    @ResponseBody
-    public Object getTest(HttpServletRequest request){
-        System.out.println(11);
-        return "aaa";
-    }
-
-    @RequestMapping(value = "/test2", method = RequestMethod.GET)
-    @ResponseBody
-    public Object getTest2(HttpServletRequest request){
-        System.out.println(22);
-        return "aaa22";
-    }
-
     @RequestMapping(value = "/download", method = RequestMethod.GET)
     @ResponseBody
     public String download(HttpServletResponse response){
@@ -276,5 +260,34 @@ public class ControllerMy {
         return userService.binaryImageDbRead(id);
     }
 
+    //在mysql中测试使用事务
+    @RequestMapping(value = "/transactionalTest", method = RequestMethod.GET)
+    @ResponseBody
+    public String transactionalTest() {
+	    return userService.transactionalTest();
+    }
 
+    @RequestMapping(value = "/restfulTest", method = RequestMethod.GET)
+    @ResponseBody
+    public String restfulTest() {
+        return "get";
+    }
+
+    @RequestMapping(value = "/restfulTest", method = RequestMethod.POST)
+    @ResponseBody
+    public String restfulTest2() {
+        return "post";
+    }
+
+    @RequestMapping(value = "/restfulTest", method = RequestMethod.PUT)
+    @ResponseBody
+    public String restfulTest3() {
+        return "put";
+    }
+
+    @RequestMapping(value = "/restfulTest", method = RequestMethod.DELETE)
+    @ResponseBody
+    public String restfulTest4() {
+        return "delete";
+    }
 }

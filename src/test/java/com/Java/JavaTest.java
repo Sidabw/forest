@@ -10,9 +10,12 @@
  */
 package com.Java;
 
+import com.Java.basic.extendstest.test1.Son;
 import com.alibaba.fastjson.JSONObject;
 import org.junit.Test;
 
+import java.io.*;
+import java.lang.reflect.Array;
 import java.math.BigDecimal;
 import java.math.RoundingMode;
 import java.text.DecimalFormat;
@@ -28,8 +31,6 @@ import java.util.*;
  * @since 1.0.0
  */
 public class JavaTest {
-
-
 
     @Test
     public void test5(){
@@ -110,6 +111,173 @@ public class JavaTest {
             System.out.println(e);
             return "d".equals(e);
         });
+
     }
 
+    @Test
+    public void testIo() throws IOException {
+        FileInputStream fileInputStream = new FileInputStream(new File("/Users/feiyi/Desktop/20191214预发user重复数据删除"));
+        System.out.println(fileInputStream.available());
+        byte[] bytes = new byte[1024];
+        int len = 0;
+
+        FileOutputStream fileOutputStream = new FileOutputStream(new File("/Users/feiyi/Desktop/20191214预发user重复数据删除2"));
+        while ((len = fileInputStream.read(bytes)) != -1) {
+            System.out.println(len);
+            fileOutputStream.write(bytes, 0, len);
+        }
+    }
+
+
+    @Test
+    public void testTime(){
+        long l1 = Double.valueOf(1577693319.86831 * 1000).longValue();
+        System.out.println();
+        Date date = new Date(l1);
+        Date date2 = new Date(1577693319868L);
+        System.out.println(new SimpleDateFormat("yyyy-MM-dd HH:mm:ss:SSS").format(date));
+
+        int i = 0;
+        int j = 0;
+
+        int a = i++;
+        int b = ++j;
+        System.out.println(a);
+        System.out.println(b);
+        System.out.println(i++);
+        System.out.println(++j);
+    }
+
+
+    //unicode 转 utf-8
+    //
+    @Test
+    public void encodingTest() throws UnsupportedEncodingException {
+        String str = "21\u4e16\u7eaa\u7ecf\u6d4e\u62a5\u9053";
+        System.out.println(new String (str.getBytes(), "UTF-8")); //21世纪经济报道
+
+        String str2 = "\u83b7\u53d6\u62bd\u53d6\u6570\u636e\u5931\u8d25";
+        System.out.println(new String (str2.getBytes(), "UTF-8")); //获取抽取数据失败
+    }
+
+    @Test
+    public void regexTest(){
+        String str = "aa$.bb";
+        String str2 = "aa$bb.cc";
+        //index of 不接受regex...
+        System.out.println(str.indexOf("\\."));
+
+        String str3 = " $.param.meta_info";
+        String substring = str3.substring(2);
+        System.out.println(substring);
+    }
+
+    @Test
+    public void test1(){
+        Son son1 = new Son();
+        son1.setAge(1);
+
+        List<Son> sons = Arrays.asList(son1);
+        test1S(sons);
+        System.out.println(sons.get(0).getAge());
+
+        Son son = new Son();
+        son.setAge(11);
+        son11(son);
+        System.out.println(son.getAge());
+    }
+
+    public static void son11(Son son) {
+        Son son1 = new Son();
+        son1.setAge(12);
+
+        son = son1;
+
+    }
+
+
+
+
+    //在方法内部直接通过改变引用的方式改变对象是无效的。
+    public static void test1S(List<Son> sons) {
+        Son son = new Son();
+        son.setAge(2);
+        sons = Arrays.asList();
+    }
+
+    @Test
+    public void test21(){
+        //不能这么搞...
+        DataTest dataTest = new DataTest();
+        Integer age = dataTest.getAge();
+        age++;
+        age = age + 1;
+        System.out.println(age);
+        System.out.println(dataTest.getAge());
+    }
+
+    @Test
+    public void test22() {
+        //HashMap的正确遍历方式
+        //原先获取keyset 然后get(key)的方式效率是很低的
+        //原文 https://wiki.jikexueyuan.com/project/java-collection/hashmap.html
+        HashMap<String, String> hashMap = new HashMap<>();
+        Iterator<Map.Entry<String, String>> iterator = hashMap.entrySet().iterator();
+        while (iterator.hasNext()) {
+            Map.Entry<String, String> next = iterator.next();
+            String key = next.getKey();
+            String value = next.getValue();
+        }
+
+    }
+
+    @Test
+    public void test23() {
+        HashMap<String, DataTest> dataMap = new HashMap<>();
+        DataTest aaa = dataMap.get("aaa");
+        if (aaa == null)
+             aaa = new DataTest();
+        aaa.setAge(1);
+        dataMap.put("aaa", aaa);
+        System.out.println();
+        if (dataMap.keySet().size() == 1)
+            System.out.println(dataMap.get("aaa").getAge());
+        else
+            System.out.println("不好使啊...");
+
+        byte b = 2, e =3;
+//        byte f = b + e;   //编译错误
+    }
+
+    @Test
+    public void test24(){
+        Shunxu shunxu = new Shunxu();
+    }
+
+}
+
+class DataTest{
+
+    private Integer age = 0;
+
+    public Integer getAge() {
+        return age;
+    }
+
+    public void setAge(Integer age) {
+        this.age = age;
+    }
+}
+
+class Shunxu{
+
+    private static final DataTest DATA_TEST = create();
+
+    public Shunxu(){
+        System.out.println("Shunxu");
+    }
+    private static DataTest create() {
+        System.out.println("create");
+        return null;
+    }
 }

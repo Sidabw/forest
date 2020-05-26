@@ -23,6 +23,7 @@ public class UsualUse {
         User[] users = new User[] {user, user1, user2, user3};
         //将users中的所有age拿出来重新组成1个集合，--->[方便：不需要重新声明1个数组，不需要手动遍历users，不需要去手动赋值。满分！！！]
         List<Integer> array = Arrays.stream(users).map(User::getAge).collect(Collectors.toList());
+        //这样方便在于使用的时候需要强转
         Object[] array2 = Arrays.stream(users).map(u ->u.getAge()).toArray();
         for(Object obj:array2){
             System.out.println(obj);
@@ -37,9 +38,10 @@ public class UsualUse {
         //iterate 生成无限大的stream(懒加载，并非无限大) limit做限制
         Stream.iterate(1, item -> item + 1).limit(10).forEach(System.out::println);
         System.out.println("----------------------------");
-        //peek方法，接口一个Consumer,但与foreach不同
+        //peek方法，接受一个Consumer,但与foreach不同
         //1.void foreach ，Stream peek
         //2.peek 只是给each element 包了一个consumer，不会立即执行，后面对each element有操作时才会执行
+        //3.peek 和 map 的区别。如果只是在每个元素上e.setxx 这样的操作，就可以使用peek，但是如果要 Person -> Dog 则需要map
         Stream.of(1,2,3,4).forEach(System.out::println);
         System.out.println("----------------------------");
         Stream.of(1,2,3,4).peek(System.out::println).forEach(e -> System.out.println(e + 1));
@@ -62,7 +64,8 @@ public class UsualUse {
     public void summing(){
         System.out.println("=====   Summing   =====");
         List<Integer> intList = Arrays.asList(12, 10, 29, 4, 1);
-        Integer sum = intList.stream().collect(Collectors.summingInt(value -> value));
+//        Integer sum = intList.stream().collect(Collectors.summingInt(value -> value));
+        Integer sum = intList.stream().mapToInt(value -> value).sum();
         System.out.println(sum);
     }
 
@@ -93,19 +96,11 @@ public class UsualUse {
 
 
     @Test
-    public void testFromBlog(){
-        User sida1 = new User(17, "女", "sida1");
-        User sida2 = new User(17, "女", "sida2");
-        User sida3 = new User(19, "女", "sida3");
-        List<User> users = Arrays.asList(sida1, sida2, sida3);
-    }
-
-    @Test
     public void sumTest() {
-        List<Integer> integers = Arrays.asList(1, 2, 4, 5);
         int sum = IntStream.of(1, 2, 4).sum();
         System.out.println(sum);
 
+        List<Integer> integers = Arrays.asList(1, 2, 4, 5);
         int sum1 = integers.stream().mapToInt(Integer::intValue).sum();
         System.out.println(sum1);
     }
@@ -191,18 +186,18 @@ public class UsualUse {
     @Test
     public void concurrentMapTest() {
         List<String> strings = Arrays.asList("1", "2", "3", "4", "5", "6", "7");
-//        System.out.println("⬇️️⬇️️⬇️️⬇️️⬇️️⬇️️⬇️️⬇️️⬇️️⬇️️⬇️️⬇️️⬇️️⬇️️⬇️️️️⬇️️️");
-//        strings.stream().map(e -> {
-//            System.out.print(e);
-//            return e+" z";
-//        }).map(e ->{
-//            System.out.print(" map2 ");
-//            return e;
-//        }).forEach(e -> {
-//            System.out.print(" -> foreach :: ");
-//            System.out.println(e);
-//        });
-//        System.out.println("⬆️⬆️⬆️⬆️⬆️⬆️⬆️⬆️⬆️⬆️⬆️⬆️⬆️⬆️⬆️⬆️⬆️");
+        System.out.println("⬇️️⬇️️⬇️️⬇️️⬇️️⬇️️⬇️️⬇️️⬇️️⬇️️⬇️️⬇️️⬇️️⬇️️⬇️️️️⬇️️️");
+        strings.stream().map(e -> {
+            System.out.print(e);
+            return e+" z";
+        }).map(e ->{
+            System.out.print(" map2 ");
+            return e;
+        }).forEach(e -> {
+            System.out.print(" -> foreach :: ");
+            System.out.println(e);
+        });
+        System.out.println("⬆️⬆️⬆️⬆️⬆️⬆️⬆️⬆️⬆️⬆️⬆️⬆️⬆️⬆️⬆️⬆️⬆️");
 
         Stream<String> stream = strings.stream();
 

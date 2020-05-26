@@ -22,20 +22,24 @@ import org.springframework.stereotype.Service;
  * @create 2018/11/9
  * @since 1.0.0
  */
-//@Service
-//public class ScheduleService {
-//
-//    @Autowired
-//    private Scheduler scheduler;
-//
-//    public void testScheduleTask() throws SchedulerException {
+@Service
+public class ScheduleService {
+
+    @Autowired
+    private Scheduler scheduler;
+
+    public void testScheduleTask() throws SchedulerException {
 //        System.out.println("quartz...   in..");
 //        JobDetail jobDetail = JobBuilder.newJob(TaskPerform.class)
 //                .withIdentity("updateMatch"+1, "updateMatch")
 //                .withDescription("Quartz定时比赛Id为"+1)
 //                .build();
-//        //cron表达式 表示每隔2秒执行
-//        CronScheduleBuilder scheduleBuilder = CronScheduleBuilder.cronSchedule("0/2 * * * * ? ")
+//        ///cron表达式，表示每年每月每天每小时每分2sec执行一次
+////        CronScheduleBuilder scheduleBuilder = CronScheduleBuilder.cronSchedule("0/4 * * * * ? ")
+////                .withMisfireHandlingInstructionDoNothing();
+//
+//        //cron表达式，表示每年每月每天每小时每2min0sec执行一次
+//        CronScheduleBuilder scheduleBuilder = CronScheduleBuilder.cronSchedule("0 0/2 * * * ? ")
 //                .withMisfireHandlingInstructionDoNothing();
 //        //触发器
 //        CronTrigger cronTrigger = TriggerBuilder.newTrigger()
@@ -46,6 +50,6 @@ import org.springframework.stereotype.Service;
 //
 //        scheduler.scheduleJob(jobDetail,cronTrigger);
 //        scheduler.start();
-//    }
-//
-//}
+    }
+
+}

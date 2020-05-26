@@ -23,7 +23,7 @@ import org.junit.Test;
 public class Recursion {
     //单层递归
     @Test
-    public void test1(){
+    public void test1() {
         singleRecursion(5);
     }
 

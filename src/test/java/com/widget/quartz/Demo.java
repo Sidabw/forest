@@ -1,19 +1,28 @@
 package com.widget.quartz;
 
-import org.quartz.JobBuilder;
-import org.quartz.JobDetail;
-import org.quartz.Scheduler;
-import org.quartz.SchedulerException;
-import org.quartz.SchedulerFactory;
-import org.quartz.SimpleScheduleBuilder;
-import org.quartz.Trigger;
-import org.quartz.TriggerBuilder;
+import org.quartz.*;
 import org.quartz.impl.StdSchedulerFactory;
+
+import java.text.SimpleDateFormat;
+import java.util.Date;
 
 /***
  *  Created by shao.guangze on 2018/7/25
  */
 public class Demo {
+
+    //对应日志见最下方。
+    private static final String cron = "*/30 * * * * ?";//从现在开始，到当前时间的第十秒执行一次，整除计算：
+//    private static final String cron = "0 * * * * ?";//从现在开始，每分钟的第0秒执行一次。
+//    private static final String cron = "0 */2 * * * ?";//同上，从现在开始，每分钟的第0秒执行一次。。。
+
+    //未测试用法
+//    private static final String cron = "0 0 * * * ?";//从现在开始，在每小时的第0分钟第0秒执行一次。
+//    private static final String cron = "0 0 0 * * ?";//从现在开始，在每天的第0时第0分钟第0秒执行一次。
+
+    //错误用法
+//    private static final String cron = "* */1 * * * ?";//实际是每秒。
+
     public static void main(String[] args) throws InterruptedException {
 
         SchedulerFactory schedulerfactory = new StdSchedulerFactory();
@@ -26,22 +35,40 @@ public class Demo {
             JobDetail job = JobBuilder.newJob(HelloQuartz.class).withIdentity("JobName", "JobGroupName").build();
             // 定义调度触发规则
             // SimpleTrigger
-            Trigger trigger=TriggerBuilder.newTrigger().withIdentity("SimpleTrigger", "SimpleTriggerGroup")
-                    .withSchedule(SimpleScheduleBuilder.repeatSecondlyForever(2).withRepeatCount(3))
-                    .startNow().build();
-            //  corn表达式  每五秒执行一次
-//            Trigger trigger=TriggerBuilder.newTrigger().withIdentity("CronTrigger1", "CronTriggerGroup")
-//                    .withSchedule(CronScheduleBuilder.cronSchedule("*/5 * * * * ?"))
+//            Trigger trigger=TriggerBuilder.newTrigger().withIdentity("SimpleTrigger", "SimpleTriggerGroup")
+//                    .withSchedule(SimpleScheduleBuilder.repeatSecondlyForever(2).withRepeatCount(3))
 //                    .startNow().build();
+            //  corn表达式  每五秒执行一次
+            Trigger trigger=TriggerBuilder.newTrigger().withIdentity("CronTrigger1", "CronTriggerGroup")
+                    .withSchedule(CronScheduleBuilder.cronSchedule(cron))
+                    .startNow().build();
             // 把作业和触发器注册到任务调度中
             scheduler.scheduleJob(job, trigger);
             // 启动调度
             scheduler.start();
-            Thread.sleep(100000);
+            System.out.println("scheduler.start()::" + new SimpleDateFormat("yyyy-MM-dd HH:mm:ss:SSS").format(new Date()));
+            Thread.sleep(1500000);
+            System.out.println(scheduler.getCurrentlyExecutingJobs().size());
             // 停止调度
             scheduler.shutdown();
         }catch(SchedulerException e){
             e.printStackTrace();
         }
     }
+
+//    private static final String cron = "*/10 * * * * ?";
+//    scheduler.start()::2020-04-09 14:31:08:089
+//    Hello quarze world !!!   ::2020-04-09 14:31:10:040
+
+//    private static final String cron = "0 * * * * ?";
+//    scheduler.start()::2020-04-09 14:37:18:014
+//    Hello quarze world !!!   ::2020-04-09 14:38:00:054
+//    Hello quarze world !!!   ::2020-04-09 14:39:00:005
+
+//    private static final String cron = "0 */1 * * * ?";
+//    scheduler.start()::2020-04-09 14:40:25:491
+//    Hello quarze world !!!   ::2020-04-09 14:41:00:038
+
+
+
 }

@@ -45,10 +45,11 @@ public class Demo {
 //        MongoCollection<Document> collection = MongoUtil.getCollection("zk_unstructure_data", "gonggao_structure_data");
         MongoClient mongoClient = MongoUtil.getMongoClient();
         MongoCollection<Document> collection = mongoClient.getDatabase("demo").getCollection("demo1");
-//        MongoUtil.insert(collection);
-//        MongoUtil.updateByFilter(collection);
-//        MongoUtil.deleteByFilter(collection);
-        MongoUtil.aggs(collection);
+
+//        MongoUtil.aggs(collection);
+        MongoUtil.aggs2(collection);
+
+
 
     }
 

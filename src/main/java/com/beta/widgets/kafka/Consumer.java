@@ -22,11 +22,11 @@ import org.springframework.stereotype.Component;
  * @since 1.0.0
  */
 //@Component
-public class Consumer {
-
+//public class Consumer {
+//
 //    @KafkaListener(topics = "${kafka.topic.testtopic}")
-    public void receive(String payload) {
-        System.out.println("kafka consumer in!");
-        System.out.println(payload);
-    }
-}
+//    public void receive(String payload) {
+//        System.out.println("kafka consumer: message received");
+//        System.out.println(payload);
+//    }
+//}

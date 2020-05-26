@@ -6,6 +6,7 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.builder.SpringApplicationBuilder;
 import org.springframework.boot.web.servlet.MultipartConfigFactory;
+import org.springframework.boot.web.servlet.ServletComponentScan;
 import org.springframework.boot.web.support.SpringBootServletInitializer;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.annotation.Bean;
@@ -34,21 +35,9 @@ import java.lang.reflect.Method;
 @Controller
 @EnableAsync
 @EnableSwagger2
+@ServletComponentScan(basePackages = "com.beta")
 public class Application extends SpringBootServletInitializer {
 	
-	private Logger logger = Logger.getLogger(Application.class);
-
-    @Autowired
-    private ApplicationContext applicationContext;
-	
-	//url:	localhost:8081/
-	@RequestMapping("/")
-	@ResponseBody
-	public String greeting(){
-
-		return "Hello SpringBoot"+"------2";
-	}
-
 	public static void main(String[] args){
 		SpringApplication.run(Application.class, args);
 	}

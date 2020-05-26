@@ -52,4 +52,21 @@ public class IOTest {
         }
         return bytes;
     }
+
+
+    //try-with-resources
+    //不用手动finally里调用close了，statement中的类实现了AutoClosable, JVM会自动调用其close方法。
+    //在close内抛出了异常、try也抛出了异常，close内的异常会被覆盖。这正是我们想要的。
+    //正常的try-finally如果都抛出异常的话，try的异常会被覆盖，但我们想看到的其实是try内哪里跑了异常，而不是finally里唯一的一行close抛异常
+    @Test
+    public void test2() {
+        try (FileInputStream f1 = new FileInputStream(new File(""));
+             FileInputStream f2 = new FileInputStream( new File(""))
+        ){
+            int read = f1.read();
+            int read2 = f2.read();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
 }

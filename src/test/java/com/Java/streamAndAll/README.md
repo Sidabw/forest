@@ -1,4 +1,3 @@
-
 ###     lambda/Interface的关系
 Interface MyActionInterface can be called by a lambda expression, 
 only because it contains exactly one abstract method declaration.
