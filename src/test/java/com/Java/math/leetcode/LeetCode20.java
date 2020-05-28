@@ -12,6 +12,9 @@ package com.Java.math.leetcode;
 
 import org.junit.Test;
 
+import java.util.ArrayList;
+import java.util.Stack;
+
 /**
  * 〈一句话功能简述〉:
  * 〈有效的括号〉
@@ -65,14 +68,17 @@ public class LeetCode20 {
     public void test6(){
 //        String str = "{[]}";
 //        String str = "([][]){{}}";
+//        String str = "(((([]))}]";
 //        String str = "()[]{}";
         String str = "(]";
+//        String str = "}[)]";
+//        String str = "([)]";//false，正确的顺序！！！
 //        ( ( ( [ ] ) ) )
 //        0 1 2 3 4 5 6 7
 //
 //        { { { } } }
 //        0 1 2 3 4 5
-        System.out.println(isValid((str)));
+        System.out.println(isValid2(str));
     }
     public static boolean isValid(String s) {
         //40 41 91 93 123 125
@@ -117,4 +123,36 @@ public class LeetCode20 {
         }
         return true;
     }
+
+    public boolean isValid2(String origin){
+        //使用Stack来解决这个问题。
+        char[] chars = origin.toCharArray();
+        Stack<Object> objectStack = new Stack<>();
+        char[] charsLeft = new char[]{'(','[','{'};
+        char[] charsRight = new char[]{')',']','}'};
+        for (char each : chars) {
+            //push if cur char is left
+            boolean isLeft = false;
+            for (char e1 : charsLeft) {
+                if (e1 == each) {isLeft = true;break;}
+            }
+            if (isLeft) objectStack.push(each);
+            else {
+                //此时说明是右括号.现在要找到对应的左括号是什么。
+                int leftIndex = 0;
+                for (int i = 0; i< charsRight.length; i++) {
+                    if (charsRight[i] == each) {leftIndex = i; break;}
+                }
+                char oppositeLeft = charsLeft[leftIndex];
+                //1.查看objectstatck中有对应的左括号吗，有的话取出，没有的话直接return false
+                //要以正确的顺序闭合，所以直接取栈顶就可以了。
+                if (objectStack.empty()) return false;
+                boolean yes = ((char)objectStack.pop()) == oppositeLeft;
+                if (!yes) return false;//此时说明就没有对应的
+            }
+        }
+        //最后是空的就说明 没问题
+        return objectStack.empty();
+    }
+
 }
