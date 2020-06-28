@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.beta.widgets.easycode.dao.M8FirstTable2Dao">
+
+    <resultMap type="com.beta.widgets.easycode.entity.M8FirstTable2" id="M8FirstTable2Map">
+        <result property="id" column="id" jdbcType="INTEGER"/>
+        <result property="phonenum" column="phoneNum" jdbcType="VARCHAR"/>
+        <result property="soHot" column="" jdbcType="VARCHAR"/>
+        <result property="phoneNum" column="" jdbcType="VARCHAR"/>
+    </resultMap>
+
+    <!--查询单个-->
+    <select id="queryById" resultMap="M8FirstTable2Map">
+        select
+          id, phoneNum, $column.obj.name, $column.obj.name
+        from mysql8_first_db.m8_first_table2
+        where id = #{id}
+    </select>
+
+    <!--查询指定行数据-->
+    <select id="queryAllByLimit" resultMap="M8FirstTable2Map">
+        select
+          id, phoneNum, $column.obj.name, $column.obj.name
+        from mysql8_first_db.m8_first_table2
+        limit #{offset}, #{limit}
+    </select>
+
+    <!--通过实体作为筛选条件查询-->
+    <select id="queryAll" resultMap="M8FirstTable2Map">
+        select
+          id, phoneNum, $column.obj.name, $column.obj.name
+        from mysql8_first_db.m8_first_table2
+        <where>
+            <if test="id != null">
+                and id = #{id}
+            </if>
+            <if test="phonenum != null and phonenum != ''">
+                and phoneNum = #{phonenum}
+            </if>
+            <if test="soHot != null and soHot != ''">
+                and  = #{soHot}
+            </if>
+            <if test="phoneNum != null and phoneNum != ''">
+                and  = #{phoneNum}
+            </if>
+        </where>
+    </select>
+
+    <!--新增所有列-->
+    <insert id="insert" keyProperty="id" useGeneratedKeys="true">
+        insert into mysql8_first_db.m8_first_table2(phoneNum)
+        values (#{phonenum})
+    </insert>
+
+    <!--通过主键修改数据-->
+    <update id="update">
+        update mysql8_first_db.m8_first_table2
+        <set>
+            <if test="phonenum != null and phonenum != ''">
+                phoneNum = #{phonenum},
+            </if>
+        </set>
+        where id = #{id}
+    </update>
+
+    <!--通过主键删除-->
+    <delete id="deleteById">
+        delete from mysql8_first_db.m8_first_table2 where id = #{id}
+    </delete>
+
+</mapper>
