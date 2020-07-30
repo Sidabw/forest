@@ -14,7 +14,7 @@ import java.util.List;
  * @author makejava
  * @since 2020-06-26 17:02:24
  */
-@Service("m8FirstTableService")
+@Service
 public class M8FirstTableServiceImpl implements M8FirstTableService {
     @Resource
     private M8FirstTableDao m8FirstTableDao;

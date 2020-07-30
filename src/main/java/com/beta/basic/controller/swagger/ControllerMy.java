@@ -25,6 +25,7 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.multipart.MultipartFile;
 import org.springframework.web.servlet.ModelAndView;
@@ -46,6 +47,14 @@ public class ControllerMy {
 	
 	@Autowired
 	private AsyncTest asyncTest;
+
+    @RequestMapping(value="/reqTest",method=RequestMethod.GET)
+    @ResponseBody
+    public String reqTest(Object aa) throws Exception{
+        System.out.println(aa);
+        Thread.sleep(new Random().nextInt(10)*1000);
+        return "/reqTest请求到达";
+    }
 
 	@RequestMapping(value="/asynctest",method=RequestMethod.GET)
 	@ResponseBody
