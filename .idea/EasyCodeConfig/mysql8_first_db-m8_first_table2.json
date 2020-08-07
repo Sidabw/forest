@@ -1,0 +1,44 @@
+{
+  "name" : "M8FirstTable2",
+  "comment" : null,
+  "fullColumn" : [ {
+    "name" : "id",
+    "comment" : null,
+    "type" : null,
+    "shortType" : null,
+    "custom" : false,
+    "ext" : { }
+  }, {
+    "name" : "phonenum",
+    "comment" : null,
+    "type" : null,
+    "shortType" : null,
+    "custom" : false,
+    "ext" : {
+      "disable" : true
+    }
+  }, {
+    "name" : "soHot",
+    "comment" : "",
+    "type" : "java.lang.String",
+    "shortType" : null,
+    "custom" : true,
+    "ext" : {
+      "disable" : true
+    }
+  }, {
+    "name" : "phoneNum",
+    "comment" : null,
+    "type" : "java.lang.String",
+    "shortType" : null,
+    "custom" : true,
+    "ext" : {
+      "disable" : true
+    }
+  } ],
+  "pkColumn" : null,
+  "otherColumn" : null,
+  "savePackageName" : "com.beta.widgets.easycode",
+  "savePath" : "./src/main/java/com/beta/widgets/easycode",
+  "saveModelName" : "forest"
+}
