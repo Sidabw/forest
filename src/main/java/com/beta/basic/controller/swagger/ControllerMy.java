@@ -8,6 +8,7 @@ import java.util.*;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+import com.alibaba.fastjson.JSONObject;
 import org.apache.http.HttpEntity;
 import org.apache.http.client.methods.CloseableHttpResponse;
 import org.apache.http.client.methods.HttpPost;
@@ -37,7 +38,7 @@ import com.beta.basic.service.IUserService;
 
 
 @Controller
-@RequestMapping("/user")
+@RequestMapping("/test")
 public class ControllerMy {
 	
 	private Logger logger = Logger.getLogger(ControllerMy.class);  
@@ -47,6 +48,32 @@ public class ControllerMy {
 	
 	@Autowired
 	private AsyncTest asyncTest;
+
+	//魔豆远程服务节点测试
+    //1.get 同步
+    @RequestMapping(value="/moduleTest1",method=RequestMethod.GET)
+    @ResponseBody
+    public Object moduleTest1(Object param) {
+        logger.debug(JSONObject.toJSONString(param));
+        return "moduleTest1 success";
+    }
+
+    //2.post 同步
+    @RequestMapping(value="/moduleTest2",method=RequestMethod.POST)
+    @ResponseBody
+    public Object moduleTest2(Object param) {
+        logger.debug(JSONObject.toJSONString(param));
+        return "moduleTest2 success";
+    }
+
+    //2.post 异步
+    @RequestMapping(value="/moduleTest3",method=RequestMethod.POST)
+    @ResponseBody
+    public Object moduleTest3(Object param) throws InterruptedException {
+        logger.debug(JSONObject.toJSONString(param));
+        Thread.sleep(20000L);
+        return "moduleTest3 success";
+    }
 
     @RequestMapping(value="/reqTest",method=RequestMethod.GET)
     @ResponseBody

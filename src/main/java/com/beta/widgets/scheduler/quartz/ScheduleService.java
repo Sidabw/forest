@@ -25,8 +25,8 @@ import org.springframework.stereotype.Service;
 @Service
 public class ScheduleService {
 
-    @Autowired
-    private Scheduler scheduler;
+//    @Autowired
+//    private Scheduler scheduler;
 
     public void testScheduleTask() throws SchedulerException {
 //        System.out.println("quartz...   in..");
