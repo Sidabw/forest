@@ -35,13 +35,15 @@ public class MultiThread2 {
     @Test
     public void test1() throws InterruptedException {
         blockingTestThreadPool.shutdown();
-        for (int i = 0; i< 6 ; i ++) {
+        for (int i = 0; i < 6; i++) {
             int activeCount = blockingTestThreadPool.getActiveCount();
             System.out.println("activeCount : " + activeCount);
             int finalI = i;
             if (activeCount < 2)
 //            if (activeCount < 3)
-                blockingTestThreadPool.execute(() -> {run(finalI);});
+                blockingTestThreadPool.execute(() -> {
+                    run(finalI);
+                });
             else
                 Thread.sleep(4000L);
         }
@@ -60,7 +62,7 @@ public class MultiThread2 {
     @Test
     public void test2() throws InterruptedException {
         ExecutorService es = Executors.newFixedThreadPool(5);
-        for (int i = 0 ;i < 100; i ++) {
+        for (int i = 0; i < 100; i++) {
             try {
                 int finalI = i;
                 System.out.println(finalI);

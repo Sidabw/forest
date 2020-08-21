@@ -25,7 +25,7 @@ import java.nio.file.Paths;
  * @create 2019/6/24
  * @since 1.0.0
  */
-public class MyClassloader extends ClassLoader{
+public class MyClassloader extends ClassLoader {
 
 
     @Override

@@ -18,7 +18,7 @@ package com.Java.basic.extendstest.test4;
  * @create 2020/1/6
  * @since 1.0.0
  */
-public class B extends A{
+public class B extends A {
 
     //TODO  需要好好复习一下Java的子父类属性的覆盖
     protected static String staticStr = "b";

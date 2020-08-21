@@ -32,7 +32,7 @@ import java.util.function.Supplier;
 public class Demo {
 
     //Method and Constructor References
-    public static void main(String[] args){
+    public static void main(String[] args) {
         //pass reference by utilizing static method
         //静态方法引用
         Function<String, Integer> f1 = Integer::valueOf;

@@ -23,7 +23,7 @@ import org.junit.Test;
 public class LeetCode141 {
 
     @Test
-    public void test(){
+    public void test() {
         ListNode listNode1 = new ListNode(1);
         ListNode listNode2 = new ListNode(2);
 //        ListNode listNode3 = new ListNode(3);
@@ -52,7 +52,7 @@ public class LeetCode141 {
         //一人先跳一次
         ListNode slow = head.next;
         ListNode fast = head.next.next;
-        for (;;){
+        for (; ; ) {
             if (slow == null || fast == null) return false;
             if (slow == fast) return true;
             slow = slow.next;

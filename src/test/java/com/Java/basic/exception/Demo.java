@@ -30,7 +30,7 @@ public class Demo {
             new Demo().t1();
         } catch (Exception e) {
             //正常的异常堆栈信息不会有caused by，只有该异常调用了Throwable的initCause(e)方法之后，该异常的堆栈信息里才会有caused by
-            LOGGER.error("",e);
+            LOGGER.error("", e);
         }
     }
 
@@ -38,7 +38,7 @@ public class Demo {
         try {
             t2();
         } catch (Exception e) {
-            LOGGER.error("",e);
+            LOGGER.error("", e);
             MyException myException = new MyException(e.getMessage());
             myException.initCause(e);
             throw myException;
@@ -59,7 +59,7 @@ public class Demo {
 }
 
 
-class MyException extends RuntimeException{
+class MyException extends RuntimeException {
 
     public MyException(String msg) {
         super(msg);

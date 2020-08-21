@@ -86,7 +86,7 @@ public class JsonPathDemo {
     }
 
     @Test
-    public void test2(){
+    public void test2() {
         DocumentContext context = JsonPath.parse(originStr);
         //方法上的泛型是这么用的...
         //当然下面两种肯定会有一个throw an java.lang.ClassCastException
@@ -95,7 +95,7 @@ public class JsonPathDemo {
     }
 
     @Test
-    public void test3(){
+    public void test3() {
         JSONObject jsonObject = JSONObject.parseObject(originStr);
         //parse一个jsonObj也是可以的
         DocumentContext context = JsonPath.parse(jsonObject);
@@ -104,7 +104,7 @@ public class JsonPathDemo {
 
     //异常
     @Test
-    public void test4(){
+    public void test4() {
         Configuration conf = Configuration.defaultConfiguration();
         //真的是奇怪的用法...
         Configuration conf2 = conf.addOptions(Option.SUPPRESS_EXCEPTIONS);

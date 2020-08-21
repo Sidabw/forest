@@ -33,7 +33,7 @@ import java.util.*;
 public class JavaTest {
 
     @Test
-    public void test5(){
+    public void test5() {
         HashMap<String, Object> map = new HashMap<>();
         System.out.println(map.getOrDefault("aa", "asdfsdf"));
         Runtime runtime = Runtime.getRuntime();
@@ -45,7 +45,7 @@ public class JavaTest {
         jsonObject.remove("a");
         System.out.println(map.get("a"));
         Map<String, String> map2 = Collections.singletonMap("a", "v");
-        map.put("c",map2);
+        map.put("c", map2);
         System.out.println(jsonObject.getJSONObject("c") == jsonObject.getJSONObject("c"));
 //        System.out.println(jsonObject.getJSONObject("c").get("a"));
 //        jsonObject.getJSONObject("c").put("a", "aaa");
@@ -66,22 +66,23 @@ public class JavaTest {
         while (arr2[i] > 2) {
             i--;
         }
-        while(arr2[j--] > 2) {}
+        while (arr2[j--] > 2) {
+        }
         System.out.println(i);  //输出：1
         System.out.println(j);  //输出：0
     }
 
     /**
+     * @param
      * @Description 元素迭代的时候remove必须使用迭代器. jdk1.8之后新增了removeIf方法
      * 注意：下面只有方式二好使，因为方式一返回的是一个假的ArrayList(是Arrays的静态内部类)
-     * @param
      * @return: void
      * @since: 2.0.5
      * @Author: feiyi
      * @Date: 2019/12/23 4:00 PM
      **/
     @Test
-    public void test7 () {
+    public void test7() {
         //方式一
 //        List<String> strs = Arrays.asList("a", "b", "c", "d", "e", "f", "g");
 
@@ -130,7 +131,7 @@ public class JavaTest {
 
 
     @Test
-    public void testTime(){
+    public void testTime() {
         long l1 = Double.valueOf(1577693319.86831 * 1000).longValue();
         System.out.println();
         Date date = new Date(l1);
@@ -154,14 +155,14 @@ public class JavaTest {
     @Test
     public void encodingTest() throws UnsupportedEncodingException {
         String str = "21\u4e16\u7eaa\u7ecf\u6d4e\u62a5\u9053";
-        System.out.println(new String (str.getBytes(), "UTF-8")); //21世纪经济报道
+        System.out.println(new String(str.getBytes(), "UTF-8")); //21世纪经济报道
 
         String str2 = "\u83b7\u53d6\u62bd\u53d6\u6570\u636e\u5931\u8d25";
-        System.out.println(new String (str2.getBytes(), "UTF-8")); //获取抽取数据失败
+        System.out.println(new String(str2.getBytes(), "UTF-8")); //获取抽取数据失败
     }
 
     @Test
-    public void regexTest(){
+    public void regexTest() {
         String str = "aa$.bb";
         String str2 = "aa$bb.cc";
         //index of 不接受regex...
@@ -173,7 +174,7 @@ public class JavaTest {
     }
 
     @Test
-    public void test1(){
+    public void test1() {
         Son son1 = new Son();
         son1.setAge(1);
 
@@ -196,8 +197,6 @@ public class JavaTest {
     }
 
 
-
-
     //在方法内部直接通过改变引用的方式改变对象是无效的。
     public static void test1S(List<Son> sons) {
         Son son = new Son();
@@ -206,7 +205,7 @@ public class JavaTest {
     }
 
     @Test
-    public void test21(){
+    public void test21() {
         //不能这么搞...
         DataTest dataTest = new DataTest();
         Integer age = dataTest.getAge();
@@ -236,7 +235,7 @@ public class JavaTest {
         HashMap<String, DataTest> dataMap = new HashMap<>();
         DataTest aaa = dataMap.get("aaa");
         if (aaa == null)
-             aaa = new DataTest();
+            aaa = new DataTest();
         aaa.setAge(1);
         dataMap.put("aaa", aaa);
         System.out.println();
@@ -245,18 +244,18 @@ public class JavaTest {
         else
             System.out.println("不好使啊...");
 
-        byte b = 2, e =3;
+        byte b = 2, e = 3;
 //        byte f = b + e;   //编译错误
     }
 
     @Test
-    public void test24(){
+    public void test24() {
         Shunxu shunxu = new Shunxu();
     }
 
 }
 
-class DataTest{
+class DataTest {
 
     private Integer age = 0;
 
@@ -269,13 +268,14 @@ class DataTest{
     }
 }
 
-class Shunxu{
+class Shunxu {
 
     private static final DataTest DATA_TEST = create();
 
-    public Shunxu(){
+    public Shunxu() {
         System.out.println("Shunxu");
     }
+
     private static DataTest create() {
         System.out.println("create");
         return null;

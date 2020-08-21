@@ -34,9 +34,10 @@ public class Parent {
         System.out.println(b);
     }
 
-    Parent(){
+    Parent() {
         System.out.println("父类构造函数");
     }
+
     private String name;
 
     private String id;

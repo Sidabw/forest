@@ -57,6 +57,7 @@ public class ClientDemo {
 //        delete(client);
 //        update(client);
     }
+
     public static TransportClient getClient() throws UnknownHostException {
         return getClient(address, clusterName);
     }
@@ -70,10 +71,10 @@ public class ClientDemo {
         return client;
     }
 
-    public static void getResponseResult(SearchResponse response, String showField){
+    public static void getResponseResult(SearchResponse response, String showField) {
         SearchHit[] hits = response.getHits().getHits();
 //        System.out.println("total hits:::" + response.getHits().totalHits);
-        for(SearchHit searchHit : hits){
+        for (SearchHit searchHit : hits) {
             Map<String, Object> sourceAsMap = searchHit.getSourceAsMap();
             System.out.println(sourceAsMap.get(showField));
         }

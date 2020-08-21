@@ -50,9 +50,9 @@ public class Demo {
 //        System.out.println("out");
     }
 
-    public static List<Integer> simulationData(){
+    public static List<Integer> simulationData() {
         ArrayList<Integer> result = new ArrayList<>();
-        for (int i = 0; i < 10000; i ++) {
+        for (int i = 0; i < 10000; i++) {
             result.add(i);
         }
         return result;

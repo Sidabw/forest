@@ -21,7 +21,7 @@ import java.util.concurrent.locks.ReentrantLock;
  * @create 2020/3/19
  * @since 1.0.0
  */
-public class User3 implements Runnable{
+public class User3 implements Runnable {
 
     private static ReentrantLock lock = new ReentrantLock();
 
@@ -39,7 +39,7 @@ public class User3 implements Runnable{
     public void run() {
         i++;
         while (true) {
-            webApp.webMethod(lock, user  + " -- " +  i);
+            webApp.webMethod(lock, user + " -- " + i);
         }
     }
 }

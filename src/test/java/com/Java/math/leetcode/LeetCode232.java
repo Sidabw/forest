@@ -26,7 +26,7 @@ public class LeetCode232 {
 
     //半个小时。。  而且还是看了答案又写的情况。。
     @Test
-    public void test(){
+    public void test() {
         MyQueue queue = new MyQueue();
 
         queue.push(1);
@@ -43,16 +43,23 @@ class MyQueue {
     private final Stack<Integer> s2 = new Stack<>();
     int front = 0;
 
-    /** Initialize your data structure here. */
-    public MyQueue() {}
+    /**
+     * Initialize your data structure here.
+     */
+    public MyQueue() {
+    }
 
-    /** Push element x to the back of queue. */
+    /**
+     * Push element x to the back of queue.
+     */
     public void push(int x) {
         if (s1.empty()) front = x;
         s1.push(x);
     }
 
-    /** Removes the element from in front of queue and returns that element. */
+    /**
+     * Removes the element from in front of queue and returns that element.
+     */
     //出队的时候又发生了push没关系，就push到s1里就可以了，只要在s2空了的情况下再去反转s1就ok。
     public int pop() {
         if (s2.empty()) {
@@ -64,7 +71,9 @@ class MyQueue {
         return s2.pop();
     }
 
-    /** Get the front element. */
+    /**
+     * Get the front element.
+     */
     public int peek() {
         if (!s2.isEmpty()) {
             return s2.peek();
@@ -72,7 +81,9 @@ class MyQueue {
         return front;
     }
 
-    /** Returns whether the queue is empty. */
+    /**
+     * Returns whether the queue is empty.
+     */
     public boolean empty() {
         return s2.empty() && s1.empty();
     }

@@ -13,7 +13,7 @@ package com.Java.designMode.callback.callbackdemo.student;
 import com.Java.designMode.callback.callbackdemo.teacher.ITeacherCallback;
 
 /**
- * 〈一句话功能简述〉: 
+ * 〈一句话功能简述〉:
  * 〈〉
  *
  * @author feiyi

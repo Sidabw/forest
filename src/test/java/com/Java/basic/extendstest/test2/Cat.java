@@ -18,6 +18,6 @@ package com.Java.basic.extendstest.test2;
  * @create 2019/12/5
  * @since 1.0.0
  */
-public class Cat extends Animal<CatEntity>{
+public class Cat extends Animal<CatEntity> {
 
 }

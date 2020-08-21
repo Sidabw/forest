@@ -38,14 +38,14 @@ public class Recursion {
 
     //双层递归
     @Test
-    public void test2(){
+    public void test2() {
         int a = 2;
         int b = 2;
         System.out.println(a--);
         System.out.println(--b);
 
-        int[] origin = new int[] {6, 202, 100, 301, 38, 8, 1};
-        int aa = 8/10;
+        int[] origin = new int[]{6, 202, 100, 301, 38, 8, 1};
+        int aa = 8 / 10;
         System.out.println(aa);
     }
 

@@ -26,6 +26,7 @@ import java.util.List;
 public class LeetCode234 {
 
     /**
+     * @param
      * @Description 请判断一个链表是否为回文链表。
      * 示例 1:
      * 输入: 1->2
@@ -38,7 +39,6 @@ public class LeetCode234 {
      * 来源：力扣（LeetCode）
      * 链接：https://leetcode-cn.com/problems/palindrome-linked-list
      * 著作权归领扣网络所有。商业转载请联系官方授权，非商业转载请注明出处。
-     * @param
      * @return: void
      * @since: 2.0.5
      * @Author: feiyi
@@ -83,16 +83,16 @@ public class LeetCode234 {
         //求得leftEnd 和 rightStart
         int size = arrayList.size();
         if (size == 0 || size == 1) return true;
-        int lefEndIndex = size/2 -1;
+        int lefEndIndex = size / 2 - 1;
         int rightStartIndex;
-        if (size%2 == 0)
-            rightStartIndex = size/2;
+        if (size % 2 == 0)
+            rightStartIndex = size / 2;
         else
-            rightStartIndex = size/2 + 1;
+            rightStartIndex = size / 2 + 1;
 
         List<Integer> subLeft = arrayList.subList(0, lefEndIndex + 1);
         List<Integer> subRight = arrayList.subList(rightStartIndex, size);
-        for (int i = 0; i<subLeft.size(); i++) {
+        for (int i = 0; i < subLeft.size(); i++) {
             int curLeftIndex = i;
             int curRightIndex = subRight.size() - i - 1;
             Integer left = subLeft.get(curLeftIndex);

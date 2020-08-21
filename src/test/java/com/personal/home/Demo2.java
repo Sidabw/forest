@@ -32,7 +32,7 @@ public class Demo2 {
     //现在计算，到第31年上，哪种方式留下的钱更多。即，贷款，到底应该是按照最短年限来贷款，还是最高年限。
 
     @Test
-    public void test(){
+    public void test() {
         double b1 = 0.04;//理财利率
         double b2 = 0.0325;//公积金贷款利率
         double incomeM = 9771.9;
@@ -69,7 +69,6 @@ public class Demo2 {
             System.out.println("第" + (i + 1) + "年，10年剩余" + count10);
             System.out.println("第" + (i + 1) + "年，30年剩余" + count30);
         }
-
 
 
     }

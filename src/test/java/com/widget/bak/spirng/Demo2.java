@@ -28,7 +28,7 @@ import java.math.BigDecimal;
 public class Demo2 {
 
     @RequestMapping(value = "/b")
-    public Object dyReqTest(){
+    public Object dyReqTest() {
         BigDecimal.valueOf(0.0001).doubleValue();
         return "ooooo------ooooo";
     }

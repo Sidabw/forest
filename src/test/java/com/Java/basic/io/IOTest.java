@@ -24,31 +24,31 @@ public class IOTest {
         byte[] temp = new byte[1024];
         int len;
         while ((len = b1.read(temp)) != -1) {
-            bo1.write(temp,0, len);
+            bo1.write(temp, 0, len);
         }
         bo1.close();
 
         byte[] temp2 = new byte[1024];
         int len2;
         while ((len2 = b2.read(temp2)) != -1) {
-            bo2.write(temp2,0, len2);
+            bo2.write(temp2, 0, len2);
         }
         bo2.close();
     }
 
     private byte[] inputStreamToByte(InputStream inputStream) throws IOException {
-        int length ;
+        int length;
         byte[] temp = new byte[1024];
         ArrayList<Byte> list = new ArrayList<>();
-        while ((length = inputStream.read(temp)) != -1){
-            for (int i = 0 ; i<length ; i ++) {
+        while ((length = inputStream.read(temp)) != -1) {
+            for (int i = 0; i < length; i++) {
                 list.add(temp[i]);
             }
         }
         Object[] objects = list.toArray();
         byte[] bytes = new byte[objects.length];
-        for (int i = 0 ; i < objects.length ; i ++){
-            bytes[i] = ((Byte)objects[i]).byteValue();
+        for (int i = 0; i < objects.length; i++) {
+            bytes[i] = ((Byte) objects[i]).byteValue();
         }
         return bytes;
     }
@@ -61,8 +61,8 @@ public class IOTest {
     @Test
     public void test2() {
         try (FileInputStream f1 = new FileInputStream(new File(""));
-             FileInputStream f2 = new FileInputStream( new File(""))
-        ){
+             FileInputStream f2 = new FileInputStream(new File(""))
+        ) {
             int read = f1.read();
             int read2 = f2.read();
         } catch (IOException e) {

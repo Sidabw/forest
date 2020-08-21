@@ -31,7 +31,7 @@ public class DecimalTest {
 
     //BigDecimal正确错误示例
     @Test
-    public void test1(){
+    public void test1() {
         //为什么二进制不能表示一个小数，举例0.1换成二进制，请看下面的运算
         //        0.1 * 2 = 0.2     -----0
         //        0.2 * 2 = 0.4     -----0
@@ -41,14 +41,14 @@ public class DecimalTest {
         //        0.2 * 2 = 0.4     -----0
         //你懂的 0.0001100110011001100110011001100110011001100110011001101
         BigDecimal bigDecimal = BigDecimal.valueOf(0.8);
-        BigDecimal bigDecimal2 =  BigDecimal.valueOf(7);
-        BigDecimal bigDecimal1 =  BigDecimal.valueOf(110.6);
+        BigDecimal bigDecimal2 = BigDecimal.valueOf(7);
+        BigDecimal bigDecimal1 = BigDecimal.valueOf(110.6);
         //计算准确：得116.2
         System.out.println(bigDecimal1.add(bigDecimal2.multiply(bigDecimal)).doubleValue());
 
         BigDecimal bigDecimal222 = new BigDecimal(0.8);
-        BigDecimal bigDecimal22 =  new BigDecimal(7);
-        BigDecimal bigDecimal21 =  new BigDecimal(110.6);
+        BigDecimal bigDecimal22 = new BigDecimal(7);
+        BigDecimal bigDecimal21 = new BigDecimal(110.6);
         //计算不正确：得116.19999999999999
         System.out.println(bigDecimal21.add(bigDecimal22.multiply(bigDecimal222)).doubleValue());
     }
@@ -73,7 +73,7 @@ public class DecimalTest {
 
     //使用HALF_UP实现四舍五入
     @Test
-    public void test3(){
+    public void test3() {
         //四舍五入：使用BigDecimal处理小数点精度问题
 //        BigDecimal b1 = BigDecimal.valueOf(1.234);
 //        BigDecimal b1 = BigDecimal.valueOf(1.235);
@@ -89,8 +89,8 @@ public class DecimalTest {
     //占位符可以使用0和#两种，当使用0的时候会严格按照样式来进行匹配，不够的时候会补0，而使用#时会将前后的0进行忽略
     //正常的舍入操作直接使用BigDecimal的setScale
     @Test
-    public void test4(){
-        double ll = 0.55123 ;
+    public void test4() {
+        double ll = 0.55123;
         DecimalFormat d1 = new DecimalFormat("0.00000000");
         DecimalFormat d2 = new DecimalFormat("#.########");
         DecimalFormat d3 = new DecimalFormat("0.00%");  //format传入浮点返回正确的xx%
@@ -102,7 +102,7 @@ public class DecimalTest {
 
     //Math使用
     @Test
-    public void test5 (){
+    public void test5() {
         //Math取整Math.round四舍五入取整
         System.out.println(Math.floor(5.4));
         System.out.println(Math.floor(5.5));

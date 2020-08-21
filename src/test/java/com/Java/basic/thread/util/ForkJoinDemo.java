@@ -18,7 +18,7 @@ import java.util.concurrent.*;
  * fork/join,即拆分/组合，是即jdk1.7之后提供的并发框架,其思想在于将大任务拆分成小任务，各个线程完成各子的小任务，最后再组合结果。
  * 重要的是其工作窃取(work-stealing)算法。每个线程都会维护一个任务队列，该队列是一个双端队列。当前线程取任务是从头上取，其他线程完成了
  * 自己的任务，就可以去其他线程的双端队列里，从尾部取任务。
- *
+ * <p>
  * RecursiveAction 没有返回结果的任务
  * RecursiveTask 有返回结果的任务
  * ForkJoinTask, Future的子类 上面两个的爸爸，通常不需要
@@ -31,7 +31,7 @@ import java.util.concurrent.*;
 public class ForkJoinDemo {
 
     public static void main(String[] args) throws ExecutionException, InterruptedException {
-        ForkJoinTask <Integer> countTask = new CountTask(1, 4);
+        ForkJoinTask<Integer> countTask = new CountTask(1, 4);
         //pool主要由任务队列和WorkerThread队列组成。
         ForkJoinPool forkJoinPool = new ForkJoinPool();
         Future<Integer> result = forkJoinPool.submit(countTask);
@@ -50,7 +50,7 @@ class CountTask extends RecursiveTask<Integer> {
 
     private int end;
 
-    public CountTask (int start, int end) {
+    public CountTask(int start, int end) {
         this.start = start;
         this.end = end;
     }
@@ -61,10 +61,10 @@ class CountTask extends RecursiveTask<Integer> {
         boolean needlessFork = (end - start) <= THRESHOLD;
         //不需要fork，直接计算
         if (needlessFork)
-            for (int i = start; i<= end; i++) {
-                sum+=i;
+            for (int i = start; i <= end; i++) {
+                sum += i;
             }
-        //需要fork
+            //需要fork
         else {
             //任务拆分。手动
             int mid = (end + start) / 2;

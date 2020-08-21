@@ -51,22 +51,22 @@ public class Demo {
 		List<Integer> squareNums = nums.stream().map(n -> n*n).collect(Collectors.toList());
 		squareNums.stream().forEach(System.out::println);*/
 
-       //4.flatMap 合并list
-		Stream<List<Integer>> inputStream = Stream.of(
-				 Arrays.asList(1),
-				 Arrays.asList(2, 3),
-				 Arrays.asList(4, 5, 6)
-				 );
+        //4.flatMap 合并list
+        Stream<List<Integer>> inputStream = Stream.of(
+                Arrays.asList(1),
+                Arrays.asList(2, 3),
+                Arrays.asList(4, 5, 6)
+        );
         List<Integer> collect = inputStream.
                 flatMap((childList) -> childList.stream()).collect(Collectors.toList());
 
         //5.filter	filter对Stream进行某项测试，通过测试的元素被留下来生成一个新的Stream
-     //留下偶数
-    //Integer[] sixNums = {1, 2 , 3, 4, 5, 6};
+        //留下偶数
+        //Integer[] sixNums = {1, 2 , 3, 4, 5, 6};
     /*Integer[] events=
             Stream.of(sixNums).filter(n -> n%2 == 0).toArray(Integer[]::new);
     Stream.of(events).forEach(System.out::println);*/
-    //把单词挑出来	使用flatMap
+        //把单词挑出来	使用flatMap
     /*List<String> output = reader.lines().
              flatMap(line -> Stream.of(line.split(REGEXP))).
              filter(word -> word.length() > 0).
@@ -90,7 +90,7 @@ public class Demo {
         j1.put("b", "bb");
         Object clone = j1.clone();
         if (clone instanceof JSONObject) {
-            JSONObject cloneJson = (JSONObject)clone;
+            JSONObject cloneJson = (JSONObject) clone;
             cloneJson.put("a", "ab");
             System.out.println(j1.getString("a"));
         }

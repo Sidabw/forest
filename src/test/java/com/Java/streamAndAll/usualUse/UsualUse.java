@@ -16,19 +16,19 @@ public class UsualUse {
 
     @Test
     public void mapTest() {
-        User user = new User(12,"women","sida");
-        User user1 = new User(12,"women","sida");
-        User user2 = new User(13,"women","sida");
-        User user3 = new User(12,"women","sida");
-        User[] users = new User[] {user, user1, user2, user3};
+        User user = new User(12, "women", "sida");
+        User user1 = new User(12, "women", "sida");
+        User user2 = new User(13, "women", "sida");
+        User user3 = new User(12, "women", "sida");
+        User[] users = new User[]{user, user1, user2, user3};
         //将users中的所有age拿出来重新组成1个集合，--->[方便：不需要重新声明1个数组，不需要手动遍历users，不需要去手动赋值。满分！！！]
         List<Integer> array = Arrays.stream(users).map(User::getAge).collect(Collectors.toList());
         //这样方便在于使用的时候需要强转
-        Object[] array2 = Arrays.stream(users).map(u ->u.getAge()).toArray();
-        for(Object obj:array2){
+        Object[] array2 = Arrays.stream(users).map(u -> u.getAge()).toArray();
+        for (Object obj : array2) {
             System.out.println(obj);
         }
-        List<Integer> list = Arrays.asList(1,2,3,4);
+        List<Integer> list = Arrays.asList(1, 2, 3, 4);
         //避免理解为静态函数	forEach接受的参数为Consumer
         list.forEach(System.out::println);
 
@@ -42,14 +42,14 @@ public class UsualUse {
         //1.void foreach ，Stream peek
         //2.peek 只是给each element 包了一个consumer，不会立即执行，后面对each element有操作时才会执行
         //3.peek 和 map 的区别。如果只是在每个元素上e.setxx 这样的操作，就可以使用peek，但是如果要 Person -> Dog 则需要map
-        Stream.of(1,2,3,4).forEach(System.out::println);
+        Stream.of(1, 2, 3, 4).forEach(System.out::println);
         System.out.println("----------------------------");
-        Stream.of(1,2,3,4).peek(System.out::println).forEach(e -> System.out.println(e + 1));
+        Stream.of(1, 2, 3, 4).peek(System.out::println).forEach(e -> System.out.println(e + 1));
         System.out.println("----------------------------");
     }
 
     @Test
-    public void groupByTest(){
+    public void groupByTest() {
         System.out.println("=====   Grouping By   =====");
         User sida1 = new User(17, "女", "sida1");
         User sida2 = new User(17, "女", "sida2");
@@ -61,7 +61,7 @@ public class UsualUse {
     }
 
     @Test
-    public void summing(){
+    public void summing() {
         System.out.println("=====   Summing   =====");
         List<Integer> intList = Arrays.asList(12, 10, 29, 4, 1);
 //        Integer sum = intList.stream().collect(Collectors.summingInt(value -> value));
@@ -70,7 +70,7 @@ public class UsualUse {
     }
 
     @Test
-    public void sort(){
+    public void sort() {
         System.out.println("=====   String Sort   =====");
         List<String> names = Arrays.asList("peter", "anna", "mike", "xenia");
         //1
@@ -80,7 +80,7 @@ public class UsualUse {
         //2
 //        Collections.sort(names,(a, b) -> a.compareTo(b));
         //3
-        Collections.sort(names,String::compareTo);
+        Collections.sort(names, String::compareTo);
         names.stream().forEach(System.out::println);
 
         System.out.println("=====   Object Sort   =====");
@@ -107,7 +107,7 @@ public class UsualUse {
 
 
     @Test
-    public void collectTest(){
+    public void collectTest() {
         //指定collect的构造容器
 
         //不指定的情况
@@ -131,7 +131,7 @@ public class UsualUse {
 
     //reduce 擅长的是从一组值中生成一个值
     @Test
-    public void reduceTest(){
+    public void reduceTest() {
         //使用reduce 找出最长单词
         Stream<String> strStream = Stream.of("I", "LOVE", "YOU", "TOO");
         Optional<String> reduce = strStream.reduce((s1, s2) -> s1.length() >= s2.length() ? s1 : s2);
@@ -156,16 +156,16 @@ public class UsualUse {
     public void parallelStreamTest() throws InterruptedException {
 
         ArrayList<Integer> integers = new ArrayList<>();
-        for (int i = 0 ; i <  10 ; i ++) {
+        for (int i = 0; i < 10; i++) {
             integers.add(i);
         }
 
         long date = System.nanoTime();
-        integers.stream().forEach(e ->{
+        integers.stream().forEach(e -> {
             System.out.println(e);
         });
         long date2 = System.nanoTime();
-        integers.parallelStream().forEach(e ->{
+        integers.parallelStream().forEach(e -> {
             if (e == 2) System.out.println(e);
         });
         long date3 = System.nanoTime();
@@ -176,8 +176,8 @@ public class UsualUse {
 
 
     /**
-     * @Description 测试 stream.map是处理完一个给后边还是等全部处理完了再给后边
      * @param
+     * @Description 测试 stream.map是处理完一个给后边还是等全部处理完了再给后边
      * @return: void
      * @since: 2.0.5
      * @Author: feiyi
@@ -189,8 +189,8 @@ public class UsualUse {
         System.out.println("⬇️️⬇️️⬇️️⬇️️⬇️️⬇️️⬇️️⬇️️⬇️️⬇️️⬇️️⬇️️⬇️️⬇️️⬇️️️️⬇️️️");
         strings.stream().map(e -> {
             System.out.print(e);
-            return e+" z";
-        }).map(e ->{
+            return e + " z";
+        }).map(e -> {
             System.out.print(" map2 ");
             return e;
         }).forEach(e -> {
@@ -205,10 +205,10 @@ public class UsualUse {
 //        Spliterator<String> spliterator = stream.spliterator();
 //        spliterator.forEachRemaining(System.out::println);
 
-        stream.map(e ->{
+        stream.map(e -> {
             System.out.println(e);
             return e + 'z';
-        }).forEach(e ->{
+        }).forEach(e -> {
             System.out.println(e);
         });
     }

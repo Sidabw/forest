@@ -21,7 +21,7 @@ echo "我要删除只读变量  variabletest"
 #只读变量不可删除
 unset variabletest
 echo "variabletest is ${variabletest}"
-echo "字符串可以使用单引号，但这样就不能在字符串中引用其他变量了"
+echo "字符串使用双引号，因为这样可以在字符串里饮用其他字符串。如果是单引号的话就不可以了"
 name="zhangsan"
 name2="shazi${name}"
 echo ${name2}

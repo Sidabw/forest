@@ -57,14 +57,14 @@ public class Demo {
         getResponseResult(response, client);
     }
 
-    public static void getResponseResult(SearchResponse response, TransportClient client){
+    public static void getResponseResult(SearchResponse response, TransportClient client) {
 //        String insertIndex = "zk_sug_user_info_20191010_bak";
 //        String insertType = "zk_sug_user_info";
         String insertIndex = "zk_metadata_search_20191010_bak";
         String insertType = "zk_metadata_search";
         SearchHit[] hits = response.getHits().getHits();
         System.out.println("total hits:::" + response.getHits().getTotalHits());
-        for(SearchHit searchHit : hits){
+        for (SearchHit searchHit : hits) {
             System.out.println("------------------------------------------------------------------");
             Map<String, Object> sourceAsMap = searchHit.getSourceAsMap();
             System.out.println("id : " + searchHit.getId());
@@ -73,7 +73,7 @@ public class Demo {
                 System.out.println(key + " : " + sourceAsMap.get(key));
             }
             JSONObject jsonRecored = (JSONObject) JSONObject.toJSON(sourceAsMap);
-            IndexResponse responseRecord = client.prepareIndex(insertIndex, insertType,searchHit.getId())
+            IndexResponse responseRecord = client.prepareIndex(insertIndex, insertType, searchHit.getId())
                     .setSource(jsonRecored, XContentType.JSON)
                     .get();
             System.out.println(responseRecord.status());

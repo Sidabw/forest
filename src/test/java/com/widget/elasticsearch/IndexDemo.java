@@ -56,13 +56,13 @@ public class IndexDemo {
     /***
      * 批量 insert操作
      */
-    public static void bulkIndexNewRecoreds(TransportClient client, String index, String type, List<String> ids, List<String> jsonRecored){
+    public static void bulkIndexNewRecoreds(TransportClient client, String index, String type, List<String> ids, List<String> jsonRecored) {
         BulkRequestBuilder bulkRequestBuilder = client.prepareBulk();
-        for(int i = 0 ; i < jsonRecored.size(); i++){
+        for (int i = 0; i < jsonRecored.size(); i++) {
             bulkRequestBuilder.add(client
                     .prepareIndex(index, type, ids.get(i)).
                             setSource(jsonRecored.get(i), XContentType.JSON));
-            if(i != 0 && i % 100 == 0){
+            if (i != 0 && i % 100 == 0) {
                 //一次插入100条记录
                 bulkRequestBuilder.execute().actionGet();
             }
@@ -96,7 +96,7 @@ public class IndexDemo {
      * delete index
      * delete by filter
      */
-    public static void delete(TransportClient client){
+    public static void delete(TransportClient client) {
         //delete by id
 //        DeleteResponse consumer = client.prepareDelete().setIndex("consumer").setType("_doc")
 //                                        .setId("MMJFIGcBefsE9oGgzK4p").execute().actionGet();

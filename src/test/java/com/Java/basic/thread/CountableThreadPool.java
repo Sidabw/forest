@@ -7,7 +7,6 @@ import java.util.concurrent.locks.Condition;
 import java.util.concurrent.locks.ReentrantLock;
 
 /**
- *
  * from chaofeng 20191230
  * Thread pool for workers.<br></br>
  * Use {@link java.util.concurrent.ExecutorService} as inner implement. <br></br>
@@ -94,7 +93,7 @@ public class CountableThreadPool {
         executorService.shutdown();
     }
 
-    public boolean isTerminated(){
+    public boolean isTerminated() {
         return executorService.isTerminated();
     }
 }

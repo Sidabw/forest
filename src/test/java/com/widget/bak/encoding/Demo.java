@@ -62,7 +62,7 @@ public class Demo {
     public static void transferSingle(String path, String oldCharset, String newCharset) throws IOException {
         File eachFile = new File(path);
         String name = eachFile.getName();
-        String dir = path.substring(0,path.lastIndexOf(name) - 1);
+        String dir = path.substring(0, path.lastIndexOf(name) - 1);
         String newFileName = name.replaceAll("\\.java", "") + "Rc" + ".java";
         String newFilePath = dir + "/" + newFileName;
         InputStreamReader isr = new InputStreamReader(new FileInputStream(eachFile), oldCharset);
@@ -76,11 +76,9 @@ public class Demo {
     }
 
 
-
-
     @Test
-    public void test(){
+    public void test() {
         String str = ".a";
-        System.out.println(str.replaceAll("\\.","b"));
+        System.out.println(str.replaceAll("\\.", "b"));
     }
 }

@@ -25,7 +25,7 @@ import org.junit.Test;
 public class Demo {
 
     @Test
-    public void test(){
+    public void test() {
         TeacherBrew teacherBrew = new TeacherBrew(new StudentSida());
         teacherBrew.question();
     }

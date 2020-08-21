@@ -14,7 +14,7 @@ import java.util.HashMap;
  */
 public class RedisPoolTest {
 
-    private String a= "";
+    private String a = "";
 
     public String getA() {
         return a;
@@ -32,13 +32,13 @@ public class RedisPoolTest {
         jedisPoolConfig.setMinIdle(10);
         jedisPoolConfig.setMaxWaitMillis(3000);
 
-        JedisPool pool ;
-        Jedis jedis ;
+        JedisPool pool;
+        Jedis jedis;
 
         //2.按照配置参数创建连接池对象
-        pool = new JedisPool(jedisPoolConfig,"127.0.0.1",6379);
+        pool = new JedisPool(jedisPoolConfig, "127.0.0.1", 6379);
         //3.使用连接时从连接池获取对象
-        jedis=pool.getResource();
+        jedis = pool.getResource();
         //4.使用连接
 //        String str = jedis.get("sida");
 //        System.out.println(str);
@@ -49,7 +49,7 @@ public class RedisPoolTest {
         pool.close();
     }
 
-    public static void hashTest(Jedis jedis){
+    public static void hashTest(Jedis jedis) {
         HashMap<String, String> map = new HashMap<>();
         map.put("key1", "value1");
         map.put("key2", "value2");
@@ -57,7 +57,7 @@ public class RedisPoolTest {
         System.out.println(jedis.hmget("map_test", "key1", "key2"));
     }
 
-    public static void strTest(Jedis jedis){
+    public static void strTest(Jedis jedis) {
         HashMap<String, String> map = new HashMap<>();
         map.put("key1", "value1");
         map.put("key2", "value2");
@@ -67,8 +67,7 @@ public class RedisPoolTest {
             //NX 不存在时才set；XX 存在时才set；EX 秒；PX毫秒
             System.out.println("key " + "str_test" + " not exist!");
             jedis.set("str_test", strMap, "NX", "EX", 10);
-        }
-        else {
+        } else {
             //
             System.out.println("key " + "str_test" + " exist!");
             jedis.set("str_test", strMap, "XX", "EX", 10);

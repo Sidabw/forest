@@ -43,14 +43,14 @@ public class MultiThread {
     //测试主线程是否会堵塞
     @Test
     public void test() {
-        for (int i = 0 ; i < 5 ; i ++) {
+        for (int i = 0; i < 5; i++) {
             System.out.println(i + "for in");
             int finalI = i;
             //线程池会堵塞，等待其他线程结束执行，但主线程不会。
             //跑一遍，看console，都不用看文件的时间戳。
             blockingTestThreadPool.execute(() -> threadRun(finalI));
         }
-        System.out.println("主线程结束::" + "timeStamp ::" +new Date().getTime());
+        System.out.println("主线程结束::" + "timeStamp ::" + new Date().getTime());
     }
 
     public static void threadRun(int i) {
@@ -70,7 +70,7 @@ public class MultiThread {
 
     public static void writeFile(int value) throws IOException {
         FileWriter fileWriter = new FileWriter(new File("/Users/feiyi/Desktop/thread/" + value + ".txt"));
-        fileWriter.write("value:: " + value + "timeStamp ::" +new Date().getTime());
+        fileWriter.write("value:: " + value + "timeStamp ::" + new Date().getTime());
         fileWriter.close();
     }
 }

@@ -21,18 +21,19 @@ import java.util.concurrent.LinkedBlockingQueue;
  * @create 2020/2/2
  * @since 1.0.0
  */
-public class QueueConsumer implements Runnable{
+public class QueueConsumer implements Runnable {
 
     LinkedBlockingQueue<Object> blockingQueue;
 
     private Boolean consumed = Boolean.FALSE;
 
-    public QueueConsumer (LinkedBlockingQueue<Object> blockingQueue) {
+    public QueueConsumer(LinkedBlockingQueue<Object> blockingQueue) {
         this.blockingQueue = blockingQueue;
     }
+
     @Override
     public void run() {
-        for (;;){
+        for (; ; ) {
             try {
                 Object take = blockingQueue.take();
                 consumed = Boolean.FALSE;

@@ -32,7 +32,7 @@ public class ModelInfo {
 
     private String dbName;
 
-    ModelInfo(String id, String comment, Integer index, String schema, String parentLabel, String dbName){
+    ModelInfo(String id, String comment, Integer index, String schema, String parentLabel, String dbName) {
         this.id = id;
         this.comment = comment;
         this.index = index;
@@ -41,9 +41,10 @@ public class ModelInfo {
         this.dbName = dbName;
     }
 
-    ModelInfo(){}
+    ModelInfo() {
+    }
 
-    public static class Builder{
+    public static class Builder {
 
         private String id;
 
@@ -57,40 +58,41 @@ public class ModelInfo {
 
         private String dbName;
 
-        public Builder id(String id){
+        public Builder id(String id) {
             this.id = id;
             return this;
         }
 
-        public Builder comment(String comment){
+        public Builder comment(String comment) {
             this.comment = comment;
             return this;
         }
 
-        public Builder index(Integer index){
-            this.index =index;
+        public Builder index(Integer index) {
+            this.index = index;
             return this;
         }
 
-        public Builder schema(String schema){
+        public Builder schema(String schema) {
             this.schema = schema;
             return this;
         }
 
-        public Builder parentLabel(String parentLabel){
+        public Builder parentLabel(String parentLabel) {
             this.parentLabel = parentLabel;
             return this;
         }
 
-        public Builder dbName(String dbName){
+        public Builder dbName(String dbName) {
             this.dbName = dbName;
             return this;
         }
 
-        public ModelInfo build(){
+        public ModelInfo build() {
             return new ModelInfo(id, comment, index, schema, parentLabel, dbName);
         }
     }
+
     public String getId() {
         return id;
     }

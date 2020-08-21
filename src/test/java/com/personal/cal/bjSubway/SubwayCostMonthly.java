@@ -35,7 +35,7 @@ public class SubwayCostMonthly {
 
     private static final BigDecimal disCountSecondly = new BigDecimal(150);
 
-    private static final MathContext mc = new MathContext(5,RoundingMode.HALF_UP);
+    private static final MathContext mc = new MathContext(5, RoundingMode.HALF_UP);
 
     private static final BigDecimal disCountFirstlyCost = new BigDecimal(costFirstly).multiply(new BigDecimal(0.8), mc);
 

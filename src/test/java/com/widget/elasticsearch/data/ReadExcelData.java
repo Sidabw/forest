@@ -38,7 +38,7 @@ public class ReadExcelData {
     public static void main(String[] args) throws IOException {
         //read data from excel
         ArrayList<TianmaoData> result = new ArrayList<>();
-        for (int i = 1; i < 29; i++){
+        for (int i = 1; i < 29; i++) {
             ArrayList<TianmaoData> sheetData = poiExcel("/Users/feiyi/Downloads/es_tianmao_data_test.xls", 1);
             result.addAll(sheetData);
         }
@@ -46,7 +46,7 @@ public class ReadExcelData {
         JSONArray resultConverted = EsUtil.entityToEsRecord(result);
         //insert into es
         TransportClient client = ClientDemo.getClient();
-        resultConverted.stream().forEach(e ->{
+        resultConverted.stream().forEach(e -> {
             IndexDemo.indexNewRecored(client, ClientDemo.indexName, ClientDemo.indexType, null, JSON.toJSONString(e));
         });
     }
@@ -57,22 +57,22 @@ public class ReadExcelData {
         InputStream str = new FileInputStream(fileDes);
         HSSFWorkbook xwb = new HSSFWorkbook(str);  //利用poi读取excel文件流
         HSSFSheet st = xwb.getSheetAt(sheetIndex);
-          //读取sheet的第一个工作表
-        int rows=st.getLastRowNum();//总行数
+        //读取sheet的第一个工作表
+        int rows = st.getLastRowNum();//总行数
         int cols;//总列数
-        for (int i=3;i<rows;i++) {
+        for (int i = 3; i < rows; i++) {
             TianmaoData tianmaoData = new TianmaoData();
             HSSFRow row = st.getRow(i);//读取某一行数据
             //获取行中所有列数据
-            cols=row.getLastCellNum();
-            for(int j=0;j<cols;j++){
+            cols = row.getLastCellNum();
+            for (int j = 0; j < cols; j++) {
                 HSSFCell cell = row.getCell(j);
                 //判断单元格的数据类型
                 CellType cellTypeEnum = cell.getCellTypeEnum();
-                switch ( cellTypeEnum ) {
+                switch (cellTypeEnum) {
                     case NUMERIC: // 数字
                         double numericCellValue = cell.getNumericCellValue();
-                        if (j == 3){
+                        if (j == 3) {
                             tianmaoData.setDiscountPrice(Double.toString(numericCellValue));
                         } else if (j == 4) {
                             tianmaoData.setOriginalCost(Double.toString(numericCellValue));
@@ -82,9 +82,9 @@ public class ReadExcelData {
                         break;
                     case STRING: // 字符串
                         String stringCellValue = cell.getStringCellValue();
-                        if (j == 0){
+                        if (j == 0) {
                             tianmaoData.setStoreName(stringCellValue);
-                        } else if (j == 2){
+                        } else if (j == 2) {
                             tianmaoData.setProductName(stringCellValue);
                         }
                         break;

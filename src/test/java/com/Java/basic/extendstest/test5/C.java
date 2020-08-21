@@ -11,7 +11,7 @@
 package com.Java.basic.extendstest.test5;
 
 /**
- * 〈一句话功能简述〉: 
+ * 〈一句话功能简述〉:
  * 〈〉
  *
  * @author feiyi

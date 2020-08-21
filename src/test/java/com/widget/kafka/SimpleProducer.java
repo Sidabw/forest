@@ -13,7 +13,7 @@ import java.util.Properties;
  *  如果已经提前打开了kafka-console-consumer.bat 运行完成后可以在consumer处看到结果
  */
 public class SimpleProducer {
-    public static void main(String[] args){
+    public static void main(String[] args) {
         String topicName = "PMC-Spider-Source";
 //        String topicName = "Hello-Kafka";
         Properties props = new Properties();
@@ -27,11 +27,11 @@ public class SimpleProducer {
         props.put("buffer.memory", 33554432);
         props.put("key.serializer", StringSerializer.class.getName());
         props.put("value.serializer", StringSerializer.class.getName());
-       // Thread.currentThread().setContextClassLoader(null);
+        // Thread.currentThread().setContextClassLoader(null);
         Producer<String, String> producer = new KafkaProducer<String, String>(props);
 //        for(int i = 0; i < 10; i++)
-            producer.send(new ProducerRecord<String, String>(topicName,
-                    "test-msg2..."));
+        producer.send(new ProducerRecord<String, String>(topicName,
+                "test-msg2..."));
         System.out.println("Message sent successfully");
         producer.close();
     }

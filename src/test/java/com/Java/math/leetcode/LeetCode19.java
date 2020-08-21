@@ -23,7 +23,7 @@ import org.junit.Test;
 public class LeetCode19 {
 
     @Test
-    public void test(){
+    public void test() {
         ListNode listNode1 = new ListNode(1);
         ListNode listNode2 = new ListNode(2);
 //        ListNode listNode3 = new ListNode(3);
@@ -54,7 +54,7 @@ public class LeetCode19 {
         int curIndex = 0;
         cur = head;
         ListNode pre = cur;
-        for (;;){
+        for (; ; ) {
             if (curIndex == indexFromStart) {
                 pre.next = cur.next;
                 return head;

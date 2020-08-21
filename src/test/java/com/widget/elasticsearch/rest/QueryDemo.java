@@ -31,7 +31,7 @@ import java.io.IOException;
  */
 public class QueryDemo {
 
-    public static SearchResponse query(RestHighLevelClient client, String ... indices) throws IOException {
+    public static SearchResponse query(RestHighLevelClient client, String... indices) throws IOException {
         //支持跨index查询
         SearchSourceBuilder sourceBuilder = new SearchSourceBuilder();
 //        QueryBuilder queryBuilder = QueryBuilders.matchAllQuery();
@@ -48,7 +48,6 @@ public class QueryDemo {
         System.out.println(response.getHits().getTotalHits());
         return response;
     }
-
 
 
 }

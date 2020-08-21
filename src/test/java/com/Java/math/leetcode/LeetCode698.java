@@ -23,7 +23,7 @@ import org.junit.Test;
 public class LeetCode698 {
 
     @Test
-    public void test(){
+    public void test() {
 
     }
 }

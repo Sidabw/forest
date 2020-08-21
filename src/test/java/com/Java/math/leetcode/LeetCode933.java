@@ -26,7 +26,7 @@ import java.util.Deque;
 public class LeetCode933 {
 
     @Test
-    public void test(){
+    public void test() {
         RecentCounter recentCounter = new RecentCounter();
         System.out.println(recentCounter.ping(1));
         System.out.println(recentCounter.ping(2));

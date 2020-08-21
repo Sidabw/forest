@@ -28,14 +28,14 @@ import java.util.stream.Stream;
  */
 public class EsUtil {
 
-    public static JSONArray entityToEsRecord(List<?> data){
+    public static JSONArray entityToEsRecord(List<?> data) {
         JSONArray array = new JSONArray();
-        for (Object obj : data){
+        for (Object obj : data) {
             Class<?> clazz = obj.getClass();
             JSONObject each = new JSONObject();
-            for(; clazz != Object.class ; clazz = clazz.getSuperclass()) {
+            for (; clazz != Object.class; clazz = clazz.getSuperclass()) {
                 Field[] declaredFields = clazz.getDeclaredFields();
-                Stream.of(declaredFields).forEach(e ->{
+                Stream.of(declaredFields).forEach(e -> {
                     e.setAccessible(Boolean.TRUE);
                     try {
                         Object value = e.get(obj);
@@ -54,11 +54,11 @@ public class EsUtil {
         return array;
     }
 
-    private static String renameAttribute(String attributeName){
+    private static String renameAttribute(String attributeName) {
         char[] chars = attributeName.toCharArray();
         StringBuffer result = new StringBuffer();
-        for (char e : chars){
-            if (e > 64 && e  < 91){
+        for (char e : chars) {
+            if (e > 64 && e < 91) {
                 String curLowerCaseLetter = String.valueOf(e).toLowerCase();
                 result.append("_").append(curLowerCaseLetter);
             } else {

@@ -76,16 +76,15 @@ public class MergeSort {
         while (j <= n)
             temp[k++] = a[j++];
         //接下来在把原a[]的对应数值替换
-        for (i = 0; i< k;i++) {
+        for (i = 0; i < k; i++) {
             a[first++] = temp[i];
         }
     }
 
 
-
     //合并两个有序数组1
     public static int[] sortedArrayMerged(int[] a, int[] b) {
-        int totalLength = a.length +b.length;
+        int totalLength = a.length + b.length;
         int[] result = new int[totalLength];
         int aIndex = 0;
         int bIndex = 0;
@@ -94,8 +93,7 @@ public class MergeSort {
             if (a[aIndex] < b[bIndex]) {
                 result[index] = a[aIndex];
                 aIndex++;
-            }
-            else {
+            } else {
                 result[index] = b[bIndex];
                 bIndex++;
             }

@@ -19,7 +19,7 @@ import java.util.concurrent.CyclicBarrier;
  * 〈一句话功能简述〉:
  * 〈可以认为是CountDownLatch的更高级版，有一些reset、getNumberWaiting等CountDownLatch没有的功能，他的功能是：
  * 一组线程到达一个屏障（同步点）时 被阻塞，直到最后一个线程到达屏障时，屏障才会打开，所有被拦截的线程继续运行
- *
+ * <p>
  * 〉
  *
  * @author feiyi
@@ -32,7 +32,7 @@ public class CyclicBarrierDemo {
 //    private static CyclicBarrier cyclicBarrier = new CyclicBarrier(3);
 
     //创建一个所有线程到达屏障之后，优先执行A的...,是等待A执行完了其他才执行
-    private static CyclicBarrier cyclicBarrier = new CyclicBarrier(3, ()->{
+    private static CyclicBarrier cyclicBarrier = new CyclicBarrier(3, () -> {
         System.out.println("⬇⬇⬇⬇⬇⬇⬇");
         System.out.println("我被优先执行");
         System.out.println(Thread.currentThread().getName() + new SimpleDateFormat("yyyy-MM-dd hh:mm:ss").format(new Date()));

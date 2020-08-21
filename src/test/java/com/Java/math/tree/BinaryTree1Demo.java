@@ -71,14 +71,12 @@ public class BinaryTree1Demo {
     }
 
     /**
-     * @Description
-     *
-     * 声明：这只是一个二叉树，不是二叉搜索树
-     *
-     *        10
-     *   6        11
-     * 3    7   9   12
      * @param
+     * @Description 声明：这只是一个二叉树，不是二叉搜索树
+     * <p>
+     * 10
+     * 6        11
+     * 3    7   9   12
      * @return: com.Java.math.tree.Node
      * @since: 2.0.5
      * @Author: feiyi
@@ -105,7 +103,7 @@ public class BinaryTree1Demo {
     }
 }
 
-class Node{
+class Node {
 
     int value;
 

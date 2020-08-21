@@ -44,18 +44,23 @@ public class LeetCode641 {
         System.out.println(circularDeque.getFront());
     }
 }
+
 class MyCircularDeque {
 
     int[] origins;
     int tail = 0;
     int size = 0;
 
-    /** Initialize your data structure here. Set the size of the deque to be k. */
+    /**
+     * Initialize your data structure here. Set the size of the deque to be k.
+     */
     public MyCircularDeque(int k) {
         origins = new int[k];
     }
 
-    /** Adds an item at the front of Deque. Return true if the operation is successful. */
+    /**
+     * Adds an item at the front of Deque. Return true if the operation is successful.
+     */
     //每次insertFront都会导致一次O(n)的数据搬移
     public boolean insertFront(int value) {
         if (size == origins.length)
@@ -69,7 +74,7 @@ class MyCircularDeque {
         //进行insertFront真正的数据搬移
         int temp1 = value;
         int temp2 = 0;
-        for (int i = 0; i < size+1; i++) {
+        for (int i = 0; i < size + 1; i++) {
             temp2 = origins[i];
             origins[i] = temp1;
             temp1 = temp2;
@@ -81,7 +86,10 @@ class MyCircularDeque {
 
     //tail指针的移动和size的变化。
     //tail总是指向最后一个有值的元素
-    /** Adds an item at the rear of Deque. Return true if the operation is successful. */
+
+    /**
+     * Adds an item at the rear of Deque. Return true if the operation is successful.
+     */
     public boolean insertLast(int value) {
         if (isFull())
             return false;
@@ -93,7 +101,9 @@ class MyCircularDeque {
         return true;
     }
 
-    /** Deletes an item from the front of Deque. Return true if the operation is successful. */
+    /**
+     * Deletes an item from the front of Deque. Return true if the operation is successful.
+     */
     public boolean deleteFront() {
         if (isEmpty()) return false;
         origins[0] = 0;
@@ -107,7 +117,9 @@ class MyCircularDeque {
         return true;
     }
 
-    /** Deletes an item from the rear of Deque. Return true if the operation is successful. */
+    /**
+     * Deletes an item from the rear of Deque. Return true if the operation is successful.
+     */
     public boolean deleteLast() {
         if (isEmpty()) return false;
         origins[tail--] = 0;
@@ -116,24 +128,32 @@ class MyCircularDeque {
         return true;
     }
 
-    /** Get the front item from the deque. */
+    /**
+     * Get the front item from the deque.
+     */
     public int getFront() {
         if (size == 0) return -1;
         return origins[0];
     }
 
-    /** Get the last item from the deque. */
+    /**
+     * Get the last item from the deque.
+     */
     public int getRear() {
         if (size == 0) return -1;
         return origins[tail];
     }
 
-    /** Checks whether the circular deque is empty or not. */
+    /**
+     * Checks whether the circular deque is empty or not.
+     */
     public boolean isEmpty() {
         return size == 0;
     }
 
-    /** Checks whether the circular deque is full or not. */
+    /**
+     * Checks whether the circular deque is full or not.
+     */
     public boolean isFull() {
         return size == origins.length;
     }

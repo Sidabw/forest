@@ -25,26 +25,26 @@ import java.util.ArrayList;
 public class LeetCode206 {
 
     /**
+     * @param
      * @Description 反转一个单链表。
-     *
+     * <p>
      * 示例:
-     *
+     * <p>
      * 输入: 1->2->3->4->5->NULL
      * 输出: 5->4->3->2->1->NULL
      * 进阶:
      * 你可以迭代或递归地反转链表。你能否用两种方法解决这道题？
-     *
+     * <p>
      * 来源：力扣（LeetCode）
      * 链接：https://leetcode-cn.com/problems/reverse-linked-list
      * 著作权归领扣网络所有。商业转载请联系官方授权，非商业转载请注明出处。
-     * @param
      * @return: void
      * @since: 2.0.5
      * @Author: feiyi
      * @Date: 2020/5/26 9:33 AM
      **/
     @Test
-    public void test(){
+    public void test() {
         ListNode listNode1 = new ListNode(1);
 //        ListNode listNode2 = new ListNode(2);
 //        ListNode listNode3 = new ListNode(3);
@@ -72,7 +72,7 @@ public class LeetCode206 {
         }
         ListNode head2 = new ListNode(result.get(result.size() - 1));
         ListNode cur = head2;
-        for (int i = result.size() - 2; i >=0; i --) {
+        for (int i = result.size() - 2; i >= 0; i--) {
             cur.next = new ListNode(result.get(i));
             cur = cur.next;
         }
@@ -87,7 +87,7 @@ public class LeetCode206 {
 
         ListNode pre = null;
         ListNode next = null;
-        for (;;){
+        for (; ; ) {
             next = cur.next;
             cur.next = pre;//把当前向后指的指针改为向前指。
             pre = cur;//当前的cur下，就是下一个节点的pre;

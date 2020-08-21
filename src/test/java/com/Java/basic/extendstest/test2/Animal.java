@@ -24,11 +24,11 @@ public class Animal<T> {
 
     private T t;
 
-    public Animal(){
+    public Animal() {
         System.out.println(getClass());
-        System.out.println((ParameterizedType)getClass().getGenericSuperclass());
+        System.out.println((ParameterizedType) getClass().getGenericSuperclass());
 
-        System.out.println( (Class<T>) ((ParameterizedType) getClass()
+        System.out.println((Class<T>) ((ParameterizedType) getClass()
                 .getGenericSuperclass()).getActualTypeArguments()[0]);
     }
 }

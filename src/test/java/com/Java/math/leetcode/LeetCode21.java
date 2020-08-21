@@ -22,23 +22,22 @@ import org.junit.Test;
  */
 public class LeetCode21 {
     /**
-     * @Description
-     * 将两个有序链表合并为一个新的有序链表并返回。新链表是通过拼接给定的两个链表的所有节点组成的。 
+     * @param
+     * @Description 将两个有序链表合并为一个新的有序链表并返回。新链表是通过拼接给定的两个链表的所有节点组成的。 
      * 示例：
      * 输入：1->2->4, 1->3->4
      * 输出：1->1->2->3->4->4
-     *
+     * <p>
      * 来源：力扣（LeetCode）
      * 链接：https://leetcode-cn.com/problems/merge-two-sorted-lists
      * 著作权归领扣网络所有。商业转载请联系官方授权，非商业转载请注明出处。
-     * @param
      * @return: void
      * @since: 2.0.5
      * @Author: feiyi
      * @Date: 2019/7/22 4:51 PM
      **/
     @Test
-    public void test10(){
+    public void test10() {
         ListNode listNode1 = new ListNode(1);
         ListNode listNode2 = new ListNode(2);
         ListNode listNode3 = new ListNode(4);
@@ -55,18 +54,19 @@ public class LeetCode21 {
     }
 
     @Test
-    public void test11(){
-        System.out.println(orangesRotting(new int[][]{{2,1,1}, {1,1,0}, {0,1,1}}));
-        System.out.println(orangesRotting(new int[][]{{2,1,1}, {0,1,1}, {1,0,1}}));
-        System.out.println(orangesRotting(new int[][]{{0 ,2 }}));//0
+    public void test11() {
+        System.out.println(orangesRotting(new int[][]{{2, 1, 1}, {1, 1, 0}, {0, 1, 1}}));
+        System.out.println(orangesRotting(new int[][]{{2, 1, 1}, {0, 1, 1}, {1, 0, 1}}));
+        System.out.println(orangesRotting(new int[][]{{0, 2}}));//0
         System.out.println(orangesRotting(new int[][]{{0}}));//0
         System.out.println(orangesRotting(new int[][]{{1}}));//-1
         System.out.println(orangesRotting(new int[][]{{2}}));//0
-        System.out.println(orangesRotting(new int[][]{{1},{2}}));//1
-        System.out.println(orangesRotting(new int[][]{{2},{1}}));//1
+        System.out.println(orangesRotting(new int[][]{{1}, {2}}));//1
+        System.out.println(orangesRotting(new int[][]{{2}, {1}}));//1
 
 
     }
+
     public static int orangesRotting(int[][] grid) {
         if (grid.length == 0) return -1;
         //xia:  将4个正方向的好橘子变成烂橘子，同时计时+1
@@ -76,7 +76,7 @@ public class LeetCode21 {
             boolean preBadExist = false;
             boolean goodExist = false;
             int iLen = grid.length;
-            for (int i = 0 ; i < iLen; i ++) {
+            for (int i = 0; i < iLen; i++) {
                 int jLen = grid[i].length;
                 for (int j = 0; j < jLen; j++) {
                     int cur = grid[i][j];
@@ -122,7 +122,7 @@ public class LeetCode21 {
             if (timing == 0 && !goodExist)
                 return timing;
             //遍历一圈没有2，return-1
-            if (!badExist )
+            if (!badExist)
                 return -1;
             //遍历一圈发现没有3了，那就完事了
             if (!preBadExist) {
@@ -130,7 +130,7 @@ public class LeetCode21 {
                 if (goodExist) return -1;
                 return timing;
             }
-            for (int i = 0 ; i < iLen; i ++) {
+            for (int i = 0; i < iLen; i++) {
                 int jLen = grid[i].length;
                 for (int j = 0; j < jLen; j++) {
                     int cur = grid[i][j];

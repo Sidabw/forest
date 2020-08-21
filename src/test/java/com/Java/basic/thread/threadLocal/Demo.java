@@ -41,7 +41,7 @@ public class Demo {
 
     public static void main(String[] args) throws InterruptedException {
         Demo demo = new Demo();
-        for (int i = 0; i < 20 ; i++) {
+        for (int i = 0; i < 20; i++) {
             demo.executorService.execute(() -> {
                 demo.format(new Date());
                 try {
@@ -57,8 +57,7 @@ public class Demo {
                     System.out.println("thread local init ---- new ThreadLocal");
                     return new SimpleDateFormat("");
                 });
-            }
-            else
+            } else
                 Thread.sleep(1500L);
         }
     }

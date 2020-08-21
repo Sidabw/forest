@@ -33,7 +33,7 @@ public class QueryDemo {
     /***
      * 以下查询分别为 id、term(.keyword)、match、range、multiBool
      */
-    public static void findById(TransportClient client){
+    public static void findById(TransportClient client) {
         GetRequest getRequest = new GetRequest("bank");
         getRequest.id("25");
         ActionFuture<GetResponse> getResponseActionFuture = client.get(getRequest);
@@ -51,6 +51,7 @@ public class QueryDemo {
         return response;
 
     }
+
     //NOTE:这里firstname:o并不是不分词，而是库中的数据分词后没有和o能对上的，如果有Sida o 这样的fitstname那么就能对应
     //The standard query for performing full text queries, including fuzzy matching and phrase or proximity(接近) queries.
     public static SearchResponse simpleMatchQuery(TransportClient client, String index, String name, String text) {
@@ -60,6 +61,7 @@ public class QueryDemo {
         SearchResponse response = searchRequestBuilder.setQuery(matchQueryBuilder).get();
         return response;
     }
+
     public static SearchResponse simpleMatchPhraseQuery(TransportClient client, String index, String name, String text) {
         MatchPhraseQueryBuilder matchQueryBuilder = QueryBuilders.matchPhraseQuery(name, text);
 //        MatchQueryBuilder matchQueryBuilder = QueryBuilders.matchQuery("name", "Doe");
@@ -67,6 +69,7 @@ public class QueryDemo {
         SearchResponse response = searchRequestBuilder.setQuery(matchQueryBuilder).get();
         return response;
     }
+
     public static SearchResponse simpleWildcardQuery(TransportClient client, String index, String name, String text) {
         WildcardQueryBuilder wildcardQueryBuilder = QueryBuilders.wildcardQuery(name, text);
 //        MatchQueryBuilder matchQueryBuilder = QueryBuilders.matchQuery("name", "Doe");
@@ -74,15 +77,17 @@ public class QueryDemo {
         SearchResponse response = searchRequestBuilder.setQuery(wildcardQueryBuilder).get();
         return response;
     }
-    public static SearchResponse simpleMultiMatch(TransportClient client, String index, String text, String... fields){
+
+    public static SearchResponse simpleMultiMatch(TransportClient client, String index, String text, String... fields) {
         MultiMatchQueryBuilder multiMatchQueryBuilder = QueryBuilders.multiMatchQuery(text, fields);
         SearchRequestBuilder searchRequestBuilder = client.prepareSearch(index);
         SearchResponse response = searchRequestBuilder.setQuery(multiMatchQueryBuilder).get();
         return response;
     }
+
     // gt大于, lt小于 gte、ge大于等于   lte、le 小于等于
     //分页的话需要使用SearchRequestBuilder 执行查询方式 两种都可以
-    public static SearchResponse simpleRangeQuery(TransportClient client, String index){
+    public static SearchResponse simpleRangeQuery(TransportClient client, String index) {
         RangeQueryBuilder ageRangeQueryBuilder = QueryBuilders.rangeQuery("age");
         ageRangeQueryBuilder.gt(1);
         ageRangeQueryBuilder.lte(32);
@@ -94,7 +99,8 @@ public class QueryDemo {
 //        SearchResponse searchResponse = searchRequestBuilder.execute().actionGet();
         return searchResponse1;
     }
-    public static SearchResponse boolQuery(TransportClient client, String index){
+
+    public static SearchResponse boolQuery(TransportClient client, String index) {
         MatchPhraseQueryBuilder matchPhraseQueryBuilder = QueryBuilders.matchPhraseQuery("firstname", "o");
         TermQueryBuilder termQueryBuilder = QueryBuilders.termQuery("xx", "xxx");
         BoolQueryBuilder boolQuery = QueryBuilders.boolQuery();

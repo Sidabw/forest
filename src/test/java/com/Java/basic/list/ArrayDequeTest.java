@@ -25,7 +25,7 @@ import java.util.*;
 public class ArrayDequeTest {
 
     @Test
-    public void test(){
+    public void test() {
         //ArrayDeque线程不安全
         //ArrayDeque作为栈使用时，比Stack性能好；作为队列使用时，比LinkedList性能好。
         //不可存取null
@@ -47,7 +47,7 @@ public class ArrayDequeTest {
     }
 
     @Test
-    public void test2(){
+    public void test2() {
 //        int n = 9;
 //        int[][] adjacencyList = new int[][]{
 //                {1},{2,3},{4,5},{8},{},{8},{6,7},{8},{8}};
@@ -63,8 +63,8 @@ public class ArrayDequeTest {
     }
 
     /**
-     * @Description 有向无环图排序
      * @param
+     * @Description 有向无环图排序
      * @return:
      * @since: 2.0.5
      * @Author: feiyi
@@ -101,7 +101,7 @@ public class ArrayDequeTest {
     }
 
     @Test
-    public void testShuffle(){
+    public void testShuffle() {
         List<Integer> integers = Arrays.asList(1, 2, 3, 4);
         System.out.println(integers);
         Collections.shuffle(integers);

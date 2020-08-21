@@ -30,19 +30,20 @@ public class Demo {
     /**
      * //TODO   读模版操作
      * 尝试读到周报封页中的内容，但读到的格式是XWPFSDT
+     *
      * @throws Exception
      */
-    public static void test()throws Exception{
+    public static void test() throws Exception {
         XWPFDocument xwpfDocument = new XWPFDocument(new FileInputStream("C:\\Users\\think\\Desktop\\ReportTemplate3.docx"));
         List<IBodyElement> bodyElements = xwpfDocument.getBodyElements();
         System.out.println(bodyElements.size());
-        for(int i =0 ; i< bodyElements.size(); i++){
-            if(bodyElements.get(i) instanceof XWPFTable){
+        for (int i = 0; i < bodyElements.size(); i++) {
+            if (bodyElements.get(i) instanceof XWPFTable) {
                 System.out.println("哈哈哈哈");
-            }else if(bodyElements.get(i) instanceof XWPFParagraph){
+            } else if (bodyElements.get(i) instanceof XWPFParagraph) {
                 System.out.println("呵呵呵");
-            }else if (bodyElements.get(i) instanceof XWPFSDT){
-                XWPFSDT abc = (XWPFSDT)bodyElements.get(i);
+            } else if (bodyElements.get(i) instanceof XWPFSDT) {
+                XWPFSDT abc = (XWPFSDT) bodyElements.get(i);
 				/*XWPFDocument document = abc.getDocument();
 				List<XWPFParagraph> paragraphs = document.getParagraphs();
 				System.out.println("XWPFSDT paragraph size : "+ paragraphs.size());

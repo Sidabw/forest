@@ -46,7 +46,7 @@ public class MongoUtil {
         db.ps1554085431232_data_source.update({_id: doc._id}, {$set: {is_delete: NumberInt(0)}});
     })*/
 
-    public static MongoCollection<Document> getCollection(String databaseName, String collectionName){
+    public static MongoCollection<Document> getCollection(String databaseName, String collectionName) {
 
         MongoClient mongoClient = getMongoClientCredential();
 //        MongoClient mongoClient = getMongoClient();
@@ -56,9 +56,9 @@ public class MongoUtil {
         return label_info;
     }
 
-    public static MongoClient getMongoClientCredential(){
+    public static MongoClient getMongoClientCredential() {
         //连接到MongoDB服务 如果是远程连接可以替换“localhost”为服务器所在IP地址
-        ServerAddress serverAddress = new ServerAddress("",12000);
+        ServerAddress serverAddress = new ServerAddress("", 12000);
         List<ServerAddress> addrs = new ArrayList<>();
         addrs.add(serverAddress);
 
@@ -67,11 +67,12 @@ public class MongoUtil {
         List<MongoCredential> credentials = new ArrayList<>();
         credentials.add(credential);
         //通过连接认证获取MongoDB连接
-        MongoClient mongoClient = new MongoClient(addrs,credentials);
+        MongoClient mongoClient = new MongoClient(addrs, credentials);
         return mongoClient;
     }
-    public static MongoClient getMongoClient(){
-        return new MongoClient( "localhost" , 27017 );
+
+    public static MongoClient getMongoClient() {
+        return new MongoClient("localhost", 27017);
     }
 
     public static void createCol(String colName) {
@@ -91,15 +92,16 @@ public class MongoUtil {
                 .append("list_test", Arrays.asList(1, 2, 3, 4, 5));
         col.insertOne(document2);
     }
-    public static void updateByFilter(MongoCollection<Document> mongoCollection){
+
+    public static void updateByFilter(MongoCollection<Document> mongoCollection) {
         //这里的写法类似原生的mongo语句；这里表示只修改负责条件的document的name字段的值
         //
 //        Filters.eq("_id", new ObjectId("sjdlfkjalsdjflak"));
-        mongoCollection.updateOne(Filters.eq("ObjectId","jlsdjflkasjdfljsadl"),
-                new Document("$set", new Document("name","luobotouo")));
+        mongoCollection.updateOne(Filters.eq("ObjectId", "jlsdjflkasjdfljsadl"),
+                new Document("$set", new Document("name", "luobotouo")));
     }
 
-    public static void replaceById(MongoCollection<Document> mongoCollection){
+    public static void replaceById(MongoCollection<Document> mongoCollection) {
         //replace的时候已经有id了下面的document就不用再放id了。要放也要放一样的。
         mongoCollection.replaceOne(Filters.eq("_id", new ObjectId("sjdlfkjalsdjflak")),
                 new Document("name", "Green Salads Buffet")
@@ -107,11 +109,11 @@ public class MongoUtil {
                         .append("categories", Arrays.asList("Salads", "Health Foods", "Buffet")));
     }
 
-    public static void deleteByFilter(MongoCollection<Document> mongoCollection){
+    public static void deleteByFilter(MongoCollection<Document> mongoCollection) {
         DeleteResult result = mongoCollection.deleteOne(Filters.eq("_id", "5bf670f061ea9781177e7743"));
-        System.out.println(String.format("总共删除了%s条记录",result.getDeletedCount()));
+        System.out.println(String.format("总共删除了%s条记录", result.getDeletedCount()));
         DeleteResult result2 = mongoCollection.deleteOne(new Document().append("_id", new ObjectId("5bf66fc461ea9781177e7742")));
-        System.out.println(String.format("总共删除了%s条记录",result2.getDeletedCount()));
+        System.out.println(String.format("总共删除了%s条记录", result2.getDeletedCount()));
     }
 
     /***
@@ -119,7 +121,7 @@ public class MongoUtil {
      * 2.通过JsonWriterSettings可以将long或double转为string。以防原有数据结构在json序列化时发生变化。
      * @param mongoCollection
      */
-    public static void findAll(MongoCollection<Document> mongoCollection){
+    public static void findAll(MongoCollection<Document> mongoCollection) {
         JSONObject jsonObject = new JSONObject();
         jsonObject.put("_id", "AN201901101283782382__dongshihuijueyi");
         Bson parse = Document.parse(jsonObject.toJSONString());
@@ -128,7 +130,7 @@ public class MongoUtil {
             System.out.println(doc.toJson());
         }
         MongoCursor<Document> iterator = documents.iterator();
-        while (iterator.hasNext()){
+        while (iterator.hasNext()) {
             Document eachModel = iterator.next();
 //            eachModel.keySet().stream().forEach(e -> System.out.println(eachModel.get(e)));
             System.out.println("------------------------");
@@ -155,7 +157,7 @@ public class MongoUtil {
     }
 
     //模糊匹配
-    public static void findFuzzy (MongoCollection<Document> mongoCollection) {
+    public static void findFuzzy(MongoCollection<Document> mongoCollection) {
         Pattern pattern = Pattern.compile("^.*替换.*$", Pattern.CASE_INSENSITIVE);
         Bson name = Filters.regex("name", pattern);
         FindIterable<Document> documents = mongoCollection.find(name);

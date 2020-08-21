@@ -37,9 +37,9 @@ class MyThread implements Runnable {
     }
 }
 
-class Resource{
+class Resource {
 
-    public void produce(){
+    public void produce() {
         //就没有synchronized{}这个用法...
         synchronized (this) {
 

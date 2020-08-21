@@ -35,16 +35,16 @@ public class Demo {
 //        InputStream resourceAsStream = demo.getClass().getClassLoader().getResourceAsStream("pom.xml");
         Document doc = saxReader.read(new FileInputStream("/Users/feiyi/Documents/feiyiGitProject/forest/pom.xml"));
         Element rootElement = doc.getRootElement();
-        rootElement.elements().stream().forEach(e ->{
-            Element eL = (Element)e;
+        rootElement.elements().stream().forEach(e -> {
+            Element eL = (Element) e;
             String name = eL.getName();
-            if ("version".equals(name))  System.out.println(eL.getText());
+            if ("version".equals(name)) System.out.println(eL.getText());
         });
     }
 
 
     @Test
-    public void test(){
+    public void test() {
         System.out.println(1);
     }
 }

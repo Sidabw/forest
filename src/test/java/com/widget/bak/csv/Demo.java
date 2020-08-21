@@ -34,7 +34,7 @@ import java.util.*;
 public class Demo {
 
     //CSV文件分隔符
-    private static final String NEW_LINE_SEPARATOR="\n";
+    private static final String NEW_LINE_SEPARATOR = "\n";
     //文件后缀
 //    private static final String suffix = ".csv";
     private static final String suffix = ".zenki";
@@ -48,9 +48,9 @@ public class Demo {
         //初始化csvformat
         CSVFormat formator = CSVFormat.DEFAULT.withRecordSeparator(NEW_LINE_SEPARATOR);
         //创建FileWriter对象,filePathcsv文件路径
-        FileWriter fileWriter=new FileWriter(filePath);
+        FileWriter fileWriter = new FileWriter(filePath);
         //创建CSVPrinter对象
-        CSVPrinter printer=new CSVPrinter(fileWriter,formator);
+        CSVPrinter printer = new CSVPrinter(fileWriter, formator);
         String[] headers = new String[]{"name", "content"};
         List<String[]> data = Arrays.asList(
                 new String[]{"header--1", "content--内容--1"},
@@ -78,10 +78,10 @@ public class Demo {
     public void test2() throws IOException {
         String filePath = "/Users/feiyi/Desktop/csvdir/1" + suffix;
         CSVFormat formator = CSVFormat.DEFAULT;
-        FileReader fileReader=new FileReader(filePath);
+        FileReader fileReader = new FileReader(filePath);
         //创建CSVParser对象
-        CSVParser parser=new CSVParser(fileReader,formator);
-        List<CSVRecord> records=parser.getRecords();
+        CSVParser parser = new CSVParser(fileReader, formator);
+        List<CSVRecord> records = parser.getRecords();
         CSVRecord headersRecord = records.get(0);
         Iterator<String> iterator = headersRecord.iterator();
         ArrayList<String> headers = new ArrayList<>();
@@ -90,15 +90,15 @@ public class Demo {
             headers.add(next);
         }
         JSONArray result = new JSONArray();
-        for (int i = 1; i<records.size(); i++) {
+        for (int i = 1; i < records.size(); i++) {
             JSONObject each = new JSONObject();
             Iterator<String> iteratorIn = records.get(i).iterator();
 //            ArrayList<String> eachContent = new ArrayList<>();
 //            while (iteratorIn.hasNext()) {
 //                eachContent.add(iteratorIn.next());
 //            }
-            headers.stream().forEach(e ->{
-               each.put(e, iteratorIn.hasNext()? iteratorIn.next() : "");
+            headers.stream().forEach(e -> {
+                each.put(e, iteratorIn.hasNext() ? iteratorIn.next() : "");
             });
             result.add(each);
         }

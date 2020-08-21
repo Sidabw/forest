@@ -25,18 +25,18 @@ import java.math.BigDecimal;
 public class Demo {
 
     @Test
-    public void test () {
+    public void test() {
         //每年有新的本金进入的复利结算
         int money = 53575;  //每年存多少钱
         int end = 10;    //连续存几年
         double b1 = 0.04; //余额宝年利率
 
         double moneyCount = 0.0;
-        for (int i = 0 ; i < end ; i++) {
+        for (int i = 0; i < end; i++) {
             moneyCount += BigDecimal.valueOf(money).doubleValue();
             BigDecimal lixi = BigDecimal.valueOf(b1).multiply(BigDecimal.valueOf(moneyCount));
             moneyCount = BigDecimal.valueOf(moneyCount).add(lixi).doubleValue();
-            System.out.println("第" + (i + 1) + "年：：" + moneyCount );
+            System.out.println("第" + (i + 1) + "年：：" + moneyCount);
         }
         System.out.println(moneyCount);
     }

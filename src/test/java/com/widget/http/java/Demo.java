@@ -33,7 +33,7 @@ public class Demo {
 
     public static void test() throws IOException {
         URL url = new URL("http://www.baidu.com");
-        HttpURLConnection connection = (HttpURLConnection)url.openConnection();
+        HttpURLConnection connection = (HttpURLConnection) url.openConnection();
         connection.setRequestMethod("GET");
         connection.setConnectTimeout(10000);//10s
         connection.setReadTimeout(20000);//20s

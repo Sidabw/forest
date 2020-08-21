@@ -25,11 +25,11 @@ public class TeacherBrew implements ITeacherCallback {
 
     private IStudent student;
 
-    public TeacherBrew(IStudent student){
+    public TeacherBrew(IStudent student) {
         this.student = student;
     }
 
-    public void question(){
+    public void question() {
         System.out.println(this.getClass().getName() + "    开始提问");
         student.resolveQuestions(this);
     }

@@ -28,7 +28,7 @@ public class Demo {
 
         SchedulerFactory schedulerfactory = new StdSchedulerFactory();
         Scheduler scheduler;
-        try{
+        try {
             // 通过schedulerFactory获取一个调度器
             scheduler = schedulerfactory.getScheduler();
             // 创建jobDetail实例，绑定Job实现类
@@ -36,7 +36,7 @@ public class Demo {
             JobDetail job = JobBuilder.newJob(HelloQuartz.class).withIdentity("JobName", "JobGroupName").build();
             // 定义调度触发规则
             // SimpleTrigger
-            Trigger trigger=TriggerBuilder.newTrigger().withIdentity("SimpleTrigger", "SimpleTriggerGroup")
+            Trigger trigger = TriggerBuilder.newTrigger().withIdentity("SimpleTrigger", "SimpleTriggerGroup")
                     .withSchedule(SimpleScheduleBuilder.repeatSecondlyForever(13).withRepeatCount(3))
                     .startNow().build();
             //  corn表达式  每五秒执行一次2
@@ -61,7 +61,7 @@ public class Demo {
             System.out.println(scheduler.getCurrentlyExecutingJobs().size());
             // 停止调度
             scheduler.shutdown();
-        }catch(Exception e){
+        } catch (Exception e) {
             e.printStackTrace();
         }
     }
@@ -78,7 +78,6 @@ public class Demo {
 //    private static final String cron = "0 */1 * * * ?";
 //    scheduler.start()::2020-04-09 14:40:25:491
 //    Hello quarze world !!!   ::2020-04-09 14:41:00:038
-
 
 
 }

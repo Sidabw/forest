@@ -14,7 +14,7 @@ import java.util.Properties;
  *  Created by shao.guangze on 2018/9/25
  */
 public class GroupConsumer {
-    public static void main(String[] args){
+    public static void main(String[] args) {
 
         String topic = "PMC-Spider-Source";
 //        String topic = "Multibrokerapplication";
@@ -39,14 +39,14 @@ public class GroupConsumer {
             ConsumerRecords<String, String> records = consumer.poll(Duration.ofMillis(100L));
             for (ConsumerRecord<String, String> record : records) {
                 System.out.printf("offset = %d, key = %s, value = %s\n",
-                            record.offset(), record.key(), record.value());
+                        record.offset(), record.key(), record.value());
                 consumer.commitSync();
             }
         }
     }
 
     @Test
-    public void testt(){
+    public void testt() {
         Duration duration = Duration.ofMillis(100);
         System.out.println(duration.toMillis());
     }

@@ -20,7 +20,7 @@ package com.widget.bak.spirng;
  */
 public class Demo22 {
 
-    public String test(){
+    public String test() {
         return "123";
     }
 }

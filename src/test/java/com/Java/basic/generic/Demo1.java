@@ -51,7 +51,7 @@ public class Demo1 {
     }
 
 
-    public static void mm(Father< ? extends C1> f) {
+    public static void mm(Father<? extends C1> f) {
 
     }
 }
@@ -66,7 +66,7 @@ class C1 {
     }
 }
 
-class B2 extends C1{
+class B2 extends C1 {
     public void eq(List list) {
         System.out.println("B2");
     }
@@ -88,7 +88,7 @@ class Son extends Father<String> {
 
 }
 
-class Son2{
+class Son2 {
 
     public void m1(String str) {
         System.out.println("String");

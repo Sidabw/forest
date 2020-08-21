@@ -24,6 +24,7 @@ import java.util.concurrent.Callable;
 public class CallableTask implements Callable<Integer> {
 
     private int taskIndex;
+
     public CallableTask(int taskIndex) {
         this.taskIndex = taskIndex;
     }
@@ -31,6 +32,7 @@ public class CallableTask implements Callable<Integer> {
     public CallableTask() {
         taskIndex = 0;
     }
+
     @Override
     public Integer call() throws Exception {
         int t = new Random().nextInt(5) * 1000;

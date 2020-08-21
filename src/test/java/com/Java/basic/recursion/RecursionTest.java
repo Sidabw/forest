@@ -28,7 +28,7 @@ import java.util.Set;
 public class RecursionTest {
 
     @Test
-    public void test(){
+    public void test() {
         String str1 = " {\n" +
                 "                    \"paragraph_offset\" : 4,\n" +
                 "                    \"paragraph_location\" : {\n" +
@@ -54,22 +54,22 @@ public class RecursionTest {
                 "                    \"label\" : 1,\n" +
                 "                    \"value\" : \"中国农业银行股份有限公司发行减记型无固定期限资本债券计划\"\n" +
                 "                }";
-        Map<String, Object> map1 =JSONObject.parseObject(str1);
-        Map<String, Object> map2 =JSONObject.parseObject(str2);
+        Map<String, Object> map1 = JSONObject.parseObject(str1);
+        Map<String, Object> map2 = JSONObject.parseObject(str2);
 
         Boolean aBoolean = recursionCompareMap(map1, map2);
         System.out.println(aBoolean);
     }
 
-    private Boolean recursionCompareMap(Map<String, Object> map1, Map<String, Object> map2){
+    private Boolean recursionCompareMap(Map<String, Object> map1, Map<String, Object> map2) {
         Set<String> map1Keyset = map1.keySet();
         Set<String> map2Keyset = map2.keySet();
         if (map1Keyset.size() != map2Keyset.size()) return Boolean.FALSE;
 
-        for (String each : map1Keyset){
+        for (String each : map1Keyset) {
             Object objValue1 = map1.get(each);
             Object objValue2 = map2.get(each);
-            if (objValue1 == null && objValue2 != null || objValue2 == null && objValue1 != null){
+            if (objValue1 == null && objValue2 != null || objValue2 == null && objValue1 != null) {
                 return Boolean.FALSE;
             }
 

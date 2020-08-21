@@ -25,27 +25,27 @@ public class PhantomController {
 
     @RequestMapping("/test")
     @ResponseBody
-    public String testform(String username,Date timetest){
+    public String testform(String username, Date timetest) {
         User user = new User();
         user.setGender("woman");
         user.setHobby("anger");
         user.setName("sida");
         String jsonString = JSONObject.toJSONString(user);
-        String temp = jsonString+"#TRS#"+jsonString+"#TRS#"+jsonString+"#TRS#"+jsonString+"#TRS#"+jsonString;
+        String temp = jsonString + "#TRS#" + jsonString + "#TRS#" + jsonString + "#TRS#" + jsonString + "#TRS#" + jsonString;
         System.out.println(temp);
         return "result from testform";
     }
 
     @RequestMapping("/echarts")
     @ResponseBody
-    public Object echartsTest(String name,String value){
+    public Object echartsTest(String name, String value) {
         System.out.println("request in ........................");
         System.out.println(name);
         System.out.println(value);
-        List<Integer> listHigh = Arrays.asList(7,8,3,2,9,6,5);
-        List<Integer> listLow = Arrays.asList(-1,-3,-2,-5,-6,-3,-2);
-        List<String> listTitle = Arrays.asList("周一","周二","周三","周四","周五","周六","周天");
-        HashMap<String,List<?>> hashMap = new HashMap<>();
+        List<Integer> listHigh = Arrays.asList(7, 8, 3, 2, 9, 6, 5);
+        List<Integer> listLow = Arrays.asList(-1, -3, -2, -5, -6, -3, -2);
+        List<String> listTitle = Arrays.asList("周一", "周二", "周三", "周四", "周五", "周六", "周天");
+        HashMap<String, List<?>> hashMap = new HashMap<>();
         hashMap.put("listHigh", listHigh);
         hashMap.put("listLow", listLow);
         hashMap.put("listTitle", listTitle);
@@ -54,7 +54,7 @@ public class PhantomController {
 
     @RequestMapping("/echarts2")
     @ResponseBody
-    public Object echartsTest2(String base64url) throws Exception{
+    public Object echartsTest2(String base64url) throws Exception {
         System.out.println(base64url);
         String[] split = base64url.split(",");
         String b64 = split[1];
@@ -63,10 +63,10 @@ public class PhantomController {
         ByteArrayInputStream byteArrayInputStream = new ByteArrayInputStream(decode);
         BufferedInputStream bufferedInputStream = new BufferedInputStream(byteArrayInputStream);
         BufferedOutputStream bufferedOutputStream = new BufferedOutputStream(new FileOutputStream("11.png"));
-        byte[] temp=new byte[1024];
+        byte[] temp = new byte[1024];
         int read;
-        while((read = bufferedInputStream.read(temp))!=-1){
-            bufferedOutputStream.write(temp,0,read);
+        while ((read = bufferedInputStream.read(temp)) != -1) {
+            bufferedOutputStream.write(temp, 0, read);
         }
         bufferedOutputStream.close();
         return base64url;

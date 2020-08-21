@@ -28,23 +28,24 @@ public class Demo {
         ThreadPoolExecutor threadPoolExecutor = new ThreadPoolExecutor(2, 2, 0L,
                 TimeUnit.MILLISECONDS, new SynchronousQueue<>());
 
-        for (int i = 0; i< 10; i++) {
+        for (int i = 0; i < 10; i++) {
             System.out.println("source:: " + i);
-            for (;;) {
+            for (; ; ) {
                 try {
-                    threadPoolExecutor.execute(()->{
+                    threadPoolExecutor.execute(() -> {
                         try {
-                            Thread.sleep(new Random().nextInt(3)*1000L);
+                            Thread.sleep(new Random().nextInt(3) * 1000L);
                         } catch (Exception e) {
 
                         }
                     });
                 } catch (Exception e) {
-                  try {
-                      System.out.println("source:: " + i + "sleep!");
-                      Thread.sleep(1000L);
-                  } catch (Exception e1) {}
-                  continue;
+                    try {
+                        System.out.println("source:: " + i + "sleep!");
+                        Thread.sleep(1000L);
+                    } catch (Exception e1) {
+                    }
+                    continue;
                 }
                 break;
             }

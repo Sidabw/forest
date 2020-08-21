@@ -11,7 +11,7 @@
 package com.Java.designMode.callback.callbackdemo.teacher;
 
 /**
- * 〈一句话功能简述〉: 
+ * 〈一句话功能简述〉:
  * 〈〉
  *
  * @author feiyi

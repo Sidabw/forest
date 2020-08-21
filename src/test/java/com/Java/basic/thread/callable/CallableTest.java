@@ -18,12 +18,12 @@ import java.util.concurrent.*;
  * 主要涉及到几个类：
  * Future:接口，声明，里面的get方法会阻塞等待线程的返回值。
  * FutureTask:包装Callable的，同时也是Runnable 和 Future的子类，
- *  里面的run方法，就是正常调用(也就是阻塞执行)Callable的call方法。
- *  里面的get方法，实现了Future的get方法，循环等待Callable的返回值，也就是阻塞等待结果。
- *
- *  ExecutorCompletionService： 多任务情况下使用，本质上就是就是将结果放到了一个阻塞队列里。调用take方法阻塞等待返回值，本质上也是
- *  调用阻塞队列的take方法阻塞等待返回。
- *
+ * 里面的run方法，就是正常调用(也就是阻塞执行)Callable的call方法。
+ * 里面的get方法，实现了Future的get方法，循环等待Callable的返回值，也就是阻塞等待结果。
+ * <p>
+ * ExecutorCompletionService： 多任务情况下使用，本质上就是就是将结果放到了一个阻塞队列里。调用take方法阻塞等待返回值，本质上也是
+ * 调用阻塞队列的take方法阻塞等待返回。
+ * <p>
  * 〉
  *
  * @author feiyi
@@ -50,11 +50,11 @@ public class CallableTest {
         //方式3   ::执行多个带返回值的任务，并获取对应结果
         ExecutorService executorService2 = Executors.newFixedThreadPool(5);
         CompletionService<Integer> cs = new ExecutorCompletionService<Integer>(executorService2);
-        for (int i = 0; i< 5; i++) {
+        for (int i = 0; i < 5; i++) {
             CallableTask task = new CallableTask(i);
             cs.submit(task);
         }
-        for (int i = 0; i<5; i++) {
+        for (int i = 0; i < 5; i++) {
             System.out.println("第 " + i + " 次尝试获取结果");
             //take方法就是从一个completionBlockingQueue中take数据而已，所以哪个线程先执行完了，自然就会先出现在队列里。
             //阻塞队列的take方法会阻塞，如果队列里没有元素；poll方法在这种情况下会直接返回null。

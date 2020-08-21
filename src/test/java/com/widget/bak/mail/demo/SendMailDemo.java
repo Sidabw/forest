@@ -30,11 +30,12 @@ public class SendMailDemo {
         //3.发送文本+图片+附件的邮件+html文本(font 标签)
 //        sendMixedMail();
     }
-    public static void sendTextMail()  throws Exception {
+
+    public static void sendTextMail() throws Exception {
         Properties prop = new Properties();
-        prop.setProperty("mail.host",HOST);    //smtp服务器就是由邮箱服务器提供的代发服务器地址
-        prop.setProperty("mail.transport.protocol","smtp");
-        prop.setProperty("mail.smtp.auth","true");
+        prop.setProperty("mail.host", HOST);    //smtp服务器就是由邮箱服务器提供的代发服务器地址
+        prop.setProperty("mail.transport.protocol", "smtp");
+        prop.setProperty("mail.smtp.auth", "true");
         //使用Java Mail 发送邮件的5个步骤
         //1.创建seesion
         Session seesion = Session.getInstance(prop);
@@ -42,7 +43,7 @@ public class SendMailDemo {
         //2.获得transport对象
         Transport transport = seesion.getTransport();
         //3.连接transport
-        transport.connect(HOST,USER,getPasswordFromDB(USER));
+        transport.connect(HOST, USER, getPasswordFromDB(USER));
         //4.获取mail
         MimeMessage message = createSimpleMail(seesion);
         transport.sendMessage(message, message.getAllRecipients());
@@ -50,11 +51,11 @@ public class SendMailDemo {
         transport.close();
     }
 
-    public static void sendImageMail() throws Exception{
+    public static void sendImageMail() throws Exception {
         Properties prop = new Properties();
-        prop.setProperty("mail.host",HOST);    //smtp服务器就是由邮箱服务器提供的代发服务器地址
-        prop.setProperty("mail.transport.protocol","smtp");
-        prop.setProperty("mail.smtp.auth","true");
+        prop.setProperty("mail.host", HOST);    //smtp服务器就是由邮箱服务器提供的代发服务器地址
+        prop.setProperty("mail.transport.protocol", "smtp");
+        prop.setProperty("mail.smtp.auth", "true");
         //使用Java Mail 发送邮件的5个步骤
         //1.创建seesion
         Session seesion = Session.getInstance(prop);
@@ -62,7 +63,7 @@ public class SendMailDemo {
         //2.获得transport对象
         Transport transport = seesion.getTransport();
         //3.连接transport
-        transport.connect(HOST,USER,getPasswordFromDB(USER));
+        transport.connect(HOST, USER, getPasswordFromDB(USER));
         //4.获取mail
         MimeMessage message = createImageMail(seesion);
         transport.sendMessage(message, message.getAllRecipients());
@@ -70,11 +71,11 @@ public class SendMailDemo {
         transport.close();
     }
 
-    public static void sendMixedMail() throws Exception{
+    public static void sendMixedMail() throws Exception {
         Properties prop = new Properties();
-        prop.setProperty("mail.host",HOST);    //smtp服务器就是由邮箱服务器提供的代发服务器地址
-        prop.setProperty("mail.transport.protocol","smtp");
-        prop.setProperty("mail.smtp.auth","true");
+        prop.setProperty("mail.host", HOST);    //smtp服务器就是由邮箱服务器提供的代发服务器地址
+        prop.setProperty("mail.transport.protocol", "smtp");
+        prop.setProperty("mail.smtp.auth", "true");
         //使用Java Mail 发送邮件的5个步骤
         //1.创建seesion
         Session seesion = Session.getInstance(prop);
@@ -82,13 +83,14 @@ public class SendMailDemo {
         //2.获得transport对象
         Transport transport = seesion.getTransport();
         //3.连接transport
-        transport.connect(HOST,USER,getPasswordFromDB(USER));
+        transport.connect(HOST, USER, getPasswordFromDB(USER));
         //4.获取mail
         MimeMessage message = createAttachMail(seesion);
         transport.sendMessage(message, message.getAllRecipients());
         //transport.
         transport.close();
     }
+
     /***
      * 创建包含 text image attachment 的邮件
      * @param session
@@ -104,7 +106,7 @@ public class SendMailDemo {
 
         //正文
         MimeBodyPart text = new MimeBodyPart();
-        text.setContent("这是一封邮件正文带图片<img src = 'cid:sida.jpg' style='width:30%;'>的邮件。除此之外还包括了回<br>车，空   格he <font size= \"15\" color = \"red\" > hahah </font> 的字体","text/html;charset=UTF-8");
+        text.setContent("这是一封邮件正文带图片<img src = 'cid:sida.jpg' style='width:30%;'>的邮件。除此之外还包括了回<br>车，空   格he <font size= \"15\" color = \"red\" > hahah </font> 的字体", "text/html;charset=UTF-8");
 
         //正文：图片
         MimeBodyPart image = new MimeBodyPart();
@@ -163,7 +165,7 @@ public class SendMailDemo {
         message.setSubject("This is a MIME MAIL contained img content.");
         //放图片
         MimeBodyPart body = new MimeBodyPart();
-        body.setContent("这是一封邮件正文带图片<img src = 'cid:sida.jpg' style='width:30%;'>的邮件。除此之外还包括了回<br>车，空   格","text/html;charset=UTF-8");
+        body.setContent("这是一封邮件正文带图片<img src = 'cid:sida.jpg' style='width:30%;'>的邮件。除此之外还包括了回<br>车，空   格", "text/html;charset=UTF-8");
 
         //正文：图片
         MimeBodyPart image = new MimeBodyPart();
@@ -187,33 +189,33 @@ public class SendMailDemo {
         message.setFrom(new InternetAddress(FROM));
         message.setRecipient(Message.RecipientType.TO, new InternetAddress(TO));
         message.setSubject("罗蕾啊");//你说你你昨晚真是把我折腾的够呛，就那么点小事，你闹半天！不过我也有错。
-        message.setContent("你说你你昨晚真是把我折腾的够呛，就那么点小事，你闹半天！不过我也有错。","text/html;charset=UTF-8");
+        message.setContent("你说你你昨晚真是把我折腾的够呛，就那么点小事，你闹半天！不过我也有错。", "text/html;charset=UTF-8");
         return message;
     }
 
     /***
      *
      * @param user  用户名
-     * @return  密码
+     * @return 密码
      */
     public static String getPasswordFromDB(String user) throws Exception {
-        String URL="jdbc:mysql://127.0.0.1:3306/ego?useUnicode=true&amp;characterEncoding=utf-8";
-        String USER="root";
-        String PASSWORD="root";
+        String URL = "jdbc:mysql://127.0.0.1:3306/ego?useUnicode=true&amp;characterEncoding=utf-8";
+        String USER = "root";
+        String PASSWORD = "root";
 //        String PASSWORD="123456";
         //1.加载驱动程序
         Class.forName("com.mysql.jdbc.Driver");
         //2.获得数据库链接
-        Connection conn=DriverManager.getConnection(URL, USER, PASSWORD);
+        Connection conn = DriverManager.getConnection(URL, USER, PASSWORD);
         //3.通过数据库的连接操作数据库，实现增删改查（使用Statement类）
-        Statement st=conn.createStatement();
-        ResultSet rs=st.executeQuery("select * from user_password_secret_storage where user = \"" + user +"\"");
+        Statement st = conn.createStatement();
+        ResultSet rs = st.executeQuery("select * from user_password_secret_storage where user = \"" + user + "\"");
         //4.处理数据库的返回结果(使用ResultSet类)
         String password = "";
-        while(rs.next()){
+        while (rs.next()) {
             password = rs.getString("password");
-            System.out.println(rs.getString("user")+" "
-                    +rs.getString("password"));
+            System.out.println(rs.getString("user") + " "
+                    + rs.getString("password"));
         }
         //关闭资源
         rs.close();

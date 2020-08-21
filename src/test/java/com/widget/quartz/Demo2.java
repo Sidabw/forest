@@ -38,7 +38,7 @@ public class Demo2 {
         SchedulerFactory schedulerfactory = new StdSchedulerFactory();
         Scheduler scheduler = schedulerfactory.getScheduler();
         JobDetail job = JobBuilder.newJob(HelloQuartz.class).withIdentity("JobName", "JobGroupName").build();
-        Trigger trigger=TriggerBuilder.newTrigger().withIdentity("CronTrigger1", "CronTriggerGroup")
+        Trigger trigger = TriggerBuilder.newTrigger().withIdentity("CronTrigger1", "CronTriggerGroup")
                 .withSchedule(CronScheduleBuilder.cronSchedule(cron))
                 .startNow().build();
         scheduler.scheduleJob(job, trigger);

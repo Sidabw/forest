@@ -25,17 +25,17 @@ import java.util.HashMap;
 public class LeetCode1137 {
 
     /**
+     * @param
      * @Description 泰波那契序列 Tn 定义如下： 
      * T0 = 0, T1 = 1, T2 = 1, 且在 n >= 0 的条件下 Tn+3 = Tn + Tn+1 + Tn+2
      * 给你整数 n，请返回第 n 个泰波那契数 Tn 的值。
-     * @param
      * @return: void
      * @since: 2.0.5
      * @Author: feiyi
      * @Date: 2020/5/29 10:39 AM
      **/
     @Test
-    public void test(){
+    public void test() {
         //t3=t0+t1+t2   =>2
         //t4=t1+t2+t3   =>4
         //t5=t2+t3+t4   =>7
@@ -47,13 +47,14 @@ public class LeetCode1137 {
     }
 
     private HashMap<Integer, Integer> map = new HashMap<>();
+
     public int tribonacci(int n) {
         if (n <= 0) return 0;
         if (n == 1) return 1;
         if (n == 2) return 1;
         int k1 = n - 3;
-        int k2 = n -2;
-        int k3 = n-1;
+        int k2 = n - 2;
+        int k3 = n - 1;
 
         int v1;
         if (!map.containsKey(k1)) {

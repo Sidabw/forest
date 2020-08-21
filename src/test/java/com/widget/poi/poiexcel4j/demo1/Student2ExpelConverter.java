@@ -24,6 +24,6 @@ public class Student2ExpelConverter implements WriteConvertible {
 
     @Override
     public Object execWrite(Object o) {
-        return o == Boolean.TRUE ?  "是" : "否";
+        return o == Boolean.TRUE ? "是" : "否";
     }
 }

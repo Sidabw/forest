@@ -27,11 +27,11 @@ import java.io.*;
 public class Demo {
 
     @Test
-    public void test1 () throws IOException {
+    public void test1() throws IOException {
 
         BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(new FileInputStream("/Users/feiyi/Desktop/jinjing.txt")));
         BufferedWriter bufferedWriter = new BufferedWriter(new OutputStreamWriter(new FileOutputStream("/Users/feiyi/Desktop/jinjing2.txt")));
-        String line ;
+        String line;
         while ((line = bufferedReader.readLine()) != null) {
             if (StringUtils.isEmpty(line))
                 continue;
@@ -47,8 +47,8 @@ public class Demo {
         BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(new FileInputStream("/Users/feiyi/Desktop/jinjing2.txt")));
         String line;
         String allLine = "";
-        while((line = bufferedReader.readLine()) != null) {
-            allLine +=line;
+        while ((line = bufferedReader.readLine()) != null) {
+            allLine += line;
         }
         String substring = allLine.substring(7, allLine.length() - 3);
         substring += "]";

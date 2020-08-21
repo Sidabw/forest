@@ -22,7 +22,7 @@ import java.util.concurrent.locks.ReentrantLock;
  * @create 2020/3/19
  * @since 1.0.0
  */
-public class User1 implements Runnable{
+public class User1 implements Runnable {
 
     private static ReentrantLock lock = new ReentrantLock();
 

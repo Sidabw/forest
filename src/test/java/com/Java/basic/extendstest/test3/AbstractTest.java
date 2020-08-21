@@ -26,7 +26,7 @@ public class AbstractTest {
     public void test() {
 
         //证明创建一个继承抽象类的匿名内部类时，必须复写父类的所有抽象方法。
-        new A(){
+        new A() {
 
             @Override
             void aM1() {

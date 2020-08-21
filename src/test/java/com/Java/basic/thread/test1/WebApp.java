@@ -30,36 +30,36 @@ public class WebApp {
 
     private static ReentrantLock lock2 = new ReentrantLock();
 
-    public void webMethod(Lock lock, String user){
+    public void webMethod(Lock lock, String user) {
         lock2.lock();
 //        synchronized (user) {
-            AtomicInteger atomicInteger = map.get(user);
-            if (atomicInteger == null) {
-                atomicInteger = new AtomicInteger(0);
-                map.put(user, atomicInteger);
-            }
-            atomicInteger.incrementAndGet();
-            System.out.println("atomicInteger:  " + atomicInteger + "  ->user: " +  user);
-            if (atomicInteger.get() == 2)
-                System.out.println("-----------------------------------那看来不行::" +  user + "-----------------------------------");
-            atomicInteger.decrementAndGet();
+        AtomicInteger atomicInteger = map.get(user);
+        if (atomicInteger == null) {
+            atomicInteger = new AtomicInteger(0);
+            map.put(user, atomicInteger);
+        }
+        atomicInteger.incrementAndGet();
+        System.out.println("atomicInteger:  " + atomicInteger + "  ->user: " + user);
+        if (atomicInteger.get() == 2)
+            System.out.println("-----------------------------------那看来不行::" + user + "-----------------------------------");
+        atomicInteger.decrementAndGet();
 //            ReentrantLock reentrantLock = (ReentrantLock)lock;
 //            System.out.println(reentrantLock.getHoldCount());
-            try {
-                Thread.sleep(3000L);
-            } catch (InterruptedException e) {
-                e.printStackTrace();
-            }
-            lock2.unlock();
-            try {
-                Thread.sleep(2000L);
-            } catch (InterruptedException e) {
-                e.printStackTrace();
-            }
+        try {
+            Thread.sleep(3000L);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
+        lock2.unlock();
+        try {
+            Thread.sleep(2000L);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
 //        }
     }
 
-    public void m1(String user){
+    public void m1(String user) {
         synchronized (WebApp.class) {
             System.out.println("m1 --- --- " + user + "--" + "start");
             try {
@@ -71,7 +71,7 @@ public class WebApp {
         }
     }
 
-    public void m2(String user){
+    public void m2(String user) {
         synchronized (WebApp.class) {
             System.out.println("m2 --- --- " + user + "--" + "start");
             try {

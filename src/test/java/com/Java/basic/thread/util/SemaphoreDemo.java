@@ -18,7 +18,7 @@ import java.util.concurrent.Semaphore;
  * 〈一句话功能简述〉:
  * 〈信号量，控制并发线程数.
  * 具体解释可见《Java并发编程的艺术》-196 路口红绿灯控制马路车流量的例子
- *
+ * <p>
  * 应用场景，100个线程处理一部分数据，处理完之后还要同步到数据库，但是数据库连接只有10个。这个时候就需要使用信号量保证同一时间最多只有
  * 10个线程拿的到数据库连接。
  * 〉
@@ -37,8 +37,8 @@ public class SemaphoreDemo {
 
         //每一个任务睡15秒
         //信号量是10，所以到第11个任务的时候会卡住，等待第一个任务释放"资源"
-        for (int i = 0; i< 30; i++) {
-            executorService.execute(()->{
+        for (int i = 0; i < 30; i++) {
+            executorService.execute(() -> {
                 try {
                     semaphore.acquire();
 //                    semaphore.tryAcquire();//有点tryLock的味道

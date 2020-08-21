@@ -34,13 +34,13 @@ public class PinYin {
      * @Author:feiyi
      * @Date: 2019/3/19 11:42 AM
      */
-    public static String getPinyin(String hanzi){
+    public static String getPinyin(String hanzi) {
         //ascii 32-126 是所有符号及大小写英文的10进制值
         StringBuffer convertResult = new StringBuffer();
-        for(int i =0 ; i < hanzi.length(); i++){
+        for (int i = 0; i < hanzi.length(); i++) {
             char c = hanzi.charAt(i);
             boolean condition = (c > 31 && c < 127) || c == 65295 || c == 12289;
-            if(!condition){
+            if (!condition) {
                 convertResult.append(c);
             }
         }
@@ -76,21 +76,20 @@ public class PinYin {
      * @Date: 2019/3/19 11:43 AM
      */
     public static String getSimplifiedPinyin(String companyName) {
-        if(StringUtils.isEmpty(companyName))
+        if (StringUtils.isEmpty(companyName))
             return null;
         StringBuffer result = new StringBuffer();
-        for(char c : companyName.toCharArray()){
+        for (char c : companyName.toCharArray()) {
             String pinyin = getPinyin(new StringBuffer().append(c).toString());
-            if(StringUtils.isEmpty(pinyin))
+            if (StringUtils.isEmpty(pinyin))
                 continue;
-            result.append(pinyin.substring(0,1));
+            result.append(pinyin.substring(0, 1));
         }
         return result.toString();
     }
 
 
-
-    public static void main(String[] args){
+    public static void main(String[] args) {
         System.out.println(getPinyin("萝卜"));
         System.out.println(getSimplifiedPinyin("萝卜"));
     }

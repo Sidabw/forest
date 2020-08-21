@@ -29,7 +29,7 @@ import java.io.IOException;
 public class Demo {
 
     @Test
-    public void test () throws IOException {
+    public void test() throws IOException {
         String host = "localhost";
         int port = 9200;
         String index = "tianmao";

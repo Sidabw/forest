@@ -77,7 +77,7 @@ public class BinaryTree2Search {
         else child = null;//此时说明p是叶子节点
 
         if (pp == null) root = child;//此时表示删除的是根节点。且该树只有一个节点。
-        else if(pp.left == p) pp.left = child;
+        else if (pp.left == p) pp.left = child;
         else pp.right = child;
 
     }
@@ -118,15 +118,16 @@ public class BinaryTree2Search {
         }
         return root;
     }
-    
+
     //使用分层遍历计算树的确定高度
+
     /**
+     * @param root
      * @Description 每一层记录都记录下当前队列的长度，这个是队尾，每一层队头从0开始。然后每遍历一个元素，队头下标+1。
      * 直到队头下标等于队尾下标。这个时候表示当前层遍历完成。每一层刚开始遍历的时候，树的高度+1。最后队列为空，就能得到树的高度。
-     * @param root 
      * @return: int
      * @since: 2.0.5
-     * @Author: feiyi  
+     * @Author: feiyi
      * @Date: 2020/6/27 3:47 PM
      **/
     public static int calHeight(Node root) {
@@ -134,8 +135,8 @@ public class BinaryTree2Search {
     }
 
 
-
     private static List<Integer> res = new ArrayList<>();
+
     private static void getLeaf(Node root) {
         if (root == null) return;
         getLeaf(root.left);
@@ -143,6 +144,7 @@ public class BinaryTree2Search {
         if (root.left == null && root.right == null)
             res.add(root.value);
     }
+
     public static boolean com(Node root1, Node root2) {
         getLeaf(root1);
         ArrayList<Integer> leaf1 = new ArrayList<>(res);
@@ -153,7 +155,7 @@ public class BinaryTree2Search {
         res.clear();
 
         if (leaf1.size() != leaf2.size()) return false;
-        for (int i = 0; i< leaf1.size(); i++) {
+        for (int i = 0; i < leaf1.size(); i++) {
             int i1 = leaf1.get(i);
             int i2 = leaf2.get(i);
             if (i1 != i2) return false;
@@ -162,21 +164,19 @@ public class BinaryTree2Search {
     }
 
     @Test
-    public void test(){
+    public void test() {
         Node root1 = buildTree1();
         Node root2 = buildTree2();
         System.out.println(com(root1, root2));
     }
 
     /**
-     * @Description
-     *
-     * 声明：这只是一个二叉树，不是二叉搜索树
-     *
-     *        10
-     *   6        11
-     * 3    7   9   12
      * @param
+     * @Description 声明：这只是一个二叉树，不是二叉搜索树
+     * <p>
+     * 10
+     * 6        11
+     * 3    7   9   12
      * @return: com.Java.math.tree.Node
      * @since: 2.0.5
      * @Author: feiyi
@@ -203,14 +203,12 @@ public class BinaryTree2Search {
     }
 
     /**
-     * @Description
-     *
-     * 声明：这只是一个二叉树，不是二叉搜索树
-     *
-     *        10
-     *   6        11
-     * 3    7   9   12
      * @param
+     * @Description 声明：这只是一个二叉树，不是二叉搜索树
+     * <p>
+     * 10
+     * 6        11
+     * 3    7   9   12
      * @return: com.Java.math.tree.Node
      * @since: 2.0.5
      * @Author: feiyi

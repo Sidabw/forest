@@ -27,9 +27,9 @@ import java.util.concurrent.TimeUnit;
 /**
  * 〈一句话功能简述〉:
  * 〈okhttp
- *  主要测试常规的get/post/form/header append/asyn/文件上传
- *  无关html
- *  有关分块请求等暂不做测试。〉
+ * 主要测试常规的get/post/form/header append/asyn/文件上传
+ * 无关html
+ * 有关分块请求等暂不做测试。〉
  *
  * @author feiyi
  * @create 2018/12/4
@@ -38,18 +38,20 @@ import java.util.concurrent.TimeUnit;
 public class Demo {
 
     private static Logger logger = LoggerFactory.getLogger(Demo.class);
+
     public static void main(String[] args) throws IOException {
 //        get("http://localhost:8018/dp/v1/source/getSug");
 //        postNormal("http://localhost:8018/dp/v1/login");
 //        postForm("http://localhost:8018/dp/v1/login");
         postMultipartUpload2();
     }
+
     public static void get(String url) throws IOException {
         StringBuffer urlAndParam = new StringBuffer(url).append("?").append("searchText=\"富士康\"").append("&").append("queryType=\"company\"");
         OkHttpClient client = new OkHttpClient();
         Request request = new Request.Builder().url(urlAndParam.toString()).build();
         Response response = client.newCall(request).execute();
-        logger.info("response body --> {}",response.body().string());
+        logger.info("response body --> {}", response.body().string());
     }
 
     public static void postNormal(String url) throws IOException {
@@ -63,7 +65,7 @@ public class Demo {
         RequestBody body = RequestBody.create(mediaType, param);
         Request request = new Request.Builder().url(url).post(body).build();
         Response response = client.newCall(request).execute();
-        logger.info("response body --> {}",response.body().string());
+        logger.info("response body --> {}", response.body().string());
     }
 
     public static void postForm(String url) throws IOException {
@@ -74,12 +76,13 @@ public class Demo {
                 .build();
         Request request = new Request.Builder().url(url).post(body).build();
         Response response = client.newCall(request).execute();
-        logger.info("response body --> {}",response.body().string());
+        logger.info("response body --> {}", response.body().string());
     }
 
     /**
      * 功能描述:
-     *  有争议，详细见md of cur package
+     * 有争议，详细见md of cur package
+     *
      * @return:
      * @since: 1.0.0
      * @Author:feiyi
@@ -91,15 +94,15 @@ public class Demo {
         int length = 0;
         byte[] temp = new byte[1024];
         ArrayList<Byte> list = new ArrayList<>();
-        while ((length = fileInputStream.read(temp)) != -1){
-            for (int i = 0 ; i<length ; i ++){
+        while ((length = fileInputStream.read(temp)) != -1) {
+            for (int i = 0; i < length; i++) {
                 list.add(temp[i]);
             }
         }
         Object[] objects = list.toArray();
         byte[] bytes = new byte[objects.length];
-        for (int i = 0 ; i < objects.length ; i ++){
-            bytes[i] = ((Byte)objects[i]).byteValue();
+        for (int i = 0; i < objects.length; i++) {
+            bytes[i] = ((Byte) objects[i]).byteValue();
         }
 
 //        FileInputStream fileInputStream2 = new FileInputStream(new File("/Users/feiyi/Desktop/models-proceed-demo.png"));
@@ -122,7 +125,7 @@ public class Demo {
                         Headers.of("Content-Disposition",
                                 "form-data; name=\"file\""),
                         RequestBody.create(null, bytes))
-               .build();
+                .build();
         Request request = new Request.Builder()
                 .header("Accept-Language", "zh-cn")
                 .url("http://localhost:8020/dp/api/v1/pmc/proceed/filetest")
@@ -137,7 +140,7 @@ public class Demo {
     public static void postMultipartUpload2() throws IOException {
         File file = new File("/Users/feiyi/Desktop/handsome_guy.jpg");
         FileInputStream fileInputStream = new FileInputStream(file);
-        byte[] bytes =inputStreamToByte(fileInputStream);
+        byte[] bytes = inputStreamToByte(fileInputStream);
         //TODO  OkHttp official example. practice. https://square.github.io/okhttp/recipes/#posting-a-multipart-request
         OkHttpClient okHttpClient = new OkHttpClient();
         RequestBody requestBody = new MultipartBody.Builder()
@@ -154,23 +157,25 @@ public class Demo {
                 .build();
         okHttpClient.newCall(request).execute();
     }
+
     private static byte[] inputStreamToByte(InputStream inputStream) throws IOException {
-        int length ;
+        int length;
         byte[] temp = new byte[1024];
         ArrayList<Byte> list = new ArrayList<>();
-        while ((length = inputStream.read(temp)) != -1){
-            for (int i = 0 ; i<length ; i ++) {
+        while ((length = inputStream.read(temp)) != -1) {
+            for (int i = 0; i < length; i++) {
                 list.add(temp[i]);
             }
         }
         Object[] objects = list.toArray();
         byte[] bytes = new byte[objects.length];
-        for (int i = 0 ; i < objects.length ; i ++){
-            bytes[i] = ((Byte)objects[i]).byteValue();
+        for (int i = 0; i < objects.length; i++) {
+            bytes[i] = ((Byte) objects[i]).byteValue();
         }
         return bytes;
     }
-    public static void addTimeout(){
+
+    public static void addTimeout() {
         OkHttpClient client = new OkHttpClient.Builder()
                 .connectTimeout(10, TimeUnit.SECONDS)
                 .readTimeout(10, TimeUnit.SECONDS)
@@ -178,10 +183,10 @@ public class Demo {
                 .build();
     }
 
-    public static void addHeader(RequestBody body){
+    public static void addHeader(RequestBody body) {
         new Request.Builder()
                 .url("")
-                .addHeader("content-type","application/x-www-form-urlencoded")
+                .addHeader("content-type", "application/x-www-form-urlencoded")
                 .addHeader("", "")
                 .addHeader("", "")
                 .post(body)
@@ -197,7 +202,7 @@ public class Demo {
 
             @Override
             public void onResponse(Call call, Response response) throws IOException {
-                logger.info("response body --> {}",response.body().string());
+                logger.info("response body --> {}", response.body().string());
             }
         });
     }
@@ -207,7 +212,7 @@ public class Demo {
 
         OkHttpClient client = new OkHttpClient();
         Request request = new Request.Builder()
-                .header("Cookie","UM_distinctid=16d7c40ff5e769-011fea921754e6-38607501-1aeaa0-16d7c40ff5f4ad; zenki.ops=MTU3MzY5Njk5OXxEdi1CQkFFQ180SUFBUXdCRUFBQWN2LUNBQUVGZEc5clpXNEdjM1J5YVc1bkRGOEFYWHNpWjJsMlpXNU9ZVzFsSWpvaTZJS2w2WUdYSWl3aWN5STZJbU00TVRsaFlUUTNOelpqT1RJeU56QTNaakEzWTJVd1l6ZGlZbUU1TURaaUlpd2lkR2x0WlNJNk1UVTNNelk1TmprNU9Td2lkV2xrSWpvaVptVnBlV2tpZlE9PXzGfznVis3g7pNtMi9QlhPUK8_6r5k6YRfzf1O9TYIeyg==; zenki.act=MTU3MzcwMjQ1NnxEdi1CQkFFQ180SUFBUXdCRUFBQV83WF9nZ0FCQlhSdmEyVnVCbk4wY21sdVp3el9vUURfbm5zaWFXUWlPamN6TkRVc0luQm9iMjVsYm5WdFltVnlJam9pTVRjMk1UQXhOekEyTWpJaUxDSnpJam9pTjJOak5UTmlZV1l6TWpSa09UaGlNelEzTlRRNU1UZzBZak14TVRWaFl6TWlMQ0owYVcxbElqb3hOVGN6TnpBeU5EVTJMQ0oxYVdRaU9pSTRNRFkzTVRFeFptVm1OamxpTnpReVkyVTVObUpsWTJJeVpUa3lNR05rWWlJc0luVnpaWEp1WVcxbElqb2lXRlZKVjBsTFVpSjl8v4RunzfXwPvlm_o5cq5-YAUu5It7Wd5oFCkDUuvBigE=")
+                .header("Cookie", "UM_distinctid=16d7c40ff5e769-011fea921754e6-38607501-1aeaa0-16d7c40ff5f4ad; zenki.ops=MTU3MzY5Njk5OXxEdi1CQkFFQ180SUFBUXdCRUFBQWN2LUNBQUVGZEc5clpXNEdjM1J5YVc1bkRGOEFYWHNpWjJsMlpXNU9ZVzFsSWpvaTZJS2w2WUdYSWl3aWN5STZJbU00TVRsaFlUUTNOelpqT1RJeU56QTNaakEzWTJVd1l6ZGlZbUU1TURaaUlpd2lkR2x0WlNJNk1UVTNNelk1TmprNU9Td2lkV2xrSWpvaVptVnBlV2tpZlE9PXzGfznVis3g7pNtMi9QlhPUK8_6r5k6YRfzf1O9TYIeyg==; zenki.act=MTU3MzcwMjQ1NnxEdi1CQkFFQ180SUFBUXdCRUFBQV83WF9nZ0FCQlhSdmEyVnVCbk4wY21sdVp3el9vUURfbm5zaWFXUWlPamN6TkRVc0luQm9iMjVsYm5WdFltVnlJam9pTVRjMk1UQXhOekEyTWpJaUxDSnpJam9pTjJOak5UTmlZV1l6TWpSa09UaGlNelEzTlRRNU1UZzBZak14TVRWaFl6TWlMQ0owYVcxbElqb3hOVGN6TnpBeU5EVTJMQ0oxYVdRaU9pSTRNRFkzTVRFeFptVm1OamxpTnpReVkyVTVObUpsWTJJeVpUa3lNR05rWWlJc0luVnpaWEp1WVcxbElqb2lXRlZKVjBsTFVpSjl8v4RunzfXwPvlm_o5cq5-YAUu5It7Wd5oFCkDUuvBigE=")
                 .url("http://localhost:8020/dp/api/v1/pmc/proceed/test").build();
         Response response = client.newCall(request).execute();
         System.out.println(response.body().contentType());

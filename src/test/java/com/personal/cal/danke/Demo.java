@@ -26,7 +26,7 @@ import java.math.RoundingMode;
 public class Demo {
 
     @Test
-    public void test(){
+    public void test() {
         int a = 2230;
         BigDecimal bigDecimalA = BigDecimal.valueOf(a);
         BigDecimal bigDecimalB = BigDecimal.valueOf(2.5);
@@ -34,7 +34,7 @@ public class Demo {
         BigDecimal multiply = bigDecimalA.multiply(bigDecimalC); // a * 12
         BigDecimal multiply1 = bigDecimalA.multiply(bigDecimalB);   //a * 2.5
         BigDecimal subtract = multiply.subtract(multiply1); //(a * 12) - (a*2.5)
-        double end = subtract.divide(bigDecimalC,0, RoundingMode.HALF_DOWN).doubleValue();
+        double end = subtract.divide(bigDecimalC, 0, RoundingMode.HALF_DOWN).doubleValue();
         System.out.println(end);
     }
 }

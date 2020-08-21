@@ -41,7 +41,7 @@ import java.util.Arrays;
 public class Demo {
 
     @Test
-    public void test(){
+    public void test() {
 //        MongoCollection<Document> collection = MongoUtil.getCollection("zk_unstructure_data", "gonggao_structure_data");
         MongoClient mongoClient = MongoUtil.getMongoClient();
         MongoCollection<Document> collection = mongoClient.getDatabase("demo").getCollection("demo1");
@@ -50,10 +50,7 @@ public class Demo {
         MongoUtil.aggs2(collection);
 
 
-
     }
 
-
-   
 
 }

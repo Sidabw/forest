@@ -51,7 +51,7 @@ public class EOFExceptionTest {
 //        }
 //        System.out.println(reqBuilder.build().body());
         Call call = client.newCall(reqBuilder.build());
-        Response response =call.execute();
+        Response response = call.execute();
         if (response.code() != 200) throw new RuntimeException("request error, code " + response.code());
         String result = response.body().string();
         System.out.println(result);
