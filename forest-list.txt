@@ -1,4 +1,10 @@
-pine 松
+pine 松(used)
+
+poplar 白杨(used)
+
+birch 白桦(used)
+
+cone 松果(used)
 
 cerdar 雪松类
 
@@ -6,15 +12,11 @@ larch 落叶松
 
 juniper 杜松
 
-cone 松果
-
 cypress 柏树
 
 bamboo 竹
 
 box 黄杨
-
-poplar 白杨
 
 cottonwood 三角叶杨
 
@@ -22,7 +24,6 @@ osier 紫皮柳树
 
 willow 垂柳
 
-birch 白桦
 
 maple 枫树
 

@@ -4,7 +4,7 @@ import java.io.IOException;
 import java.io.InputStream;
 import java.util.List;
 
-import com.beta.basic.mybatis.mapper.TbUser;
+import com.beta.basic.dao.mapper.TbUser;
 
 
 public interface IUserService {

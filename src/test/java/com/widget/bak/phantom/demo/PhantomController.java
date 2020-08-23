@@ -1,7 +1,7 @@
 package com.widget.bak.phantom.demo;
 
 import com.alibaba.fastjson.JSONObject;
-import com.beta.basic.pojo.User;
+import com.beta.basic.util.pojo.User;
 import org.apache.commons.codec.binary.Base64;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
