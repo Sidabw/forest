@@ -100,6 +100,4 @@ public class QuickSort {
         //递归调用右半数组
         quickSort2(arr, j + 1, high);
     }
-
-
 }

@@ -12,6 +12,9 @@ package com.Java.math.leetcode;
 
 import org.junit.Test;
 
+import java.text.SimpleDateFormat;
+import java.util.Date;
+
 /**
  * 〈一句话功能简述〉:
  * 〈〉
@@ -22,7 +25,11 @@ import org.junit.Test;
  */
 public class LeetCodeDemo {
 
-
+    public static void main(String[] args) {
+        double a = 1601175692.3262467D;
+        Date date = new Date(1601175692326L);
+        System.out.println(new SimpleDateFormat("yyyy-MM-dd HH:mm:ss:SSS").format(date));
+    }
 }
 
 class ListNode {

@@ -49,6 +49,7 @@ public class Demo {
 //        MongoUtil.aggs(collection);
         MongoUtil.aggs2(collection);
 
+        collection.find(Document.parse(""));
 
     }
 

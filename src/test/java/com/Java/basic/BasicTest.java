@@ -8,6 +8,7 @@ import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 import java.util.Random;
+import java.util.regex.Pattern;
 
 /***
  *  Created by shao.guangze on 2018/7/26
@@ -115,6 +116,11 @@ public class BasicTest {
 
     public static void ge1(List<String> strs) {
         strs.forEach(System.out::print);
+    }
+
+    @Test
+    public void test1(){
+        System.out.println(Pattern.matches("^|1|2|3|&", "1"));
     }
 
 }

@@ -21,6 +21,9 @@ import java.math.RoundingMode;
 import java.text.DecimalFormat;
 import java.text.SimpleDateFormat;
 import java.util.*;
+import java.util.concurrent.ExecutorService;
+import java.util.concurrent.Executors;
+import java.util.concurrent.ThreadPoolExecutor;
 
 /**
  * 〈一句话功能简述〉:
@@ -251,6 +254,12 @@ public class JavaTest {
     @Test
     public void test24() {
         Shunxu shunxu = new Shunxu();
+    }
+
+    @Test
+    public void test25(){
+        ThreadPoolExecutor aa = (ThreadPoolExecutor)Executors.newFixedThreadPool(10);
+
     }
 
 }
