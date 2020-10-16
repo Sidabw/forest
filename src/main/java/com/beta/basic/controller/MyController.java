@@ -23,6 +23,7 @@ import org.springframework.http.HttpHeaders;
 import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.ResponseBody;
@@ -271,4 +272,12 @@ public class MyController {
     public String transactionalTest() {
 	    return userService.transactionalTest();
     }
+
+    @RequestMapping(value = "/reqTestParams", method = RequestMethod.POST)
+    @ResponseBody
+    public String reqTest(@RequestBody HashMap params) {
+        System.out.println(params.size());
+        return "200aa";
+    }
+
 }
