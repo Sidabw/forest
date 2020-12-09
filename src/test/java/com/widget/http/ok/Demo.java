@@ -16,10 +16,7 @@ import org.junit.Test;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-import java.io.File;
-import java.io.FileInputStream;
-import java.io.IOException;
-import java.io.InputStream;
+import java.io.*;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.concurrent.TimeUnit;
@@ -43,7 +40,8 @@ public class Demo {
 //        get("http://localhost:8018/dp/v1/source/getSug");
 //        postNormal("http://localhost:8018/dp/v1/login");
 //        postForm("http://localhost:8018/dp/v1/login");
-        postMultipartUpload2();
+//        postMultipartUpload2();
+        download();
     }
 
     public static void get(String url) throws IOException {
@@ -79,6 +77,17 @@ public class Demo {
         logger.info("response body --> {}", response.body().string());
     }
 
+    public static void download() throws IOException {
+        OkHttpClient client = new OkHttpClient();
+        Request req = new Request.Builder().get().url("http://weedfs-filer.zenki.cn/gonggao/AN202009041407495808").build();
+        Response res = client.newCall(req).execute();
+        byte[] bytes = res.body().bytes();
+
+        FileOutputStream fileOutputStream = new FileOutputStream(new File("/Users/feiyi/Desktop/aaa"));
+        fileOutputStream.write(bytes);
+        fileOutputStream.close();
+    }
+
     /**
      * 功能描述:
      * 有争议，详细见md of cur package
@@ -104,6 +113,7 @@ public class Demo {
         for (int i = 0; i < objects.length; i++) {
             bytes[i] = ((Byte) objects[i]).byteValue();
         }
+
 
 //        FileInputStream fileInputStream2 = new FileInputStream(new File("/Users/feiyi/Desktop/models-proceed-demo.png"));
 //        int length2 = 0;

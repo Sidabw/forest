@@ -7,7 +7,11 @@ import java.util.*;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-
+import com.alibaba.fastjson.JSONObject;
+import com.beta.basic.util.IoUtils;
+import com.beta.basic.util.JacksonUtils;
+import com.beta.basic.util.pojo.BusinessRegisterContent;
+import com.beta.basic.util.pojo.BusinessRegisterRequest;
 import org.apache.http.HttpEntity;
 import org.apache.http.client.methods.CloseableHttpResponse;
 import org.apache.http.client.methods.HttpPost;
@@ -18,15 +22,12 @@ import org.apache.http.impl.client.HttpClients;
 import org.apache.http.message.BasicHeader;
 import org.apache.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.core.io.FileSystemResource;
 import org.springframework.http.HttpHeaders;
 import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
-import org.springframework.stereotype.Controller;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
-import org.springframework.web.bind.annotation.ResponseBody;
+import org.springframework.web.bind.annotation.*;
 import org.springframework.web.multipart.MultipartFile;
 import org.springframework.web.servlet.ModelAndView;
 
@@ -36,7 +37,8 @@ import com.beta.basic.service.AsyncTest;
 import com.beta.basic.service.IUserService;
 
 
-@Controller
+//import com.redshield.licence.feign.Secsrv;
+@RestController
 @RequestMapping("/test")
 public class MyController {
 	
@@ -47,6 +49,9 @@ public class MyController {
 	
 	@Autowired
 	private AsyncTest asyncTest;
+
+//	@Autowired
+//	private Secsrv secsrv;
 
     @RequestMapping(value="/reqTest",method=RequestMethod.GET)
     @ResponseBody
@@ -277,7 +282,73 @@ public class MyController {
     @ResponseBody
     public String reqTest(@RequestBody HashMap params) {
         System.out.println(params.size());
+        for (Object key : params.keySet()) {
+            System.out.println(params.get(key));
+        }
         return "200aa";
+    }
+
+
+    @RequestMapping(value = "/saTes", method = RequestMethod.POST)
+    public String saTest(@RequestBody BusinessRegisterRequest request, HttpServletRequest httpReq) throws IOException {
+        System.out.println(JacksonUtils.convertToJsonStr(request.getContent()));
+        return "ssa";
+    }
+
+    @RequestMapping(value = "/saTes2", method = RequestMethod.POST)
+    public String saTest2(@RequestBody JSONObject jsonReq) {
+        //这个就相当于原始message_content字符串，拿这个去验签
+        String messageContentStr = jsonReq.getJSONObject("message_content").toJSONString();
+        //如果你后边还要用这个对象的话，就这么处理下。但是验签要拿上边那个原始的
+        BusinessRegisterContent messageContent = jsonReq.getJSONObject("message_content").toJavaObject(BusinessRegisterContent.class);
+        return "ssa";
+    }
+
+    @Value("${docker.test}")
+    private String dockerTest;
+
+    @RequestMapping(value = "getDt", method = RequestMethod.GET)
+    public String getDt(){
+        return dockerTest;
+    }
+
+
+    @RequestMapping(value = "rrtt", method = RequestMethod.POST)
+    public String rrtt(@RequestBody Header header){
+//        System.out.println(header.getC1().toJSONString());
+        System.out.println(header.getC1());
+        return "ss";
+    }
+
+
+
+    @RequestMapping(value = "/reqTestTest", method = RequestMethod.POST)
+    public String reqTestTest(@RequestBody String abc){
+        System.out.println(abc);
+        return "ss";
+    }
+
+    @RequestMapping(value = "/jmeter", method = RequestMethod.POST)
+    public Object jmeterTest(@RequestBody String abc, HttpServletRequest request){
+        System.out.println(abc);
+        System.out.println(request.getCookies()[0].getComment());
+        HashMap<String, Object> res = new HashMap<>();
+        res.put("statusCode", 200);
+        res.put("message", "成功不成功，你猜猜!");
+        try {
+            int sleepSec = new Random().nextInt(50)  +250;
+            if (sleepSec> 260) {
+                res.put("statusCode", 508);
+            }
+//            int sleepSec = new Random().nextInt(100);
+            System.out.println("开始睡：    " + sleepSec);
+            System.out.println("当前线程：   " + Thread.currentThread().getName());
+            //假设一个请求占用50～100毫秒
+            Thread.sleep(sleepSec);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
+        return res;
     }
 
 }

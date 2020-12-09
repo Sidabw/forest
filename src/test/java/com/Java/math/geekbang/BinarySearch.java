@@ -8,10 +8,7 @@
  * <author>          <time>          <version>          <desc>
  * 作者姓名           修改时间           版本号              描述
  */
-package com.Java.math.jike;
-
-import java.math.BigDecimal;
-import java.math.RoundingMode;
+package com.Java.math.geekbang;
 
 /**
  * 〈一句话功能简述〉:

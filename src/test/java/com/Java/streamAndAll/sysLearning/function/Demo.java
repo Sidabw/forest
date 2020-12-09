@@ -11,6 +11,14 @@ import java.util.function.Supplier;
 
 
 public class Demo {
+    /**
+     * @Description aa
+     * @param args  aa
+     * @return: void
+     * @since: 2.0.5
+     * @Author: feiyi
+     * @Date: 2020/10/31 9:56 PM
+     **/
     public static void main(String[] args) {
         /**
          * 1.Function<T,R>	T 输入， R 输出

@@ -18,6 +18,7 @@ import java.io.*;
 import java.lang.reflect.Array;
 import java.math.BigDecimal;
 import java.math.RoundingMode;
+import java.nio.charset.StandardCharsets;
 import java.text.DecimalFormat;
 import java.text.SimpleDateFormat;
 import java.util.*;
@@ -258,7 +259,8 @@ public class JavaTest {
 
     @Test
     public void test25(){
-        ThreadPoolExecutor aa = (ThreadPoolExecutor)Executors.newFixedThreadPool(10);
+        String a = "asdfjlsajflsjdflsajaslkdjfasodifuaopiseqnwknfglwqk12423513";
+        byte[] bytes1 = a.getBytes(StandardCharsets.UTF_8);
 
     }
 
