@@ -20,7 +20,6 @@ package com.Java.basic.extendstest.test4;
  */
 public class B extends A {
 
-    //TODO  需要好好复习一下Java的子父类属性的覆盖
     protected static String staticStr = "b";
 
     protected String str = "b";
@@ -30,9 +29,8 @@ public class B extends A {
         System.out.println(A.staticStr);
         System.out.println(B.staticStr);
         System.out.println("⬆");
+        //override只是method，没有column
 
-        //神奇啊............
-        //override只支持method，不支持column
         System.out.println(new B().getStr());
         System.out.println(new B().getStr2());
         System.out.println(new B().str);

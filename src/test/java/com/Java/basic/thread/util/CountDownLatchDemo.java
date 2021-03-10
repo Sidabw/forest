@@ -51,8 +51,8 @@ public class CountDownLatchDemo {
         t1.start();
         t2.start();
         //可以把下面两行打开和关闭测试下join
-//        t1.join();//主线程等待t1执行完
-//        t2.join();//主线程等待t2执行完
+        t1.join();//主线程等待t1执行完
+        t2.join();//主线程等待t2执行完
         System.out.println(3);
     }
 

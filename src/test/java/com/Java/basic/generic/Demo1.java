@@ -11,7 +11,6 @@
 package com.Java.basic.generic;
 
 
-import org.apache.poi.ss.formula.functions.T;
 
 import java.util.ArrayList;
 import java.util.Collection;
@@ -33,17 +32,22 @@ public class Demo1 {
         b2.eq(objects); //B2
         Collection col = objects;
         b2.eq(col); //c1
-
-        Son son = new Son();
-        son.m1(1);
-        son.m1("11");//这本身就是一个桥方法。因为Father实际只有一个 m1(Object)的方法
+        System.out.println("奇妙的多态.....但应该没有人会写这种代码吧⬆⬆⬆⬆⬆⬆");
 
         //传递是引用，故而引用类型即栈类型是什么，那么调用的时候就去找参数列表是该栈类型的..
+        //而多态说的应该是没找到的情况...
         Son2 son2 = new Son2();
         son2.m1(new Object());
         son2.m1("222");
         Object strObj = "aa";
         son2.m1(strObj);
+        System.out.println("奇妙的多态2....");
+
+        Son son = new Son();
+        son.m1(1);
+        son.m1("11");//这本身就是一个桥方法。因为Father实际只有一个 m1(Object)的方法
+        System.out.println("桥方法测试......⬆⬆⬆⬆⬆⬆⬆");
+
 
         mm(new Father<C1>());
         mm(new Father<B2>());

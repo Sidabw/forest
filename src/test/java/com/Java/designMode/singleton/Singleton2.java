@@ -12,7 +12,7 @@ package com.Java.designMode.singleton;
 
 /**
  * 〈一句话功能简述〉:
- * 〈懒汉式〉
+ * 〈懒汉式单例〉
  *
  * @author feiyi
  * @create 2019/1/2

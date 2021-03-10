@@ -13,7 +13,8 @@ import java.util.Date;
 public class Demo {
 
     //对应日志见最下方。
-    private static final String cron = "0/13 * * * * ?";//从现在开始，到当前时间的第十三秒执行一次，整除计算：
+    private static final String cron = "00 51 16 18 01 ? 2021";//
+//    private static final String cron = "0/13 * * * * ?";//从现在开始，到当前时间的第十三秒执行一次，整除计算：
 //    private static final String cron = "0 * * * * ?";//从现在开始，每分钟的第0秒执行一次。
 //    private static final String cron = "0 */2 * * * ?";//同上，从现在开始，每分钟的第0秒执行一次。。。
 
@@ -36,13 +37,13 @@ public class Demo {
             JobDetail job = JobBuilder.newJob(HelloQuartz.class).withIdentity("JobName", "JobGroupName").build();
             // 定义调度触发规则
             // SimpleTrigger
-            Trigger trigger = TriggerBuilder.newTrigger().withIdentity("SimpleTrigger", "SimpleTriggerGroup")
-                    .withSchedule(SimpleScheduleBuilder.repeatSecondlyForever(13).withRepeatCount(3))
-                    .startNow().build();
-            //  corn表达式  每五秒执行一次2
-//                Trigger trigger=TriggerBuilder.newTrigger().withIdentity("CronTrigger1", "CronTriggerGroup")
-//                        .withSchedule(CronScheduleBuilder.cronSchedule(cron))
-//                        .startNow().build();
+//            Trigger trigger = TriggerBuilder.newTrigger().withIdentity("SimpleTrigger", "SimpleTriggerGroup")
+//                    .withSchedule(SimpleScheduleBuilder.repeatSecondlyForever(13).withRepeatCount(3))
+//                    .startNow().build();
+            //  corn表达式
+                Trigger trigger=TriggerBuilder.newTrigger().withIdentity("JobName", "JobGroupName")
+                        .withSchedule(CronScheduleBuilder.cronSchedule(cron))
+                        .startNow().build();
             System.out.println("scheduler.start()::" + new SimpleDateFormat("yyyy-MM-dd HH:mm:ss:SSS").format(new Date()));
             // 把作业和触发器注册到任务调度中
             scheduler.scheduleJob(job, trigger);
@@ -57,8 +58,19 @@ public class Demo {
 //            System.out.println( new SimpleDateFormat("yyyy-MM-dd HH:mm:ss:SSS").format(n2));
 //            System.out.println("//获取下次调度时间⬆⬆⬆⬆⬆⬆⬆⬆⬆⬆⬆⬆⬆⬆⬆⬆");
 
+            //这里拿到的是当前正在执行的。当前，当前，当前，正在执行，正在执行，正在执行。
+            System.out.println("当前正在执行的任务总数：" + scheduler.getCurrentlyExecutingJobs().size());
+            boolean b = scheduler.checkExists(JobKey.jobKey("JobName", "JobGroupName"));
+            System.out.println("当前任务是否已存在：" + b);
+
+//            Thread.sleep(60000);
+            boolean b1 = scheduler.deleteJob(JobKey.jobKey("JobName", "JobGroupName"));
+            System.out.println("当前任务被删除："+ b1);
+
+            boolean b2 = scheduler.checkExists(JobKey.jobKey("JobName", "JobGroupName"));
+            System.out.println("当前任务是否已存在：" + b2);
+
             Thread.sleep(1500000);
-            System.out.println(scheduler.getCurrentlyExecutingJobs().size());
             // 停止调度
             scheduler.shutdown();
         } catch (Exception e) {

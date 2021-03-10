@@ -31,7 +31,10 @@ public class JacksonUtils {
 
     public static String convertToJsonStr(Object scanContentBo) throws IOException {
         ObjectMapper mapper = new ObjectMapper();
+        //排除value是null的key
+        //如果对象是一个Map的话这个好像是不起作用的。
         mapper.setSerializationInclusion(JsonSerialize.Inclusion.NON_NULL);
+        //key按照字母顺序排序
         mapper.configure(SerializationConfig.Feature.SORT_PROPERTIES_ALPHABETICALLY, true);
         String messageContent;
             messageContent = mapper.writeValueAsString(scanContentBo);

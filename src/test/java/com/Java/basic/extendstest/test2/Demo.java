@@ -22,6 +22,6 @@ public class Demo {
 
     public static void main(String[] args) {
         new Cat();
-//        new Dog();
+        new Dog();
     }
 }

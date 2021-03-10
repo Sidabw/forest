@@ -27,8 +27,8 @@ public class Animal<T> {
     public Animal() {
         System.out.println(getClass());
         System.out.println((ParameterizedType) getClass().getGenericSuperclass());
-
         System.out.println((Class<T>) ((ParameterizedType) getClass()
                 .getGenericSuperclass()).getActualTypeArguments()[0]);
+        System.out.println("------------------------------------------------");
     }
 }

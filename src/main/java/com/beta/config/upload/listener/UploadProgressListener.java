@@ -10,6 +10,13 @@
  */
 package com.beta.config.upload.listener;
 
+import org.apache.commons.fileupload.ProgressListener;
+import org.springframework.stereotype.Component;
+
+import javax.servlet.http.HttpSession;
+import java.util.HashMap;
+import java.util.Map;
+
 /**
  * 〈一句话功能简述〉:
  * 〈〉

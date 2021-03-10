@@ -10,6 +10,7 @@
  */
 package com.widget.security.symmetrical;
 
+import org.apache.commons.codec.DecoderException;
 import org.apache.commons.codec.binary.Base64;
 import org.apache.commons.codec.binary.Hex;
 
@@ -31,7 +32,7 @@ public class AES {
 
     private static final String originStr = "I'm sidalu";
 
-    public static void main(String[] args) throws NoSuchAlgorithmException, NoSuchPaddingException, InvalidKeyException, BadPaddingException, IllegalBlockSizeException {
+    public static void main(String[] args) throws NoSuchAlgorithmException, NoSuchPaddingException, InvalidKeyException, BadPaddingException, IllegalBlockSizeException, DecoderException {
         //1⃣️初始化密钥
         KeyGenerator keyGenerator = KeyGenerator.getInstance("AES");
         //128 or 192 or 256
@@ -44,7 +45,8 @@ public class AES {
         System.out.println("十六进制密钥：" + hexStr);
 
         //2⃣️密钥key转换
-        Key key = new SecretKeySpec(keyBytes,"AES");
+        byte[] fromHexBytes = Hex.decodeHex(hexStr.toCharArray());
+        Key key = new SecretKeySpec(fromHexBytes,"AES");
 
         //3⃣️加密
         Cipher cipher = Cipher.getInstance("AES/ECB/PKCS5Padding");
@@ -53,8 +55,10 @@ public class AES {
         System.out.println("jdk AES encrypt: " + Base64.encodeBase64String(result));
 
         //4⃣️解密
-        cipher.init(Cipher.DECRYPT_MODE, key);
-        result = cipher.doFinal(result);
+        Key key2 = new SecretKeySpec(fromHexBytes,"AES");
+        Cipher cipher2 = Cipher.getInstance("AES/ECB/PKCS5Padding");
+        cipher2.init(Cipher.DECRYPT_MODE, key2);
+        result = cipher2.doFinal(result);
         System.out.println("jdk aes decrypt: " + new String(result));
 
     }

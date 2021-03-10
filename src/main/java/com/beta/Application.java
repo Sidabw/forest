@@ -36,7 +36,7 @@ import java.lang.reflect.Method;
 @Controller
 @EnableAsync
 @EnableSwagger2
-@ServletComponentScan(basePackages = "com.beta")
+//@ServletComponentScan(basePackages = "com.beta")
 public class Application extends SpringBootServletInitializer {
 
 	public static void main(String[] args){

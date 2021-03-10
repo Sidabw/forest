@@ -10,6 +10,18 @@
  */
 package com.beta.config.upload.listener;
 
+import org.apache.commons.fileupload.FileItem;
+import org.apache.commons.fileupload.FileUpload;
+import org.apache.commons.fileupload.FileUploadException;
+import org.apache.commons.fileupload.servlet.ServletFileUpload;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Component;
+import org.springframework.web.multipart.MultipartException;
+import org.springframework.web.multipart.commons.CommonsMultipartResolver;
+
+import javax.servlet.http.HttpServletRequest;
+import java.util.List;
+
 /**
  * 〈一句话功能简述〉:
  * 〈〉
@@ -20,6 +32,7 @@ package com.beta.config.upload.listener;
  */
 //@Component
 //public class MyMultipartResolver extends CommonsMultipartResolver {
+//
 //    @Autowired
 //    private UploadProgressListener progressListener;
 //

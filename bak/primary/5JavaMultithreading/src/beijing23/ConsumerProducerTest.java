@@ -4,7 +4,8 @@ package beijing23;
  * --->此Demo中如果有多个Producer就可能导致set方法等待线程池中有多个线程在等待，当唤醒p1、p2，不再flag判断，导致重复生产两次。
  * 		当线程池中有多个wait线程时，notify只能唤醒随机单个线程。
  *
- * 正常生产者消费者模型： 生产者产生的数据存到容器中，消费者从容器中提取数据
+ * 正常
+ * 生产者消费者模型： 生产者产生的数据存到容器中，消费者从容器中提取数据
  *
  * 简化版生产者消费者模型：生产一次消费一次
  *
@@ -29,7 +30,7 @@ class Resourse {
     private String name;
     private int count;
     private boolean flag;	//保证 set方法与get方法一次只能进行1个，一个在运行，一个在wait()。
-    public synchronized void set(String name) {
+    public  void synchronized set(String name) {
 
         while(this.flag) {
             try {

@@ -12,6 +12,7 @@ package com.Java;
 
 import com.Java.basic.extendstest.test1.Son;
 import com.alibaba.fastjson.JSONObject;
+import com.beta.basic.util.JacksonUtils;
 import org.junit.Test;
 
 import java.io.*;
@@ -253,15 +254,45 @@ public class JavaTest {
     }
 
     @Test
-    public void test24() {
-        Shunxu shunxu = new Shunxu();
+    public void test24() throws IOException {
+//        Shunxu shunxu = new Shunxu();
+
+        LinkedHashMap<Object, Object> ll = new LinkedHashMap<>();
+        ll.put("a", 1);
+        ll.put("v", null);
+        System.out.println(JSONObject.toJSONString(ll));
+        System.out.println(JacksonUtils.convertToJsonStr(ll));
+    }
+
+    @Test
+    public void test225(){
+        //正则测试
+        String aaa = "lkjljl\rkjfla\rlkjkl";
+        System.out.println(aaa.replaceAll("\r", ""));
+        System.out.println(aaa.replaceAll("\\\r", ""));
+
+        boolean djlkjlk = Boolean.parseBoolean("djlkjlk");
+        System.out.println(djlkjlk);
     }
 
     @Test
     public void test25(){
-        String a = "asdfjlsajflsjdflsajaslkdjfasodifuaopiseqnwknfglwqk12423513";
-        byte[] bytes1 = a.getBytes(StandardCharsets.UTF_8);
+//        String a = "asdfjlsajflsjdflsajaslkdjfasodifuaopiseqnwknfglwqk12423513";
+//        byte[] bytes1 = a.getBytes(StandardCharsets.UTF_8);
+        String aa = "\u751f\u6210\u7b80\u62a5\u5931\u8d25";
+        System.out.println(aa);
 
+
+        ArrayList<String> a = new ArrayList<>();
+        ArrayList<Object> b = new ArrayList<>();
+        HashMap map = new HashMap();
+        map.put("1",a);
+        map.put("2",b);
+        System.out.println(JSONObject.toJSONString(map));
+
+        String s = map.toString();
+        JSONObject jsonObject = JSONObject.parseObject(s);
+        System.out.println(jsonObject.toString());
     }
 
 }

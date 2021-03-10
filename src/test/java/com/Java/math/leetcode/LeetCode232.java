@@ -35,6 +35,16 @@ public class LeetCode232 {
         System.out.println(queue.pop());   // 返回 1
         System.out.println(queue.empty()); // 返回 false
     }
+
+    @Test
+    public void t2 () {
+        MyStack myStack = new MyStack();
+        myStack.push(1);
+        myStack.push(2);
+        System.out.println(myStack.top()); // returns 2
+        System.out.println(myStack.pop()); // returns 2
+        System.out.println(myStack.empty()); // returns false
+    }
 }
 
 class MyQueue {
@@ -97,3 +107,29 @@ class MyQueue {
  * int param_3 = obj.peek();
  * boolean param_4 = obj.empty();
  */
+
+
+class MyStack {
+
+    int[] content = new int[8];
+
+    int index = -1;
+
+    public void push(int val) {
+        index++;
+        content[index] = val;
+    }
+
+    public int top() {
+        return content[index];
+    }
+
+    public int pop() {
+        return content[index--];
+    }
+
+    public boolean empty() {
+        return index < 0;
+    }
+
+}

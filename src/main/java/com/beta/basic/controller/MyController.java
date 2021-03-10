@@ -55,15 +55,17 @@ public class MyController {
 
     @RequestMapping(value="/reqTest",method=RequestMethod.GET)
     @ResponseBody
-    public String reqTest(Object aa) throws Exception{
-        System.out.println(aa);
-        Thread.sleep(new Random().nextInt(10)*1000);
-        return "/reqTest请求到达";
+    public String reqTest() throws Exception {
+        logger.debug("req come in!");
+        Thread.sleep(new Random().nextInt(50));
+        logger.debug("req finished");
+        return "When grace is lost from life, come with a burst of song.\n" +
+                "If the day is done, if birds sing no more, if the wind has flagged tired, then draw the veil of darkness thick upon me, even as thou hast wrapt the earth with the coverlet of sleep and tenderly closed the petals of the drooping lotus at dusk.From the traveller, whose sack of provisions is empty before the voyage is ended, whose garment is torn and dustladen, whose strength is exhausted, remove shame and poverty, and renew his life like a flower under the cover of thy kindly night.";
     }
 
 	@RequestMapping(value="/asynctest",method=RequestMethod.GET)
 	@ResponseBody
-	public String asyncTest() throws Exception{
+	public String asyncTest() throws Exception {
 		asyncTest.testt();
 		logger.info("/asynctest请求到达");
 		System.out.println("/asynctest请求到达");
@@ -72,7 +74,7 @@ public class MyController {
 
 	@RequestMapping(value="/dataList",method=RequestMethod.GET)
 	@ResponseBody
-	public ModelAndView dataList(){
+	public ModelAndView dataList() {
 
 		long start = System.currentTimeMillis();
 		List<TbUser> queryList = userService.queryList();
@@ -130,6 +132,7 @@ public class MyController {
     @RequestMapping(value = "/upload", method = RequestMethod.POST)
     @ResponseBody
     public Object upload(MultipartFile[] uploadFile) throws IOException {
+        System.out.println("in...");
         String originalFilename = uploadFile[0].getOriginalFilename();
         String originalFilename2 = uploadFile[1].getOriginalFilename();
         System.out.println(originalFilename);
@@ -143,31 +146,32 @@ public class MyController {
 
     @RequestMapping(value = "/upload2", method = RequestMethod.POST)
     @ResponseBody
-    public Object upload2(MultipartFile uploadFile, String userIdtime) throws IOException {
+    public Object upload2(@RequestParam(value = "file") MultipartFile file) throws IOException {
 //        MultipartHttpServletRequest multipartRequest = (MultipartHttpServletRequest)request;
 //        Iterator<String> fileNames = uploadFile.getFileNames();
 //        ServletInputStream inputStream = uploadFile.getInputStream();
 //        List<MultipartFile> files = uploadFile.getFiles("uploadFile");
 //        for(MultipartFile file : files) {
-        InputStream inputStream = uploadFile.getInputStream();
+        InputStream inputStream = file.getInputStream();
+        System.out.println(inputStream.available());
 //        String fileMd5 = DigestUtils.md5Hex(inputStream);
 //        InputStream inputStream1 = uploadFile.getInputStream();
 //        System.out.println(inputStream == inputStream1);
 //        System.out.println(fileMd5);
 //        System.out.println(userIdtime);
-            CloseableHttpClient httpClient = HttpClients.createDefault();
-            HttpPost httpPost = new HttpPost("http://weedfs-filer.zenki.cn/a/b");
-            httpPost.setHeader(new BasicHeader("Accept-Language", "zh-cn"));
-            HttpEntity reqEntity = MultipartEntityBuilder.create()
-                    .setCharset(Charset.forName("UTF-8"))
-                    .setMode(HttpMultipartMode.BROWSER_COMPATIBLE)
-                    .addBinaryBody("b", inputStream)
-                    .build();
-//
+//            CloseableHttpClient httpClient = HttpClients.createDefault();
+//            HttpPost httpPost = new HttpPost("http://weedfs-filer.zenki.cn/a/b");
+//            httpPost.setHeader(new BasicHeader("Accept-Language", "zh-cn"));
+//            HttpEntity reqEntity = MultipartEntityBuilder.create()
+//                    .setCharset(Charset.forName("UTF-8"))
+//                    .setMode(HttpMultipartMode.BROWSER_COMPATIBLE)
+//                    .addBinaryBody("b", inputStream)
+//                    .build();
+////
             // 发起请求并返回请求的响应
-            httpPost.setEntity(reqEntity);
-            CloseableHttpResponse response = httpClient.execute(httpPost);
-            System.out.println(response.getStatusLine());
+//            httpPost.setEntity(reqEntity);
+//            CloseableHttpResponse response = httpClient.execute(httpPost);
+//            System.out.println(response.getStatusLine());
 //            File fileUpload = new File("/Users/feiyi/Documents/feiyiGitProject/" + "upload_test/" +  new Random().nextInt(10) +uploadFile.getOriginalFilename());
 //
 //        uploadFile.transferTo(fileUpload);

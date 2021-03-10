@@ -12,7 +12,7 @@ package com.Java.designMode.singleton;
 
 /**
  * 〈一句话功能简述〉:
- * 〈饿汉式〉
+ * 〈饿汉式单例〉
  *
  * @author feiyi
  * @create 2019/1/2
@@ -20,7 +20,7 @@ package com.Java.designMode.singleton;
  */
 public class Singleton {
 
-    private static Singleton singleton = new Singleton();
+    private static final Singleton singleton = new Singleton();
 
     private Singleton() {
     }

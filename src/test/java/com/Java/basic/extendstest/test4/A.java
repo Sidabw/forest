@@ -29,11 +29,14 @@ public class A {
     }
 
     public String getStr() {
-        return this.str;
+        //这里写不写this都一样，访问的都是本类的属性
+        return str;
     }
 
     public String getStr2() {
-        return this.m1();
+        //这里写不写this都一样, 访问的都是子类的m1方法
+        //继承：方法覆盖、属性不覆盖
+        return m1();
     }
 
     protected String m1() {
