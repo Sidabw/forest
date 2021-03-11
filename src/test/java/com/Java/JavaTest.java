@@ -21,6 +21,7 @@ import java.math.BigDecimal;
 import java.math.RoundingMode;
 import java.nio.charset.StandardCharsets;
 import java.text.DecimalFormat;
+import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.*;
 import java.util.concurrent.ExecutorService;
@@ -136,22 +137,18 @@ public class JavaTest {
 
 
     @Test
-    public void testTime() {
-        long l1 = Double.valueOf(1577693319.86831 * 1000).longValue();
+    public void testTime() throws ParseException {
+        long l1 = Double.valueOf(1597032106.11475 * 1000).longValue();
         System.out.println();
         Date date = new Date(l1);
         Date date2 = new Date(1577693319868L);
         System.out.println(new SimpleDateFormat("yyyy-MM-dd HH:mm:ss:SSS").format(date));
+        String dateStr = "2020-02-01 00:00:00:00";
+        Date parse = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss:SSS").parse(dateStr);
 
-        int i = 0;
-        int j = 0;
-
-        int a = i++;
-        int b = ++j;
-        System.out.println(a);
-        System.out.println(b);
-        System.out.println(i++);
-        System.out.println(++j);
+        System.out.println(parse.getTime());
+        //2020-01-01 00:00:00:00对应到double类型是1577808000.000
+        //2020-02-01 00:00:00:00对应到double类型是1580486400.000
     }
 
 
@@ -293,6 +290,11 @@ public class JavaTest {
         String s = map.toString();
         JSONObject jsonObject = JSONObject.parseObject(s);
         System.out.println(jsonObject.toString());
+    }
+
+    @Test
+    public void test26(){
+//        1597032106.11475
     }
 
 }
