@@ -164,7 +164,7 @@
 		<dependency>
 			<groupId>org.apache.commons</groupId>
 			<artifactId>commons-lang3</artifactId>
-			<version>3.3</version>
+			<version>3.9</version>
 		</dependency>
 
 		<dependency>
@@ -201,19 +201,10 @@
 			<version>0.9.0</version>
 		</dependency>
 		<!-- redis -->
-        <dependency>
-            <groupId>redis.clients</groupId>
-            <artifactId>jedis</artifactId>
-            <scope>test</scope>
-        </dependency>
 		<dependency>
 			<groupId>redis.clients</groupId>
 			<artifactId>jedis</artifactId>
-			<scope>test</scope>
-		</dependency>
-		<dependency>
-			<groupId>redis.clients</groupId>
-			<artifactId>jedis</artifactId>
+			<version>3.0.1</version>
 		</dependency>
 
 		<!-- quartz -->
@@ -398,11 +389,11 @@
         </dependency>
 
         <!-- https://mvnrepository.com/artifact/net.sourceforge.cpdetector/cpdetector -->
-        <dependency>
-            <groupId>net.sourceforge.cpdetector</groupId>
-            <artifactId>cpdetector</artifactId>
-            <version>1.0.6</version>
-        </dependency>
+<!--        <dependency>-->
+<!--            <groupId>net.sourceforge.cpdetector</groupId>-->
+<!--            <artifactId>cpdetector</artifactId>-->
+<!--            <version>1.0.6</version>-->
+<!--        </dependency>-->
 
         <!-- Hbase 相关-->
         <!-- https://mvnrepository.com/artifact/org.apache.hadoop/hadoop-common -->

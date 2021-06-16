@@ -50,8 +50,20 @@ public class MyController {
 	@Autowired
 	private AsyncTest asyncTest;
 
-//	@Autowired
-//	private Secsrv secsrv;
+    @RequestMapping(value="/reqTest2",method=RequestMethod.POST)
+    public Person reqTest2(HttpServletRequest request) {
+
+        System.out.println(request.getParameter("f3"));
+        System.out.println(request.getParameter("person"));
+        System.out.println(JSONObject.toJSONString(request.getParameterMap()));
+
+        Person2 person2 = new Person2();
+        person2.setF1("f1");
+        person2.setF2(2);
+        person2.setF3(false);
+
+        return new Person("f11", 1, true, person2);
+    }
 
     @RequestMapping(value="/reqTest",method=RequestMethod.GET)
     @ResponseBody

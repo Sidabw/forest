@@ -37,11 +37,14 @@ public class Demo {
         //静态方法引用
         Function<String, Integer> f1 = Integer::valueOf;
         System.out.println(f1.apply("1"));
+
         //pass reference by utilizing object method
         //下面的Function和Supplier只是例子，代表接口的唯一抽象方法接受的参数和返回的参数的不同。
         //类型上的实例方法引用
         Function<User, Integer> f2 = User::getAge;
+        f2.apply(new User());
         User user = new User(10, "a", "ad");
+
         //实例上的实例方法引用
         Supplier<Integer> s1 = user::getAge;
         System.out.println(s1.get());

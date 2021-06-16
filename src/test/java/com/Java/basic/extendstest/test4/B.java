@@ -24,18 +24,6 @@ public class B extends A {
 
     protected String str = "b";
 
-    public static void main(String[] args) {
-        System.out.println(new B().getStaticStr());
-        System.out.println(A.staticStr);
-        System.out.println(B.staticStr);
-        System.out.println("⬆");
-        //override只是method，没有column
-
-        System.out.println(new B().getStr());
-        System.out.println(new B().getStr2());
-        System.out.println(new B().str);
-    }
-
     protected String m1() {
         return str;
     }

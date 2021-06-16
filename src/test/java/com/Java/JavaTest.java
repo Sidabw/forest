@@ -13,6 +13,7 @@ package com.Java;
 import com.Java.basic.extendstest.test1.Son;
 import com.alibaba.fastjson.JSONObject;
 import com.beta.basic.util.JacksonUtils;
+import com.fasterxml.jackson.databind.ObjectMapper;
 import org.junit.Test;
 
 import java.io.*;
@@ -27,6 +28,7 @@ import java.util.*;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 import java.util.concurrent.ThreadPoolExecutor;
+import java.util.stream.Collectors;
 
 /**
  * 〈一句话功能简述〉:
@@ -138,15 +140,17 @@ public class JavaTest {
 
     @Test
     public void testTime() throws ParseException {
-        long l1 = Double.valueOf(1597032106.11475 * 1000).longValue();
-        System.out.println();
-        Date date = new Date(l1);
-        Date date2 = new Date(1577693319868L);
-        System.out.println(new SimpleDateFormat("yyyy-MM-dd HH:mm:ss:SSS").format(date));
-        String dateStr = "2020-02-01 00:00:00:00";
-        Date parse = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss:SSS").parse(dateStr);
+        // long l1 = Double.valueOf(1597032106.11475 * 1000).longValue();
+        // System.out.println();
+        // Date date = new Date(l1);
 
-        System.out.println(parse.getTime());
+        Date date2 = new Date(1618899293692L);
+        System.out.println(new SimpleDateFormat("yyyy-MM-dd HH:mm:ss:SSS").format(date2));
+
+        // String dateStr = "2020-02-01 00:00:00:00";
+        // Date parse = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss:SSS").parse(dateStr);
+        //
+        // System.out.println(parse.getTime());
         //2020-01-01 00:00:00:00对应到double类型是1577808000.000
         //2020-02-01 00:00:00:00对应到double类型是1580486400.000
     }
@@ -295,6 +299,36 @@ public class JavaTest {
     @Test
     public void test26(){
 //        1597032106.11475
+    }
+
+    @Test
+    public void test27() throws IOException {
+        BufferedReader bufferedReader = new BufferedReader(new FileReader(new File("/Users/feiyi/Desktop/spring-configuration-metadata.json")));
+        StringBuilder resultJson = new StringBuilder();
+        String tmp = null;
+        while ((tmp = bufferedReader.readLine()) != null) {
+            resultJson.append(tmp);
+        }
+        Map map = new ObjectMapper().readValue(resultJson.toString(), Map.class);
+
+        List properties = (List)map.get("properties");
+        Object collect = properties.stream().filter(e -> {
+            Map emap = (Map)e;
+            return emap.get("name").toString().contains("rabbitmq");
+        }).map(e -> {
+            Map emap = (Map)e;
+            String name = emap.get("name").toString();
+            String description = emap.getOrDefault("description", "").toString();
+            String defaultValue = emap.getOrDefault("defaultValue", "").toString();
+            StringBuilder eachRes =
+                new StringBuilder().append("| ").append(name).append(" | ").append(description).append(" | ")
+                    .append(defaultValue).append(" |");
+            System.out.println(eachRes);
+            return eachRes;
+        }).collect(Collectors.toList());
+        System.out.println(1);
+        // System.out.println(new ObjectMapper().writeValueAsString(collect));
+
     }
 
 }
