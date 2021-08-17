@@ -10,12 +10,14 @@
  */
 package com.Java.date;
 
+import java.time.Instant;
 import java.time.LocalDate;
 import java.time.LocalDateTime;
 import java.time.LocalTime;
 import java.time.format.DateTimeFormatter;
 import java.time.temporal.TemporalAccessor;
 import java.time.temporal.TemporalField;
+import java.util.Date;
 
 /**
  * 〈一句话功能简述〉:
@@ -56,7 +58,12 @@ public class LocalDateTimeTest {
         System.out.println("⬇️️️️⬇️️️️⬇️️️️⬇️️️️⬇️️️️⬇️️️️⬇️️️️⬇️️️️⬇️️️️⬇️️️️⬇️️️️⬇️️️️⬇️️️️⬇️️️️⬇️️️️⬇️️️️⬇️️️️");
         //4格式化时间（线程安全）
         System.out.println(DateTimeFormatter.ofPattern("yyyy//MM//dd").format(localDateTime));
-        LocalDateTime localDateTime3 = LocalDateTime.parse("2020//12/12");//parse的话就必须对应的类，不能用DateTimeFormatter
+        // LocalDateTime localDateTime3 = LocalDateTime.parse("2020//12/12");//parse的话就必须对应的类，不能用DateTimeFormatter
 
+        Instant now = Instant.now();
+        //拿时间戳
+        System.out.println(now.getEpochSecond());   //秒
+        System.out.println(now.toEpochMilli());     //毫秒
+        System.out.println(new Date().getTime());   //毫秒
     }
 }

@@ -1,9 +1,3 @@
-/**
- * Copyright (C), 2018-2021, bokecc.com FileName: Person2 Author:   shaogz Date:     2021/6/16 1:46 PM Description:
- * History:
- * <author>          <time>          <version>          <desc>
- * 作者姓名           修改时间           版本号              描述
- */
 package com.widget.json.jackson.pojo.p2;
 
 import lombok.AllArgsConstructor;
@@ -23,7 +17,7 @@ import java.util.Date;
 @AllArgsConstructor
 public class Person2 {
 
-    private String firstname;
+    public String firstname;
 
     private String lastname;
 

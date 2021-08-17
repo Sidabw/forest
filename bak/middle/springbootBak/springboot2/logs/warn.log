@@ -1,2 +1,0 @@
-[WARN ] 2018-03-06 01:07:53,579(24013) com.beta.ControllerMy.loginTest(ControllerMy.java:43) –> [http-nio-8080-exec-1] loginTest...WARN...LEVEL...Test  
-[ERROR] 2018-03-06 01:07:53,581(24015) com.beta.ControllerMy.loginTest(ControllerMy.java:44) –> [http-nio-8080-exec-1] loginTest...ERROR...LEVEL...Test  
