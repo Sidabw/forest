@@ -3,6 +3,8 @@ package com.widget;
 import org.junit.Test;
 
 import java.io.*;
+import java.util.Iterator;
+import java.util.LinkedList;
 
 /**
  * @author shaogz
@@ -36,5 +38,19 @@ public class TmpTest {
             }
             inputStream.close();
         }
+
+
+    }
+    @Test
+    public void tt() {
+        LinkedList<SizeOfObject> sizeOfObjects = new LinkedList<>();
+        sizeOfObjects.add(new SizeOfObject());
+        Iterator<SizeOfObject> iterator = sizeOfObjects.iterator();
+        while (iterator.hasNext()) {
+            SizeOfObject next = iterator.next();
+            iterator.remove();
+            System.out.println(2);
+        }
+        System.out.println(1);
     }
 }

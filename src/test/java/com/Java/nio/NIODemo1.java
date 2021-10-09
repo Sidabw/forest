@@ -18,6 +18,7 @@ public class NIODemo1 {
         RandomAccessFile aFile = new RandomAccessFile("forest-list.txt", "rw");
         FileChannel channel = aFile.getChannel();
 
+        //分配1个48字节的buffer
         ByteBuffer buf = ByteBuffer.allocate(48);
 
         //把流从channel写入到buffer中
