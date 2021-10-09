@@ -2,6 +2,12 @@ pine 松(used)
 poplar 白杨(used)
 birch 白桦(used)
 cone 松果(used)
+fir 冷杉
+elm 榆木树
+ginkgo 银杏树
+spruce 云杉
+
+
 cerdar 雪松类
 larch 落叶松
 juniper 杜松
@@ -13,9 +19,7 @@ osier 紫皮柳树
 willow 垂柳
 maple 枫树
 sequoia 红杉
-fir 冷杉
 hemlock spruce 铁杉
-spruce 云杉
 yew 紫杉
 eucalytus 桉树
 locust 洋槐
@@ -28,11 +32,9 @@ satinwood 椴木
 linden 椴树
 rowan 欧洲山梨
 teak 柚木树
-elm 榆木树
 oak 橡树
 acorn 橡树果
 sycamore 美国梧桐
-ginkgo 银杏树
 holly 冬青
 coco 椰树
 date 枣椰树
