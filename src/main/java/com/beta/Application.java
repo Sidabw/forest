@@ -2,6 +2,7 @@ package com.beta;
 
 import org.apache.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.builder.SpringApplicationBuilder;
@@ -35,15 +36,14 @@ import java.lang.reflect.Method;
 @Controller
 @EnableAsync
 @EnableSwagger2
-@ServletComponentScan(basePackages = "com.beta")
+//@ServletComponentScan(basePackages = "com.beta")
 public class Application extends SpringBootServletInitializer {
-	
+
 	public static void main(String[] args){
 		SpringApplication.run(Application.class, args);
 	}
 	 @Override
 	 protected SpringApplicationBuilder configure(SpringApplicationBuilder application) {
-
 		return application.sources(Application.class);
 	}
 

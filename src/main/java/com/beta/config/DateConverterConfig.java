@@ -39,7 +39,6 @@ public class DateConverterConfig implements Converter<String,Date> {
 	            throw new IllegalArgumentException("Invalid boolean value '" + source + "'");
 	        }
 	}
-
 	public  Date parseDate(String dateStr, String format) {
         Date date=null;
         try {

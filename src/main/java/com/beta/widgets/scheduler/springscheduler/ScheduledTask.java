@@ -11,6 +11,7 @@
 package com.beta.widgets.scheduler.springscheduler;
 
 import org.springframework.beans.factory.annotation.Configurable;
+import org.springframework.scheduling.annotation.Scheduled;
 import org.springframework.stereotype.Component;
 
 import java.text.SimpleDateFormat;
@@ -35,7 +36,7 @@ public class ScheduledTask {
      * fixedRate = 1000 * 30    每隔30秒执行
      * initialDelay=1000, fixedRate=6000    第一次延迟1秒后执行，之后按fixedRate的规则每6秒执行一次
      */
-    //@Scheduled(fixedRate = 1000 * 30)
+    @Scheduled(fixedRate = 1000 * 30)
     public void reportCurrentTime(){
         System.out.println ("Scheduling Tasks Examples: The time is now " + dateFormat ().format (new Date()));
     }

@@ -1,7 +1,0 @@
-[INFO ] 2018-03-06 00:56:15,630(0) com.beta.ControllerMy.loginTest(ControllerMy.java:42) –> [http-nio-8080-exec-1] loginTest  
-[INFO ] 2018-03-06 00:58:00,089(0) com.beta.ControllerMy.loginTest(ControllerMy.java:42) –> [http-nio-8080-exec-7] loginTest  
-[INFO ] 2018-03-06 01:04:27,501(0) com.Application.main(Application.java:29) –> [main] 项目启动  
-[INFO ] 2018-03-06 01:07:29,566(0) com.Application.main(Application.java:29) –> [main] 项目启动  
-[INFO ] 2018-03-06 01:07:53,576(24010) com.beta.ControllerMy.loginTest(ControllerMy.java:42) –> [http-nio-8080-exec-1] loginTest...INFO...LEVEL...Test  
-[WARN ] 2018-03-06 01:07:53,579(24013) com.beta.ControllerMy.loginTest(ControllerMy.java:43) –> [http-nio-8080-exec-1] loginTest...WARN...LEVEL...Test  
-[ERROR] 2018-03-06 01:07:53,581(24015) com.beta.ControllerMy.loginTest(ControllerMy.java:44) –> [http-nio-8080-exec-1] loginTest...ERROR...LEVEL...Test  

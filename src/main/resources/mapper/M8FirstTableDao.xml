@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.beta.widgets.easycode.dao.M8FirstTableDao">
+
+    <resultMap type="com.beta.widgets.easycode.entity.M8FirstTable" id="M8FirstTableMap">
+        <result property="id" column="id" jdbcType="INTEGER"/>
+        <result property="phoneNums" column="phone_nums" jdbcType="OTHER"/>
+    </resultMap>
+
+    <!--查询单个-->
+    <select id="queryById" resultMap="M8FirstTableMap">
+        select
+          id, phone_nums
+        from mysql8_first_db.m8_first_table
+        where id = #{id}
+    </select>
+
+    <!--查询指定行数据-->
+    <select id="queryAllByLimit" resultMap="M8FirstTableMap">
+        select
+          id, phone_nums
+        from mysql8_first_db.m8_first_table
+        limit #{offset}, #{limit}
+    </select>
+
+    <!--通过实体作为筛选条件查询-->
+    <select id="queryAll" resultMap="M8FirstTableMap">
+        select
+          id, phone_nums
+        from mysql8_first_db.m8_first_table
+        <where>
+            <if test="id != null">
+                and id = #{id}
+            </if>
+            <if test="phoneNums != null">
+                and phone_nums = #{phoneNums}
+            </if>
+        </where>
+    </select>
+
+    <!--新增所有列-->
+    <insert id="insert" keyProperty="id" useGeneratedKeys="true">
+        insert into mysql8_first_db.m8_first_table(phone_nums)
+        values (#{phoneNums})
+    </insert>
+
+    <!--通过主键修改数据-->
+    <update id="update">
+        update mysql8_first_db.m8_first_table
+        <set>
+            <if test="phoneNums != null">
+                phone_nums = #{phoneNums},
+            </if>
+        </set>
+        where id = #{id}
+    </update>
+
+    <!--通过主键删除-->
+    <delete id="deleteById">
+        delete from mysql8_first_db.m8_first_table where id = #{id}
+    </delete>
+
+</mapper>

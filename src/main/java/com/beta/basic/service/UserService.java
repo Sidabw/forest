@@ -2,8 +2,6 @@ package com.beta.basic.service;
 
 import java.io.IOException;
 import java.io.InputStream;
-import java.lang.reflect.Array;
-import java.util.Arrays;
 import java.util.List;
 
 import com.alibaba.fastjson.JSONObject;
@@ -11,9 +9,7 @@ import com.beta.widgets.gp.dao.*;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import com.beta.basic.mybatis.mapper.TbUser;
-import com.beta.basic.mybatis.mapper.TbUserExample;
-import com.beta.basic.mybatis.mapper.TbUserMapper;
+import com.beta.basic.dao.mapper.TbUser;
 import org.springframework.transaction.annotation.Transactional;
 
 @Service

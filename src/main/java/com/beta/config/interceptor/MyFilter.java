@@ -10,6 +10,8 @@
  */
 package com.beta.config.interceptor;
 
+import com.beta.basic.util.IoUtils;
+
 import javax.servlet.*;
 import javax.servlet.annotation.WebFilter;
 import java.io.IOException;
@@ -32,8 +34,10 @@ public class MyFilter implements Filter {
 
     @Override
     public void doFilter(ServletRequest servletRequest, ServletResponse servletResponse, FilterChain filterChain) throws IOException, ServletException {
-        filterChain.doFilter(servletRequest, servletResponse);
         System.out.println("doFilter");
+//        System.out.println(IoUtils.readStreamToStr(servletRequest.getInputStream()));
+//        System.out.println();
+        filterChain.doFilter(servletRequest, servletResponse);
     }
 
     @Override
