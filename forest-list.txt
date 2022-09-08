@@ -6,6 +6,7 @@ fir 冷杉
 elm 榆木树
 ginkgo 银杏树
 spruce 云杉
+beech 山毛榉
 
 
 cerdar 雪松类
@@ -40,7 +41,6 @@ coco 椰树
 date 枣椰树
 hickory 山核桃树
 plane tree 悬铃树
-beech 山毛榉
 horse chestnut 七叶树
 blackthorn 黑刺李
 baobab 猴面包树
